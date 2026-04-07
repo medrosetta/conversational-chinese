@@ -3012,8 +3012,8 @@
   .feedback-submit:disabled { opacity: 0.35; cursor: not-allowed; }
 
   </style>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjMWExYTJlIi8+CiAgPHRleHQgeD0iNTAiIHk9IjcyIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iNjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNlOGM5N2UiPuipsTwvdGV4dD4KPC9zdmc+">
-  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjMWExYTJlIi8+CiAgPHRleHQgeD0iNTAiIHk9IjcyIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iNjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNlOGM5N2UiPuipsTwvdGV4dD4KPC9zdmc+">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjMWExYTJlIi8+PHRleHQgeD0iNTAiIHk9Ijc0IiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iNjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNlOGM5N2UiPuS4rTwvdGV4dD48L3N2Zz4=">
+  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjMWExYTJlIi8+PHRleHQgeD0iNTAiIHk9Ijc0IiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iNjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNlOGM5N2UiPuS4rTwvdGV4dD48L3N2Zz4=">
 </head>
 <body>
 
@@ -3106,6 +3106,8 @@
 </div>
 
 <script>
+function trackEvent() {}
+
 
 const LESSONS = [
   {id:1,zh:"情緒與感受",en:"Emotions & Feelings",sections:[{title:"Basic Emotions",zh:"基本情緒",vocab:[{zh:"快樂",jp:"faai3 lok6",en:"Happy"},{zh:"傷心",jp:"soeng1 sam1",en:"Sad"},{zh:"憤怒",jp:"fan5 nou6",en:"Angry"},{zh:"害怕",jp:"hoi6 pa3",en:"Afraid / Scared"},{zh:"驚訝",jp:"ging1 ngaa6",en:"Surprised"},{zh:"厭惡",jp:"jim3 wu3",en:"Disgusted"},{zh:"平靜",jp:"ping4 zing6",en:"Calm"},{zh:"緊張",jp:"gan2 zoeng1",en:"Nervous / Anxious"},{zh:"興奮",jp:"hing1 fan5",en:"Excited"},{zh:"失望",jp:"sat1 mong6",en:"Disappointed"},{zh:"孤獨",jp:"gu1 duk6",en:"Lonely"},{zh:"嫉妒",jp:"zat1 dou6",en:"Jealous"}]},{title:"Complex Feelings",zh:"複雜感受",vocab:[{zh:"懷念",jp:"waai4 nim6",en:"Nostalgic / Missing someone"},{zh:"內疚",jp:"noi6 gau3",en:"Guilty"},{zh:"羞愧",jp:"sau1 kwai3",en:"Ashamed"},{zh:"尷尬",jp:"gaang1 gaai3",en:"Embarrassed"},{zh:"感激",jp:"gam2 gik1",en:"Grateful"},{zh:"委屈",jp:"wai2 wat1",en:"Wronged / Aggrieved"},{zh:"迷茫",jp:"mai4 mong4",en:"Lost / Confused about life"},{zh:"沮喪",jp:"zeoi2 song3",en:"Dejected / Discouraged"},{zh:"滿足",jp:"mun5 zuk1",en:"Content / Satisfied"},{zh:"不安",jp:"bat1 on1",en:"Uneasy / Unsettled"},{zh:"壓力",jp:"aat3 lik6",en:"Stress / Pressure"},{zh:"崩潰",jp:"bang1 kwai3",en:"Overwhelmed / Breaking down"}]},{title:"Expressing Feelings",zh:"表達感受",vocab:[{zh:"我好開心",jp:"ngo5 hou2 hoi1 sam1",en:"I'm very happy"},{zh:"我覺得好辛苦",jp:"ngo5 gok3 dak1 hou2 san1 fu2",en:"I feel like it's really tough"},{zh:"我唔知點算好",jp:"ngo5 m4 zi1 dim2 syun3 hou2",en:"I don't know what to do"},{zh:"你有冇諗過呢件事？",jp:"nei5 jau5 mou5 nam2 gwo3 ni1 gin6 si6?",en:"Have you ever thought about this?"},{zh:"佢令我好感動",jp:"keoi5 ling6 ngo5 hou2 gam2 dung6",en:"He/She really moved me"},{zh:"我需要時間冷靜",jp:"ngo5 seoi1 jiu3 si4 gaan3 laang5 zing6",en:"I need time to calm down"},{zh:"我受唔住喇",jp:"ngo5 sau6 m4 zyu6 laa3",en:"I can't take it anymore"},{zh:"係咁㗎喇，唔緊要",jp:"hai6 gam2 gaa3 laa3, m4 gan2 jiu3",en:"That's just how it is, it's okay"}]}],dialogue:{title:"Dialogue: How Are You Feeling?",lines:[{sp:"A",zh:"喂，你最近點呀？睇落好似有啲唔開心喎。",jp:"wai3, nei5 zeoi3 gan6 dim2 aa3? tai2 lok6 hou2 ci5 jau5 di1 m4 hoi1 sam1 wo3.",en:"Hey, how have you been lately? You seem a bit down."},{sp:"B",zh:"係囉，我最近壓力好大，份工令我好大壓力，瞓唔著覺。",jp:"hai6 lo3, ngo5 zeoi3 gan6 aat3 lik6 hou2 daai6, go3 gung1 ling6 ngo5 hou2 daai6 aat3 lik6, fan3 m4 zoek6 gaau3.",en:"Yeah, I've been under a lot of pressure lately. Work is really stressing me out and I can't sleep."},{sp:"A",zh:"我明白你嘅感受。你試過同人傾訴冇？",jp:"ngo5 ming4 baak6 nei5 ge3 gam2 sau6. nei5 si3 gwo3 tung4 jan4 king1 sou3 mou5?",en:"I understand how you feel. Have you tried talking to someone about it?"},{sp:"B",zh:"冇乜，我唔係好鍾意講自己嘅嘢。但係今日同你講，感覺舒服啲。",jp:"mou5 mat1, ngo5 m4 hai6 hou2 zung1 ji3 gong2 zi6 gei2 ge3 je5. daan6 hai6 gam1 jat6 tung4 nei5 gong2, gam2 gok3 syu1 fuk6 di1.",en:"Not really, I don't like to talk about my own stuff much. But talking to you today makes me feel a bit better."},{sp:"A",zh:"係咁㗎，有時講出嚟會輕鬆好多。記住，你唔係一個人㗎。",jp:"hai6 gam2 gaa3, jau5 si4 gong2 ceot1 lei4 wui5 hing1 sung1 hou2 do1. gei3 zyu3, nei5 m4 hai6 jat1 go3 jan4 gaa3.",en:"That's true, sometimes saying it out loud makes things much lighter. Remember, you're not alone."}]}},
@@ -4836,13 +4838,13 @@ function navSelectLessons() {
   if (window.innerWidth <= 768) toggleDrawer(true);
   trackEvent('tab_view', { tab_name: 'Lessons' });
   document.getElementById('lessons-container').style.display = '';
-  document.getElementById('anatomy-container').style.display = 'none';
+  (document.getElementById('anatomy-container')||{style:{}}).style.display='none';
   document.body.style.overflow = '';
   document.getElementById('setup-container').style.display = 'none';
   document.getElementById('favorites-container').style.display = 'none';
   document.getElementById('pathway-container').style.display = 'none';
   document.getElementById('nav-lessons').classList.add('active');
-  document.getElementById('nav-anatomy').classList.remove('active');
+  (document.getElementById('nav-anatomy')||{classList:{remove:()=>{}}}).classList.remove('active');
   document.getElementById('nav-setup').classList.remove('active');
   document.getElementById('nav-favorites').classList.remove('active');
   if (document.getElementById('nav-pathway')) document.getElementById('nav-pathway').classList.remove('active');
@@ -4856,11 +4858,11 @@ function navSelectAnatomy() {
   if (window.innerWidth <= 768) toggleDrawer(true);
   trackEvent('tab_view', { tab_name: 'Anatomy' });
   document.getElementById('lessons-container').style.display = 'none';
-  document.getElementById('anatomy-container').style.display = '';
+  (document.getElementById('anatomy-container')||{style:{}}).style.display='';
   document.getElementById('setup-container').style.display = 'none';
   document.getElementById('favorites-container').style.display = 'none';
   document.getElementById('pathway-container').style.display = 'none';
-  document.getElementById('nav-anatomy').classList.add('active');
+  (document.getElementById('nav-anatomy')||{classList:{add:()=>{}}}).classList.add('active');
   document.getElementById('nav-lessons').classList.remove('active');
   document.getElementById('nav-setup').classList.remove('active');
   document.getElementById('nav-favorites').classList.remove('active');
@@ -4873,13 +4875,13 @@ function navSelectSetup() {
   if (window.innerWidth <= 768) toggleDrawer(true);
   trackEvent('tab_view', { tab_name: 'Setup' });
   document.getElementById('lessons-container').style.display = 'none';
-  document.getElementById('anatomy-container').style.display = 'none';
+  (document.getElementById('anatomy-container')||{style:{}}).style.display='none';
   document.getElementById('setup-container').style.display = '';
   document.getElementById('favorites-container').style.display = 'none';
   document.getElementById('pathway-container').style.display = 'none';
   document.getElementById('nav-setup').classList.add('active');
   document.getElementById('nav-lessons').classList.remove('active');
-  document.getElementById('nav-anatomy').classList.remove('active');
+  (document.getElementById('nav-anatomy')||{classList:{remove:()=>{}}}).classList.remove('active');
   document.getElementById('nav-favorites').classList.remove('active');
   if (document.getElementById('nav-pathway')) document.getElementById('nav-pathway').classList.remove('active');
   document.body.style.overflow = '';
@@ -4891,13 +4893,13 @@ function navSelectFavorites() {
   trackEvent('tab_view', { tab_name: 'Favorites' });
   stopVocabPlayAll();
   document.getElementById('lessons-container').style.display = 'none';
-  document.getElementById('anatomy-container').style.display = 'none';
+  (document.getElementById('anatomy-container')||{style:{}}).style.display='none';
   document.getElementById('setup-container').style.display = 'none';
   document.getElementById('pathway-container').style.display = 'none';
   document.getElementById('favorites-container').style.display = '';
   document.getElementById('nav-favorites').classList.add('active');
   document.getElementById('nav-lessons').classList.remove('active');
-  document.getElementById('nav-anatomy').classList.remove('active');
+  (document.getElementById('nav-anatomy')||{classList:{remove:()=>{}}}).classList.remove('active');
   document.getElementById('nav-setup').classList.remove('active');
   if (document.getElementById('nav-pathway')) document.getElementById('nav-pathway').classList.remove('active');
   document.body.style.overflow = '';
@@ -7447,12 +7449,12 @@ let assessmentAnswers = {};
 function navSelectPathway() {
   if (window.innerWidth <= 768) toggleDrawer(true);
   document.getElementById('lessons-container').style.display = 'none';
-  document.getElementById('anatomy-container').style.display = 'none';
+  (document.getElementById('anatomy-container')||{style:{}}).style.display='none';
   document.getElementById('setup-container').style.display = 'none';
   document.getElementById('favorites-container').style.display = 'none';
   document.getElementById('pathway-container').style.display = '';
   document.getElementById('nav-lessons').classList.remove('active');
-  document.getElementById('nav-anatomy').classList.remove('active');
+  (document.getElementById('nav-anatomy')||{classList:{remove:()=>{}}}).classList.remove('active');
   document.getElementById('nav-setup').classList.remove('active');
   document.getElementById('nav-favorites').classList.remove('active');
   document.getElementById('nav-pathway').classList.add('active');
@@ -7696,7 +7698,7 @@ renderPathwayBanner();
 // Registers an inline service worker for offline support & home screen install
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'medical-chinese-v22';
+    const CACHE = 'conversational-chinese-v1';
     self.addEventListener('install', e => {
       e.waitUntil(
         caches.open(CACHE).then(c => c.addAll(['${location.href}']))
@@ -7841,7 +7843,6 @@ window.addEventListener('resize', () => {
 
 
 // ── Beta Feedback System ─────────────────────────────────────────────────────
-const APPS_SCRIPT_URL = '';
 const FEEDBACK_FALLBACK_EMAIL = 'waikiulee@gmail.com';
 
 let _feedbackContext = {};
