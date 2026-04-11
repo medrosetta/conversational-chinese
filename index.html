@@ -9,10 +9,10 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#1a2a5e">
 <meta name="description" content="MedChinese — Learn Medical Cantonese and Mandarin — 33 lessons, vocabulary, dialogues, and drills for healthcare professionals.">
-<title>ConversationalChinese — Cantonese & Mandarin</title>
+<title>EverydayChinese — Cantonese & Mandarin</title>
 
 <!-- PWA Manifest (inline via data URI) -->
-<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%20%22ConversationalChinese%22%2C%20%22short_name%22%3A%20%22%E6%97%A5%E5%B8%B8%E4%B8%AD%E6%96%87%22%2C%20%22description%22%3A%20%22Everyday%20Cantonese%20%26%20Mandarin%20%E2%80%94%2021%20conversation%20lessons%22%2C%20%22start_url%22%3A%20%22/%22%2C%20%22display%22%3A%20%22standalone%22%2C%20%22background_color%22%3A%20%22%231a2a5e%22%2C%20%22theme_color%22%3A%20%22%231a2a5e%22%2C%20%22orientation%22%3A%20%22portrait%22%2C%20%22icons%22%3A%20%5B%7B%22src%22%3A%20%22data%3Aimage/svg%2Bxml%2C%253Csvg%2520xmlns%253D%2522http%253A//www.w3.org/2000/svg%2522%2520viewBox%253D%25220%25200%2520512%2520512%2522%253E%253Crect%2520width%253D%2522512%2522%2520height%253D%2522512%2522%2520rx%253D%252280%2522%2520fill%253D%2522%25231a2a5e%2522/%253E%253Ctext%2520x%253D%2522256%2522%2520y%253D%2522340%2522%2520font-size%253D%2522280%2522%2520text-anchor%253D%2522middle%2522%2520fill%253D%2522white%2522%2520font-family%253D%2522serif%2522%253E%25E8%25AA%259E%253C/text%253E%253C/svg%253E%22%2C%20%22sizes%22%3A%20%22512x512%22%2C%20%22type%22%3A%20%22image/svg%2Bxml%22%2C%20%22purpose%22%3A%20%22any%20maskable%22%7D%5D%7D">
+<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%20%22EverydayChinese%22%2C%20%22short_name%22%3A%20%22%E6%97%A5%E5%B8%B8%E4%B8%AD%E6%96%87%22%2C%20%22description%22%3A%20%22Everyday%20Cantonese%20%26%20Mandarin%22%2C%20%22start_url%22%3A%20%22/%22%2C%20%22display%22%3A%20%22standalone%22%2C%20%22background_color%22%3A%20%22%231a2a5e%22%2C%20%22theme_color%22%3A%20%22%231a2a5e%22%2C%20%22orientation%22%3A%20%22portrait%22%2C%20%22icons%22%3A%20%5B%7B%22src%22%3A%20%22data%3Aimage/svg%2Bxml%2C%253Csvg%2520xmlns%253D%2522http%253A//www.w3.org/2000/svg%2522%2520viewBox%253D%25220%25200%2520512%2520512%2522%253E%253Crect%2520width%253D%2522512%2522%2520height%253D%2522512%2522%2520rx%253D%252280%2522%2520fill%253D%2522%25231a2a5e%2522/%253E%253Ctext%2520x%253D%2522256%2522%2520y%253D%2522340%2522%2520font-size%253D%2522280%2522%2520text-anchor%253D%2522middle%2522%2520fill%253D%2522white%2522%2520font-family%253D%2522serif%2522%253E%25E8%25AA%259E%253C/text%253E%253C/svg%253E%22%2C%20%22sizes%22%3A%20%22512x512%22%2C%20%22type%22%3A%20%22image/svg%2Bxml%22%2C%20%22purpose%22%3A%20%22any%20maskable%22%7D%5D%7D">
 
 <!-- iOS home screen icon (inline SVG → data URI) -->
 
@@ -188,6 +188,7 @@
     width: 100%; margin-top: 2px; overflow-x: auto;
   }
   .section-header {
+    display: flex; flex-direction: column; align-items: stretch;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -3052,7 +3053,7 @@
         <rect y="11.5" width="14" height="1.5" rx="0.75" fill="currentColor"/>
       </svg>
     </button>
-    <span class="header-wordmark">ConversationalChinese</span>
+    <span class="header-wordmark">EverydayChinese</span>
     <span class="header-sub">日常中文</span>
   </div>
   <div class="header-right" id="lang-switcher">
@@ -3133,17 +3134,30 @@
 
 <script>
 function trackEvent() {}
-
+const APPS_SCRIPT_URL = '';
 
 const LESSONS = [
-  {id:1,zh:"情緒與感受",en:"Emotions & Feelings",sections:[{title:"Basic Emotions",zh:"基本情緒",vocab:[{zh:"快樂",jp:"faai3 lok6",en:"Happy"},{zh:"傷心",jp:"soeng1 sam1",en:"Sad"},{zh:"憤怒",jp:"fan5 nou6",en:"Angry"},{zh:"害怕",jp:"hoi6 pa3",en:"Afraid / Scared"},{zh:"驚訝",jp:"ging1 ngaa6",en:"Surprised"},{zh:"厭惡",jp:"jim3 wu3",en:"Disgusted"},{zh:"平靜",jp:"ping4 zing6",en:"Calm"},{zh:"緊張",jp:"gan2 zoeng1",en:"Nervous / Anxious"},{zh:"興奮",jp:"hing1 fan5",en:"Excited"},{zh:"失望",jp:"sat1 mong6",en:"Disappointed"},{zh:"孤獨",jp:"gu1 duk6",en:"Lonely"},{zh:"嫉妒",jp:"zat1 dou6",en:"Jealous"}]},{title:"Complex Feelings",zh:"複雜感受",vocab:[{zh:"懷念",jp:"waai4 nim6",en:"Nostalgic / Missing someone"},{zh:"內疚",jp:"noi6 gau3",en:"Guilty"},{zh:"羞愧",jp:"sau1 kwai3",en:"Ashamed"},{zh:"尷尬",jp:"gaang1 gaai3",en:"Embarrassed"},{zh:"感激",jp:"gam2 gik1",en:"Grateful"},{zh:"委屈",jp:"wai2 wat1",en:"Wronged / Aggrieved"},{zh:"迷茫",jp:"mai4 mong4",en:"Lost / Confused about life"},{zh:"沮喪",jp:"zeoi2 song3",en:"Dejected / Discouraged"},{zh:"滿足",jp:"mun5 zuk1",en:"Content / Satisfied"},{zh:"不安",jp:"bat1 on1",en:"Uneasy / Unsettled"},{zh:"壓力",jp:"aat3 lik6",en:"Stress / Pressure"},{zh:"崩潰",jp:"bang1 kwai3",en:"Overwhelmed / Breaking down"}]},{title:"Expressing Feelings",zh:"表達感受",vocab:[{zh:"我好開心",jp:"ngo5 hou2 hoi1 sam1",en:"I'm very happy"},{zh:"我覺得好辛苦",jp:"ngo5 gok3 dak1 hou2 san1 fu2",en:"I feel like it's really tough"},{zh:"我唔知點算好",jp:"ngo5 m4 zi1 dim2 syun3 hou2",en:"I don't know what to do"},{zh:"你有冇諗過呢件事？",jp:"nei5 jau5 mou5 nam2 gwo3 ni1 gin6 si6?",en:"Have you ever thought about this?"},{zh:"佢令我好感動",jp:"keoi5 ling6 ngo5 hou2 gam2 dung6",en:"He/She really moved me"},{zh:"我需要時間冷靜",jp:"ngo5 seoi1 jiu3 si4 gaan3 laang5 zing6",en:"I need time to calm down"},{zh:"我受唔住喇",jp:"ngo5 sau6 m4 zyu6 laa3",en:"I can't take it anymore"},{zh:"係咁㗎喇，唔緊要",jp:"hai6 gam2 gaa3 laa3, m4 gan2 jiu3",en:"That's just how it is, it's okay"}]}],dialogue:{title:"Dialogue: How Are You Feeling?",lines:[{sp:"A",zh:"喂，你最近點呀？睇落好似有啲唔開心喎。",jp:"wai3, nei5 zeoi3 gan6 dim2 aa3? tai2 lok6 hou2 ci5 jau5 di1 m4 hoi1 sam1 wo3.",en:"Hey, how have you been lately? You seem a bit down."},{sp:"B",zh:"係囉，我最近壓力好大，份工令我好大壓力，瞓唔著覺。",jp:"hai6 lo3, ngo5 zeoi3 gan6 aat3 lik6 hou2 daai6, go3 gung1 ling6 ngo5 hou2 daai6 aat3 lik6, fan3 m4 zoek6 gaau3.",en:"Yeah, I've been under a lot of pressure lately. Work is really stressing me out and I can't sleep."},{sp:"A",zh:"我明白你嘅感受。你試過同人傾訴冇？",jp:"ngo5 ming4 baak6 nei5 ge3 gam2 sau6. nei5 si3 gwo3 tung4 jan4 king1 sou3 mou5?",en:"I understand how you feel. Have you tried talking to someone about it?"},{sp:"B",zh:"冇乜，我唔係好鍾意講自己嘅嘢。但係今日同你講，感覺舒服啲。",jp:"mou5 mat1, ngo5 m4 hai6 hou2 zung1 ji3 gong2 zi6 gei2 ge3 je5. daan6 hai6 gam1 jat6 tung4 nei5 gong2, gam2 gok3 syu1 fuk6 di1.",en:"Not really, I don't like to talk about my own stuff much. But talking to you today makes me feel a bit better."},{sp:"A",zh:"係咁㗎，有時講出嚟會輕鬆好多。記住，你唔係一個人㗎。",jp:"hai6 gam2 gaa3, jau5 si4 gong2 ceot1 lei4 wui5 hing1 sung1 hou2 do1. gei3 zyu3, nei5 m4 hai6 jat1 go3 jan4 gaa3.",en:"That's true, sometimes saying it out loud makes things much lighter. Remember, you're not alone."}]}},
-  {id:2,zh:"政治與時事",en:"Politics & Current Affairs",sections:[{title:"Government & Systems",zh:"政府與制度",vocab:[{zh:"民主",jp:"man4 zyu2",en:"Democracy"},{zh:"獨裁",jp:"duk6 coi4",en:"Dictatorship / Authoritarianism"},{zh:"共產主義",jp:"gung6 caan2 zyu2 ji6",en:"Communism"},{zh:"資本主義",jp:"zi1 bun2 zyu2 ji6",en:"Capitalism"},{zh:"政府",jp:"zing3 fu2",en:"Government"},{zh:"議會",jp:"ji5 wui2",en:"Parliament / Legislature"},{zh:"選舉",jp:"syun2 geoi2",en:"Election"},{zh:"投票",jp:"tau4 piu3",en:"Vote / Voting"},{zh:"政策",jp:"zing3 caak3",en:"Policy"},{zh:"法律",jp:"faat3 leot6",en:"Law"},{zh:"憲法",jp:"hin3 faat3",en:"Constitution"},{zh:"人權",jp:"jan4 kyun4",en:"Human rights"}]},{title:"Political Topics",zh:"政治議題",vocab:[{zh:"自由",jp:"zi6 jau4",en:"Freedom / Liberty"},{zh:"平等",jp:"ping4 dang2",en:"Equality"},{zh:"示威",jp:"si6 wai1",en:"Protest / Demonstration"},{zh:"言論自由",jp:"jin4 leon6 zi6 jau4",en:"Freedom of speech"},{zh:"新聞自由",jp:"san1 man4 zi6 jau4",en:"Freedom of the press"},{zh:"腐敗",jp:"fu6 baai6",en:"Corruption"},{zh:"制裁",jp:"zai3 coi4",en:"Sanctions"},{zh:"外交",jp:"ngoi6 gaau1",en:"Diplomacy / Foreign affairs"},{zh:"移民",jp:"ji4 man4",en:"Immigration / Immigrant"},{zh:"難民",jp:"naan6 man4",en:"Refugee"},{zh:"貧富差距",jp:"pan4 fu3 caa1 geoi3",en:"Wealth gap / Inequality"},{zh:"氣候變化",jp:"hei3 hau6 bin3 faa3",en:"Climate change"}]},{title:"Current Affairs Phrases",zh:"時事用語",vocab:[{zh:"你點睇呢件事？",jp:"nei5 dim2 tai2 ni1 gin6 si6?",en:"What do you think about this matter?"},{zh:"我支持／反對",jp:"ngo5 zi1 ci4 / faan2 deoi3",en:"I support / I oppose"},{zh:"呢個情況好複雜",jp:"ni1 go3 cing4 fong3 hou2 fuk6 zaap6",en:"The situation is very complicated"},{zh:"根據新聞報導",jp:"gan1 geoi3 san1 man4 bou3 dou6",en:"According to news reports"},{zh:"兩黨之間嘅爭議",jp:"loeng5 dong2 zi1 gaan1 ge3 zang1 ji3",en:"Dispute between the two parties"},{zh:"政治立場",jp:"zing3 zi6 laap6 coeng4",en:"Political stance"},{zh:"左派／右派",jp:"zo2 paai3 / jau6 paai3",en:"Left-wing / Right-wing"}]}],dialogue:{title:"Dialogue: Talking Politics",lines:[{sp:"A",zh:"你有冇睇今日嘅新聞？政府又出咗新政策喇。",jp:"nei5 jau5 mou5 tai2 gam1 jat6 ge3 san1 man4? zing3 fu2 jau6 ceot1 zo2 san1 zing3 caak3 laa3.",en:"Did you see today's news? The government has announced a new policy again."},{sp:"B",zh:"睇咗，我唔係好支持呢個政策，覺得對普通市民唔公平。",jp:"tai2 zo2, ngo5 m4 hai6 hou2 zi1 ci4 ni1 go3 zing3 caak3, gok3 dak1 deoi3 pou2 tung1 si5 man4 m4 gung1 ping4.",en:"I saw it. I don't really support this policy — I think it's unfair to ordinary citizens."},{sp:"A",zh:"我明白你嘅擔憂，但係我覺得佢哋係想解決貧富差距嘅問題。",jp:"ngo5 ming4 baak6 nei5 ge3 daam1 jau1, daan6 hai6 ngo5 gok3 dak1 keoi5 dei6 hai6 soeng2 gaai2 kyut3 pan4 fu3 caa1 geoi3 ge3 man6 tai4.",en:"I understand your concern, but I think they're trying to address the wealth gap."},{sp:"B",zh:"係，但係執行嘅方式有問題。言論自由同新聞自由都要保護。",jp:"hai6, daan6 hai6 zap1 hang4 ge3 fong1 sik1 jau5 man6 tai4. jin4 leon6 zi6 jau4 tung4 san1 man4 zi6 jau4 dou1 jiu3 bou2 wu6.",en:"Yes, but the way it's being implemented is problematic. Freedom of speech and the press both need to be protected."},{sp:"A",zh:"你講得啱。呢個係一個好複雜嘅議題，唔係三言兩語可以講清楚㗎。",jp:"nei5 gong2 dak1 ngaam1. ni1 go3 hai6 jat1 go3 hou2 fuk6 zaap6 ge3 ji5 tai4, m4 hai6 saam1 jin4 loeng5 jyu5 ho2 yi5 gong2 cing1 co2 gaa3.",en:"You make a good point. This is a very complicated issue — it can't be explained in just a few words."}]}},
-  {id:3,zh:"財務、銀行與投資",en:"Finance, Banking & Investing",sections:[{title:"Banking Basics",zh:"銀行基本",vocab:[{zh:"銀行",jp:"ngan4 hong4",en:"Bank"},{zh:"戶口",jp:"wu6 hau2",en:"Bank account"},{zh:"存款",jp:"cyun4 fun2",en:"Deposit / Savings"},{zh:"提款",jp:"tai4 fun2",en:"Withdrawal"},{zh:"轉帳",jp:"zyun2 zoeng3",en:"Transfer (money)"},{zh:"利息",jp:"lei6 sik1",en:"Interest"},{zh:"貸款",jp:"daai3 fun2",en:"Loan"},{zh:"按揭",jp:"on3 kit3",en:"Mortgage"},{zh:"信用卡",jp:"seon3 jung6 kaat1",en:"Credit card"},{zh:"債務",jp:"zaai3 mou6",en:"Debt"},{zh:"預算",jp:"jyu6 syun3",en:"Budget"},{zh:"稅",jp:"seoi3",en:"Tax"}]},{title:"Investing & Markets",zh:"投資與市場",vocab:[{zh:"股票",jp:"gu2 piu3",en:"Stock / Share"},{zh:"股市",jp:"gu2 si5",en:"Stock market"},{zh:"基金",jp:"gei1 gam1",en:"Fund / Mutual fund"},{zh:"債券",jp:"zaai3 gyun3",en:"Bond"},{zh:"加密貨幣",jp:"gaa1 mat6 fo3 bai6",en:"Cryptocurrency"},{zh:"升值",jp:"sing1 zik6",en:"Appreciate / Go up in value"},{zh:"貶值",jp:"bin2 zik6",en:"Depreciate / Lose value"},{zh:"風險",jp:"fung1 him2",en:"Risk"},{zh:"回報",jp:"wui4 bou3",en:"Return / Yield"},{zh:"分散投資",jp:"fan1 saan3 tau4 zi1",en:"Diversify investments"},{zh:"通貨膨脹",jp:"tung1 fo3 paang4 zoeng3",en:"Inflation"},{zh:"衰退",jp:"seoi1 teoi3",en:"Recession"}]},{title:"Financial Phrases",zh:"財務用語",vocab:[{zh:"我想開個戶口",jp:"ngo5 soeng2 hoi1 go3 wu6 hau2",en:"I'd like to open an account"},{zh:"而家利率係幾多？",jp:"ji4 gaa1 lei6 leot6 hai6 gei2 do1?",en:"What's the current interest rate?"},{zh:"長線投資定短線炒賣？",jp:"coeng4 sin3 tau4 zi1 ding6 dyun2 sin3 caau2 maai6?",en:"Long-term investing or short-term trading?"},{zh:"你有冇買股票？",jp:"nei5 jau5 mou5 maai5 gu2 piu3?",en:"Do you invest in stocks?"},{zh:"我唔想冒太大風險",jp:"ngo5 m4 soeng2 mou6 taai3 daai6 fung1 him2",en:"I don't want to take too much risk"},{zh:"應該點樣分配資產？",jp:"jing1 goi1 dim2 joeng2 fan1 pui3 zi1 caan2?",en:"How should I allocate my assets?"}]}],dialogue:{title:"Dialogue: Talking About Investments",lines:[{sp:"A",zh:"你最近有冇留意股市呀？跌咗好多喎。",jp:"nei5 zeoi3 gan6 jau5 mou5 lau4 ji3 gu2 si5 aa3? dit3 zo2 hou2 do1 wo3.",en:"Have you been watching the stock market lately? It's dropped a lot."},{sp:"B",zh:"係呀，通貨膨脹同加息令股市好波動。我而家唔敢亂買。",jp:"hai6 aa3, tung1 fo3 paang4 zoeng3 tung4 gaa1 sik1 ling6 gu2 si5 hou2 bo1 dung6. ngo5 ji4 gaa1 m4 gam2 lyun6 maai5.",en:"Yeah, inflation and rate hikes are making the market very volatile. I don't dare buy randomly now."},{sp:"A",zh:"我係長線投資嗰種，唔理短期升跌。買咗指數基金就算。",jp:"ngo5 hai6 coeng4 sin3 tau4 zi1 go2 zung2, m4 lei5 dyun2 kei4 sing1 dit3. maai5 zo2 zi2 sou3 gei1 gam1 zau6 syun3.",en:"I'm a long-term investor — I don't worry about short-term ups and downs. I just buy index funds."},{sp:"B",zh:"聽落好穩陣，但係我覺得分散投資好重要。唔可以將所有雞蛋放係同一個籃。",jp:"ting1 lok6 hou2 wan2 zan6, daan6 hai6 ngo5 gok3 dak1 fan1 saan3 tau4 zi1 hou2 zung6 jiu3. m4 ho2 ji5 zoeng1 so2 jau5 gai1 daan6 fong3 hai6 tung4 jat1 go3 laam2.",en:"That sounds stable, but I still think diversification is important. You can't put all your eggs in one basket."},{sp:"A",zh:"你講得好啱。我都有買一啲債券同加密貨幣作為對沖。",jp:"nei5 gong2 dak1 hou2 ngaam1. ngo5 dou1 jau5 maai5 jat1 di1 zaai3 gyun3 tung4 gaa1 mat6 fo3 bai6 zok3 wai4 deoi3 cung1.",en:"You're absolutely right. I also hold some bonds and crypto as a hedge."}]}},
-  {id:4,zh:"工作與職業",en:"Work & Career",sections:[{title:"Workplace Vocabulary",zh:"職場詞彙",vocab:[{zh:"老闆",jp:"lou5 baan2",en:"Boss / Employer"},{zh:"同事",jp:"tung4 si6",en:"Colleague"},{zh:"下屬",jp:"haa6 suk6",en:"Subordinate"},{zh:"升職",jp:"sing1 zik1",en:"Promotion"},{zh:"加薪",jp:"gaa1 san1",en:"Pay raise"},{zh:"炒魷魚",jp:"caau2 jau4 jyu2",en:"Get fired"},{zh:"辭職",jp:"ci4 zik1",en:"Resign"},{zh:"面試",jp:"min6 si3",en:"Job interview"},{zh:"履歷",jp:"leoi5 lik6",en:"Resume / CV"},{zh:"合約",jp:"hap6 joek3",en:"Contract"},{zh:"加班",jp:"gaa1 baan1",en:"Overtime"},{zh:"在家工作",jp:"zoi6 gaa1 gung1 zok3",en:"Work from home"}]},{title:"Career & Profession",zh:"職業",vocab:[{zh:"醫生",jp:"ji1 saang1",en:"Doctor"},{zh:"律師",jp:"leot6 si1",en:"Lawyer"},{zh:"工程師",jp:"gung1 cing4 si1",en:"Engineer"},{zh:"教師",jp:"gaau3 si1",en:"Teacher"},{zh:"會計師",jp:"wui2 gai3 si1",en:"Accountant"},{zh:"商人",jp:"soeng1 jan4",en:"Businessman"},{zh:"護士",jp:"wu6 si6",en:"Nurse"},{zh:"廚師",jp:"cyu4 si1",en:"Chef"},{zh:"記者",jp:"gei3 ze2",en:"Journalist"},{zh:"自僱人士",jp:"zi6 gu3 jan4 si6",en:"Self-employed"},{zh:"公務員",jp:"gung1 mou6 jyun4",en:"Civil servant"},{zh:"退休",jp:"teoi3 jau1",en:"Retirement / Retired"}]},{title:"Work-Life Phrases",zh:"工作生活用語",vocab:[{zh:"你做咩工作㗎？",jp:"nei5 zou6 me1 gung1 zok3 gaa3?",en:"What do you do for work?"},{zh:"你鍾唔鍾意你份工？",jp:"nei5 zung1 m4 zung1 ji3 nei5 fan6 gung1?",en:"Do you like your job?"},{zh:"份工好有壓力",jp:"fan6 gung1 hou2 jau5 aat3 lik6",en:"The job is very stressful"},{zh:"我想轉工",jp:"ngo5 soeng2 zyun2 gung1",en:"I want to change jobs"},{zh:"工作同生活要平衡",jp:"gung1 zok3 tung4 sang1 wut6 jiu3 ping4 hang4",en:"Work-life balance is important"},{zh:"你有冇考慮過創業？",jp:"nei5 jau5 mou5 haau2 leoi6 gwo3 cong3 jip6?",en:"Have you ever considered starting your own business?"}]}],dialogue:{title:"Dialogue: Career Change",lines:[{sp:"A",zh:"你最近話想轉工，係咪真㗎？",jp:"nei5 zeoi3 gan6 waa6 soeng2 zyun2 gung1, hai6 mai6 zan1 gaa3?",en:"You mentioned recently that you want to change jobs — is that true?"},{sp:"B",zh:"係呀，我做咗呢份工五年，一直冇升職，而且加班嘅情況愈嚟愈嚴重。",jp:"hai6 aa3, ngo5 zou6 zo2 ni1 fan6 gung1 ng5 nin4, jat1 zik6 mou5 sing1 zik1, ji4 ce2 gaa1 baan1 ge3 cing4 fong3 jyu6 lei4 jyu6 jim4 zung6.",en:"Yeah, I've been in this job for five years, never got promoted, and the overtime is getting worse and worse."},{sp:"A",zh:"我明白，工作同生活嘅平衡好重要。你有冇考慮過自己創業？",jp:"ngo5 ming4 baak6, gung1 zok3 tung4 sang1 wut6 ge3 ping4 hang4 hou2 zung6 jiu3. nei5 jau5 mou5 haau2 leoi6 gwo3 zi6 gei2 cong3 jip6?",en:"I understand — work-life balance is very important. Have you considered starting your own business?"},{sp:"B",zh:"諗過，但係風險好大。而家經濟唔係好好，我唔敢冒險。",jp:"nam2 gwo3, daan6 hai6 fung1 him2 hou2 daai6. ji4 gaa1 ging1 zai3 m4 hai6 hou2 hou2, ngo5 m4 gam2 mou6 him2.",en:"I've thought about it, but the risk is high. The economy isn't great right now — I don't dare to take the risk."},{sp:"A",zh:"明白。咁你可以先整靚份履歷，試吓去面試，睇吓有冇更好嘅機會。",jp:"ming4 baak6. gam2 nei5 ho2 yi5 sin1 zing2 leng3 fan6 leoi5 lik6, si3 haa5 heoi3 min6 si3, tai2 haa5 jau5 mou5 gang3 hou2 ge3 gei1 wui6.",en:"I understand. Then you could start by polishing your resume, try some interviews, and see if better opportunities come up."}]}},
-  {id:5,zh:"旅遊與交通",en:"Travel & Transportation",sections:[{title:"Transportation",zh:"交通",vocab:[{zh:"飛機",jp:"fei1 gei1",en:"Airplane"},{zh:"火車",jp:"fo2 ce1",en:"Train"},{zh:"地鐵",jp:"dei6 tit3",en:"Subway / MTR"},{zh:"巴士",jp:"baa1 si2",en:"Bus"},{zh:"的士",jp:"dik1 si2",en:"Taxi"},{zh:"渡輪",jp:"dou6 leon4",en:"Ferry"},{zh:"機場",jp:"gei1 coeng4",en:"Airport"},{zh:"車站",jp:"ce1 zaam6",en:"Train / Bus station"},{zh:"月台",jp:"jyut6 toi4",en:"Platform"},{zh:"行李",jp:"hang4 lei5",en:"Luggage / Baggage"},{zh:"護照",jp:"wu6 ziu3",en:"Passport"},{zh:"簽證",jp:"cim1 zing3",en:"Visa"}]},{title:"Travel Experiences",zh:"旅遊體驗",vocab:[{zh:"酒店",jp:"zau2 dim3",en:"Hotel"},{zh:"民宿",jp:"man4 suk1",en:"Guesthouse / Airbnb"},{zh:"景點",jp:"ging2 dim2",en:"Tourist attraction"},{zh:"博物館",jp:"bok3 mat6 gun2",en:"Museum"},{zh:"海灘",jp:"hoi2 taan1",en:"Beach"},{zh:"文化差異",jp:"man4 faa3 caa1 ji6",en:"Cultural difference"},{zh:"時差",jp:"si4 caa1",en:"Jet lag / Time difference"},{zh:"換錢",jp:"wun6 cin2",en:"Currency exchange"},{zh:"旅遊保險",jp:"leoi5 jau4 bou2 him2",en:"Travel insurance"},{zh:"迷路",jp:"mai4 lou6",en:"Get lost"}]},{title:"Travel Phrases",zh:"旅遊用語",vocab:[{zh:"去邊度好？",jp:"heoi3 bin1 dou6 hou2?",en:"Where's a good place to go?"},{zh:"下一班車係幾時？",jp:"haa6 jat1 baan1 ce1 hai6 gei2 si4?",en:"When is the next bus/train?"},{zh:"我想訂一個房間",jp:"ngo5 soeng2 deng6 jat1 go3 fong4 gaan1",en:"I'd like to book a room"},{zh:"附近有冇好食嘅地方？",jp:"fu6 gan6 jau5 mou5 hou2 sik6 ge3 dei6 fong1?",en:"Are there any good places to eat nearby?"},{zh:"我迷路喇，可唔可以幫我？",jp:"ngo5 mai4 lou6 laa3, ho2 m4 ho2 yi5 bong1 ngo5?",en:"I'm lost — can you help me?"}]}],dialogue:{title:"Dialogue: Planning a Trip",lines:[{sp:"A",zh:"你暑假有冇計劃去旅行？",jp:"nei5 syu2 gaa3 jau5 mou5 gai3 waak6 heoi3 leoi5 hang4?",en:"Do you have any travel plans for the summer?"},{sp:"B",zh:"有呀！我計劃去日本，去京都同大阪。你呢？",jp:"jau5 aa3! ngo5 gai3 waak6 heoi3 jat6 bun2, heoi3 ging1 dou1 tung4 daai6 baan2. nei5 ne1?",en:"Yes! I'm planning to go to Japan — Kyoto and Osaka. What about you?"},{sp:"A",zh:"我想去歐洲，但係機票好貴，仲要申請簽證，好麻煩。",jp:"ngo5 soeng2 heoi3 au1 zau1, daan6 hai6 gei1 piu3 hou2 gwai3, zung6 jiu3 san1 cing2 cim1 zing3, hou2 maa4 faan4.",en:"I want to go to Europe, but flights are expensive and I still need to apply for a visa — such a hassle."},{sp:"B",zh:"係囉，簽證好煩。日本就唔使簽證，方便好多。記得買旅遊保險㗎，好重要㗎。",jp:"hai6 lo3, cim1 zing3 hou2 faan4. jat6 bun2 zau6 m4 sai2 cim1 zing3, fong1 bin6 hou2 do1. gei3 dak1 maai5 leoi5 jau4 bou2 him2 gaa3, hou2 zung6 jiu3 gaa3.",en:"Yeah, visas are a pain. Japan doesn't require one — much more convenient. Remember to buy travel insurance, it's really important."},{sp:"A",zh:"好，我會記住。希望你玩得開心，帶埋手信返嚟㗎！",jp:"hou2, ngo5 wui5 gei3 zyu3. hei1 mong6 nei5 waan2 dak1 hoi1 sam1, daai3 maai4 sau2 seon3 faan1 lei4 gaa3!",en:"Okay, I'll remember. I hope you have a great time — bring back some souvenirs!"}]}},
-  {id:6,zh:"教育與學校",en:"Education & School",sections:[{title:"School & Study",zh:"學校與學習",vocab:[{zh:"小學",jp:"siu2 hok6",en:"Primary school"},{zh:"中學",jp:"zung1 hok6",en:"Secondary school"},{zh:"大學",jp:"daai6 hok6",en:"University"},{zh:"研究院",jp:"jin4 gau3 jyun2",en:"Graduate school"},{zh:"學費",jp:"hok6 fai3",en:"Tuition fee"},{zh:"獎學金",jp:"zoeng2 hok6 gam1",en:"Scholarship"},{zh:"考試",jp:"haau2 si3",en:"Exam"},{zh:"功課",jp:"gung1 fo3",en:"Homework"},{zh:"成績",jp:"sing4 zik1",en:"Grades / Results"},{zh:"畢業",jp:"bat1 jip6",en:"Graduate / Graduation"},{zh:"學位",jp:"hok6 wai6",en:"Degree"},{zh:"課程",jp:"fo3 cing4",en:"Curriculum / Course"}]},{title:"Learning & Knowledge",zh:"學習與知識",vocab:[{zh:"努力",jp:"nou5 lik6",en:"Work hard / Diligence"},{zh:"理解",jp:"lei5 gaai2",en:"Understand / Comprehend"},{zh:"批判性思維",jp:"pai1 pun3 sing3 si1 wai4",en:"Critical thinking"},{zh:"創意",jp:"cong3 ji3",en:"Creativity"},{zh:"自學",jp:"zi6 hok6",en:"Self-study"},{zh:"終身學習",jp:"zung1 san1 hok6 zaap6",en:"Lifelong learning"},{zh:"語言學習",jp:"jyu5 jin4 hok6 zaap6",en:"Language learning"},{zh:"技能",jp:"gei6 nang4",en:"Skill"},{zh:"知識",jp:"zi1 sik1",en:"Knowledge"},{zh:"競爭",jp:"ging6 zang1",en:"Competition"}]},{title:"Education Phrases",zh:"教育用語",vocab:[{zh:"你讀乜嘢科？",jp:"nei5 duk6 mat1 je5 fo1?",en:"What are you studying?"},{zh:"而家讀書競爭好激烈",jp:"ji4 gaa1 duk6 syu1 ging6 zang1 hou2 gik1 lit6",en:"Academic competition is very intense nowadays"},{zh:"我希望可以出國留學",jp:"ngo5 hei1 mong6 ho2 yi5 ceot1 gwok3 lau4 hok6",en:"I hope to study abroad"},{zh:"學歷係咪一定重要？",jp:"hok6 lik6 hai6 mai6 jat1 ding6 zung6 jiu3?",en:"Is academic qualification necessarily important?"},{zh:"實踐係最好嘅學習方式",jp:"sat6 cin3 hai6 zeoi3 hou2 ge3 hok6 zaap6 fong1 sik1",en:"Hands-on practice is the best way to learn"}]}],dialogue:{title:"Dialogue: Studying Abroad",lines:[{sp:"A",zh:"你個仔話想出國留學，你點睇？",jp:"nei5 go3 zai2 waa6 soeng2 ceot1 gwok3 lau4 hok6, nei5 dim2 tai2?",en:"Your son mentioned he wants to study abroad. What do you think?"},{sp:"B",zh:"我支持㗎，但係學費真係好貴。美國同英國嘅學費貴到嚇人。",jp:"ngo5 zi1 ci4 gaa3, daan6 hai6 hok6 fai3 zan1 hai6 hou2 gwai3. mei5 gwok3 tung4 jing1 gwok3 ge3 hok6 fai3 gwai3 dou3 haat3 jan4.",en:"I support it, but the tuition is really expensive. American and British university fees are frighteningly high."},{sp:"A",zh:"係，但係外國嘅學習環境同批判性思維嘅培養，真係有好大分別。",jp:"hai6, daan6 hai6 ngoi6 gwok3 ge3 hok6 zaap6 waan4 ging2 tung4 pai1 pun3 sing3 si1 wai4 ge3 pui4 joeng5, zan1 hai6 jau5 hou2 daai6 fan1 bit6.",en:"Yes, but the learning environment and how they cultivate critical thinking abroad is genuinely very different."},{sp:"B",zh:"你講得啱。而且而家競爭咁激烈，有海外學歷都係一個優勢。",jp:"nei5 gong2 dak1 ngaam1. ji4 ce2 ji4 gaa1 ging6 zang1 gam3 gik1 lit6, jau5 hoi2 ngoi6 hok6 lik6 dou1 hai6 jat1 go3 jau1 sai3.",en:"You're right. And with competition so fierce nowadays, having an overseas degree is an advantage."},{sp:"A",zh:"佢可以申請獎學金㗎，唔係一定要自己付晒所有學費㗎。",jp:"keoi5 ho2 yi5 san1 cing2 zoeng2 hok6 gam1 gaa3, m4 hai6 jat1 ding6 jiu3 zi6 gei2 fu6 saai3 so2 jau5 hok6 fai3 gaa3.",en:"He can apply for scholarships — he doesn't necessarily have to pay for all the tuition himself."}]}},
-  {id:7,zh:"法律",en:"Legal & Law",sections:[{title:"Legal System",zh:"法律制度",vocab:[{zh:"法庭",jp:"faat3 ting4",en:"Court"},{zh:"法官",jp:"faat3 gun1",en:"Judge"},{zh:"律師",jp:"leot6 si1",en:"Lawyer / Attorney"},{zh:"陪審團",jp:"pui4 sam2 tyun4",en:"Jury"},{zh:"被告",jp:"bei6 gou3",en:"Defendant"},{zh:"原告",jp:"jyun4 gou3",en:"Plaintiff"},{zh:"證人",jp:"zing3 jan4",en:"Witness"},{zh:"證據",jp:"zing3 geoi3",en:"Evidence"},{zh:"判決",jp:"pun3 kyut3",en:"Verdict / Ruling"},{zh:"上訴",jp:"soeng5 sou3",en:"Appeal"},{zh:"無罪",jp:"mou4 zeoi6",en:"Not guilty / Innocent"},{zh:"賠償",jp:"pui4 soeng4",en:"Compensation"}]},{title:"Rights & Crime",zh:"權利與罪行",vocab:[{zh:"合法",jp:"hap6 faat3",en:"Legal / Lawful"},{zh:"非法",jp:"fei1 faat3",en:"Illegal / Unlawful"},{zh:"犯罪",jp:"faan6 zeoi6",en:"Crime / Commit a crime"},{zh:"詐騙",jp:"zaa3 pin3",en:"Fraud / Scam"},{zh:"盜竊",jp:"dou6 zit3",en:"Theft"},{zh:"傷人",jp:"soeng1 jan4",en:"Assault / Bodily harm"},{zh:"合約",jp:"hap6 joek3",en:"Contract"},{zh:"知識產權",jp:"zi1 sik1 caan2 kyun4",en:"Intellectual property"},{zh:"隱私",jp:"jan2 si1",en:"Privacy"},{zh:"義務",jp:"ji6 mou6",en:"Obligation / Duty"}]},{title:"Legal Phrases",zh:"法律用語",vocab:[{zh:"我需要搵律師",jp:"ngo5 seoi1 jiu3 wan2 leot6 si1",en:"I need to find a lawyer"},{zh:"呢件事係咪合法㗎？",jp:"ni1 gin6 si6 hai6 mai6 hap6 faat3 gaa3?",en:"Is this legal?"},{zh:"你有權保持緘默",jp:"nei5 jau5 kyun4 bou2 ci4 gaam3 mak6",en:"You have the right to remain silent"},{zh:"簽合約前要睇清楚",jp:"cim1 hap6 joek3 cin4 jiu3 tai2 cing1 co2",en:"Read carefully before signing a contract"},{zh:"我要提出投訴",jp:"ngo5 jiu3 tai4 ceot1 tau4 sou3",en:"I want to file a complaint"}]}],dialogue:{title:"Dialogue: Legal Dispute",lines:[{sp:"A",zh:"我而家有個好大嘅麻煩，個房東唔肯還我按金，話我損壞咗佢嘅傢俬。",jp:"ngo5 ji4 gaa1 jau5 go3 hou2 daai6 ge3 maa4 faan4, go3 fong4 dung1 m4 hang2 waan4 ngo5 on3 gam1, waa6 ngo5 syun2 waai6 zo2 keoi5 ge3 gaa1 si1.",en:"I have a big problem. My landlord refuses to return my deposit, saying I damaged his furniture."},{sp:"B",zh:"咁你有冇喺搬走之前影相留底？",jp:"gam2 nei5 jau5 mou5 hai2 bun1 jau2 zi1 cin4 jing2 zoeng2 lau4 dai2?",en:"Did you take photos before moving out?"},{sp:"A",zh:"有㗎，全部都影咗，係清楚嘅。我覺得佢係屈我㗎。",jp:"jau5 gaa3, cyun4 bou6 dou1 jing2 zo2, hai6 cing1 co2 ge3. ngo5 gok3 dak1 keoi5 hai6 wat1 ngo5 gaa3.",en:"Yes, I photographed everything clearly. I feel like he's falsely accusing me."},{sp:"B",zh:"咁你要認真考慮搵律師，或者去消費者委員會投訴。呢件事係涉及你嘅合法權益。",jp:"gam2 nei5 jiu3 jan6 zan1 haau2 leoi6 wan2 leot6 si1, waak6 ze2 heoi3 siu1 fai3 ze2 wai2 jyun4 wui2 tau4 sou3. ni1 gin6 si6 hai6 sip3 kap6 nei5 ge3 hap6 faat3 kyun4 jik1.",en:"Then you should seriously consider finding a lawyer, or filing a complaint with the consumer council. This involves your legal rights."},{sp:"A",zh:"你係啱㗎。我唔可以就咁算數，要維護自己嘅權利。",jp:"nei5 hai6 ngaam1 gaa3. ngo5 m4 ho2 yi5 zau6 gam2 syun3 sou3, jiu3 wai4 wu6 zi6 gei2 ge3 kyun4 lei6.",en:"You're right. I can't just let it go — I need to protect my own rights."}]}},
-  {id:8,zh:"地理與地方",en:"Geography & Places",
+  {id:1,zh:"情緒與感受",en:"Emotions & Feelings",sections:[{title:"Basic Emotions",zh:"基本情緒",vocab:[{zh:"快樂",jp:"faai3 lok6",en:"Happy"},{zh:"傷心",jp:"soeng1 sam1",en:"Sad"},{zh:"憤怒",jp:"fan5 nou6",en:"Angry"},{zh:"害怕",jp:"hoi6 pa3",en:"Afraid / Scared"},{zh:"驚訝",jp:"ging1 ngaa6",en:"Surprised"},{zh:"厭惡",jp:"jim3 wu3",en:"Disgusted"},{zh:"平靜",jp:"ping4 zing6",en:"Calm"},{zh:"緊張",jp:"gan2 zoeng1",en:"Nervous / Anxious"},{zh:"興奮",jp:"hing1 fan5",en:"Excited"},{zh:"失望",jp:"sat1 mong6",en:"Disappointed"},{zh:"孤獨",jp:"gu1 duk6",en:"Lonely"},{zh:"嫉妒",jp:"zat1 dou6",en:"Jealous"}]},{title:"Complex Feelings",zh:"複雜感受",vocab:[{zh:"懷念",jp:"waai4 nim6",en:"Nostalgic / Missing someone"},{zh:"內疚",jp:"noi6 gau3",en:"Guilty"},{zh:"羞愧",jp:"sau1 kwai3",en:"Ashamed"},{zh:"尷尬",jp:"gaang1 gaai3",en:"Embarrassed"},{zh:"感激",jp:"gam2 gik1",en:"Grateful"},{zh:"委屈",jp:"wai2 wat1",en:"Wronged / Aggrieved"},{zh:"迷茫",jp:"mai4 mong4",en:"Lost / Confused about life"},{zh:"沮喪",jp:"zeoi2 song3",en:"Dejected / Discouraged"},{zh:"滿足",jp:"mun5 zuk1",en:"Content / Satisfied"},{zh:"不安",jp:"bat1 on1",en:"Uneasy / Unsettled"},{zh:"壓力",jp:"aat3 lik6",en:"Stress / Pressure"},{zh:"崩潰",jp:"bang1 kwai3",en:"Overwhelmed / Breaking down"}]},{title:"Expressing Feelings",zh:"表達感受",vocab:[{zh:"我好開心",jp:"ngo5 hou2 hoi1 sam1",en:"I'm very happy"},{zh:"我覺得好辛苦",jp:"ngo5 gok3 dak1 hou2 san1 fu2",en:"I feel like it's really tough"},{zh:"我唔知點算好",jp:"ngo5 m4 zi1 dim2 syun3 hou2",en:"I don't know what to do"},{zh:"你有冇諗過呢件事？",jp:"nei5 jau5 mou5 nam2 gwo3 ni1 gin6 si6?",en:"Have you ever thought about this?"},{zh:"佢令我好感動",jp:"keoi5 ling6 ngo5 hou2 gam2 dung6",en:"He/She really moved me"},{zh:"我需要時間冷靜",jp:"ngo5 seoi1 jiu3 si4 gaan3 laang5 zing6",en:"I need time to calm down"},{zh:"我受唔住喇",jp:"ngo5 sau6 m4 zyu6 laa3",en:"I can't take it anymore"},{zh:"係咁㗎喇，唔緊要",jp:"hai6 gam2 gaa3 laa3, m4 gan2 jiu3",en:"That's just how it is, it's okay"}]}],dialogue:{title:"Dialogue: How Are You Feeling?",lines:[{sp:"A",zh:"喂，你最近點呀？睇落好似有啲唔開心喎。",jp:"wai3, nei5 zeoi3 gan6 dim2 aa3? tai2 lok6 hou2 ci5 jau5 di1 m4 hoi1 sam1 wo3.",en:"Hey, how have you been lately? You seem a bit down."},{sp:"B",zh:"係囉，我最近壓力好大，份工令我好大壓力，瞓唔著覺。",jp:"hai6 lo3, ngo5 zeoi3 gan6 aat3 lik6 hou2 daai6, go3 gung1 ling6 ngo5 hou2 daai6 aat3 lik6, fan3 m4 zoek6 gaau3.",en:"Yeah, I've been under a lot of pressure lately. Work is really stressing me out and I can't sleep."},{sp:"A",zh:"我明白你嘅感受。你試過同人傾訴冇？",jp:"ngo5 ming4 baak6 nei5 ge3 gam2 sau6. nei5 si3 gwo3 tung4 jan4 king1 sou3 mou5?",en:"I understand how you feel. Have you tried talking to someone about it?"},{sp:"B",zh:"冇乜，我唔係好鍾意講自己嘅嘢。但係今日同你講，感覺舒服啲。",jp:"mou5 mat1, ngo5 m4 hai6 hou2 zung1 ji3 gong2 zi6 gei2 ge3 je5. daan6 hai6 gam1 jat6 tung4 nei5 gong2, gam2 gok3 syu1 fuk6 di1.",en:"Not really, I don't like to talk about my own stuff much. But talking to you today makes me feel a bit better."},{sp:"A",zh:"係咁㗎，有時講出嚟會輕鬆好多。記住，你唔係一個人㗎。",jp:"hai6 gam2 gaa3, jau5 si4 gong2 ceot1 lei4 wui5 hing1 sung1 hou2 do1. gei3 zyu3, nei5 m4 hai6 jat1 go3 jan4 gaa3.",en:"That's true, sometimes saying it out loud makes things much lighter. Remember, you're not alone."}]}}
+  ,{id:2,zh:"政治與時事",en:"Politics & Current Affairs",sections:[{title:"Government & Systems",zh:"政府與制度",vocab:[{zh:"民主",jp:"man4 zyu2",en:"Democracy"},{zh:"獨裁",jp:"duk6 coi4",en:"Dictatorship / Authoritarianism"},{zh:"共產主義",jp:"gung6 caan2 zyu2 ji6",en:"Communism"},{zh:"資本主義",jp:"zi1 bun2 zyu2 ji6",en:"Capitalism"},{zh:"政府",jp:"zing3 fu2",en:"Government"},{zh:"議會",jp:"ji5 wui2",en:"Parliament / Legislature"},{zh:"選舉",jp:"syun2 geoi2",en:"Election"},{zh:"投票",jp:"tau4 piu3",en:"Vote / Voting"},{zh:"政策",jp:"zing3 caak3",en:"Policy"},{zh:"法律",jp:"faat3 leot6",en:"Law"},{zh:"憲法",jp:"hin3 faat3",en:"Constitution"},{zh:"人權",jp:"jan4 kyun4",en:"Human rights"}]},{title:"Political Topics",zh:"政治議題",vocab:[{zh:"自由",jp:"zi6 jau4",en:"Freedom / Liberty"},{zh:"平等",jp:"ping4 dang2",en:"Equality"},{zh:"示威",jp:"si6 wai1",en:"Protest / Demonstration"},{zh:"言論自由",jp:"jin4 leon6 zi6 jau4",en:"Freedom of speech"},{zh:"新聞自由",jp:"san1 man4 zi6 jau4",en:"Freedom of the press"},{zh:"腐敗",jp:"fu6 baai6",en:"Corruption"},{zh:"制裁",jp:"zai3 coi4",en:"Sanctions"},{zh:"外交",jp:"ngoi6 gaau1",en:"Diplomacy / Foreign affairs"},{zh:"移民",jp:"ji4 man4",en:"Immigration / Immigrant"},{zh:"難民",jp:"naan6 man4",en:"Refugee"},{zh:"貧富差距",jp:"pan4 fu3 caa1 geoi3",en:"Wealth gap / Inequality"},{zh:"氣候變化",jp:"hei3 hau6 bin3 faa3",en:"Climate change"}]},{title:"Current Affairs Phrases",zh:"時事用語",vocab:[{zh:"你點睇呢件事？",jp:"nei5 dim2 tai2 ni1 gin6 si6?",en:"What do you think about this matter?"},{zh:"我支持／反對",jp:"ngo5 zi1 ci4 / faan2 deoi3",en:"I support / I oppose"},{zh:"呢個情況好複雜",jp:"ni1 go3 cing4 fong3 hou2 fuk6 zaap6",en:"The situation is very complicated"},{zh:"根據新聞報導",jp:"gan1 geoi3 san1 man4 bou3 dou6",en:"According to news reports"},{zh:"兩黨之間嘅爭議",jp:"loeng5 dong2 zi1 gaan1 ge3 zang1 ji3",en:"Dispute between the two parties"},{zh:"政治立場",jp:"zing3 zi6 laap6 coeng4",en:"Political stance"},{zh:"左派／右派",jp:"zo2 paai3 / jau6 paai3",en:"Left-wing / Right-wing"}]}],dialogue:{title:"Dialogue: Talking Politics",lines:[{sp:"A",zh:"你有冇睇今日嘅新聞？政府又出咗新政策喇。",jp:"nei5 jau5 mou5 tai2 gam1 jat6 ge3 san1 man4? zing3 fu2 jau6 ceot1 zo2 san1 zing3 caak3 laa3.",en:"Did you see today's news? The government has announced a new policy again."},{sp:"B",zh:"睇咗，我唔係好支持呢個政策，覺得對普通市民唔公平。",jp:"tai2 zo2, ngo5 m4 hai6 hou2 zi1 ci4 ni1 go3 zing3 caak3, gok3 dak1 deoi3 pou2 tung1 si5 man4 m4 gung1 ping4.",en:"I saw it. I don't really support this policy — I think it's unfair to ordinary citizens."},{sp:"A",zh:"我明白你嘅擔憂，但係我覺得佢哋係想解決貧富差距嘅問題。",jp:"ngo5 ming4 baak6 nei5 ge3 daam1 jau1, daan6 hai6 ngo5 gok3 dak1 keoi5 dei6 hai6 soeng2 gaai2 kyut3 pan4 fu3 caa1 geoi3 ge3 man6 tai4.",en:"I understand your concern, but I think they're trying to address the wealth gap."},{sp:"B",zh:"係，但係執行嘅方式有問題。言論自由同新聞自由都要保護。",jp:"hai6, daan6 hai6 zap1 hang4 ge3 fong1 sik1 jau5 man6 tai4. jin4 leon6 zi6 jau4 tung4 san1 man4 zi6 jau4 dou1 jiu3 bou2 wu6.",en:"Yes, but the way it's being implemented is problematic. Freedom of speech and the press both need to be protected."},{sp:"A",zh:"你講得啱。呢個係一個好複雜嘅議題，唔係三言兩語可以講清楚㗎。",jp:"nei5 gong2 dak1 ngaam1. ni1 go3 hai6 jat1 go3 hou2 fuk6 zaap6 ge3 ji5 tai4, m4 hai6 saam1 jin4 loeng5 jyu5 ho2 yi5 gong2 cing1 co2 gaa3.",en:"You make a good point. This is a very complicated issue — it can't be explained in just a few words."}]}}
+  ,{id:3,zh:"財務、銀行與投資",en:"Finance, Banking & Investing",sections:[{title:"Banking Basics",zh:"銀行基本",vocab:[{zh:"銀行",jp:"ngan4 hong4",en:"Bank"},{zh:"戶口",jp:"wu6 hau2",en:"Bank account"},{zh:"存款",jp:"cyun4 fun2",en:"Deposit / Savings"},{zh:"提款",jp:"tai4 fun2",en:"Withdrawal"},{zh:"轉帳",jp:"zyun2 zoeng3",en:"Transfer (money)"},{zh:"利息",jp:"lei6 sik1",en:"Interest"},{zh:"貸款",jp:"daai3 fun2",en:"Loan"},{zh:"按揭",jp:"on3 kit3",en:"Mortgage"},{zh:"信用卡",jp:"seon3 jung6 kaat1",en:"Credit card"},{zh:"債務",jp:"zaai3 mou6",en:"Debt"},{zh:"預算",jp:"jyu6 syun3",en:"Budget"},{zh:"稅",jp:"seoi3",en:"Tax"}]},{title:"Investing & Markets",zh:"投資與市場",vocab:[{zh:"股票",jp:"gu2 piu3",en:"Stock / Share"},{zh:"股市",jp:"gu2 si5",en:"Stock market"},{zh:"基金",jp:"gei1 gam1",en:"Fund / Mutual fund"},{zh:"債券",jp:"zaai3 gyun3",en:"Bond"},{zh:"加密貨幣",jp:"gaa1 mat6 fo3 bai6",en:"Cryptocurrency"},{zh:"升值",jp:"sing1 zik6",en:"Appreciate / Go up in value"},{zh:"貶值",jp:"bin2 zik6",en:"Depreciate / Lose value"},{zh:"風險",jp:"fung1 him2",en:"Risk"},{zh:"回報",jp:"wui4 bou3",en:"Return / Yield"},{zh:"分散投資",jp:"fan1 saan3 tau4 zi1",en:"Diversify investments"},{zh:"通貨膨脹",jp:"tung1 fo3 paang4 zoeng3",en:"Inflation"},{zh:"衰退",jp:"seoi1 teoi3",en:"Recession"}]},{title:"Financial Phrases",zh:"財務用語",vocab:[{zh:"我想開個戶口",jp:"ngo5 soeng2 hoi1 go3 wu6 hau2",en:"I'd like to open an account"},{zh:"而家利率係幾多？",jp:"ji4 gaa1 lei6 leot6 hai6 gei2 do1?",en:"What's the current interest rate?"},{zh:"長線投資定短線炒賣？",jp:"coeng4 sin3 tau4 zi1 ding6 dyun2 sin3 caau2 maai6?",en:"Long-term investing or short-term trading?"},{zh:"你有冇買股票？",jp:"nei5 jau5 mou5 maai5 gu2 piu3?",en:"Do you invest in stocks?"},{zh:"我唔想冒太大風險",jp:"ngo5 m4 soeng2 mou6 taai3 daai6 fung1 him2",en:"I don't want to take too much risk"},{zh:"應該點樣分配資產？",jp:"jing1 goi1 dim2 joeng2 fan1 pui3 zi1 caan2?",en:"How should I allocate my assets?"}]}],dialogue:{title:"Dialogue: Talking About Investments",lines:[{sp:"A",zh:"你最近有冇留意股市呀？跌咗好多喎。",jp:"nei5 zeoi3 gan6 jau5 mou5 lau4 ji3 gu2 si5 aa3? dit3 zo2 hou2 do1 wo3.",en:"Have you been watching the stock market lately? It's dropped a lot."},{sp:"B",zh:"係呀，通貨膨脹同加息令股市好波動。我而家唔敢亂買。",jp:"hai6 aa3, tung1 fo3 paang4 zoeng3 tung4 gaa1 sik1 ling6 gu2 si5 hou2 bo1 dung6. ngo5 ji4 gaa1 m4 gam2 lyun6 maai5.",en:"Yeah, inflation and rate hikes are making the market very volatile. I don't dare buy randomly now."},{sp:"A",zh:"我係長線投資嗰種，唔理短期升跌。買咗指數基金就算。",jp:"ngo5 hai6 coeng4 sin3 tau4 zi1 go2 zung2, m4 lei5 dyun2 kei4 sing1 dit3. maai5 zo2 zi2 sou3 gei1 gam1 zau6 syun3.",en:"I'm a long-term investor — I don't worry about short-term ups and downs. I just buy index funds."},{sp:"B",zh:"聽落好穩陣，但係我覺得分散投資好重要。唔可以將所有雞蛋放係同一個籃。",jp:"ting1 lok6 hou2 wan2 zan6, daan6 hai6 ngo5 gok3 dak1 fan1 saan3 tau4 zi1 hou2 zung6 jiu3. m4 ho2 ji5 zoeng1 so2 jau5 gai1 daan6 fong3 hai6 tung4 jat1 go3 laam2.",en:"That sounds stable, but I still think diversification is important. You can't put all your eggs in one basket."},{sp:"A",zh:"你講得好啱。我都有買一啲債券同加密貨幣作為對沖。",jp:"nei5 gong2 dak1 hou2 ngaam1. ngo5 dou1 jau5 maai5 jat1 di1 zaai3 gyun3 tung4 gaa1 mat6 fo3 bai6 zok3 wai4 deoi3 cung1.",en:"You're absolutely right. I also hold some bonds and crypto as a hedge."}]}}
+  ,{id:4,zh:"工作與職業",en:"Work & Career",sections:[{title:"Workplace Vocabulary",zh:"職場詞彙",vocab:[{zh:"老闆",jp:"lou5 baan2",en:"Boss / Employer"},{zh:"同事",jp:"tung4 si6",en:"Colleague"},{zh:"下屬",jp:"haa6 suk6",en:"Subordinate"},{zh:"升職",jp:"sing1 zik1",en:"Promotion"},{zh:"加薪",jp:"gaa1 san1",en:"Pay raise"},{zh:"炒魷魚",jp:"caau2 jau4 jyu2",en:"Get fired"},{zh:"辭職",jp:"ci4 zik1",en:"Resign"},{zh:"面試",jp:"min6 si3",en:"Job interview"},{zh:"履歷",jp:"leoi5 lik6",en:"Resume / CV"},{zh:"合約",jp:"hap6 joek3",en:"Contract"},{zh:"加班",jp:"gaa1 baan1",en:"Overtime"},{zh:"在家工作",jp:"zoi6 gaa1 gung1 zok3",en:"Work from home"}]},{title:"Career & Profession",zh:"職業",vocab:[{zh:"醫生",jp:"ji1 saang1",en:"Doctor"},{zh:"律師",jp:"leot6 si1",en:"Lawyer"},{zh:"工程師",jp:"gung1 cing4 si1",en:"Engineer"},{zh:"教師",jp:"gaau3 si1",en:"Teacher"},{zh:"會計師",jp:"wui2 gai3 si1",en:"Accountant"},{zh:"商人",jp:"soeng1 jan4",en:"Businessman"},{zh:"護士",jp:"wu6 si6",en:"Nurse"},{zh:"廚師",jp:"cyu4 si1",en:"Chef"},{zh:"記者",jp:"gei3 ze2",en:"Journalist"},{zh:"自僱人士",jp:"zi6 gu3 jan4 si6",en:"Self-employed"},{zh:"公務員",jp:"gung1 mou6 jyun4",en:"Civil servant"},{zh:"退休",jp:"teoi3 jau1",en:"Retirement / Retired"}]},{title:"Work-Life Phrases",zh:"工作生活用語",vocab:[{zh:"你做咩工作㗎？",jp:"nei5 zou6 me1 gung1 zok3 gaa3?",en:"What do you do for work?"},{zh:"你鍾唔鍾意你份工？",jp:"nei5 zung1 m4 zung1 ji3 nei5 fan6 gung1?",en:"Do you like your job?"},{zh:"份工好有壓力",jp:"fan6 gung1 hou2 jau5 aat3 lik6",en:"The job is very stressful"},{zh:"我想轉工",jp:"ngo5 soeng2 zyun2 gung1",en:"I want to change jobs"},{zh:"工作同生活要平衡",jp:"gung1 zok3 tung4 sang1 wut6 jiu3 ping4 hang4",en:"Work-life balance is important"},{zh:"你有冇考慮過創業？",jp:"nei5 jau5 mou5 haau2 leoi6 gwo3 cong3 jip6?",en:"Have you ever considered starting your own business?"}]}],dialogue:{title:"Dialogue: Career Change",lines:[{sp:"A",zh:"你最近話想轉工，係咪真㗎？",jp:"nei5 zeoi3 gan6 waa6 soeng2 zyun2 gung1, hai6 mai6 zan1 gaa3?",en:"You mentioned recently that you want to change jobs — is that true?"},{sp:"B",zh:"係呀，我做咗呢份工五年，一直冇升職，而且加班嘅情況愈嚟愈嚴重。",jp:"hai6 aa3, ngo5 zou6 zo2 ni1 fan6 gung1 ng5 nin4, jat1 zik6 mou5 sing1 zik1, ji4 ce2 gaa1 baan1 ge3 cing4 fong3 jyu6 lei4 jyu6 jim4 zung6.",en:"Yeah, I've been in this job for five years, never got promoted, and the overtime is getting worse and worse."},{sp:"A",zh:"我明白，工作同生活嘅平衡好重要。你有冇考慮過自己創業？",jp:"ngo5 ming4 baak6, gung1 zok3 tung4 sang1 wut6 ge3 ping4 hang4 hou2 zung6 jiu3. nei5 jau5 mou5 haau2 leoi6 gwo3 zi6 gei2 cong3 jip6?",en:"I understand — work-life balance is very important. Have you considered starting your own business?"},{sp:"B",zh:"諗過，但係風險好大。而家經濟唔係好好，我唔敢冒險。",jp:"nam2 gwo3, daan6 hai6 fung1 him2 hou2 daai6. ji4 gaa1 ging1 zai3 m4 hai6 hou2 hou2, ngo5 m4 gam2 mou6 him2.",en:"I've thought about it, but the risk is high. The economy isn't great right now — I don't dare to take the risk."},{sp:"A",zh:"明白。咁你可以先整靚份履歷，試吓去面試，睇吓有冇更好嘅機會。",jp:"ming4 baak6. gam2 nei5 ho2 yi5 sin1 zing2 leng3 fan6 leoi5 lik6, si3 haa5 heoi3 min6 si3, tai2 haa5 jau5 mou5 gang3 hou2 ge3 gei1 wui6.",en:"I understand. Then you could start by polishing your resume, try some interviews, and see if better opportunities come up."}]}}
+  ,{id:5,zh:"旅遊與交通",en:"Travel & Transportation",sections:[{title:"Transportation",zh:"交通",vocab:[{zh:"飛機",jp:"fei1 gei1",en:"Airplane"},{zh:"火車",jp:"fo2 ce1",en:"Train"},{zh:"地鐵",jp:"dei6 tit3",en:"Subway / MTR"},{zh:"巴士",jp:"baa1 si2",en:"Bus"},{zh:"的士",jp:"dik1 si2",en:"Taxi"},{zh:"渡輪",jp:"dou6 leon4",en:"Ferry"},{zh:"機場",jp:"gei1 coeng4",en:"Airport"},{zh:"車站",jp:"ce1 zaam6",en:"Train / Bus station"},{zh:"月台",jp:"jyut6 toi4",en:"Platform"},{zh:"行李",jp:"hang4 lei5",en:"Luggage / Baggage"},{zh:"護照",jp:"wu6 ziu3",en:"Passport"},{zh:"簽證",jp:"cim1 zing3",en:"Visa"}]},{title:"Travel Experiences",zh:"旅遊體驗",vocab:[{zh:"酒店",jp:"zau2 dim3",en:"Hotel"},{zh:"民宿",jp:"man4 suk1",en:"Guesthouse / Airbnb"},{zh:"景點",jp:"ging2 dim2",en:"Tourist attraction"},{zh:"博物館",jp:"bok3 mat6 gun2",en:"Museum"},{zh:"海灘",jp:"hoi2 taan1",en:"Beach"},{zh:"文化差異",jp:"man4 faa3 caa1 ji6",en:"Cultural difference"},{zh:"時差",jp:"si4 caa1",en:"Jet lag / Time difference"},{zh:"換錢",jp:"wun6 cin2",en:"Currency exchange"},{zh:"旅遊保險",jp:"leoi5 jau4 bou2 him2",en:"Travel insurance"},{zh:"迷路",jp:"mai4 lou6",en:"Get lost"}]},{title:"Travel Phrases",zh:"旅遊用語",vocab:[{zh:"去邊度好？",jp:"heoi3 bin1 dou6 hou2?",en:"Where's a good place to go?"},{zh:"下一班車係幾時？",jp:"haa6 jat1 baan1 ce1 hai6 gei2 si4?",en:"When is the next bus/train?"},{zh:"我想訂一個房間",jp:"ngo5 soeng2 deng6 jat1 go3 fong4 gaan1",en:"I'd like to book a room"},{zh:"附近有冇好食嘅地方？",jp:"fu6 gan6 jau5 mou5 hou2 sik6 ge3 dei6 fong1?",en:"Are there any good places to eat nearby?"},{zh:"我迷路喇，可唔可以幫我？",jp:"ngo5 mai4 lou6 laa3, ho2 m4 ho2 yi5 bong1 ngo5?",en:"I'm lost — can you help me?"}]},{ title:"Tours & Cruises", zh:"旅行團與郵輪", vocab:[
+      {zh:"郵輪",jp:"jau4 leon4",en:"Cruise ship"},
+      {zh:"郵輪旅行",jp:"jau4 leon4 leoi5 hang4",en:"Cruise holiday"},
+      {zh:"旅行團",jp:"leoi5 hang4 tyun4",en:"Group tour / Package tour"},
+      {zh:"自由行",jp:"zi6 jau4 hang4",en:"Self-guided trip / Independent travel (HK colloquial)"},
+      {zh:"導遊",jp:"dou6 jau4",en:"Tour guide"},
+      {zh:"行程",jp:"hang4 cing4",en:"Itinerary"},
+      {zh:"訂團",jp:"deng6 tyun4",en:"Book a tour (colloquial)"},
+      {zh:"上岸觀光",jp:"soeng5 ngon6 gun1 gwong1",en:"Go ashore sightseeing (cruise)"},
+      {zh:"港口",jp:"gong2 hau2",en:"Port / Harbour"},
+      {zh:"碼頭",jp:"maa5 tau4",en:"Pier / Dock"},
+      {zh:"登船",jp:"dang1 syun4",en:"Board the ship"},
+      {zh:"暈船",jp:"wan4 syun4",en:"Seasick"},
+      {zh:"包團",jp:"baau1 tyun4",en:"Charter / Book a private tour"},
+      {zh:"半自助遊",jp:"bun3 zi6 zo6 jau4",en:"Semi-independent tour"},
+    ]}],dialogue:{title:"Dialogue: Planning a Trip",lines:[{sp:"A",zh:"你暑假有冇計劃去旅行？",jp:"nei5 syu2 gaa3 jau5 mou5 gai3 waak6 heoi3 leoi5 hang4?",en:"Do you have any travel plans for the summer?"},{sp:"B",zh:"有呀！我計劃去日本，去京都同大阪。你呢？",jp:"jau5 aa3! ngo5 gai3 waak6 heoi3 jat6 bun2, heoi3 ging1 dou1 tung4 daai6 baan2. nei5 ne1?",en:"Yes! I'm planning to go to Japan — Kyoto and Osaka. What about you?"},{sp:"A",zh:"我想去歐洲，但係機票好貴，仲要申請簽證，好麻煩。",jp:"ngo5 soeng2 heoi3 au1 zau1, daan6 hai6 gei1 piu3 hou2 gwai3, zung6 jiu3 san1 cing2 cim1 zing3, hou2 maa4 faan4.",en:"I want to go to Europe, but flights are expensive and I still need to apply for a visa — such a hassle."},{sp:"B",zh:"係囉，簽證好煩。日本就唔使簽證，方便好多。記得買旅遊保險㗎，好重要㗎。",jp:"hai6 lo3, cim1 zing3 hou2 faan4. jat6 bun2 zau6 m4 sai2 cim1 zing3, fong1 bin6 hou2 do1. gei3 dak1 maai5 leoi5 jau4 bou2 him2 gaa3, hou2 zung6 jiu3 gaa3.",en:"Yeah, visas are a pain. Japan doesn't require one — much more convenient. Remember to buy travel insurance, it's really important."},{sp:"A",zh:"好，我會記住。希望你玩得開心，帶埋手信返嚟㗎！",jp:"hou2, ngo5 wui5 gei3 zyu3. hei1 mong6 nei5 waan2 dak1 hoi1 sam1, daai3 maai4 sau2 seon3 faan1 lei4 gaa3!",en:"Okay, I'll remember. I hope you have a great time — bring back some souvenirs!"}]}}
+  ,{id:6,zh:"地理與地方",en:"Geography & Places",
   sections:[
     { title:"World Geography", zh:"世界地理", vocab:[
       {zh:"大陸",jp:"daai6 luk6",en:"Continent"},{zh:"國家",jp:"gwok3 gaa1",en:"Country"},
@@ -3200,15 +3214,120 @@ const LESSONS = [
       {sp:"A",zh:"係咁㗎，香港嘅地理位置都幾好，係亞洲嘅中心點嚟㗎。",jp:"hai6 gam2 gaa3, hoeng1 gong2 ge3 dei6 lei5 wai6 zi3 dou1 gei2 hou2, hai6 aa3 zau1 ge3 zung1 sam1 dim2 lei4 gaa3.",en:"That's true — Hong Kong's geographical location is great, right at the center of Asia."},
     ]
   }
-  },
-  {id:9,zh:"飲食",en:"Food & Dining",sections:[{title:"Food & Drink",zh:"食物與飲品",vocab:[{zh:"早餐",jp:"zou2 caan1",en:"Breakfast"},{zh:"午餐",jp:"ng5 caan1",en:"Lunch"},{zh:"晚餐",jp:"maan5 caan1",en:"Dinner"},{zh:"小食",jp:"siu2 sik6",en:"Snack"},{zh:"素食",jp:"sou3 sik6",en:"Vegetarian food"},{zh:"辣",jp:"laat6",en:"Spicy"},{zh:"甜",jp:"tim4",en:"Sweet"},{zh:"酸",jp:"syun1",en:"Sour"},{zh:"苦",jp:"fu2",en:"Bitter"},{zh:"鹹",jp:"haam4",en:"Salty"},{zh:"飲茶",jp:"jam2 caa4",en:"Dim sum / Yum cha"},{zh:"外賣",jp:"ngoi6 maai6",en:"Takeout / Delivery"}]},{title:"Restaurant & Ordering",zh:"餐廳與點餐",vocab:[{zh:"餐廳",jp:"caan1 teng1",en:"Restaurant"},{zh:"菜單",jp:"coi3 daan1",en:"Menu"},{zh:"點餐",jp:"dim2 caan1",en:"Order food"},{zh:"埋單",jp:"maai4 daan1",en:"Pay the bill"},{zh:"小費",jp:"siu2 fai3",en:"Tip"},{zh:"預訂座位",jp:"jyu6 deng6 zo6 wai2",en:"Reserve a table"},{zh:"過敏",jp:"gwo3 man5",en:"Allergy"},{zh:"推薦",jp:"teoi1 zin3",en:"Recommend"},{zh:"好食",jp:"hou2 sik6",en:"Delicious / Tasty"},{zh:"收據",jp:"sau1 geoi3",en:"Receipt"}]},{title:"Food Phrases",zh:"飲食用語",vocab:[{zh:"你食唔食辣？",jp:"nei5 sik6 m4 sik6 laat6?",en:"Do you eat spicy food?"},{zh:"呢度有冇素食選擇？",jp:"ni1 dou6 jau5 mou5 sou3 sik6 syun2 zaak3?",en:"Are there vegetarian options here?"},{zh:"推薦啲乜嘢好食？",jp:"teoi1 zin3 di1 mat1 je5 hou2 sik6?",en:"What do you recommend?"},{zh:"唔該，埋單！",jp:"m4 goi1, maai4 daan1!",en:"Excuse me, the bill please!"},{zh:"今日飲茶好唔好？",jp:"gam1 jat6 jam2 caa4 hou2 m4 hou2?",en:"How about dim sum today?"}]}],dialogue:{title:"Dialogue: Dinner Plans",lines:[{sp:"A",zh:"今晚食乜好？我肚餓喇。",jp:"gam1 maan5 sik6 mat1 hou2? ngo5 tou5 ngo6 laa3.",en:"What should we eat tonight? I'm hungry."},{sp:"B",zh:"我想食粵菜，好耐冇去飲茶喇。不如去旺角果間茶樓？",jp:"ngo5 soeng2 sik6 jyut6 coi3, hou2 noi6 mou5 heoi3 jam2 caa4 laa3. bat1 jyu4 heoi3 wong6 gok3 go2 gaan1 caa4 lau4?",en:"I want Cantonese food — it's been ages since we had dim sum. How about the tea house in Mong Kok?"},{sp:"A",zh:"好呀！但係我有個朋友唔食肉，要有素食選擇㗎。",jp:"hou2 aa3! daan6 hai6 ngo5 jau5 go3 pang4 jau5 m4 sik6 juk6, jiu3 jau5 sou3 sik6 syun2 zaak3 gaa3.",en:"Sure! But one of my friends doesn't eat meat, so there need to be vegetarian options."},{sp:"B",zh:"果間茶樓有好多素食點心㗎，唔使擔心。你記得預訂座位喎，週末好多人㗎。",jp:"go2 gaan1 caa4 lau4 jau5 hou2 do1 sou3 sik6 dim2 sam1 gaa3, m4 sai2 daam1 sam1. nei5 gei3 dak1 jyu6 deng6 zo6 wai2 wo3, zau1 maat3 hou2 do1 jan4 gaa3.",en:"That tea house has lots of vegetarian dim sum — no worries. Remember to make a reservation, it gets very crowded on weekends."},{sp:"A",zh:"好，我而家就打電話去訂位。你有冇嘢唔食㗎？",jp:"hou2, ngo5 ji4 gaa1 zau6 daa2 din6 waa2 heoi3 deng6 wai2. nei5 jau5 mou5 je5 m4 sik6 gaa3?",en:"Okay, I'll call now to make a reservation. Is there anything you don't eat?"}]}},
-  {id:10,zh:"科技與媒體",en:"Technology & Media",
+  }
+  ,{id:7,zh:"教育與學校",en:"Education & School",sections:[{title:"School & Study",zh:"學校與學習",vocab:[{zh:"小學",jp:"siu2 hok6",en:"Primary school"},{zh:"中學",jp:"zung1 hok6",en:"Secondary school"},{zh:"大學",jp:"daai6 hok6",en:"University"},{zh:"研究院",jp:"jin4 gau3 jyun2",en:"Graduate school"},{zh:"學費",jp:"hok6 fai3",en:"Tuition fee"},{zh:"獎學金",jp:"zoeng2 hok6 gam1",en:"Scholarship"},{zh:"考試",jp:"haau2 si3",en:"Exam"},{zh:"功課",jp:"gung1 fo3",en:"Homework"},{zh:"成績",jp:"sing4 zik1",en:"Grades / Results"},{zh:"畢業",jp:"bat1 jip6",en:"Graduate / Graduation"},{zh:"學位",jp:"hok6 wai6",en:"Degree"},{zh:"課程",jp:"fo3 cing4",en:"Curriculum / Course"}]},{title:"Learning & Knowledge",zh:"學習與知識",vocab:[{zh:"努力",jp:"nou5 lik6",en:"Work hard / Diligence"},{zh:"理解",jp:"lei5 gaai2",en:"Understand / Comprehend"},{zh:"批判性思維",jp:"pai1 pun3 sing3 si1 wai4",en:"Critical thinking"},{zh:"創意",jp:"cong3 ji3",en:"Creativity"},{zh:"自學",jp:"zi6 hok6",en:"Self-study"},{zh:"終身學習",jp:"zung1 san1 hok6 zaap6",en:"Lifelong learning"},{zh:"語言學習",jp:"jyu5 jin4 hok6 zaap6",en:"Language learning"},{zh:"技能",jp:"gei6 nang4",en:"Skill"},{zh:"知識",jp:"zi1 sik1",en:"Knowledge"},{zh:"競爭",jp:"ging6 zang1",en:"Competition"}]},{title:"Education Phrases",zh:"教育用語",vocab:[{zh:"你讀乜嘢科？",jp:"nei5 duk6 mat1 je5 fo1?",en:"What are you studying?"},{zh:"而家讀書競爭好激烈",jp:"ji4 gaa1 duk6 syu1 ging6 zang1 hou2 gik1 lit6",en:"Academic competition is very intense nowadays"},{zh:"我希望可以出國留學",jp:"ngo5 hei1 mong6 ho2 yi5 ceot1 gwok3 lau4 hok6",en:"I hope to study abroad"},{zh:"學歷係咪一定重要？",jp:"hok6 lik6 hai6 mai6 jat1 ding6 zung6 jiu3?",en:"Is academic qualification necessarily important?"},{zh:"實踐係最好嘅學習方式",jp:"sat6 cin3 hai6 zeoi3 hou2 ge3 hok6 zaap6 fong1 sik1",en:"Hands-on practice is the best way to learn"}]}],dialogue:{title:"Dialogue: Studying Abroad",lines:[{sp:"A",zh:"你個仔話想出國留學，你點睇？",jp:"nei5 go3 zai2 waa6 soeng2 ceot1 gwok3 lau4 hok6, nei5 dim2 tai2?",en:"Your son mentioned he wants to study abroad. What do you think?"},{sp:"B",zh:"我支持㗎，但係學費真係好貴。美國同英國嘅學費貴到嚇人。",jp:"ngo5 zi1 ci4 gaa3, daan6 hai6 hok6 fai3 zan1 hai6 hou2 gwai3. mei5 gwok3 tung4 jing1 gwok3 ge3 hok6 fai3 gwai3 dou3 haat3 jan4.",en:"I support it, but the tuition is really expensive. American and British university fees are frighteningly high."},{sp:"A",zh:"係，但係外國嘅學習環境同批判性思維嘅培養，真係有好大分別。",jp:"hai6, daan6 hai6 ngoi6 gwok3 ge3 hok6 zaap6 waan4 ging2 tung4 pai1 pun3 sing3 si1 wai4 ge3 pui4 joeng5, zan1 hai6 jau5 hou2 daai6 fan1 bit6.",en:"Yes, but the learning environment and how they cultivate critical thinking abroad is genuinely very different."},{sp:"B",zh:"你講得啱。而且而家競爭咁激烈，有海外學歷都係一個優勢。",jp:"nei5 gong2 dak1 ngaam1. ji4 ce2 ji4 gaa1 ging6 zang1 gam3 gik1 lit6, jau5 hoi2 ngoi6 hok6 lik6 dou1 hai6 jat1 go3 jau1 sai3.",en:"You're right. And with competition so fierce nowadays, having an overseas degree is an advantage."},{sp:"A",zh:"佢可以申請獎學金㗎，唔係一定要自己付晒所有學費㗎。",jp:"keoi5 ho2 yi5 san1 cing2 zoeng2 hok6 gam1 gaa3, m4 hai6 jat1 ding6 jiu3 zi6 gei2 fu6 saai3 so2 jau5 hok6 fai3 gaa3.",en:"He can apply for scholarships — he doesn't necessarily have to pay for all the tuition himself."}]}}
+  ,{id:8,zh:"法律",en:"Legal & Law",sections:[{title:"Legal System",zh:"法律制度",vocab:[{zh:"法庭",jp:"faat3 ting4",en:"Court"},{zh:"法官",jp:"faat3 gun1",en:"Judge"},{zh:"律師",jp:"leot6 si1",en:"Lawyer / Attorney"},{zh:"陪審團",jp:"pui4 sam2 tyun4",en:"Jury"},{zh:"被告",jp:"bei6 gou3",en:"Defendant"},{zh:"原告",jp:"jyun4 gou3",en:"Plaintiff"},{zh:"證人",jp:"zing3 jan4",en:"Witness"},{zh:"證據",jp:"zing3 geoi3",en:"Evidence"},{zh:"判決",jp:"pun3 kyut3",en:"Verdict / Ruling"},{zh:"上訴",jp:"soeng5 sou3",en:"Appeal"},{zh:"無罪",jp:"mou4 zeoi6",en:"Not guilty / Innocent"},{zh:"賠償",jp:"pui4 soeng4",en:"Compensation"}]},{title:"Rights & Crime",zh:"權利與罪行",vocab:[{zh:"合法",jp:"hap6 faat3",en:"Legal / Lawful"},{zh:"非法",jp:"fei1 faat3",en:"Illegal / Unlawful"},{zh:"犯罪",jp:"faan6 zeoi6",en:"Crime / Commit a crime"},{zh:"詐騙",jp:"zaa3 pin3",en:"Fraud / Scam"},{zh:"盜竊",jp:"dou6 zit3",en:"Theft"},{zh:"傷人",jp:"soeng1 jan4",en:"Assault / Bodily harm"},{zh:"合約",jp:"hap6 joek3",en:"Contract"},{zh:"知識產權",jp:"zi1 sik1 caan2 kyun4",en:"Intellectual property"},{zh:"隱私",jp:"jan2 si1",en:"Privacy"},{zh:"義務",jp:"ji6 mou6",en:"Obligation / Duty"}]},{title:"Legal Phrases",zh:"法律用語",vocab:[{zh:"我需要搵律師",jp:"ngo5 seoi1 jiu3 wan2 leot6 si1",en:"I need to find a lawyer"},{zh:"呢件事係咪合法㗎？",jp:"ni1 gin6 si6 hai6 mai6 hap6 faat3 gaa3?",en:"Is this legal?"},{zh:"你有權保持緘默",jp:"nei5 jau5 kyun4 bou2 ci4 gaam3 mak6",en:"You have the right to remain silent"},{zh:"簽合約前要睇清楚",jp:"cim1 hap6 joek3 cin4 jiu3 tai2 cing1 co2",en:"Read carefully before signing a contract"},{zh:"我要提出投訴",jp:"ngo5 jiu3 tai4 ceot1 tau4 sou3",en:"I want to file a complaint"}]}],dialogue:{title:"Dialogue: Legal Dispute",lines:[{sp:"A",zh:"我而家有個好大嘅麻煩，個房東唔肯還我按金，話我損壞咗佢嘅傢俬。",jp:"ngo5 ji4 gaa1 jau5 go3 hou2 daai6 ge3 maa4 faan4, go3 fong4 dung1 m4 hang2 waan4 ngo5 on3 gam1, waa6 ngo5 syun2 waai6 zo2 keoi5 ge3 gaa1 si1.",en:"I have a big problem. My landlord refuses to return my deposit, saying I damaged his furniture."},{sp:"B",zh:"咁你有冇喺搬走之前影相留底？",jp:"gam2 nei5 jau5 mou5 hai2 bun1 jau2 zi1 cin4 jing2 zoeng2 lau4 dai2?",en:"Did you take photos before moving out?"},{sp:"A",zh:"有㗎，全部都影咗，係清楚嘅。我覺得佢係屈我㗎。",jp:"jau5 gaa3, cyun4 bou6 dou1 jing2 zo2, hai6 cing1 co2 ge3. ngo5 gok3 dak1 keoi5 hai6 wat1 ngo5 gaa3.",en:"Yes, I photographed everything clearly. I feel like he's falsely accusing me."},{sp:"B",zh:"咁你要認真考慮搵律師，或者去消費者委員會投訴。呢件事係涉及你嘅合法權益。",jp:"gam2 nei5 jiu3 jan6 zan1 haau2 leoi6 wan2 leot6 si1, waak6 ze2 heoi3 siu1 fai3 ze2 wai2 jyun4 wui2 tau4 sou3. ni1 gin6 si6 hai6 sip3 kap6 nei5 ge3 hap6 faat3 kyun4 jik1.",en:"Then you should seriously consider finding a lawyer, or filing a complaint with the consumer council. This involves your legal rights."},{sp:"A",zh:"你係啱㗎。我唔可以就咁算數，要維護自己嘅權利。",jp:"nei5 hai6 ngaam1 gaa3. ngo5 m4 ho2 yi5 zau6 gam2 syun3 sou3, jiu3 wai4 wu6 zi6 gei2 ge3 kyun4 lei6.",en:"You're right. I can't just let it go — I need to protect my own rights."}]}}
+  ,{id:9,zh:"飲食",en:"Food & Dining",sections:[{title:"Food & Drink",zh:"食物與飲品",vocab:[{zh:"早餐",jp:"zou2 caan1",en:"Breakfast"},{zh:"午餐",jp:"ng5 caan1",en:"Lunch"},{zh:"晚餐",jp:"maan5 caan1",en:"Dinner"},{zh:"小食",jp:"siu2 sik6",en:"Snack"},{zh:"素食",jp:"sou3 sik6",en:"Vegetarian food"},{zh:"辣",jp:"laat6",en:"Spicy"},{zh:"甜",jp:"tim4",en:"Sweet"},{zh:"酸",jp:"syun1",en:"Sour"},{zh:"苦",jp:"fu2",en:"Bitter"},{zh:"鹹",jp:"haam4",en:"Salty"},{zh:"飲茶",jp:"jam2 caa4",en:"Dim sum / Yum cha"},{zh:"外賣",jp:"ngoi6 maai6",en:"Takeout / Delivery"}]},{title:"Restaurant & Ordering",zh:"餐廳與點餐",vocab:[{zh:"餐廳",jp:"caan1 teng1",en:"Restaurant"},{zh:"菜單",jp:"coi3 daan1",en:"Menu"},{zh:"點餐",jp:"dim2 caan1",en:"Order food"},{zh:"埋單",jp:"maai4 daan1",en:"Pay the bill"},{zh:"小費",jp:"siu2 fai3",en:"Tip"},{zh:"預訂座位",jp:"jyu6 deng6 zo6 wai2",en:"Reserve a table"},{zh:"過敏",jp:"gwo3 man5",en:"Allergy"},{zh:"推薦",jp:"teoi1 zin3",en:"Recommend"},{zh:"好食",jp:"hou2 sik6",en:"Delicious / Tasty"},{zh:"收據",jp:"sau1 geoi3",en:"Receipt"}]},{title:"Food Phrases",zh:"飲食用語",vocab:[{zh:"你食唔食辣？",jp:"nei5 sik6 m4 sik6 laat6?",en:"Do you eat spicy food?"},{zh:"呢度有冇素食選擇？",jp:"ni1 dou6 jau5 mou5 sou3 sik6 syun2 zaak3?",en:"Are there vegetarian options here?"},{zh:"推薦啲乜嘢好食？",jp:"teoi1 zin3 di1 mat1 je5 hou2 sik6?",en:"What do you recommend?"},{zh:"唔該，埋單！",jp:"m4 goi1, maai4 daan1!",en:"Excuse me, the bill please!"},{zh:"今日飲茶好唔好？",jp:"gam1 jat6 jam2 caa4 hou2 m4 hou2?",en:"How about dim sum today?"}]}],dialogue:{title:"Dialogue: Dinner Plans",lines:[{sp:"A",zh:"今晚食乜好？我肚餓喇。",jp:"gam1 maan5 sik6 mat1 hou2? ngo5 tou5 ngo6 laa3.",en:"What should we eat tonight? I'm hungry."},{sp:"B",zh:"我想食粵菜，好耐冇去飲茶喇。不如去旺角果間茶樓？",jp:"ngo5 soeng2 sik6 jyut6 coi3, hou2 noi6 mou5 heoi3 jam2 caa4 laa3. bat1 jyu4 heoi3 wong6 gok3 go2 gaan1 caa4 lau4?",en:"I want Cantonese food — it's been ages since we had dim sum. How about the tea house in Mong Kok?"},{sp:"A",zh:"好呀！但係我有個朋友唔食肉，要有素食選擇㗎。",jp:"hou2 aa3! daan6 hai6 ngo5 jau5 go3 pang4 jau5 m4 sik6 juk6, jiu3 jau5 sou3 sik6 syun2 zaak3 gaa3.",en:"Sure! But one of my friends doesn't eat meat, so there need to be vegetarian options."},{sp:"B",zh:"果間茶樓有好多素食點心㗎，唔使擔心。你記得預訂座位喎，週末好多人㗎。",jp:"go2 gaan1 caa4 lau4 jau5 hou2 do1 sou3 sik6 dim2 sam1 gaa3, m4 sai2 daam1 sam1. nei5 gei3 dak1 jyu6 deng6 zo6 wai2 wo3, zau1 maat3 hou2 do1 jan4 gaa3.",en:"That tea house has lots of vegetarian dim sum — no worries. Remember to make a reservation, it gets very crowded on weekends."},{sp:"A",zh:"好，我而家就打電話去訂位。你有冇嘢唔食㗎？",jp:"hou2, ngo5 ji4 gaa1 zau6 daa2 din6 waa2 heoi3 deng6 wai2. nei5 jau5 mou5 je5 m4 sik6 gaa3?",en:"Okay, I'll call now to make a reservation. Is there anything you don't eat?"}]}}
+  ,{id:10,zh:"買餸與超市",en:"Grocery Shopping",
   sections:[
+    { title:"Produce — Chinese Vegetables", zh:"蔬菜", vocab:[
+      {zh:"菜心",jp:"coi3 sam1",en:"Choy sum / Chinese flowering cabbage"},
+      {zh:"芥蘭",jp:"gaai3 laan4",en:"Gai lan / Chinese broccoli"},
+      {zh:"白菜",jp:"baak6 coi3",en:"Bok choy / Napa cabbage"},
+      {zh:"通菜",jp:"tung1 coi3",en:"Morning glory / Water spinach (colloquial: 空心菜)"},
+      {zh:"苦瓜",jp:"fu2 gwaa1",en:"Bitter melon"},
+      {zh:"節瓜",jp:"zit3 gwaa1",en:"Fuzzy melon / Hairy gourd"},
+      {zh:"冬瓜",jp:"dung1 gwaa1",en:"Winter melon"},
+      {zh:"蓮藕",jp:"lin4 ngau5",en:"Lotus root"},
+      {zh:"芋頭",jp:"wu6 tau4",en:"Taro"},
+      {zh:"番薯",jp:"faan1 syu2",en:"Sweet potato"},
+      {zh:"豆苗",jp:"dau6 miu4",en:"Pea shoots"},
+      {zh:"韭黃",jp:"gau2 wong4",en:"Yellow chives"},
+      {zh:"韭菜",jp:"gau2 coi3",en:"Chinese chives (green)"},
+      {zh:"冬菇",jp:"dung1 gu1",en:"Dried shiitake mushroom"},
+      {zh:"金針菇",jp:"gam1 zam1 gu1",en:"Enoki mushroom"},
+      {zh:"豆腐",jp:"dau6 fu6",en:"Tofu"},
+      {zh:"豆芽",jp:"dau6 ngaa4",en:"Bean sprouts"},
+      {zh:"薑",jp:"goeng1",en:"Ginger"},
+      {zh:"蒜頭",jp:"syun3 tau4",en:"Garlic"},
+      {zh:"蔥",jp:"cung1",en:"Spring onion / Green onion"},
+    ]},
+    { title:"Cooked Food Counter", zh:"熟食", vocab:[
+      {zh:"燒鴨",jp:"siu1 aap3",en:"Roast duck"},
+      {zh:"叉燒",jp:"caa1 siu1",en:"Char siu / Barbecue pork"},
+      {zh:"燒肉",jp:"siu1 juk6",en:"Siu yuk / Crispy roast pork"},
+      {zh:"白切雞",jp:"baak6 cit3 gai1",en:"Poached chicken / White cut chicken"},
+      {zh:"乳豬",jp:"jyu5 zyu1",en:"Suckling pig"},
+      {zh:"牛腸",jp:"ngau4 coeng4",en:"Beef intestine (braised, common in HK BBQ shops)"},
+      {zh:"牛腩",jp:"ngau4 naam5",en:"Beef brisket (braised)"},
+      {zh:"豬手",jp:"zyu1 sau2",en:"Braised pork knuckle"},
+      {zh:"鹵水",jp:"lou5 seoi2",en:"Braised in master stock / Soy-braised (colloquial)"},
+      {zh:"斬料",jp:"zaam2 liu2",en:"Portion of BBQ meat to go (colloquial — lit. chop the ingredients)"},
+      {zh:"半份",jp:"bun3 fan6",en:"Half portion"},
+      {zh:"走皮",jp:"zau2 pei4",en:"Without skin (colloquial order modifier)"},
+    ]},
+    { title:"Meat & Seafood", zh:"肉類與海鮮", vocab:[
+      {zh:"豬肉",jp:"zyu1 juk6",en:"Pork"},
+      {zh:"牛肉",jp:"ngau4 juk6",en:"Beef"},
+      {zh:"雞肉",jp:"gai1 juk6",en:"Chicken"},
+      {zh:"羊肉",jp:"joeng4 juk6",en:"Lamb / Mutton"},
+      {zh:"豬排",jp:"zyu1 paai4",en:"Pork chop"},
+      {zh:"豬骨",jp:"zyu1 gwat1",en:"Pork bones (for soup)"},
+      {zh:"魚",jp:"jyu2",en:"Fish"},
+      {zh:"蝦",jp:"haa1",en:"Shrimp / Prawn"},
+      {zh:"螃蟹",jp:"pong4 haai5",en:"Crab"},
+      {zh:"帶子",jp:"daai3 zi2",en:"Scallop"},
+      {zh:"魷魚",jp:"jau4 jyu2",en:"Squid"},
+      {zh:"蠔",jp:"hou4",en:"Oyster"},
+      {zh:"三文魚",jp:"saam1 man4 jyu2",en:"Salmon"},
+      {zh:"鱈魚",jp:"syut3 jyu2",en:"Cod"},
+      {zh:"罐頭",jp:"gun3 tau4",en:"Canned goods / Tin"},
+    ]},
+    { title:"General Groceries", zh:"一般雜貨", vocab:[
+      {zh:"白米",jp:"baak6 mai5",en:"White rice"},
+      {zh:"麵條",jp:"min6 tiu4",en:"Noodles"},
+      {zh:"麵粉",jp:"min6 fan2",en:"Flour"},
+      {zh:"食用油",jp:"sik6 jung6 jau4",en:"Cooking oil"},
+      {zh:"生抽",jp:"saang1 cau1",en:"Light soy sauce"},
+      {zh:"老抽",jp:"lou5 cau1",en:"Dark soy sauce"},
+      {zh:"蠔油",jp:"hou4 jau4",en:"Oyster sauce"},
+      {zh:"糖",jp:"tong4",en:"Sugar"},
+      {zh:"鹽",jp:"jim4",en:"Salt"},
+      {zh:"雞蛋",jp:"gai1 daan2",en:"Eggs"},
+      {zh:"牛奶",jp:"ngau4 naai5",en:"Milk"},
+      {zh:"麵包",jp:"min6 baau1",en:"Bread"},
+      {zh:"凍貨",jp:"dung3 fo3",en:"Frozen goods (colloquial)"},
+      {zh:"手推車",jp:"sau2 teoi1 ce1",en:"Shopping cart / Trolley"},
+      {zh:"籃子",jp:"laam4 zi2",en:"Shopping basket"},
+      {zh:"收銀台",jp:"sau1 ngan4 toi4",en:"Checkout / Cash register"},
+      {zh:"會員卡",jp:"wui2 jyun4 kaat1",en:"Loyalty / Membership card"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: At the Market",
+    lines:[
+      {sp:"A",zh:"老闆，今日有冇新鮮嘅魚？",jp:"lou5 baan2, gam1 jat6 jau5 mou5 san1 sin1 ge3 jyu2?",en:"Boss, do you have fresh fish today?"},
+      {sp:"B",zh:"有㗎，今朝剛到貨，條三文魚好新鮮㗎。",jp:"jau5 gaa3, gam1 ziu1 gong1 dou3 fo3, tiu4 saam1 man4 jyu2 hou2 san1 sin1 gaa3.",en:"Yes, just got stock in this morning. The salmon is very fresh."},
+      {sp:"A",zh:"好，我要半條，同埋幫我斬件。仲有，有冇叉燒？",jp:"hou2, ngo5 jiu3 bun3 tiu4, tung4 maai4 bong1 ngo5 zaam2 gin6. zung6 jau5, jau5 mou5 caa1 siu1?",en:"Great, I'll take half, and can you chop it for me? Also, do you have char siu?"},
+      {sp:"B",zh:"叉燒剩返少少喇，如果要燒鴨就有成隻㗎。",jp:"caa1 siu1 zing6 faan1 siu2 siu2 laa3, jyu4 gwo2 jiu3 siu1 aap3 zau6 jau5 sing4 zek3 gaa3.",en:"Not much char siu left, but if you want roast duck we have a whole one."},
+      {sp:"A",zh:"咁我要半隻燒鴨，走皮。埋單幾多錢？",jp:"gam2 ngo5 jiu3 bun3 zek3 siu1 aap3, zau2 pei4. maai4 daan1 gei2 do1 cin2?",en:"Then I'll have half a roast duck, no skin. How much altogether?"},
+    ]
+  }
+  }
+  ,{id:11,zh:"購物與金錢",en:"Shopping & Money",sections:[{title:"Shopping",zh:"購物",vocab:[{zh:"商場",jp:"soeng1 coeng4",en:"Shopping mall"},{zh:"超級市場",jp:"ciu1 kap1 si5 coeng4",en:"Supermarket"},{zh:"網購",jp:"mong5 kau3",en:"Online shopping"},{zh:"折扣",jp:"zit3 kau3",en:"Discount"},{zh:"特價",jp:"dak6 gaa3",en:"Sale / Special price"},{zh:"退貨",jp:"teoi3 fo3",en:"Return (merchandise)"},{zh:"收據",jp:"sau1 geoi3",en:"Receipt"},{zh:"試身室",jp:"si3 san1 sat1",en:"Fitting room"},{zh:"貴",jp:"gwai3",en:"Expensive"},{zh:"平",jp:"peng4",en:"Cheap / Affordable"},{zh:"討價還價",jp:"tou2 gaa3 waan4 gaa3",en:"Bargain / Haggle"},{zh:"購物車",jp:"kau3 mat6 ce1",en:"Shopping cart"}]},{title:"Money",zh:"金錢",vocab:[{zh:"現金",jp:"jin6 gam1",en:"Cash"},{zh:"八達通",jp:"baat3 daat6 tung1",en:"Octopus card"},{zh:"找錢",jp:"zaau2 cin2",en:"Change (money back)"},{zh:"匯率",jp:"wui6 leot6",en:"Exchange rate"},{zh:"港幣",jp:"gong2 bai6",en:"Hong Kong Dollar"},{zh:"人民幣",jp:"jan4 man4 bai6",en:"Chinese Yuan (RMB)"},{zh:"美金",jp:"mei5 gam1",en:"US Dollar"},{zh:"儲錢",jp:"cou5 cin2",en:"Save money"},{zh:"破費",jp:"po3 fai3",en:"Spend a lot / Splurge"},{zh:"窮",jp:"kung4",en:"Poor / Broke"}]},{title:"Shopping Phrases",zh:"購物用語",vocab:[{zh:"呢件幾多錢？",jp:"ni1 gin6 gei2 do1 cin2?",en:"How much does this cost?"},{zh:"有冇平啲㗎？",jp:"jau5 mou5 peng4 di1 gaa3?",en:"Is there anything cheaper?"},{zh:"可唔可以平啲？",jp:"ho2 m4 ho2 yi5 peng4 di1?",en:"Can you make it cheaper?"},{zh:"我要試吓先",jp:"ngo5 jiu3 si3 haa5 sin1",en:"I want to try it first"},{zh:"呢件有冇大碼㗎？",jp:"ni1 gin6 jau5 mou5 daai6 maa5 gaa3?",en:"Do you have this in a larger size?"}]}],dialogue:{title:"Dialogue: Shopping at the Market",lines:[{sp:"A",zh:"呢件衫幾靚喎，幾多錢㗎？",jp:"ni1 gin6 saam1 gei2 leng3 wo3, gei2 do1 cin2 gaa3?",en:"This top looks really nice — how much is it?"},{sp:"B",zh:"三百蚊，但係而家特價，兩百五。",jp:"saam1 baak3 man1, daan6 hai6 ji4 gaa1 dak6 gaa3, loeng5 baak3 ng5.",en:"Three hundred dollars, but it's on sale now — two fifty."},{sp:"A",zh:"仲係貴喎，可唔可以再平啲？我買兩件。",jp:"zung6 hai6 gwai3 wo3, ho2 m4 ho2 yi5 zoi3 peng4 di1? ngo5 maai5 loeng5 gin6.",en:"Still a bit expensive. Can you make it cheaper? I'll buy two."},{sp:"B",zh:"買兩件嘅話，每件兩百二，點？",jp:"maai5 loeng5 gin6 ge3 waa6, mui5 gin6 loeng5 baak3 ji6, dim2?",en:"If you buy two, it's two hundred and twenty each. Deal?"},{sp:"A",zh:"好，成交！你哋係咪可以用八達通付款㗎？",jp:"hou2, sing4 gaau1! nei5 dei6 hai6 mai6 ho2 yi5 jung6 baat3 daat6 tung1 fu6 fun2 gaa3?",en:"Okay, deal! Can I pay with Octopus card?"}]}}
+  ,{id:12,zh:"科技與媒體",en:"Technology & Media",
+  sections:[
+    { title:"Communication", zh:"通訊", vocab:[
+      {zh:"電郵",jp:"din6 jau4",en:"Email (colloquial HK)"},
+      {zh:"短訊",jp:"dyun2 seon3",en:"Text message / SMS"},
+      {zh:"WhatsApp",jp:"waat1 saap1",en:"WhatsApp (dominant messaging app in HK)"},
+      {zh:"語音訊息",jp:"jyu5 jam1 seon3 sik1",en:"Voice message"},
+      {zh:"視像通話",jp:"si6 zoeng6 tung1 waa2",en:"Video call"},
+      {zh:"電話會議",jp:"din6 waa2 wui2 ji5",en:"Conference call"},
+      {zh:"附件",jp:"fu6 gin6",en:"Attachment (email)"},
+      {zh:"群組",jp:"kwan4 zou2",en:"Group chat"},
+      {zh:"藍牙",jp:"laam4 ngaa4",en:"Bluetooth"},
+      {zh:"Wi-Fi",jp:"wai1 fai1",en:"Wi-Fi"},
+      {zh:"數據",jp:"sou3 geoi3",en:"Mobile data"},
+      {zh:"已讀不回",jp:"ji5 duk6 bat1 wui4",en:"Read but no reply — left on read (colloquial)"},
+    ]},
     { title:"Technology", zh:"科技", vocab:[
       {zh:"人工智能",jp:"jan4 gung1 zi3 nang4",en:"Artificial intelligence (AI)"},
-      {zh:"大數據",jp:"daai6 sou3 geoi3",en:"Big data"},{zh:"雲端",jp:"wan4 dyun1",en:"Cloud computing"},
+      {zh:"大數據",jp:"daai6 sou3 geoi3",en:"Big data"},
+      {zh:"雲端",jp:"wan4 dyun1",en:"Cloud computing"},
       {zh:"應用程式",jp:"jing3 jung6 cing4 sik1",en:"App / Application"},
-      {zh:"網絡安全",jp:"mong5 lok3 on1 cyun4",en:"Cybersecurity"},{zh:"私隱",jp:"si1 jan2",en:"Privacy"},
+      {zh:"網絡安全",jp:"mong5 lok3 on1 cyun4",en:"Cybersecurity"},
+      {zh:"私隱",jp:"si1 jan2",en:"Privacy"},
       {zh:"演算法",jp:"jin2 syun3 faat3",en:"Algorithm"},
       {zh:"虛擬實境",jp:"heoi1 ji5 sat6 ging2",en:"Virtual reality (VR)"},
       {zh:"加密",jp:"gaa1 mat6",en:"Encryption"},
@@ -3216,24 +3335,18 @@ const LESSONS = [
       {zh:"撳",jp:"gam6",en:"Press / Tap a button (HK colloquial)"},
       {zh:"死機",jp:"sei2 gei1",en:"System crash / Freeze (colloquial)"},
       {zh:"冇電",jp:"mou5 din6",en:"Out of battery (colloquial)"},
-      {zh:"電郵",jp:"din6 jau4",en:"Email (colloquial HK)"},{zh:"短訊",jp:"dyun2 seon3",en:"Text message / SMS"},
-      {zh:"WhatsApp",jp:"waat1 saap1",en:"WhatsApp (dominant in HK)"},
-      {zh:"語音訊息",jp:"jyu5 jam1 seon3 sik1",en:"Voice message"},
-      {zh:"視像通話",jp:"si6 zoeng6 tung1 waa2",en:"Video call"},
-      {zh:"電話會議",jp:"din6 waa2 wui2 ji5",en:"Conference call"},
-      {zh:"附件",jp:"fu6 gin6",en:"Attachment (email)"},{zh:"群組",jp:"kwan4 zou2",en:"Group chat"},
-      {zh:"藍牙",jp:"laam4 ngaa4",en:"Bluetooth"},{zh:"Wi-Fi",jp:"wai1 fai1",en:"Wi-Fi"},
-      {zh:"數據",jp:"sou3 geoi3",en:"Mobile data"},
-      {zh:"已讀不回",jp:"ji5 duk6 bat1 wui4",en:"Read but no reply (left on read — colloquial)"},
     ]},
     { title:"Social Media & News", zh:"社交媒體與新聞", vocab:[
       {zh:"社交媒體",jp:"se5 gaau1 mui4 tai2",en:"Social media"},
-      {zh:"假新聞",jp:"gaa2 san1 man4",en:"Fake news"},{zh:"病毒式傳播",jp:"beng6 duk6 sik1 cyun4 bo3",en:"Go viral"},
-      {zh:"直播",jp:"zik6 bo3",en:"Live stream"},{zh:"訂閱",jp:"deng6 jyut6",en:"Subscribe"},
+      {zh:"假新聞",jp:"gaa2 san1 man4",en:"Fake news"},
+      {zh:"病毒式傳播",jp:"beng6 duk6 sik1 cyun4 bo3",en:"Go viral"},
+      {zh:"直播",jp:"zik6 bo3",en:"Live stream"},
+      {zh:"訂閱",jp:"deng6 jyut6",en:"Subscribe"},
       {zh:"網絡欺凌",jp:"mong5 lok3 hei1 ling4",en:"Cyberbullying"},
       {zh:"影響者",jp:"jing2 hoeng2 ze2",en:"Influencer"},
       {zh:"串流平台",jp:"cuen3 lau4 ping4 toi4",en:"Streaming platform"},
-      {zh:"分享",jp:"fan1 hoeng2",en:"Share"},{zh:"留言",jp:"lau4 jin4",en:"Comment / Leave a message"},
+      {zh:"分享",jp:"fan1 hoeng2",en:"Share"},
+      {zh:"留言",jp:"lau4 jin4",en:"Comment"},
       {zh:"起底",jp:"hei2 dai2",en:"Doxx someone (HK colloquial)"},
       {zh:"爆料",jp:"baau3 liu2",en:"Spill the tea / Leak news (colloquial)"},
       {zh:"帖文",jp:"tip3 man4",en:"Post / Thread (HK social media colloquial)"},
@@ -3243,25 +3356,23 @@ const LESSONS = [
       {zh:"呢個資訊係假新聞",jp:"ni1 go3 zi1 seon3 hai6 gaa2 san1 man4",en:"This information is fake news"},
       {zh:"人工智能會唔會取代人類？",jp:"jan4 gung1 zi3 nang4 wui5 m4 wui5 ceoi2 doi6 jan4 leoi6?",en:"Will AI replace humans?"},
       {zh:"網絡安全好重要",jp:"mong5 lok3 on1 cyun4 hou2 zung6 jiu3",en:"Cybersecurity is very important"},
-      {zh:"唔好輕易相信網上嘅資訊",jp:"m4 hou2 hing1 ji6 soeng1 seon3 mong5 soeng6 ge3 zi1 seon3",en:"Don't easily trust information online"},
     ]},
   ],
   dialogue:{
     title:"Dialogue: AI and the Future",
     lines:[
-      {sp:"A",zh:"你點睇人工智能嘅發展？係咪真係會取代好多工作？",jp:"nei5 dim2 tai2 jan4 gung1 zi3 nang4 ge3 faat3 jin2? hai6 mai6 zan1 hai6 wui5 ceoi2 doi6 hou2 do1 gung1 zok3?",en:"What do you think about the development of AI? Will it really replace many jobs?"},
+      {sp:"A",zh:"你點睇人工智能嘅發展？係咪真係會取代好多工作？",jp:"nei5 dim2 tai2 jan4 gung1 zi3 nang4 ge3 faat3 jin2? hai6 mai6 zan1 hai6 wui5 ceoi2 doi6 hou2 do1 gung1 zok3?",en:"What do you think about AI? Will it really replace many jobs?"},
       {sp:"B",zh:"我覺得係，特別係重複性嘅工作，好快會被AI取代。但係創意同情感類嘅工作，暫時仲係人類嘅強項。",jp:"ngo5 gok3 dak1 hai6, dak6 bit6 hai6 cung4 fuk6 sing3 ge3 gung1 zok3, hou2 faai3 wui5 bei6 AI ceoi2 doi6. daan6 hai6 cong3 ji3 tung4 cing4 gam2 leoi6 ge3 gung1 zok3, zaam6 si4 zung6 hai6 jan4 leoi6 ge3 koeng4 hoeng6.",en:"I think so — especially repetitive work. But creative and emotional work is still humanity's strength."},
       {sp:"A",zh:"咁我哋係咪要盡快學習新技能，先可以跟得上？",jp:"gam2 ngo5 dei6 hai6 mai6 jiu3 zeon6 faai3 hok6 zaap6 san1 gei6 nang4, sin1 ho2 yi5 gan1 dak1 soeng5?",en:"So do we need to quickly learn new skills to keep up?"},
-      {sp:"B",zh:"係，終身學習係必須嘅。仲有，要學識點樣同AI合作，而唔係抗拒佢。",jp:"hai6, zung1 san1 hok6 zaap6 hai6 bit1 seoi1 ge3. zung6 jau5, jiu3 hok6 sik1 dim2 joeng2 tung4 AI hap6 zok3, ji4 m4 hai6 kong3 keoi5 keoi5.",en:"Yes, lifelong learning is essential. Also, we need to learn to collaborate with AI rather than resist it."},
+      {sp:"B",zh:"係，終身學習係必須嘅。仲有，要學識點樣同AI合作，而唔係抗拒佢。",jp:"hai6, zung1 san1 hok6 zaap6 hai6 bit1 seoi1 ge3. zung6 jau5, jiu3 hok6 sik1 dim2 joeng2 tung4 AI hap6 zok3, ji4 m4 hai6 kong3 keoi5 keoi5.",en:"Yes, lifelong learning is essential. Also learn to collaborate with AI rather than resist it."},
     ]
   }
-  },
-  {id:11,zh:"家庭與人際關係",en:"Family & Relationships",sections:[{title:"Family Members",zh:"家庭成員",vocab:[{zh:"祖父母",jp:"zou2 fu6 mou5",en:"Grandparents"},{zh:"父母",jp:"fu6 mou5",en:"Parents"},{zh:"兄弟姊妹",jp:"hing1 dai6 zi2 mui6",en:"Siblings"},{zh:"配偶",jp:"pui3 ngau5",en:"Spouse"},{zh:"子女",jp:"zi2 neoi5",en:"Children"},{zh:"親戚",jp:"can1 cik1",en:"Relatives"},{zh:"姻親",jp:"jan1 can1",en:"In-laws"},{zh:"單親家庭",jp:"daan1 can1 gaa1 ting4",en:"Single-parent family"},{zh:"大家庭",jp:"daai6 gaa1 ting4",en:"Extended family"},{zh:"隔代教養",jp:"gaak3 doi6 gaau3 joeng5",en:"Grandparents raising grandchildren"}]},{title:"Relationships",zh:"人際關係",vocab:[{zh:"友誼",jp:"jau5 ji6",en:"Friendship"},{zh:"信任",jp:"seon3 jam6",en:"Trust"},{zh:"溝通",jp:"kau1 tung1",en:"Communication"},{zh:"誤解",jp:"ng6 gaai2",en:"Misunderstanding"},{zh:"和解",jp:"wo4 gaai2",en:"Reconciliation"},{zh:"衝突",jp:"cung1 dat6",en:"Conflict"},{zh:"包容",jp:"baau1 jung4",en:"Tolerance / Acceptance"},{zh:"尊重",jp:"zyun1 zung6",en:"Respect"},{zh:"界線",jp:"gaai3 sin3",en:"Boundaries"},{zh:"依賴",jp:"ji1 laai6",en:"Dependence / Rely on"}]},{title:"Family Phrases",zh:"家庭用語",vocab:[{zh:"你哋一家幾口人？",jp:"nei5 dei6 jat1 gaa1 gei2 hau2 jan4?",en:"How many people are in your family?"},{zh:"你同你父母住係埋？",jp:"nei5 tung4 nei5 fu6 mou5 zyu6 hai6 maai4?",en:"Do you live with your parents?"},{zh:"家人之間要多溝通",jp:"gaa1 jan4 zi1 gaan1 jiu3 do1 kau1 tung1",en:"Family members need to communicate more"},{zh:"我好掛住屋企人",jp:"ngo5 hou2 gwaa3 zyu6 uk1 kei2 jan4",en:"I really miss my family"},{zh:"佢哋離婚喇",jp:"keoi5 dei6 lei4 fan1 laa3",en:"They got divorced"}]}],dialogue:{title:"Dialogue: Family Dynamics",lines:[{sp:"A",zh:"你最近好似好忙，屋企人有冇投訴你？",jp:"nei5 zeoi3 gan6 hou2 ci5 hou2 mong4, uk1 kei2 jan4 jau5 mou5 tau4 sou3 nei5?",en:"You seem very busy lately. Have your family members complained?"},{sp:"B",zh:"係囉，老婆話我唔夠時間陪佢同仔女。其實我都知係我問題，但係份工真係好忙。",jp:"hai6 lo3, lou5 po4 waa6 ngo5 m4 gau3 si4 gaan3 pui4 keoi5 tung4 zai2 neoi5. kei4 sat6 ngo5 dou1 zi1 hai6 ngo5 man6 tai4, daan6 hai6 fan6 gung1 zan1 hai6 hou2 mong4.",en:"Yeah, my wife says I don't spend enough time with her and the kids. I know it's my problem, but work is really busy."},{sp:"A",zh:"家人之間要多溝通。你有冇試過同老婆坦白講，一起諗方法？",jp:"gaa1 jan4 zi1 gaan1 jiu3 do1 kau1 tung1. nei5 jau5 mou5 si3 gwo3 tung4 lou5 po4 taan2 baak6 gong2, jat1 cei4 nam2 fong1 faat3?",en:"Family members need more communication. Have you tried being honest with your wife and figuring things out together?"},{sp:"B",zh:"傾過喇，佢好體諒，但係我覺得自己好愧疚。工作同家庭要平衡，真係唔容易。",jp:"king1 gwo3 laa3, keoi5 hou2 tai2 loeng6, daan6 hai6 ngo5 gok3 dak1 zi6 gei2 hou2 kwai5 gau3. gung1 zok3 tung4 gaa1 ting4 jiu3 ping4 hang4, zan1 hai6 m4 jung4 ji6.",en:"We've talked. She's very understanding, but I feel really guilty. Balancing work and family is truly not easy."},{sp:"A",zh:"係唔容易，但係尊重同包容係最重要嘅。你屋企人係愛你㗎，一齊努力。",jp:"hai6 m4 jung4 ji6, daan6 hai6 zyun1 zung6 tung4 baau1 jung4 hai6 zeoi3 zung6 jiu3 ge3. nei5 uk1 kei2 jan4 hai6 oi3 nei5 gaa3, jat1 cei4 nou5 lik6.",en:"It's not easy, but respect and tolerance are what matter most. Your family loves you — work on it together."}]}},
-  {id:12,zh:"宗教與哲學",en:"Religion & Philosophy",sections:[{title:"Religions",zh:"宗教",vocab:[{zh:"佛教",jp:"fat6 gaau3",en:"Buddhism"},{zh:"基督教",jp:"gei1 duk6 gaau3",en:"Christianity"},{zh:"天主教",jp:"tin1 zyu2 gaau3",en:"Catholicism"},{zh:"伊斯蘭教",jp:"ji1 si1 laan4 gaau3",en:"Islam"},{zh:"猶太教",jp:"jau4 taai3 gaau3",en:"Judaism"},{zh:"道教",jp:"dou6 gaau3",en:"Taoism"},{zh:"儒家思想",jp:"jyu4 gaa1 si1 soeng2",en:"Confucianism"},{zh:"無神論",jp:"mou4 san4 leon6",en:"Atheism"},{zh:"靈性",jp:"ling4 sing3",en:"Spirituality"},{zh:"冥想",jp:"ming4 soeng2",en:"Meditation"},{zh:"禱告",jp:"dou6 gou3",en:"Prayer"},{zh:"寺廟",jp:"zi6 miu6",en:"Temple"}]},{title:"Philosophy",zh:"哲學",vocab:[{zh:"哲學",jp:"zit3 hok6",en:"Philosophy"},{zh:"倫理",jp:"leon4 lei5",en:"Ethics"},{zh:"道德",jp:"dou6 dak1",en:"Morality"},{zh:"存在主義",jp:"cyun4 zoi6 zyu2 ji6",en:"Existentialism"},{zh:"命運",jp:"ming6 wan6",en:"Fate / Destiny"},{zh:"自由意志",jp:"zi6 jau4 ji3 zi3",en:"Free will"},{zh:"意義",jp:"ji3 ji6",en:"Meaning / Purpose"},{zh:"真理",jp:"zan1 lei5",en:"Truth"},{zh:"因果",jp:"jan1 gwo2",en:"Cause and effect / Karma"},{zh:"意識",jp:"ji3 sik1",en:"Consciousness"}]},{title:"Religion & Philosophy Phrases",zh:"宗教與哲學用語",vocab:[{zh:"你信唔信教？",jp:"nei5 seon3 m4 seon3 gaau3?",en:"Are you religious?"},{zh:"生命嘅意義係咩？",jp:"sang1 ming6 ge3 ji3 ji6 hai6 me1?",en:"What is the meaning of life?"},{zh:"我相信因果報應",jp:"ngo5 soeng1 seon3 jan1 gwo2 bou3 jing3",en:"I believe in karma"},{zh:"呢個係一個道德問題",jp:"ni1 go3 hai6 jat1 go3 dou6 dak1 man6 tai4",en:"This is an ethical question"},{zh:"佛教講求慈悲",jp:"fat6 gaau3 gong2 kau4 ci4 bei1",en:"Buddhism emphasizes compassion"}]}],dialogue:{title:"Dialogue: Belief and Meaning",lines:[{sp:"A",zh:"你有冇信仰㗎？我最近開始對佛教有興趣。",jp:"nei5 jau5 mou5 seon3 joeng5 gaa3? ngo5 zeoi3 gan6 hoi1 ci2 deoi3 fat6 gaau3 jau5 hing3 ceoi3.",en:"Do you have any religious beliefs? I've recently become interested in Buddhism."},{sp:"B",zh:"我係無神論者，但係我尊重所有宗教。你係點解對佛教感興趣㗎？",jp:"ngo5 hai6 mou4 san4 leon6 ze2, daan6 hai6 ngo5 zyun1 zung6 so2 jau5 zung1 gaau3. nei5 hai6 dim2 gaai2 deoi3 fat6 gaau3 gam2 hing3 ceoi3 gaa3?",en:"I'm an atheist, but I respect all religions. What got you interested in Buddhism?"},{sp:"A",zh:"係因為佢嘅哲學，特別係關於苦難同慈悲嘅概念，令我覺得好有共鳴。",jp:"hai6 jan1 wai6 keoi5 ge3 zit3 hok6, dak6 bit6 hai6 gwaan1 jyu1 fu2 naan6 tung4 ci4 bei1 ge3 goi3 nim6, ling6 ngo5 gok3 dak1 hou2 jau5 gung6 ming4.",en:"It's the philosophy — especially the concepts of suffering and compassion — that I really resonate with."},{sp:"B",zh:"我明白。其實哲學同宗教有時係殊途同歸，都係探討生命嘅意義。",jp:"ngo5 ming4 baak6. kei4 sat6 zit3 hok6 tung4 zung1 gaau3 jau5 si4 hai6 syu1 tou4 tung4 gwai1, dou1 hai6 taam3 tou2 sang1 ming6 ge3 ji3 ji6.",en:"I understand. Philosophy and religion often arrive at the same place by different routes — both explore the meaning of life."},{sp:"A",zh:"係，我覺得無論信唔信教，對道德同倫理有自己嘅反思係好重要㗎。",jp:"hai6, ngo5 gok3 dak1 mou4 leon6 seon3 m4 seon3 gaau3, deoi3 dou6 dak1 tung4 leon4 lei5 jau5 zi6 gei2 ge3 faan2 si1 hai6 hou2 zung6 jiu3 gaa3.",en:"Yes, I think regardless of whether you're religious, reflecting on morality and ethics for yourself is very important."}]}},
-  {id:13,zh:"天氣與自然",en:"Weather & Nature",sections:[{title:"Weather",zh:"天氣",vocab:[{zh:"晴天",jp:"cing4 tin1",en:"Sunny / Clear sky"},{zh:"陰天",jp:"jam1 tin1",en:"Cloudy / Overcast"},{zh:"落雨",jp:"lok6 jyu5",en:"Raining"},{zh:"颱風",jp:"toi4 fung1",en:"Typhoon"},{zh:"閃電",jp:"sim2 din6",en:"Lightning"},{zh:"打雷",jp:"daa2 leoi4",en:"Thunder"},{zh:"大霧",jp:"daai6 mou6",en:"Heavy fog"},{zh:"潮濕",jp:"ciu4 sap1",en:"Humid"},{zh:"乾燥",jp:"gon1 zou6",en:"Dry"},{zh:"寒冷",jp:"hon4 laang5",en:"Cold"},{zh:"炎熱",jp:"jim4 jit6",en:"Hot / Scorching"},{zh:"天氣預報",jp:"tin1 hei3 jyu6 bou3",en:"Weather forecast"}]},{title:"Nature & Environment",zh:"自然與環境",vocab:[{zh:"森林",jp:"sam1 lam4",en:"Forest"},{zh:"河流",jp:"ho4 lau4",en:"River"},{zh:"海洋",jp:"hoi2 joeng4",en:"Ocean / Sea"},{zh:"野生動物",jp:"je5 sang1 dung6 mat6",en:"Wildlife"},{zh:"環境保護",jp:"waan4 ging2 bou2 wu6",en:"Environmental protection"},{zh:"污染",jp:"wu1 jim5",en:"Pollution"},{zh:"可持續發展",jp:"ho2 ci4 zeoi6 faat3 jin2",en:"Sustainable development"},{zh:"碳排放",jp:"taan3 paai4 fong3",en:"Carbon emissions"},{zh:"全球暖化",jp:"cyun4 kau4 nyun5 faa3",en:"Global warming"},{zh:"瀕危物種",jp:"ban1 ngai4 mat6 zung2",en:"Endangered species"}]},{title:"Weather Phrases",zh:"天氣用語",vocab:[{zh:"今日天氣點㗎？",jp:"gam1 jat6 tin1 hei3 dim2 gaa3?",en:"What's the weather like today?"},{zh:"聽日會唔會落雨？",jp:"ting1 jat6 wui5 m4 wui5 lok6 jyu5?",en:"Will it rain tomorrow?"},{zh:"颱風打幾號波？",jp:"toi4 fung1 daa2 gei2 hou6 bo1?",en:"What typhoon signal is up?"},{zh:"香港嘅夏天好熱好潮濕",jp:"hoeng1 gong2 ge3 haa6 tin1 hou2 jit6 hou2 ciu4 sap1",en:"Hong Kong summers are very hot and humid"},{zh:"我哋要珍惜大自然",jp:"ngo5 dei6 jiu3 zan1 sik1 daai6 zi6 jin4",en:"We must cherish nature"}]}],dialogue:{title:"Dialogue: Weather and Environment",lines:[{sp:"A",zh:"而家天氣真係愈嚟愈極端，今年夏天熱到嚇人。",jp:"ji4 gaa1 tin1 hei3 zan1 hai6 jyu6 lei4 jyu6 gik6 dyun1, gam1 nin4 haa6 tin1 jit6 dou3 haat3 jan4.",en:"The weather is getting more and more extreme. This summer has been frighteningly hot."},{sp:"B",zh:"係囉，全球暖化嘅影響愈嚟愈明顯。碳排放問題真係要認真處理。",jp:"hai6 lo3, cyun4 kau4 nyun5 faa3 ge3 jing2 hoeng2 jyu6 lei4 jyu6 ming4 hin2. taan3 paai4 fong3 man6 tai4 zan1 hai6 jiu3 jan6 zan1 cyu5 lei5.",en:"Yeah, the effects of global warming are becoming more and more obvious. Carbon emissions really need to be seriously addressed."},{sp:"A",zh:"係，但係好多國家仲係淨係講，唔做嘢。可持續發展係得個講字？",jp:"hai6, daan6 hai6 hou2 do1 gwok3 gaa1 zung6 hai6 zing6 hai6 gong2, m4 zou6 je5. ho2 ci4 zeoi6 faat3 jin2 hai6 dak1 go3 gong2 zi6?",en:"Yes, but many countries are still just talking and not doing anything. Is sustainable development just empty words?"},{sp:"B",zh:"唔可以咁悲觀，個人嘅行動都係有意義㗎。少用即棄塑膠、減少浪費，每個人都可以出一份力。",jp:"m4 ho2 ji5 gam2 bei1 gwun1, go3 jan4 ge3 hang4 dung6 dou1 hai6 jau5 ji3 ji6 gaa3. siu2 jung6 zik1 hei3 sou3 giu1, gaam2 siu2 long6 fai3, mui5 go3 jan4 dou1 ho2 yi5 ceot1 jat1 fan6 lik6.",en:"Don't be so pessimistic — individual actions do matter. Use fewer single-use plastics, reduce waste — everyone can contribute."}]}},
-  {id:14,zh:"歷史與文化",en:"History & Culture",sections:[{title:"History",zh:"歷史",vocab:[{zh:"朝代",jp:"ciu4 doi6",en:"Dynasty"},{zh:"革命",jp:"gaak3 ming6",en:"Revolution"},{zh:"戰爭",jp:"zin3 zang1",en:"War"},{zh:"殖民地",jp:"zik6 man4 dei6",en:"Colony / Colonial"},{zh:"獨立",jp:"duk6 laap6",en:"Independence"},{zh:"帝國",jp:"dai3 gwok3",en:"Empire"},{zh:"文化大革命",jp:"man4 faa3 daai6 gaak3 ming6",en:"Cultural Revolution"},{zh:"鴉片戰爭",jp:"aa3 pin3 zin3 zang1",en:"Opium War"},{zh:"冷戰",jp:"laang5 zin3",en:"Cold War"},{zh:"全球化",jp:"cyun4 kau4 faa3",en:"Globalization"}]},{title:"Culture & Traditions",zh:"文化與傳統",vocab:[{zh:"傳統",jp:"cyun4 tung2",en:"Tradition"},{zh:"風俗",jp:"fung1 zuk6",en:"Custom / Folk custom"},{zh:"節日",jp:"zit3 jat6",en:"Festival / Holiday"},{zh:"農曆新年",jp:"nung4 lik6 san1 nin4",en:"Lunar New Year"},{zh:"清明節",jp:"cing1 ming4 zit3",en:"Qingming Festival"},{zh:"中秋節",jp:"zung1 cau1 zit3",en:"Mid-Autumn Festival"},{zh:"藝術",jp:"ngai6 seot6",en:"Art"},{zh:"文學",jp:"man4 hok6",en:"Literature"},{zh:"遺產",jp:"wai4 caan2",en:"Heritage / Legacy"},{zh:"身份認同",jp:"san1 fan6 jan6 tung4",en:"Identity"}]},{title:"History & Culture Phrases",zh:"歷史文化用語",vocab:[{zh:"你對中國歷史有幾了解？",jp:"nei5 deoi3 zung1 gwok3 lik6 si2 jau5 gei2 liu5 gaai2?",en:"How much do you know about Chinese history?"},{zh:"傳統文化值得保留",jp:"cyun4 tung2 man4 faa3 zik6 dak1 bou2 lau4",en:"Traditional culture is worth preserving"},{zh:"歷史係由勝利者書寫",jp:"lik6 si2 hai6 jau4 sing3 lei6 ze2 syu1 se2",en:"History is written by the victors"},{zh:"香港有獨特嘅文化身份",jp:"hoeng1 gong2 jau5 duk6 dak6 ge3 man4 faa3 san1 fan6",en:"Hong Kong has a unique cultural identity"}]}],dialogue:{title:"Dialogue: Cultural Identity",lines:[{sp:"A",zh:"你覺得香港嘅文化係點樣嘅？",jp:"nei5 gok3 dak1 hoeng1 gong2 ge3 man4 faa3 hai6 dim2 joeng2 ge3?",en:"What do you think Hong Kong's culture is like?"},{sp:"B",zh:"我覺得香港係一個好獨特嘅地方，中西文化交融，有自己嘅身份認同。",jp:"ngo5 gok3 dak1 hoeng1 gong2 hai6 jat1 go3 hou2 duk6 dak6 ge3 dei6 fong1, zung1 sai1 man4 faa3 gaau1 jung4, jau5 zi6 gei2 ge3 san1 fan6 jan6 tung4.",en:"I think Hong Kong is a very unique place — a blend of Chinese and Western cultures with its own distinct identity."},{sp:"A",zh:"係，但係近年嚟，好多人擔心呢種獨特嘅文化會慢慢消失。",jp:"hai6, daan6 hai6 gan6 nin4 lei4, hou2 do1 jan4 daam1 sam1 ni1 zung2 duk6 dak6 ge3 man4 faa3 wui5 maan6 maan2 siu1 sat1.",en:"Yes, but in recent years many people worry this unique culture will gradually disappear."},{sp:"B",zh:"我明白呢個擔憂。所以保護廣東話、傳統節日同本土文化係好重要㗎。",jp:"ngo5 ming4 baak6 ni1 go3 daam1 jau1. so2 ji5 bou2 wu6 gwong2 dung1 waa2, cyun4 tung2 zit3 jat6 tung4 bun2 tou2 man4 faa3 hai6 hou2 zung6 jiu3 gaa3.",en:"I understand that concern. That's why protecting Cantonese, traditional festivals, and local culture is so important."},{sp:"A",zh:"係囉，歷史同文化係我哋嘅根，唔可以輕易放棄。",jp:"hai6 lo3, lik6 si2 tung4 man4 faa3 hai6 ngo5 dei6 ge3 gan1, m4 ho2 ji5 hing1 ji6 fong3 hei3.",en:"Exactly. History and culture are our roots — we can't easily abandon them."}]}},
-  {id:15,zh:"購物與金錢",en:"Shopping & Money",sections:[{title:"Shopping",zh:"購物",vocab:[{zh:"商場",jp:"soeng1 coeng4",en:"Shopping mall"},{zh:"超級市場",jp:"ciu1 kap1 si5 coeng4",en:"Supermarket"},{zh:"網購",jp:"mong5 kau3",en:"Online shopping"},{zh:"折扣",jp:"zit3 kau3",en:"Discount"},{zh:"特價",jp:"dak6 gaa3",en:"Sale / Special price"},{zh:"退貨",jp:"teoi3 fo3",en:"Return (merchandise)"},{zh:"收據",jp:"sau1 geoi3",en:"Receipt"},{zh:"試身室",jp:"si3 san1 sat1",en:"Fitting room"},{zh:"貴",jp:"gwai3",en:"Expensive"},{zh:"平",jp:"peng4",en:"Cheap / Affordable"},{zh:"討價還價",jp:"tou2 gaa3 waan4 gaa3",en:"Bargain / Haggle"},{zh:"購物車",jp:"kau3 mat6 ce1",en:"Shopping cart"}]},{title:"Money",zh:"金錢",vocab:[{zh:"現金",jp:"jin6 gam1",en:"Cash"},{zh:"八達通",jp:"baat3 daat6 tung1",en:"Octopus card"},{zh:"找錢",jp:"zaau2 cin2",en:"Change (money back)"},{zh:"匯率",jp:"wui6 leot6",en:"Exchange rate"},{zh:"港幣",jp:"gong2 bai6",en:"Hong Kong Dollar"},{zh:"人民幣",jp:"jan4 man4 bai6",en:"Chinese Yuan (RMB)"},{zh:"美金",jp:"mei5 gam1",en:"US Dollar"},{zh:"儲錢",jp:"cou5 cin2",en:"Save money"},{zh:"破費",jp:"po3 fai3",en:"Spend a lot / Splurge"},{zh:"窮",jp:"kung4",en:"Poor / Broke"}]},{title:"Shopping Phrases",zh:"購物用語",vocab:[{zh:"呢件幾多錢？",jp:"ni1 gin6 gei2 do1 cin2?",en:"How much does this cost?"},{zh:"有冇平啲㗎？",jp:"jau5 mou5 peng4 di1 gaa3?",en:"Is there anything cheaper?"},{zh:"可唔可以平啲？",jp:"ho2 m4 ho2 yi5 peng4 di1?",en:"Can you make it cheaper?"},{zh:"我要試吓先",jp:"ngo5 jiu3 si3 haa5 sin1",en:"I want to try it first"},{zh:"呢件有冇大碼㗎？",jp:"ni1 gin6 jau5 mou5 daai6 maa5 gaa3?",en:"Do you have this in a larger size?"}]}],dialogue:{title:"Dialogue: Shopping at the Market",lines:[{sp:"A",zh:"呢件衫幾靚喎，幾多錢㗎？",jp:"ni1 gin6 saam1 gei2 leng3 wo3, gei2 do1 cin2 gaa3?",en:"This top looks really nice — how much is it?"},{sp:"B",zh:"三百蚊，但係而家特價，兩百五。",jp:"saam1 baak3 man1, daan6 hai6 ji4 gaa1 dak6 gaa3, loeng5 baak3 ng5.",en:"Three hundred dollars, but it's on sale now — two fifty."},{sp:"A",zh:"仲係貴喎，可唔可以再平啲？我買兩件。",jp:"zung6 hai6 gwai3 wo3, ho2 m4 ho2 yi5 zoi3 peng4 di1? ngo5 maai5 loeng5 gin6.",en:"Still a bit expensive. Can you make it cheaper? I'll buy two."},{sp:"B",zh:"買兩件嘅話，每件兩百二，點？",jp:"maai5 loeng5 gin6 ge3 waa6, mui5 gin6 loeng5 baak3 ji6, dim2?",en:"If you buy two, it's two hundred and twenty each. Deal?"},{sp:"A",zh:"好，成交！你哋係咪可以用八達通付款㗎？",jp:"hou2, sing4 gaau1! nei5 dei6 hai6 mai6 ho2 yi5 jung6 baat3 daat6 tung1 fu6 fun2 gaa3?",en:"Okay, deal! Can I pay with Octopus card?"}]}},
-  {id:16,zh:"價值觀與品格",en:"Values & Character",
+  }
+  ,{id:13,zh:"家庭與人際關係",en:"Family & Relationships",sections:[{title:"Family Members",zh:"家庭成員",vocab:[{zh:"祖父母",jp:"zou2 fu6 mou5",en:"Grandparents"},{zh:"父母",jp:"fu6 mou5",en:"Parents"},{zh:"兄弟姊妹",jp:"hing1 dai6 zi2 mui6",en:"Siblings"},{zh:"配偶",jp:"pui3 ngau5",en:"Spouse"},{zh:"子女",jp:"zi2 neoi5",en:"Children"},{zh:"親戚",jp:"can1 cik1",en:"Relatives"},{zh:"姻親",jp:"jan1 can1",en:"In-laws"},{zh:"單親家庭",jp:"daan1 can1 gaa1 ting4",en:"Single-parent family"},{zh:"大家庭",jp:"daai6 gaa1 ting4",en:"Extended family"},{zh:"隔代教養",jp:"gaak3 doi6 gaau3 joeng5",en:"Grandparents raising grandchildren"}]},{title:"Relationships",zh:"人際關係",vocab:[{zh:"友誼",jp:"jau5 ji6",en:"Friendship"},{zh:"信任",jp:"seon3 jam6",en:"Trust"},{zh:"溝通",jp:"kau1 tung1",en:"Communication"},{zh:"誤解",jp:"ng6 gaai2",en:"Misunderstanding"},{zh:"和解",jp:"wo4 gaai2",en:"Reconciliation"},{zh:"衝突",jp:"cung1 dat6",en:"Conflict"},{zh:"包容",jp:"baau1 jung4",en:"Tolerance / Acceptance"},{zh:"尊重",jp:"zyun1 zung6",en:"Respect"},{zh:"界線",jp:"gaai3 sin3",en:"Boundaries"},{zh:"依賴",jp:"ji1 laai6",en:"Dependence / Rely on"}]},{title:"Family Phrases",zh:"家庭用語",vocab:[{zh:"你哋一家幾口人？",jp:"nei5 dei6 jat1 gaa1 gei2 hau2 jan4?",en:"How many people are in your family?"},{zh:"你同你父母住係埋？",jp:"nei5 tung4 nei5 fu6 mou5 zyu6 hai6 maai4?",en:"Do you live with your parents?"},{zh:"家人之間要多溝通",jp:"gaa1 jan4 zi1 gaan1 jiu3 do1 kau1 tung1",en:"Family members need to communicate more"},{zh:"我好掛住屋企人",jp:"ngo5 hou2 gwaa3 zyu6 uk1 kei2 jan4",en:"I really miss my family"},{zh:"佢哋離婚喇",jp:"keoi5 dei6 lei4 fan1 laa3",en:"They got divorced"}]}],dialogue:{title:"Dialogue: Family Dynamics",lines:[{sp:"A",zh:"你最近好似好忙，屋企人有冇投訴你？",jp:"nei5 zeoi3 gan6 hou2 ci5 hou2 mong4, uk1 kei2 jan4 jau5 mou5 tau4 sou3 nei5?",en:"You seem very busy lately. Have your family members complained?"},{sp:"B",zh:"係囉，老婆話我唔夠時間陪佢同仔女。其實我都知係我問題，但係份工真係好忙。",jp:"hai6 lo3, lou5 po4 waa6 ngo5 m4 gau3 si4 gaan3 pui4 keoi5 tung4 zai2 neoi5. kei4 sat6 ngo5 dou1 zi1 hai6 ngo5 man6 tai4, daan6 hai6 fan6 gung1 zan1 hai6 hou2 mong4.",en:"Yeah, my wife says I don't spend enough time with her and the kids. I know it's my problem, but work is really busy."},{sp:"A",zh:"家人之間要多溝通。你有冇試過同老婆坦白講，一起諗方法？",jp:"gaa1 jan4 zi1 gaan1 jiu3 do1 kau1 tung1. nei5 jau5 mou5 si3 gwo3 tung4 lou5 po4 taan2 baak6 gong2, jat1 cei4 nam2 fong1 faat3?",en:"Family members need more communication. Have you tried being honest with your wife and figuring things out together?"},{sp:"B",zh:"傾過喇，佢好體諒，但係我覺得自己好愧疚。工作同家庭要平衡，真係唔容易。",jp:"king1 gwo3 laa3, keoi5 hou2 tai2 loeng6, daan6 hai6 ngo5 gok3 dak1 zi6 gei2 hou2 kwai5 gau3. gung1 zok3 tung4 gaa1 ting4 jiu3 ping4 hang4, zan1 hai6 m4 jung4 ji6.",en:"We've talked. She's very understanding, but I feel really guilty. Balancing work and family is truly not easy."},{sp:"A",zh:"係唔容易，但係尊重同包容係最重要嘅。你屋企人係愛你㗎，一齊努力。",jp:"hai6 m4 jung4 ji6, daan6 hai6 zyun1 zung6 tung4 baau1 jung4 hai6 zeoi3 zung6 jiu3 ge3. nei5 uk1 kei2 jan4 hai6 oi3 nei5 gaa3, jat1 cei4 nou5 lik6.",en:"It's not easy, but respect and tolerance are what matter most. Your family loves you — work on it together."}]}}
+  ,{id:14,zh:"宗教與哲學",en:"Religion & Philosophy",sections:[{title:"Religions",zh:"宗教",vocab:[{zh:"佛教",jp:"fat6 gaau3",en:"Buddhism"},{zh:"基督教",jp:"gei1 duk6 gaau3",en:"Christianity"},{zh:"天主教",jp:"tin1 zyu2 gaau3",en:"Catholicism"},{zh:"伊斯蘭教",jp:"ji1 si1 laan4 gaau3",en:"Islam"},{zh:"猶太教",jp:"jau4 taai3 gaau3",en:"Judaism"},{zh:"道教",jp:"dou6 gaau3",en:"Taoism"},{zh:"儒家思想",jp:"jyu4 gaa1 si1 soeng2",en:"Confucianism"},{zh:"無神論",jp:"mou4 san4 leon6",en:"Atheism"},{zh:"靈性",jp:"ling4 sing3",en:"Spirituality"},{zh:"冥想",jp:"ming4 soeng2",en:"Meditation"},{zh:"禱告",jp:"dou6 gou3",en:"Prayer"},{zh:"寺廟",jp:"zi6 miu6",en:"Temple"}]},{title:"Philosophy",zh:"哲學",vocab:[{zh:"哲學",jp:"zit3 hok6",en:"Philosophy"},{zh:"倫理",jp:"leon4 lei5",en:"Ethics"},{zh:"道德",jp:"dou6 dak1",en:"Morality"},{zh:"存在主義",jp:"cyun4 zoi6 zyu2 ji6",en:"Existentialism"},{zh:"命運",jp:"ming6 wan6",en:"Fate / Destiny"},{zh:"自由意志",jp:"zi6 jau4 ji3 zi3",en:"Free will"},{zh:"意義",jp:"ji3 ji6",en:"Meaning / Purpose"},{zh:"真理",jp:"zan1 lei5",en:"Truth"},{zh:"因果",jp:"jan1 gwo2",en:"Cause and effect / Karma"},{zh:"意識",jp:"ji3 sik1",en:"Consciousness"}]},{title:"Religion & Philosophy Phrases",zh:"宗教與哲學用語",vocab:[{zh:"你信唔信教？",jp:"nei5 seon3 m4 seon3 gaau3?",en:"Are you religious?"},{zh:"生命嘅意義係咩？",jp:"sang1 ming6 ge3 ji3 ji6 hai6 me1?",en:"What is the meaning of life?"},{zh:"我相信因果報應",jp:"ngo5 soeng1 seon3 jan1 gwo2 bou3 jing3",en:"I believe in karma"},{zh:"呢個係一個道德問題",jp:"ni1 go3 hai6 jat1 go3 dou6 dak1 man6 tai4",en:"This is an ethical question"},{zh:"佛教講求慈悲",jp:"fat6 gaau3 gong2 kau4 ci4 bei1",en:"Buddhism emphasizes compassion"}]}],dialogue:{title:"Dialogue: Belief and Meaning",lines:[{sp:"A",zh:"你有冇信仰㗎？我最近開始對佛教有興趣。",jp:"nei5 jau5 mou5 seon3 joeng5 gaa3? ngo5 zeoi3 gan6 hoi1 ci2 deoi3 fat6 gaau3 jau5 hing3 ceoi3.",en:"Do you have any religious beliefs? I've recently become interested in Buddhism."},{sp:"B",zh:"我係無神論者，但係我尊重所有宗教。你係點解對佛教感興趣㗎？",jp:"ngo5 hai6 mou4 san4 leon6 ze2, daan6 hai6 ngo5 zyun1 zung6 so2 jau5 zung1 gaau3. nei5 hai6 dim2 gaai2 deoi3 fat6 gaau3 gam2 hing3 ceoi3 gaa3?",en:"I'm an atheist, but I respect all religions. What got you interested in Buddhism?"},{sp:"A",zh:"係因為佢嘅哲學，特別係關於苦難同慈悲嘅概念，令我覺得好有共鳴。",jp:"hai6 jan1 wai6 keoi5 ge3 zit3 hok6, dak6 bit6 hai6 gwaan1 jyu1 fu2 naan6 tung4 ci4 bei1 ge3 goi3 nim6, ling6 ngo5 gok3 dak1 hou2 jau5 gung6 ming4.",en:"It's the philosophy — especially the concepts of suffering and compassion — that I really resonate with."},{sp:"B",zh:"我明白。其實哲學同宗教有時係殊途同歸，都係探討生命嘅意義。",jp:"ngo5 ming4 baak6. kei4 sat6 zit3 hok6 tung4 zung1 gaau3 jau5 si4 hai6 syu1 tou4 tung4 gwai1, dou1 hai6 taam3 tou2 sang1 ming6 ge3 ji3 ji6.",en:"I understand. Philosophy and religion often arrive at the same place by different routes — both explore the meaning of life."},{sp:"A",zh:"係，我覺得無論信唔信教，對道德同倫理有自己嘅反思係好重要㗎。",jp:"hai6, ngo5 gok3 dak1 mou4 leon6 seon3 m4 seon3 gaau3, deoi3 dou6 dak1 tung4 leon4 lei5 jau5 zi6 gei2 ge3 faan2 si1 hai6 hou2 zung6 jiu3 gaa3.",en:"Yes, I think regardless of whether you're religious, reflecting on morality and ethics for yourself is very important."}]}}
+  ,{id:15,zh:"天氣與自然",en:"Weather & Nature",sections:[{title:"Weather",zh:"天氣",vocab:[{zh:"晴天",jp:"cing4 tin1",en:"Sunny / Clear sky"},{zh:"陰天",jp:"jam1 tin1",en:"Cloudy / Overcast"},{zh:"落雨",jp:"lok6 jyu5",en:"Raining"},{zh:"颱風",jp:"toi4 fung1",en:"Typhoon"},{zh:"閃電",jp:"sim2 din6",en:"Lightning"},{zh:"打雷",jp:"daa2 leoi4",en:"Thunder"},{zh:"大霧",jp:"daai6 mou6",en:"Heavy fog"},{zh:"潮濕",jp:"ciu4 sap1",en:"Humid"},{zh:"乾燥",jp:"gon1 zou6",en:"Dry"},{zh:"寒冷",jp:"hon4 laang5",en:"Cold"},{zh:"炎熱",jp:"jim4 jit6",en:"Hot / Scorching"},{zh:"天氣預報",jp:"tin1 hei3 jyu6 bou3",en:"Weather forecast"}]},{title:"Nature & Environment",zh:"自然與環境",vocab:[{zh:"森林",jp:"sam1 lam4",en:"Forest"},{zh:"河流",jp:"ho4 lau4",en:"River"},{zh:"海洋",jp:"hoi2 joeng4",en:"Ocean / Sea"},{zh:"野生動物",jp:"je5 sang1 dung6 mat6",en:"Wildlife"},{zh:"環境保護",jp:"waan4 ging2 bou2 wu6",en:"Environmental protection"},{zh:"污染",jp:"wu1 jim5",en:"Pollution"},{zh:"可持續發展",jp:"ho2 ci4 zeoi6 faat3 jin2",en:"Sustainable development"},{zh:"碳排放",jp:"taan3 paai4 fong3",en:"Carbon emissions"},{zh:"全球暖化",jp:"cyun4 kau4 nyun5 faa3",en:"Global warming"},{zh:"瀕危物種",jp:"ban1 ngai4 mat6 zung2",en:"Endangered species"}]},{title:"Weather Phrases",zh:"天氣用語",vocab:[{zh:"今日天氣點㗎？",jp:"gam1 jat6 tin1 hei3 dim2 gaa3?",en:"What's the weather like today?"},{zh:"聽日會唔會落雨？",jp:"ting1 jat6 wui5 m4 wui5 lok6 jyu5?",en:"Will it rain tomorrow?"},{zh:"颱風打幾號波？",jp:"toi4 fung1 daa2 gei2 hou6 bo1?",en:"What typhoon signal is up?"},{zh:"香港嘅夏天好熱好潮濕",jp:"hoeng1 gong2 ge3 haa6 tin1 hou2 jit6 hou2 ciu4 sap1",en:"Hong Kong summers are very hot and humid"},{zh:"我哋要珍惜大自然",jp:"ngo5 dei6 jiu3 zan1 sik1 daai6 zi6 jin4",en:"We must cherish nature"}]}],dialogue:{title:"Dialogue: Weather and Environment",lines:[{sp:"A",zh:"而家天氣真係愈嚟愈極端，今年夏天熱到嚇人。",jp:"ji4 gaa1 tin1 hei3 zan1 hai6 jyu6 lei4 jyu6 gik6 dyun1, gam1 nin4 haa6 tin1 jit6 dou3 haat3 jan4.",en:"The weather is getting more and more extreme. This summer has been frighteningly hot."},{sp:"B",zh:"係囉，全球暖化嘅影響愈嚟愈明顯。碳排放問題真係要認真處理。",jp:"hai6 lo3, cyun4 kau4 nyun5 faa3 ge3 jing2 hoeng2 jyu6 lei4 jyu6 ming4 hin2. taan3 paai4 fong3 man6 tai4 zan1 hai6 jiu3 jan6 zan1 cyu5 lei5.",en:"Yeah, the effects of global warming are becoming more and more obvious. Carbon emissions really need to be seriously addressed."},{sp:"A",zh:"係，但係好多國家仲係淨係講，唔做嘢。可持續發展係得個講字？",jp:"hai6, daan6 hai6 hou2 do1 gwok3 gaa1 zung6 hai6 zing6 hai6 gong2, m4 zou6 je5. ho2 ci4 zeoi6 faat3 jin2 hai6 dak1 go3 gong2 zi6?",en:"Yes, but many countries are still just talking and not doing anything. Is sustainable development just empty words?"},{sp:"B",zh:"唔可以咁悲觀，個人嘅行動都係有意義㗎。少用即棄塑膠、減少浪費，每個人都可以出一份力。",jp:"m4 ho2 ji5 gam2 bei1 gwun1, go3 jan4 ge3 hang4 dung6 dou1 hai6 jau5 ji3 ji6 gaa3. siu2 jung6 zik1 hei3 sou3 giu1, gaam2 siu2 long6 fai3, mui5 go3 jan4 dou1 ho2 yi5 ceot1 jat1 fan6 lik6.",en:"Don't be so pessimistic — individual actions do matter. Use fewer single-use plastics, reduce waste — everyone can contribute."}]}}
+  ,{id:16,zh:"歷史與文化",en:"History & Culture",sections:[{title:"History",zh:"歷史",vocab:[{zh:"朝代",jp:"ciu4 doi6",en:"Dynasty"},{zh:"革命",jp:"gaak3 ming6",en:"Revolution"},{zh:"戰爭",jp:"zin3 zang1",en:"War"},{zh:"殖民地",jp:"zik6 man4 dei6",en:"Colony / Colonial"},{zh:"獨立",jp:"duk6 laap6",en:"Independence"},{zh:"帝國",jp:"dai3 gwok3",en:"Empire"},{zh:"文化大革命",jp:"man4 faa3 daai6 gaak3 ming6",en:"Cultural Revolution"},{zh:"鴉片戰爭",jp:"aa3 pin3 zin3 zang1",en:"Opium War"},{zh:"冷戰",jp:"laang5 zin3",en:"Cold War"},{zh:"全球化",jp:"cyun4 kau4 faa3",en:"Globalization"}]},{title:"Culture & Traditions",zh:"文化與傳統",vocab:[{zh:"傳統",jp:"cyun4 tung2",en:"Tradition"},{zh:"風俗",jp:"fung1 zuk6",en:"Custom / Folk custom"},{zh:"節日",jp:"zit3 jat6",en:"Festival / Holiday"},{zh:"農曆新年",jp:"nung4 lik6 san1 nin4",en:"Lunar New Year"},{zh:"清明節",jp:"cing1 ming4 zit3",en:"Qingming Festival"},{zh:"中秋節",jp:"zung1 cau1 zit3",en:"Mid-Autumn Festival"},{zh:"藝術",jp:"ngai6 seot6",en:"Art"},{zh:"文學",jp:"man4 hok6",en:"Literature"},{zh:"遺產",jp:"wai4 caan2",en:"Heritage / Legacy"},{zh:"身份認同",jp:"san1 fan6 jan6 tung4",en:"Identity"}]},{title:"History & Culture Phrases",zh:"歷史文化用語",vocab:[{zh:"你對中國歷史有幾了解？",jp:"nei5 deoi3 zung1 gwok3 lik6 si2 jau5 gei2 liu5 gaai2?",en:"How much do you know about Chinese history?"},{zh:"傳統文化值得保留",jp:"cyun4 tung2 man4 faa3 zik6 dak1 bou2 lau4",en:"Traditional culture is worth preserving"},{zh:"歷史係由勝利者書寫",jp:"lik6 si2 hai6 jau4 sing3 lei6 ze2 syu1 se2",en:"History is written by the victors"},{zh:"香港有獨特嘅文化身份",jp:"hoeng1 gong2 jau5 duk6 dak6 ge3 man4 faa3 san1 fan6",en:"Hong Kong has a unique cultural identity"}]}],dialogue:{title:"Dialogue: Cultural Identity",lines:[{sp:"A",zh:"你覺得香港嘅文化係點樣嘅？",jp:"nei5 gok3 dak1 hoeng1 gong2 ge3 man4 faa3 hai6 dim2 joeng2 ge3?",en:"What do you think Hong Kong's culture is like?"},{sp:"B",zh:"我覺得香港係一個好獨特嘅地方，中西文化交融，有自己嘅身份認同。",jp:"ngo5 gok3 dak1 hoeng1 gong2 hai6 jat1 go3 hou2 duk6 dak6 ge3 dei6 fong1, zung1 sai1 man4 faa3 gaau1 jung4, jau5 zi6 gei2 ge3 san1 fan6 jan6 tung4.",en:"I think Hong Kong is a very unique place — a blend of Chinese and Western cultures with its own distinct identity."},{sp:"A",zh:"係，但係近年嚟，好多人擔心呢種獨特嘅文化會慢慢消失。",jp:"hai6, daan6 hai6 gan6 nin4 lei4, hou2 do1 jan4 daam1 sam1 ni1 zung2 duk6 dak6 ge3 man4 faa3 wui5 maan6 maan2 siu1 sat1.",en:"Yes, but in recent years many people worry this unique culture will gradually disappear."},{sp:"B",zh:"我明白呢個擔憂。所以保護廣東話、傳統節日同本土文化係好重要㗎。",jp:"ngo5 ming4 baak6 ni1 go3 daam1 jau1. so2 ji5 bou2 wu6 gwong2 dung1 waa2, cyun4 tung2 zit3 jat6 tung4 bun2 tou2 man4 faa3 hai6 hou2 zung6 jiu3 gaa3.",en:"I understand that concern. That's why protecting Cantonese, traditional festivals, and local culture is so important."},{sp:"A",zh:"係囉，歷史同文化係我哋嘅根，唔可以輕易放棄。",jp:"hai6 lo3, lik6 si2 tung4 man4 faa3 hai6 ngo5 dei6 ge3 gan1, m4 ho2 ji5 hing1 ji6 fong3 hei3.",en:"Exactly. History and culture are our roots — we can't easily abandon them."}]}}
+  ,{id:17,zh:"價值觀與品格",en:"Values & Character",
   sections:[
     { title:"Core Values", zh:"核心價值觀", vocab:[
       {zh:"誠實",jp:"sing4 sat6",en:"Honesty"},{zh:"正直",jp:"zing3 zik6",en:"Integrity"},
@@ -3312,8 +3423,8 @@ const LESSONS = [
       {sp:"A",zh:"係囉。而家社會好多人太重視面子，反而忽略咗真正重要嘅嘢，例如家人同健康。",jp:"hai6 lo3. ji4 gaa1 se5 wui2 hou2 do1 jan4 taai3 zung6 si6 min6 zi2, faan2 ji4 fat1 loek6 zo2 zan1 zing3 zung6 jiu3 ge3 je5, lai6 jyu4 gaa1 jan4 tung4 gin6 hong1.",en:"Exactly. Nowadays many people care too much about face, neglecting what's truly important — like family and health."},
     ]
   }
-  },{
-  id:17,zh:"節日與典禮",en:"Holidays & Ceremonies",
+  }
+  ,{id:18,zh:"節日與典禮",en:"Holidays & Ceremonies",
   sections:[
     { title:"Traditional Chinese Festivals", zh:"中國傳統節日", vocab:[
       {zh:"農曆新年",jp:"nung4 lik6 san1 nin4",en:"Lunar New Year"},
@@ -3365,8 +3476,7 @@ const LESSONS = [
     ]
   }
   }
-  ,{
-  id:18,zh:"讚美、寒暄與感情",en:"Compliments, Small Talk & Romance",
+  ,{id:19,zh:"讚美與寒暄",en:"Compliments & Small Talk",
   sections:[
     { title:"Compliments & Praise", zh:"讚美與稱讚", vocab:[
       {zh:"好靚喎",jp:"hou2 leng3 wo3",en:"Wow, so pretty/beautiful (colloquial exclamation)"},
@@ -3389,8 +3499,7 @@ const LESSONS = [
       {zh:"睇吓先",jp:"tai2 haa5 sin1",en:"See how it goes / Let's wait and see (colloquial)"},
       {zh:"無端端",jp:"mou4 dyun1 dyun1",en:"Out of nowhere / For no reason (colloquial)"},
       {zh:"係咁先",jp:"hai6 gam2 sin1",en:"That's it for now / Let's leave it here (wrapping up)"},
-    ]},
-    { title:"Romance & Relationships", zh:"感情與戀愛", vocab:[
+    ,
       {zh:"拍拖",jp:"paak3 to1",en:"Dating / In a relationship (Cantonese colloquial)"},
       {zh:"有冇拍拖？",jp:"jau5 mou5 paak3 to1?",en:"Are you seeing anyone? (colloquial)"},
       {zh:"單身",jp:"daan1 san1",en:"Single"},
@@ -3402,8 +3511,7 @@ const LESSONS = [
       {zh:"另一半",jp:"ling6 jat1 bun3",en:"Other half / Partner"},
       {zh:"拍拖周年",jp:"paak3 to1 zau1 nin4",en:"Dating anniversary (colloquial)"},
       {zh:"好有緣",jp:"hou2 jau5 jyun4",en:"It's fate / What a coincidence (romantic context)"},
-      {zh:"傾吓偈",jp:"king1 haa5 gai3",en:"Have a chat / Get to know each other (colloquial)"},
-    ]},
+      {zh:"傾吓偈",jp:"king1 haa5 gai3",en:"Have a chat / Get to know each other (colloquial)"}]},
   ],
   dialogue:{
     title:"Dialogue: Catching Up",
@@ -3416,8 +3524,7 @@ const LESSONS = [
     ]
   }
   }
-  ,{
-  id:19,zh:"家居與住屋",en:"Home & Housing",
+  ,{id:20,zh:"家居與住屋",en:"Home & Housing",
   sections:[
     { title:"Types of Housing", zh:"住屋類型", vocab:[
       {zh:"公屋",jp:"gung1 uk1",en:"Public housing (HK government housing, colloquial)"},
@@ -3465,8 +3572,7 @@ const LESSONS = [
     ]
   }
   }
-  ,{
-  id:20,zh:"藝術與娛樂",en:"Arts & Entertainment",
+  ,{id:21,zh:"藝術與娛樂",en:"Arts & Entertainment",
   sections:[
     { title:"Film, TV & Music", zh:"電影、電視與音樂", vocab:[
       {zh:"港產片",jp:"gong2 caan2 pin2",en:"Hong Kong movie (colloquial — lit. 'HK-made film')"},
@@ -3528,8 +3634,7 @@ const LESSONS = [
     ]
   }
   }
-  ,{
-  id:21,zh:"環保與可持續生活",en:"Environment & Sustainable Living",
+  ,{id:22,zh:"環保與可持續生活",en:"Environment & Sustainable Living",
   sections:[
     { title:"Environmental Issues", zh:"環境問題", vocab:[
       {zh:"全球暖化",jp:"cyun4 kau4 nyun5 faa3",en:"Global warming"},
@@ -3578,785 +3683,10 @@ const LESSONS = [
     ]
   }
   }
-
 ];
 
 const LESSONS_MANDARIN = [
-  {
-  id:1, zh:"情绪与感受", en:"Emotions & Feelings",
-  sections:[
-    { title:"Basic Emotions", zh:"基本情绪", vocab:[
-      {zh:"快乐",jp:"kuài lè",en:"Happy"},
-      {zh:"伤心",jp:"shāng xīn",en:"Sad"},
-      {zh:"愤怒",jp:"fèn nù",en:"Angry"},
-      {zh:"害怕",jp:"hài pà",en:"Afraid / Scared"},
-      {zh:"惊讶",jp:"jīng yà",en:"Surprised"},
-      {zh:"厌恶",jp:"yàn wù",en:"Disgusted"},
-      {zh:"平静",jp:"píng jìng",en:"Calm"},
-      {zh:"紧张",jp:"jǐn zhāng",en:"Nervous / Anxious"},
-      {zh:"兴奋",jp:"xīng fèn",en:"Excited"},
-      {zh:"失望",jp:"shī wàng",en:"Disappointed"},
-      {zh:"孤独",jp:"gū dú",en:"Lonely"},
-      {zh:"嫉妒",jp:"jí dù",en:"Jealous"},
-    ]},
-    { title:"Complex Feelings", zh:"复杂感受", vocab:[
-      {zh:"怀念",jp:"huái niàn",en:"Nostalgic / Missing someone"},
-      {zh:"内疚",jp:"nèi jiù",en:"Guilty"},
-      {zh:"羞愧",jp:"xiū kuì",en:"Ashamed"},
-      {zh:"尴尬",jp:"gān gà",en:"Embarrassed"},
-      {zh:"感激",jp:"gǎn jī",en:"Grateful"},
-      {zh:"委屈",jp:"wěi qu",en:"Wronged / Aggrieved"},
-      {zh:"迷茫",jp:"mí máng",en:"Lost / Confused about life"},
-      {zh:"沮丧",jp:"jǔ sàng",en:"Dejected / Discouraged"},
-      {zh:"满足",jp:"mǎn zú",en:"Content / Satisfied"},
-      {zh:"不安",jp:"bù ān",en:"Uneasy / Unsettled"},
-      {zh:"压力",jp:"yā lì",en:"Stress / Pressure"},
-      {zh:"崩溃",jp:"bēng kuì",en:"Overwhelmed / Breaking down"},
-    ]},
-    { title:"Expressing Feelings", zh:"表达感受", vocab:[
-      {zh:"我很开心",jp:"wǒ hěn kāi xīn",en:"I\'m very happy"},
-      {zh:"我觉得很辛苦",jp:"wǒ jué de hěn xīn kǔ",en:"I feel like it\'s really tough"},
-      {zh:"我不知道怎么办",jp:"wǒ bù zhī dào zěn me bàn",en:"I don\'t know what to do"},
-      {zh:"你有没有想过这件事？",jp:"nǐ yǒu méi yǒu xiǎng guò zhè jiàn shì?",en:"Have you ever thought about this?"},
-      {zh:"他/她真的让我很感动",jp:"tā zhēn de ràng wǒ hěn gǎn dòng",en:"He/She really moved me"},
-      {zh:"我需要时间冷静",jp:"wǒ xū yào shí jiān lěng jìng",en:"I need time to calm down"},
-      {zh:"我受不了了",jp:"wǒ shòu bù liǎo le",en:"I can\'t take it anymore"},
-      {zh:"就是这样，没关系",jp:"jiù shì zhè yàng, méi guān xi",en:"That\'s just how it is, it\'s okay"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: How Are You Feeling?",
-    lines:[
-      {sp:"A",zh:"嗨，你最近怎么样？看起来有点不开心。",jp:"hāi, nǐ zuì jìn zěn me yàng? kàn qǐ lái yǒu diǎn bù kāi xīn.",en:"Hey, how have you been lately? You seem a bit down."},
-      {sp:"B",zh:"是啊，我最近压力很大，工作让我压力很大，睡不着觉。",jp:"shì a, wǒ zuì jìn yā lì hěn dà, gōng zuò ràng wǒ yā lì hěn dà, shuì bù zháo jiào.",en:"Yeah, I\'ve been under a lot of pressure lately. Work is really stressing me out and I can\'t sleep."},
-      {sp:"A",zh:"我理解你的感受。你有没有试过跟别人倾诉？",jp:"wǒ lǐ jiě nǐ de gǎn shòu. nǐ yǒu méi yǒu shì guò gēn bié rén qīng sù?",en:"I understand how you feel. Have you tried talking to someone about it?"},
-      {sp:"B",zh:"没什么，我不太喜欢讲自己的事。但是今天跟你说，感觉好一些了。",jp:"méi shén me, wǒ bù tài xǐ huān jiǎng zì jǐ de shì. dàn shì jīn tiān gēn nǐ shuō, gǎn jué hǎo yī xiē le.",en:"Not really, I don\'t like to talk about my own stuff much. But talking to you today makes me feel a bit better."},
-      {sp:"A",zh:"就是这样，有时候说出来会轻松很多。记住，你不是一个人。",jp:"jiù shì zhè yàng, yǒu shí hou shuō chū lái huì qīng sōng hěn duō. jì zhù, nǐ bù shì yī gè rén.",en:"That\'s true, sometimes saying it out loud makes things much lighter. Remember, you\'re not alone."},
-    ]
-  }
-  },
-  {
-  id:2, zh:"政治与时事", en:"Politics & Current Affairs",
-  sections:[
-    { title:"Government & Systems", zh:"政府与制度", vocab:[
-      {zh:"民主",jp:"mín zhǔ",en:"Democracy"},
-      {zh:"独裁",jp:"dú cái",en:"Dictatorship / Authoritarianism"},
-      {zh:"共产主义",jp:"gòng chǎn zhǔ yì",en:"Communism"},
-      {zh:"资本主义",jp:"zī běn zhǔ yì",en:"Capitalism"},
-      {zh:"政府",jp:"zhèng fǔ",en:"Government"},
-      {zh:"议会",jp:"yì huì",en:"Parliament / Legislature"},
-      {zh:"选举",jp:"xuǎn jǔ",en:"Election"},
-      {zh:"投票",jp:"tóu piào",en:"Vote / Voting"},
-      {zh:"政策",jp:"zhèng cè",en:"Policy"},
-      {zh:"法律",jp:"fǎ lǜ",en:"Law"},
-      {zh:"宪法",jp:"xiàn fǎ",en:"Constitution"},
-      {zh:"人权",jp:"rén quán",en:"Human rights"},
-    ]},
-    { title:"Political Topics", zh:"政治议题", vocab:[
-      {zh:"自由",jp:"zì yóu",en:"Freedom / Liberty"},
-      {zh:"平等",jp:"píng děng",en:"Equality"},
-      {zh:"示威",jp:"shì wēi",en:"Protest / Demonstration"},
-      {zh:"言论自由",jp:"yán lùn zì yóu",en:"Freedom of speech"},
-      {zh:"新闻自由",jp:"xīn wén zì yóu",en:"Freedom of the press"},
-      {zh:"腐败",jp:"fǔ bài",en:"Corruption"},
-      {zh:"制裁",jp:"zhì cái",en:"Sanctions"},
-      {zh:"外交",jp:"wài jiāo",en:"Diplomacy / Foreign affairs"},
-      {zh:"移民",jp:"yí mín",en:"Immigration / Immigrant"},
-      {zh:"难民",jp:"nán mín",en:"Refugee"},
-      {zh:"贫富差距",jp:"pín fù chā jù",en:"Wealth gap / Inequality"},
-      {zh:"气候变化",jp:"qì hòu biàn huà",en:"Climate change"},
-    ]},
-    { title:"Current Affairs Phrases", zh:"时事用语", vocab:[
-      {zh:"你怎么看这件事？",jp:"nǐ zěn me kàn zhè jiàn shì?",en:"What do you think about this matter?"},
-      {zh:"我支持／反对",jp:"wǒ zhī chí / fǎn duì",en:"I support / I oppose"},
-      {zh:"这个情况很复杂",jp:"zhè gè qíng kuàng hěn fù zá",en:"The situation is very complicated"},
-      {zh:"根据新闻报道",jp:"gēn jù xīn wén bào dào",en:"According to news reports"},
-      {zh:"两党之间的争议",jp:"liǎng dǎng zhī jiān de zhēng yì",en:"Dispute between the two parties"},
-      {zh:"政治立场",jp:"zhèng zhì lì chǎng",en:"Political stance"},
-      {zh:"左派／右派",jp:"zuǒ pài / yòu pài",en:"Left-wing / Right-wing"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Talking Politics",
-    lines:[
-      {sp:"A",zh:"你有没有看今天的新闻？政府又出了新政策了。",jp:"nǐ yǒu méi yǒu kàn jīn tiān de xīn wén? zhèng fǔ yòu chū le xīn zhèng cè le.",en:"Did you see today\'s news? The government has announced a new policy again."},
-      {sp:"B",zh:"看了，我不太支持这个政策，觉得对普通市民不公平。",jp:"kàn le, wǒ bù tài zhī chí zhè gè zhèng cè, jué de duì pǔ tōng shì mín bù gōng píng.",en:"I saw it. I don\'t really support this policy — I think it\'s unfair to ordinary citizens."},
-      {sp:"A",zh:"我理解你的担忧，但我觉得他们是想解决贫富差距的问题。",jp:"wǒ lǐ jiě nǐ de dān yōu, dàn wǒ jué de tā men shì xiǎng jiě jué pín fù chā jù de wèn tí.",en:"I understand your concern, but I think they\'re trying to address the wealth gap."},
-      {sp:"B",zh:"是，但是执行的方式有问题。言论自由和新闻自由都要保护。",jp:"shì, dàn shì zhí xíng de fāng shì yǒu wèn tí. yán lùn zì yóu hé xīn wén zì yóu dōu yào bǎo hù.",en:"Yes, but the way it\'s being implemented is problematic. Freedom of speech and the press both need to be protected."},
-      {sp:"A",zh:"你说得对。这是一个很复杂的议题，不是三言两语可以说清楚的。",jp:"nǐ shuō de duì. zhè shì yī gè hěn fù zá de yì tí, bú shì sān yán liǎng yǔ kě yǐ shuō qīng chǔ de.",en:"You make a good point. This is a very complicated issue — it can\'t be explained in just a few words."},
-    ]
-  }
-  },
-  {
-  id:3, zh:"财务、银行与投资", en:"Finance, Banking & Investing",
-  sections:[
-    { title:"Banking Basics", zh:"银行基本", vocab:[
-      {zh:"银行",jp:"yín háng",en:"Bank"},
-      {zh:"账户",jp:"zhàng hù",en:"Bank account"},
-      {zh:"存款",jp:"cún kuǎn",en:"Deposit / Savings"},
-      {zh:"取款",jp:"qǔ kuǎn",en:"Withdrawal"},
-      {zh:"转账",jp:"zhuǎn zhàng",en:"Transfer (money)"},
-      {zh:"利息",jp:"lì xī",en:"Interest"},
-      {zh:"贷款",jp:"dài kuǎn",en:"Loan"},
-      {zh:"房贷",jp:"fáng dài",en:"Mortgage"},
-      {zh:"信用卡",jp:"xìn yòng kǎ",en:"Credit card"},
-      {zh:"债务",jp:"zhài wù",en:"Debt"},
-      {zh:"预算",jp:"yù suàn",en:"Budget"},
-      {zh:"税",jp:"shuì",en:"Tax"},
-    ]},
-    { title:"Investing & Markets", zh:"投资与市场", vocab:[
-      {zh:"股票",jp:"gǔ piào",en:"Stock / Share"},
-      {zh:"股市",jp:"gǔ shì",en:"Stock market"},
-      {zh:"基金",jp:"jī jīn",en:"Fund / Mutual fund"},
-      {zh:"债券",jp:"zhài quàn",en:"Bond"},
-      {zh:"加密货币",jp:"jiā mì huò bì",en:"Cryptocurrency"},
-      {zh:"升值",jp:"shēng zhí",en:"Appreciate / Go up in value"},
-      {zh:"贬值",jp:"biǎn zhí",en:"Depreciate / Lose value"},
-      {zh:"风险",jp:"fēng xiǎn",en:"Risk"},
-      {zh:"回报",jp:"huí bào",en:"Return / Yield"},
-      {zh:"分散投资",jp:"fēn sàn tóu zī",en:"Diversify investments"},
-      {zh:"通货膨胀",jp:"tōng huò péng zhàng",en:"Inflation"},
-      {zh:"衰退",jp:"shuāi tuì",en:"Recession"},
-    ]},
-    { title:"Financial Phrases", zh:"财务用语", vocab:[
-      {zh:"我想开一个账户",jp:"wǒ xiǎng kāi yī gè zhàng hù",en:"I\'d like to open an account"},
-      {zh:"现在的利率是多少？",jp:"xiàn zài de lì lǜ shì duō shǎo?",en:"What\'s the current interest rate?"},
-      {zh:"长线投资还是短线炒卖？",jp:"cháng xiàn tóu zī hái shì duǎn xiàn chǎo mài?",en:"Long-term investing or short-term trading?"},
-      {zh:"你有没有买股票？",jp:"nǐ yǒu méi yǒu mǎi gǔ piào?",en:"Do you invest in stocks?"},
-      {zh:"我不想冒太大风险",jp:"wǒ bù xiǎng mào tài dà fēng xiǎn",en:"I don\'t want to take too much risk"},
-      {zh:"应该怎么分配资产？",jp:"yīng gāi zěn me fēn pèi zī chǎn?",en:"How should I allocate my assets?"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Talking About Investments",
-    lines:[
-      {sp:"A",zh:"你最近有没有关注股市？跌了很多啊。",jp:"nǐ zuì jìn yǒu méi yǒu guān zhù gǔ shì? diē le hěn duō a.",en:"Have you been watching the stock market lately? It\'s dropped a lot."},
-      {sp:"B",zh:"是啊，通货膨胀和加息让股市很波动。我现在不敢乱买。",jp:"shì a, tōng huò péng zhàng hé jiā xī ràng gǔ shì hěn bō dòng. wǒ xiàn zài bù gǎn luàn mǎi.",en:"Yeah, inflation and rate hikes are making the market very volatile. I don\'t dare buy randomly now."},
-      {sp:"A",zh:"我是长线投资那种，不管短期涨跌。买了指数基金就好了。",jp:"wǒ shì cháng xiàn tóu zī nà zhǒng, bù guǎn duǎn qī zhǎng diē. mǎi le zhǐ shù jī jīn jiù hǎo le.",en:"I\'m a long-term investor — I don\'t worry about short-term ups and downs. I just buy index funds."},
-      {sp:"B",zh:"听起来很稳，但我始终觉得分散投资很重要。不能把所有鸡蛋放在同一个篮子里。",jp:"tīng qǐ lái hěn wěn, dàn wǒ shǐ zhōng jué de fēn sàn tóu zī hěn zhòng yào. bù néng bǎ suǒ yǒu jī dàn fàng zài tóng yī gè lán zi lǐ.",en:"That sounds stable, but I still think diversification is important. You can\'t put all your eggs in one basket."},
-      {sp:"A",zh:"你说得很对。我也有买一些债券和加密货币作为对冲。",jp:"nǐ shuō de hěn duì. wǒ yě yǒu mǎi yī xiē zhài quàn hé jiā mì huò bì zuò wéi duì chōng.",en:"You\'re absolutely right. I also hold some bonds and crypto as a hedge."},
-    ]
-  }
-  },
-  {
-  id:4, zh:"工作与职业", en:"Work & Career",
-  sections:[
-    { title:"Workplace Vocabulary", zh:"职场词汇", vocab:[
-      {zh:"老板",jp:"lǎo bǎn",en:"Boss / Employer"},
-      {zh:"同事",jp:"tóng shì",en:"Colleague"},
-      {zh:"下属",jp:"xià shǔ",en:"Subordinate"},
-      {zh:"升职",jp:"shēng zhí",en:"Promotion"},
-      {zh:"加薪",jp:"jiā xīn",en:"Pay raise"},
-      {zh:"被炒",jp:"bèi chǎo",en:"Get fired"},
-      {zh:"辞职",jp:"cí zhí",en:"Resign"},
-      {zh:"面试",jp:"miàn shì",en:"Job interview"},
-      {zh:"简历",jp:"jiǎn lì",en:"Resume / CV"},
-      {zh:"合同",jp:"hé tong",en:"Contract"},
-      {zh:"加班",jp:"jiā bān",en:"Overtime"},
-      {zh:"在家工作",jp:"zài jiā gōng zuò",en:"Work from home"},
-    ]},
-    { title:"Career & Profession", zh:"职业", vocab:[
-      {zh:"医生",jp:"yī shēng",en:"Doctor"},
-      {zh:"律师",jp:"lǜ shī",en:"Lawyer"},
-      {zh:"工程师",jp:"gōng chéng shī",en:"Engineer"},
-      {zh:"教师",jp:"jiào shī",en:"Teacher"},
-      {zh:"会计师",jp:"kuài jì shī",en:"Accountant"},
-      {zh:"商人",jp:"shāng rén",en:"Businessman"},
-      {zh:"护士",jp:"hù shi",en:"Nurse"},
-      {zh:"厨师",jp:"chú shī",en:"Chef"},
-      {zh:"记者",jp:"jì zhě",en:"Journalist"},
-      {zh:"自雇人士",jp:"zì gù rén shì",en:"Self-employed"},
-      {zh:"公务员",jp:"gōng wù yuán",en:"Civil servant"},
-      {zh:"退休",jp:"tuì xiū",en:"Retirement / Retired"},
-    ]},
-    { title:"Work-Life Phrases", zh:"工作生活用语", vocab:[
-      {zh:"你是做什么工作的？",jp:"nǐ shì zuò shén me gōng zuò de?",en:"What do you do for work?"},
-      {zh:"你喜不喜欢你的工作？",jp:"nǐ xǐ bù xǐ huān nǐ de gōng zuò?",en:"Do you like your job?"},
-      {zh:"工作压力很大",jp:"gōng zuò yā lì hěn dà",en:"The job is very stressful"},
-      {zh:"我想换工作",jp:"wǒ xiǎng huàn gōng zuò",en:"I want to change jobs"},
-      {zh:"工作和生活要平衡",jp:"gōng zuò hé shēng huó yào píng héng",en:"Work-life balance is important"},
-      {zh:"你有没有考虑过创业？",jp:"nǐ yǒu méi yǒu kǎo lǜ guò chuàng yè?",en:"Have you ever considered starting your own business?"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Career Change",
-    lines:[
-      {sp:"A",zh:"你最近说想换工作，是真的吗？",jp:"nǐ zuì jìn shuō xiǎng huàn gōng zuò, shì zhēn de ma?",en:"You mentioned recently that you want to change jobs — is that true?"},
-      {sp:"B",zh:"是啊，我做这份工作五年了，一直没升职，而且加班的情况越来越严重。",jp:"shì a, wǒ zuò zhè fèn gōng zuò wǔ nián le, yī zhí méi shēng zhí, ér qiě jiā bān de qíng kuàng yuè lái yuè yán zhòng.",en:"Yeah, I\'ve been in this job for five years, never got promoted, and the overtime is getting worse and worse."},
-      {sp:"A",zh:"我理解，工作和生活的平衡很重要。你有没有考虑过自己创业？",jp:"wǒ lǐ jiě, gōng zuò hé shēng huó de píng héng hěn zhòng yào. nǐ yǒu méi yǒu kǎo lǜ guò zì jǐ chuàng yè?",en:"I understand — work-life balance is very important. Have you considered starting your own business?"},
-      {sp:"B",zh:"想过，但是风险很大。现在经济不太好，我不敢冒险。",jp:"xiǎng guò, dàn shì fēng xiǎn hěn dà. xiàn zài jīng jì bù tài hǎo, wǒ bù gǎn mào xiǎn.",en:"I\'ve thought about it, but the risk is high. The economy isn\'t great right now — I don\'t dare to take the risk."},
-      {sp:"A",zh:"明白。那你可以先把简历整理好，试试去面试，看有没有更好的机会。",jp:"míng bai. nà nǐ kě yǐ xiān bǎ jiǎn lì zhěng lǐ hǎo, shì shì qù miàn shì, kàn yǒu méi yǒu gèng hǎo de jī huì.",en:"I understand. Then you could start by polishing your resume, try some interviews, and see if better opportunities come up."},
-    ]
-  }
-  },
-  {
-  id:5, zh:"旅游与交通", en:"Travel & Transportation",
-  sections:[
-    { title:"Transportation", zh:"交通", vocab:[
-      {zh:"飞机",jp:"fēi jī",en:"Airplane"},
-      {zh:"火车",jp:"huǒ chē",en:"Train"},
-      {zh:"地铁",jp:"dì tiě",en:"Subway"},
-      {zh:"公共汽车",jp:"gōng gòng qì chē",en:"Bus"},
-      {zh:"出租车",jp:"chū zū chē",en:"Taxi"},
-      {zh:"渡轮",jp:"dù lún",en:"Ferry"},
-      {zh:"机场",jp:"jī chǎng",en:"Airport"},
-      {zh:"车站",jp:"chē zhàn",en:"Train / Bus station"},
-      {zh:"月台",jp:"yuè tái",en:"Platform"},
-      {zh:"行李",jp:"xíng lǐ",en:"Luggage / Baggage"},
-      {zh:"护照",jp:"hù zhào",en:"Passport"},
-      {zh:"签证",jp:"qiān zhèng",en:"Visa"},
-    ]},
-    { title:"Travel Experiences", zh:"旅游体验", vocab:[
-      {zh:"酒店",jp:"jiǔ diàn",en:"Hotel"},
-      {zh:"民宿",jp:"mín sù",en:"Guesthouse / Airbnb"},
-      {zh:"景点",jp:"jǐng diǎn",en:"Tourist attraction"},
-      {zh:"博物馆",jp:"bó wù guǎn",en:"Museum"},
-      {zh:"海滩",jp:"hǎi tān",en:"Beach"},
-      {zh:"文化差异",jp:"wén huà chā yì",en:"Cultural difference"},
-      {zh:"时差",jp:"shí chā",en:"Jet lag / Time difference"},
-      {zh:"换钱",jp:"huàn qián",en:"Currency exchange"},
-      {zh:"旅游保险",jp:"lǚ yóu bǎo xiǎn",en:"Travel insurance"},
-      {zh:"迷路",jp:"mí lù",en:"Get lost"},
-    ]},
-    { title:"Travel Phrases", zh:"旅游用语", vocab:[
-      {zh:"去哪里好？",jp:"qù nǎ lǐ hǎo?",en:"Where\'s a good place to go?"},
-      {zh:"下一班车是几点？",jp:"xià yī bān chē shì jǐ diǎn?",en:"When is the next bus/train?"},
-      {zh:"我想订一个房间",jp:"wǒ xiǎng dìng yī gè fáng jiān",en:"I\'d like to book a room"},
-      {zh:"附近有没有好吃的地方？",jp:"fù jìn yǒu méi yǒu hǎo chī de dì fang?",en:"Are there any good places to eat nearby?"},
-      {zh:"我迷路了，可以帮我吗？",jp:"wǒ mí lù le, kě yǐ bāng wǒ ma?",en:"I\'m lost — can you help me?"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Planning a Trip",
-    lines:[
-      {sp:"A",zh:"你暑假有没有计划去旅行？",jp:"nǐ shǔ jià yǒu méi yǒu jì huà qù lǚ xíng?",en:"Do you have any travel plans for the summer?"},
-      {sp:"B",zh:"有啊！我计划去日本，去京都和大阪。你呢？",jp:"yǒu a! wǒ jì huà qù rì běn, qù jīng dōu hé dà bǎn. nǐ ne?",en:"Yes! I\'m planning to go to Japan — Kyoto and Osaka. What about you?"},
-      {sp:"A",zh:"我想去欧洲，但是机票很贵，还要申请签证，很麻烦。",jp:"wǒ xiǎng qù ōu zhōu, dàn shì jī piào hěn guì, hái yào shēn qǐng qiān zhèng, hěn má fan.",en:"I want to go to Europe, but flights are expensive and I still need to apply for a visa — such a hassle."},
-      {sp:"B",zh:"是啊，签证很烦。日本不需要签证，方便多了。记得买旅游保险，很重要的。",jp:"shì a, qiān zhèng hěn fán. rì běn bù xū yào qiān zhèng, fāng biàn duō le. jì de mǎi lǚ yóu bǎo xiǎn, hěn zhòng yào de.",en:"Yeah, visas are a pain. Japan doesn\'t require one — much more convenient. Remember to buy travel insurance, it\'s really important."},
-      {sp:"A",zh:"好，我会记住的。希望你玩得开心，带点纪念品回来！",jp:"hǎo, wǒ huì jì zhù de. xī wàng nǐ wán de kāi xīn, dài diǎn jì niàn pǐn huí lái!",en:"Okay, I\'ll remember. I hope you have a great time — bring back some souvenirs!"},
-    ]
-  }
-  },
-  {
-  id:6, zh:"教育与学校", en:"Education & School",
-  sections:[
-    { title:"School & Study", zh:"学校与学习", vocab:[
-      {zh:"小学",jp:"xiǎo xué",en:"Primary school"},
-      {zh:"中学",jp:"zhōng xué",en:"Secondary school"},
-      {zh:"大学",jp:"dà xué",en:"University"},
-      {zh:"研究生院",jp:"yán jiū shēng yuàn",en:"Graduate school"},
-      {zh:"学费",jp:"xué fèi",en:"Tuition fee"},
-      {zh:"奖学金",jp:"jiǎng xué jīn",en:"Scholarship"},
-      {zh:"考试",jp:"kǎo shì",en:"Exam"},
-      {zh:"作业",jp:"zuò yè",en:"Homework"},
-      {zh:"成绩",jp:"chéng jì",en:"Grades / Results"},
-      {zh:"毕业",jp:"bì yè",en:"Graduate / Graduation"},
-      {zh:"学位",jp:"xué wèi",en:"Degree"},
-      {zh:"课程",jp:"kè chéng",en:"Curriculum / Course"},
-    ]},
-    { title:"Learning & Knowledge", zh:"学习与知识", vocab:[
-      {zh:"努力",jp:"nǔ lì",en:"Work hard / Diligence"},
-      {zh:"理解",jp:"lǐ jiě",en:"Understand / Comprehend"},
-      {zh:"批判性思维",jp:"pī pàn xìng sī wéi",en:"Critical thinking"},
-      {zh:"创意",jp:"chuàng yì",en:"Creativity"},
-      {zh:"自学",jp:"zì xué",en:"Self-study"},
-      {zh:"终身学习",jp:"zhōng shēn xué xí",en:"Lifelong learning"},
-      {zh:"语言学习",jp:"yǔ yán xué xí",en:"Language learning"},
-      {zh:"技能",jp:"jì néng",en:"Skill"},
-      {zh:"知识",jp:"zhī shi",en:"Knowledge"},
-      {zh:"竞争",jp:"jìng zhēng",en:"Competition"},
-    ]},
-    { title:"Education Phrases", zh:"教育用语", vocab:[
-      {zh:"你在学什么专业？",jp:"nǐ zài xué shén me zhuān yè?",en:"What are you studying?"},
-      {zh:"现在读书竞争很激烈",jp:"xiàn zài dú shū jìng zhēng hěn jī liè",en:"Academic competition is very intense nowadays"},
-      {zh:"我希望可以出国留学",jp:"wǒ xī wàng kě yǐ chū guó liú xué",en:"I hope to study abroad"},
-      {zh:"学历是否一定重要？",jp:"xué lì shì fǒu yī dìng zhòng yào?",en:"Is academic qualification necessarily important?"},
-      {zh:"实践是最好的学习方式",jp:"shí jiàn shì zuì hǎo de xué xí fāng shì",en:"Hands-on practice is the best way to learn"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Studying Abroad",
-    lines:[
-      {sp:"A",zh:"你儿子说想出国留学，你怎么看？",jp:"nǐ ér zi shuō xiǎng chū guó liú xué, nǐ zěn me kàn?",en:"Your son mentioned he wants to study abroad. What do you think?"},
-      {sp:"B",zh:"我支持，但是学费真的很贵。美国和英国的学费贵得吓人。",jp:"wǒ zhī chí, dàn shì xué fèi zhēn de hěn guì. měi guó hé yīng guó de xué fèi guì de xià rén.",en:"I support it, but the tuition is really expensive. American and British university fees are frighteningly high."},
-      {sp:"A",zh:"是，但是国外的学习环境和批判性思维的培养，真的有很大的不同。",jp:"shì, dàn shì guó wài de xué xí huán jìng hé pī pàn xìng sī wéi de péi yǎng, zhēn de yǒu hěn dà de bù tóng.",en:"Yes, but the learning environment and how they cultivate critical thinking abroad is genuinely very different."},
-      {sp:"B",zh:"你说得对。而且现在竞争这么激烈，有海外学历也是一个优势。",jp:"nǐ shuō de duì. ér qiě xiàn zài jìng zhēng zhè me jī liè, yǒu hǎi wài xué lì yě shì yī gè yōu shì.",en:"You\'re right. And with competition so fierce nowadays, having an overseas degree is an advantage."},
-      {sp:"A",zh:"他可以申请奖学金，不一定要自己付所有学费。",jp:"tā kě yǐ shēn qǐng jiǎng xué jīn, bù yī dìng yào zì jǐ fù suǒ yǒu xué fèi.",en:"He can apply for scholarships — he doesn\'t necessarily have to pay for all the tuition himself."},
-    ]
-  }
-  },
-  {
-  id:7, zh:"法律", en:"Legal & Law",
-  sections:[
-    { title:"Legal System", zh:"法律制度", vocab:[
-      {zh:"法庭",jp:"fǎ tíng",en:"Court"},
-      {zh:"法官",jp:"fǎ guān",en:"Judge"},
-      {zh:"律师",jp:"lǜ shī",en:"Lawyer / Attorney"},
-      {zh:"陪审团",jp:"péi shěn tuán",en:"Jury"},
-      {zh:"被告",jp:"bèi gào",en:"Defendant"},
-      {zh:"原告",jp:"yuán gào",en:"Plaintiff"},
-      {zh:"证人",jp:"zhèng rén",en:"Witness"},
-      {zh:"证据",jp:"zhèng jù",en:"Evidence"},
-      {zh:"判决",jp:"pàn jué",en:"Verdict / Ruling"},
-      {zh:"上诉",jp:"shàng sù",en:"Appeal"},
-      {zh:"无罪",jp:"wú zuì",en:"Not guilty / Innocent"},
-      {zh:"赔偿",jp:"péi cháng",en:"Compensation"},
-    ]},
-    { title:"Rights & Crime", zh:"权利与罪行", vocab:[
-      {zh:"合法",jp:"hé fǎ",en:"Legal / Lawful"},
-      {zh:"非法",jp:"fēi fǎ",en:"Illegal / Unlawful"},
-      {zh:"犯罪",jp:"fàn zuì",en:"Crime / Commit a crime"},
-      {zh:"诈骗",jp:"zhà piàn",en:"Fraud / Scam"},
-      {zh:"盗窃",jp:"dào qiè",en:"Theft"},
-      {zh:"伤人",jp:"shāng rén",en:"Assault / Bodily harm"},
-      {zh:"合同",jp:"hé tong",en:"Contract"},
-      {zh:"知识产权",jp:"zhī shi chǎn quán",en:"Intellectual property"},
-      {zh:"隐私",jp:"yǐn sī",en:"Privacy"},
-      {zh:"义务",jp:"yì wù",en:"Obligation / Duty"},
-    ]},
-    { title:"Legal Phrases", zh:"法律用语", vocab:[
-      {zh:"我需要找律师",jp:"wǒ xū yào zhǎo lǜ shī",en:"I need to find a lawyer"},
-      {zh:"这件事合法吗？",jp:"zhè jiàn shì hé fǎ ma?",en:"Is this legal?"},
-      {zh:"你有权保持沉默",jp:"nǐ yǒu quán bǎo chí chén mò",en:"You have the right to remain silent"},
-      {zh:"签合同前要看清楚",jp:"qiān hé tong qián yào kàn qīng chǔ",en:"Read carefully before signing a contract"},
-      {zh:"我要提出投诉",jp:"wǒ yào tí chū tóu sù",en:"I want to file a complaint"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Legal Dispute",
-    lines:[
-      {sp:"A",zh:"我现在有个很大的麻烦，房东不肯还我押金，说我损坏了他的家具。",jp:"wǒ xiàn zài yǒu gè hěn dà de má fan, fáng dōng bù kěn huán wǒ yā jīn, shuō wǒ sǔn huài le tā de jiā jù.",en:"I have a big problem. My landlord refuses to return my deposit, saying I damaged his furniture."},
-      {sp:"B",zh:"那你有没有在搬走之前拍照留底？",jp:"nà nǐ yǒu méi yǒu zài bān zǒu zhī qián pāi zhào liú dǐ?",en:"Did you take photos before moving out?"},
-      {sp:"A",zh:"有，全部都拍了，很清楚的。我觉得他是在冤枉我。",jp:"yǒu, quán bù dōu pāi le, hěn qīng chǔ de. wǒ jué de tā shì zài yuān wang wǒ.",en:"Yes, I photographed everything clearly. I feel like he\'s falsely accusing me."},
-      {sp:"B",zh:"那你要认真考虑找律师，或者去消费者委员会投诉。这件事涉及你的合法权益。",jp:"nà nǐ yào rèn zhēn kǎo lǜ zhǎo lǜ shī, huò zhě qù xiāo fèi zhě wěi yuán huì tóu sù. zhè jiàn shì shè jí nǐ de hé fǎ quán yì.",en:"Then you should seriously consider finding a lawyer, or filing a complaint with the consumer council. This involves your legal rights."},
-      {sp:"A",zh:"你说得对。我不能就这样算了，要维护自己的权利。",jp:"nǐ shuō de duì. wǒ bù néng jiù zhè yàng suàn le, yào wéi hù zì jǐ de quán lì.",en:"You\'re right. I can\'t just let it go — I need to protect my own rights."},
-    ]
-  }
-  },
-  {
-  id:8, zh:"地理与地方", en:"Geography & Places",
-  sections:[
-    { title:"World Geography", zh:"世界地理", vocab:[
-      {zh:"大陆",jp:"dà lù",en:"Continent"},
-      {zh:"国家",jp:"guó jiā",en:"Country"},
-      {zh:"城市",jp:"chéng shì",en:"City"},
-      {zh:"农村",jp:"nóng cūn",en:"Rural area / Countryside"},
-      {zh:"边境",jp:"biān jìng",en:"Border"},
-      {zh:"北极",jp:"běi jí",en:"North Pole / Arctic"},
-      {zh:"赤道",jp:"chì dào",en:"Equator"},
-      {zh:"太平洋",jp:"tài píng yáng",en:"Pacific Ocean"},
-      {zh:"大西洋",jp:"dà xī yáng",en:"Atlantic Ocean"},
-      {zh:"喜马拉雅山",jp:"xǐ mǎ lā yǎ shān",en:"Himalayas"},
-      {zh:"亚马逊河",jp:"yà mǎ sūn hé",en:"Amazon River"},
-      {zh:"撒哈拉沙漠",jp:"sā hā lā shā mò",en:"Sahara Desert"},
-    ]},
-    { title:"Describing Places", zh:"描述地方", vocab:[
-      {zh:"东南西北",jp:"dōng nán xī běi",en:"East, South, West, North"},
-      {zh:"附近",jp:"fù jìn",en:"Nearby"},
-      {zh:"市中心",jp:"shì zhōng xīn",en:"City center / Downtown"},
-      {zh:"郊区",jp:"jiāo qū",en:"Suburbs"},
-      {zh:"人口密度",jp:"rén kǒu mì dù",en:"Population density"},
-      {zh:"气候",jp:"qì hòu",en:"Climate"},
-      {zh:"地震",jp:"dì zhèn",en:"Earthquake"},
-      {zh:"洪水",jp:"hóng shuǐ",en:"Flood"},
-      {zh:"火山",jp:"huǒ shān",en:"Volcano"},
-      {zh:"文化遗址",jp:"wén huà yí zhǐ",en:"Cultural heritage site"},
-    ]},
-    { title:"Places Phrases", zh:"地方用语", vocab:[
-      {zh:"你是哪里人？",jp:"nǐ shì nǎ lǐ rén?",en:"Where are you from?"},
-      {zh:"这里的生活费贵不贵？",jp:"zhè lǐ de shēng huó fèi guì bù guì?",en:"Is the cost of living expensive here?"},
-      {zh:"你去过最难忘的地方是哪里？",jp:"nǐ qù guò zuì nán wàng de dì fang shì nǎ lǐ?",en:"What\'s the most unforgettable place you\'ve visited?"},
-      {zh:"香港是一个很特别的城市",jp:"xiāng gǎng shì yī gè hěn tè bié de chéng shì",en:"Hong Kong is a very unique city"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Where Are You From?",
-    lines:[
-      {sp:"A",zh:"你是哪里人？听口音不像是本地人。",jp:"nǐ shì nǎ lǐ rén? tīng kǒu yīn bù xiàng shì běn dì rén.",en:"Where are you from? Your accent doesn\'t sound local."},
-      {sp:"B",zh:"我是广州人，来香港住了差不多十年了。",jp:"wǒ shì guǎng zhōu rén, lái xiāng gǎng zhù le chà bu duō shí nián le.",en:"I\'m from Guangzhou. I\'ve been living in Hong Kong for nearly ten years now."},
-      {sp:"A",zh:"哇，那你一定很熟悉两个城市了。你觉得哪里更好住？",jp:"wā, nà nǐ yī dìng hěn shú xī liǎng gè chéng shì le. nǐ jué de nǎ lǐ gèng hǎo zhù?",en:"Wow, you must know both cities well. Which do you think is better to live in?"},
-      {sp:"B",zh:"各有优点，广州生活费便宜一点，但香港是国际城市，机会多很多，文化也更多元。",jp:"gè yǒu yōu diǎn, guǎng zhōu shēng huó fèi pián yi yī diǎn, dàn xiāng gǎng shì guó jì chéng shì, jī huì duō hěn duō, wén huà yě gèng duō yuán.",en:"Both have their merits. Guangzhou is cheaper, but Hong Kong is an international city with far more opportunities and cultural diversity."},
-      {sp:"A",zh:"就是这样，香港的地理位置也很好，是亚洲的中心点。",jp:"jiù shì zhè yàng, xiāng gǎng de dì lǐ wèi zhì yě hěn hǎo, shì yà zhōu de zhōng xīn diǎn.",en:"That\'s true — Hong Kong\'s geographical location is great, right at the center of Asia."},
-    ]
-  }
-  },
-  {
-  id:9, zh:"饮食", en:"Food & Dining",
-  sections:[
-    { title:"Food & Drink", zh:"食物与饮品", vocab:[
-      {zh:"早餐",jp:"zǎo cān",en:"Breakfast"},
-      {zh:"午餐",jp:"wǔ cān",en:"Lunch"},
-      {zh:"晚餐",jp:"wǎn cān",en:"Dinner"},
-      {zh:"小吃",jp:"xiǎo chī",en:"Snack"},
-      {zh:"素食",jp:"sù shí",en:"Vegetarian food"},
-      {zh:"辣",jp:"là",en:"Spicy"},
-      {zh:"甜",jp:"tián",en:"Sweet"},
-      {zh:"酸",jp:"suān",en:"Sour"},
-      {zh:"苦",jp:"kǔ",en:"Bitter"},
-      {zh:"咸",jp:"xián",en:"Salty"},
-      {zh:"点心",jp:"diǎn xīn",en:"Dim sum"},
-      {zh:"外卖",jp:"wài mài",en:"Takeout / Delivery"},
-    ]},
-    { title:"Restaurant & Ordering", zh:"餐厅与点餐", vocab:[
-      {zh:"餐厅",jp:"cān tīng",en:"Restaurant"},
-      {zh:"菜单",jp:"cài dān",en:"Menu"},
-      {zh:"点餐",jp:"diǎn cān",en:"Order food"},
-      {zh:"买单",jp:"mǎi dān",en:"Pay the bill"},
-      {zh:"小费",jp:"xiǎo fèi",en:"Tip"},
-      {zh:"预订座位",jp:"yù dìng zuò wèi",en:"Reserve a table"},
-      {zh:"过敏",jp:"guò mǐn",en:"Allergy"},
-      {zh:"推荐",jp:"tuī jiàn",en:"Recommend"},
-      {zh:"好吃",jp:"hǎo chī",en:"Delicious / Tasty"},
-      {zh:"收据",jp:"shōu jù",en:"Receipt"},
-    ]},
-    { title:"Food Phrases", zh:"饮食用语", vocab:[
-      {zh:"你吃不吃辣？",jp:"nǐ chī bù chī là?",en:"Do you eat spicy food?"},
-      {zh:"这里有没有素食选择？",jp:"zhè lǐ yǒu méi yǒu sù shí xuǎn zé?",en:"Are there vegetarian options here?"},
-      {zh:"推荐什么好吃的？",jp:"tuī jiàn shén me hǎo chī de?",en:"What do you recommend?"},
-      {zh:"麻烦买单！",jp:"má fan mǎi dān!",en:"Excuse me, the bill please!"},
-      {zh:"今天去吃点心好不好？",jp:"jīn tiān qù chī diǎn xīn hǎo bù hǎo?",en:"How about dim sum today?"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Dinner Plans",
-    lines:[
-      {sp:"A",zh:"今晚吃什么好？我肚子饿了。",jp:"jīn wǎn chī shén me hǎo? wǒ dù zi è le.",en:"What should we eat tonight? I\'m hungry."},
-      {sp:"B",zh:"我想吃粤菜，好久没去吃点心了。不如去旺角那家茶楼？",jp:"wǒ xiǎng chī yuè cài, hǎo jiǔ méi qù chī diǎn xīn le. bù rú qù wàng jiǎo nà jiā chá lóu?",en:"I want Cantonese food — it\'s been ages since we had dim sum. How about the tea house in Mong Kok?"},
-      {sp:"A",zh:"好啊！但是我有个朋友不吃肉，需要有素食选择的。",jp:"hǎo a! dàn shì wǒ yǒu gè péng you bù chī ròu, xū yào yǒu sù shí xuǎn zé de.",en:"Sure! But one of my friends doesn\'t eat meat, so there need to be vegetarian options."},
-      {sp:"B",zh:"那家茶楼有很多素食点心，不用担心。记得预订座位，周末很多人的。",jp:"nà jiā chá lóu yǒu hěn duō sù shí diǎn xīn, bù yòng dān xīn. jì de yù dìng zuò wèi, zhōu mò hěn duō rén de.",en:"That tea house has lots of vegetarian dim sum — no worries. Remember to make a reservation, it gets very crowded on weekends."},
-      {sp:"A",zh:"好，我现在就打电话去订位。你有没有什么不吃的？",jp:"hǎo, wǒ xiàn zài jiù dǎ diàn huà qù dìng wèi. nǐ yǒu méi yǒu shén me bù chī de?",en:"Okay, I\'ll call now to make a reservation. Is there anything you don\'t eat?"},
-    ]
-  }
-  },
-  {
-  id:10, zh:"科技与媒体", en:"Technology & Media",
-  sections:[
-    { title:"Technology", zh:"科技", vocab:[
-      {zh:"人工智能",jp:"rén gōng zhì néng",en:"Artificial intelligence (AI)"},
-      {zh:"大数据",jp:"dà shù jù",en:"Big data"},
-      {zh:"云端",jp:"yún duān",en:"Cloud computing"},
-      {zh:"应用程序",jp:"yìng yòng chéng xù",en:"App / Application"},
-      {zh:"网络安全",jp:"wǎng luò ān quán",en:"Cybersecurity"},
-      {zh:"隐私",jp:"yǐn sī",en:"Privacy"},
-      {zh:"算法",jp:"suàn fǎ",en:"Algorithm"},
-      {zh:"虚拟现实",jp:"xū nǐ xiàn shí",en:"Virtual reality (VR)"},
-      {zh:"加密",jp:"jiā mì",en:"Encryption"},
-      {zh:"数字化转型",jp:"shù zì huà zhuǎn xíng",en:"Digital transformation"},
-    ]},
-    { title:"Social Media & News", zh:"社交媒体与新闻", vocab:[
-      {zh:"社交媒体",jp:"shè jiāo méi tǐ",en:"Social media"},
-      {zh:"假新闻",jp:"jiǎ xīn wén",en:"Fake news"},
-      {zh:"病毒式传播",jp:"bìng dú shì chuán bō",en:"Go viral"},
-      {zh:"直播",jp:"zhí bō",en:"Live stream"},
-      {zh:"订阅",jp:"dìng yuè",en:"Subscribe"},
-      {zh:"网络欺凌",jp:"wǎng luò qī líng",en:"Cyberbullying"},
-      {zh:"网红",jp:"wǎng hóng",en:"Influencer"},
-      {zh:"流媒体平台",jp:"liú méi tǐ píng tái",en:"Streaming platform"},
-      {zh:"分享",jp:"fēn xiǎng",en:"Share"},
-      {zh:"留言",jp:"liú yán",en:"Comment / Leave a message"},
-    ]},
-    { title:"Tech Phrases", zh:"科技用语", vocab:[
-      {zh:"你用什么社交媒体？",jp:"nǐ yòng shén me shè jiāo méi tǐ?",en:"What social media do you use?"},
-      {zh:"这个信息是假新闻",jp:"zhè gè xìn xī shì jiǎ xīn wén",en:"This information is fake news"},
-      {zh:"人工智能会不会取代人类？",jp:"rén gōng zhì néng huì bù huì qǔ dài rén lèi?",en:"Will AI replace humans?"},
-      {zh:"网络安全很重要",jp:"wǎng luò ān quán hěn zhòng yào",en:"Cybersecurity is very important"},
-      {zh:"不要轻易相信网上的信息",jp:"bù yào qīng yì xiāng xìn wǎng shàng de xìn xī",en:"Don\'t easily trust information online"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: AI and the Future",
-    lines:[
-      {sp:"A",zh:"你怎么看人工智能的发展？真的会取代很多工作吗？",jp:"nǐ zěn me kàn rén gōng zhì néng de fā zhǎn? zhēn de huì qǔ dài hěn duō gōng zuò ma?",en:"What do you think about the development of AI? Will it really replace many jobs?"},
-      {sp:"B",zh:"我觉得是，特别是重复性的工作，很快会被AI取代。但是创意和情感类的工作，暂时还是人类的强项。",jp:"wǒ jué de shì, tè bié shì chóng fù xìng de gōng zuò, hěn kuài huì bèi AI qǔ dài. dàn shì chuàng yì hé qíng gǎn lèi de gōng zuò, zàn shí hái shì rén lèi de qiáng xiàng.",en:"I think so — especially repetitive work, which will be replaced by AI very soon. But creative and emotional work is still humanity\'s strength for now."},
-      {sp:"A",zh:"那我们是不是要尽快学习新技能，才能跟上？",jp:"nà wǒ men shì bù shì yào jǐn kuài xué xí xīn jì néng, cái néng gēn shàng?",en:"So do we need to quickly learn new skills to keep up?"},
-      {sp:"B",zh:"是，终身学习是必须的。还有，要学会怎么跟AI合作，而不是抗拒它。",jp:"shì, zhōng shēn xué xí shì bì xū de. hái yǒu, yào xué huì zěn me gēn AI hé zuò, ér bú shì kàng jù tā.",en:"Yes, lifelong learning is essential. Also, we need to learn how to collaborate with AI rather than resist it."},
-    ]
-  }
-  },
-  {
-  id:11, zh:"家庭与人际关系", en:"Family & Relationships",
-  sections:[
-    { title:"Family Members", zh:"家庭成员", vocab:[
-      {zh:"祖父母",jp:"zǔ fù mǔ",en:"Grandparents"},
-      {zh:"父母",jp:"fù mǔ",en:"Parents"},
-      {zh:"兄弟姐妹",jp:"xiōng dì jiě mèi",en:"Siblings"},
-      {zh:"配偶",jp:"pèi ǒu",en:"Spouse"},
-      {zh:"子女",jp:"zǐ nǚ",en:"Children"},
-      {zh:"亲戚",jp:"qīn qi",en:"Relatives"},
-      {zh:"姻亲",jp:"yīn qīn",en:"In-laws"},
-      {zh:"单亲家庭",jp:"dān qīn jiā tíng",en:"Single-parent family"},
-      {zh:"大家庭",jp:"dà jiā tíng",en:"Extended family"},
-      {zh:"隔代教养",jp:"gé dài jiào yǎng",en:"Grandparents raising grandchildren"},
-    ]},
-    { title:"Relationships", zh:"人际关系", vocab:[
-      {zh:"友谊",jp:"yǒu yì",en:"Friendship"},
-      {zh:"信任",jp:"xìn rèn",en:"Trust"},
-      {zh:"沟通",jp:"gōu tōng",en:"Communication"},
-      {zh:"误解",jp:"wù jiě",en:"Misunderstanding"},
-      {zh:"和解",jp:"hé jiě",en:"Reconciliation"},
-      {zh:"冲突",jp:"chōng tū",en:"Conflict"},
-      {zh:"包容",jp:"bāo róng",en:"Tolerance / Acceptance"},
-      {zh:"尊重",jp:"zūn zhòng",en:"Respect"},
-      {zh:"界线",jp:"jiè xiàn",en:"Boundaries"},
-      {zh:"依赖",jp:"yī lài",en:"Dependence / Rely on"},
-    ]},
-    { title:"Family Phrases", zh:"家庭用语", vocab:[
-      {zh:"你们家有几个人？",jp:"nǐ men jiā yǒu jǐ gè rén?",en:"How many people are in your family?"},
-      {zh:"你和父母住在一起吗？",jp:"nǐ hé fù mǔ zhù zài yī qǐ ma?",en:"Do you live with your parents?"},
-      {zh:"家人之间要多沟通",jp:"jiā rén zhī jiān yào duō gōu tōng",en:"Family members need to communicate more"},
-      {zh:"我很想念家人",jp:"wǒ hěn xiǎng niàn jiā rén",en:"I really miss my family"},
-      {zh:"他们离婚了",jp:"tā men lí hūn le",en:"They got divorced"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Family Dynamics",
-    lines:[
-      {sp:"A",zh:"你最近好像很忙，家人有没有抱怨你？",jp:"nǐ zuì jìn hǎo xiàng hěn máng, jiā rén yǒu méi yǒu bào yuàn nǐ?",en:"You seem very busy lately. Have your family members complained?"},
-      {sp:"B",zh:"是啊，老婆说我没有足够的时间陪她和孩子。其实我也知道是我的问题，但工作真的很忙。",jp:"shì a, lǎo po shuō wǒ méi yǒu zú gòu de shí jiān péi tā hé hái zi. qí shí wǒ yě zhī dào shì wǒ de wèn tí, dàn gōng zuò zhēn de hěn máng.",en:"Yeah, my wife says I don\'t spend enough time with her and the kids. I know it\'s my problem, but work is really busy."},
-      {sp:"A",zh:"家人之间要多沟通。你有没有试过跟老婆坦白说，一起想办法？",jp:"jiā rén zhī jiān yào duō gōu tōng. nǐ yǒu méi yǒu shì guò gēn lǎo po tǎn bái shuō, yī qǐ xiǎng bàn fǎ?",en:"Family members need more communication. Have you tried being honest with your wife and figuring things out together?"},
-      {sp:"B",zh:"谈过了，她很体谅，但我觉得自己很愧疚。工作和家庭要平衡，真的不容易。",jp:"tán guò le, tā hěn tǐ liàng, dàn wǒ jué de zì jǐ hěn kuì jiù. gōng zuò hé jiā tíng yào píng héng, zhēn de bù róng yì.",en:"We\'ve talked. She\'s very understanding, but I feel really guilty. Balancing work and family is truly not easy."},
-      {sp:"A",zh:"是不容易，但是尊重和包容是最重要的。你的家人爱你，一起努力。",jp:"shì bù róng yì, dàn shì zūn zhòng hé bāo róng shì zuì zhòng yào de. nǐ de jiā rén ài nǐ, yī qǐ nǔ lì.",en:"It\'s not easy, but respect and tolerance are what matter most. Your family loves you — work on it together."},
-    ]
-  }
-  },
-  {
-  id:12, zh:"宗教与哲学", en:"Religion & Philosophy",
-  sections:[
-    { title:"Religions", zh:"宗教", vocab:[
-      {zh:"佛教",jp:"fó jiào",en:"Buddhism"},
-      {zh:"基督教",jp:"jī dū jiào",en:"Christianity"},
-      {zh:"天主教",jp:"tiān zhǔ jiào",en:"Catholicism"},
-      {zh:"伊斯兰教",jp:"yī sī lán jiào",en:"Islam"},
-      {zh:"犹太教",jp:"yóu tài jiào",en:"Judaism"},
-      {zh:"道教",jp:"dào jiào",en:"Taoism"},
-      {zh:"儒家思想",jp:"rú jiā sī xiǎng",en:"Confucianism"},
-      {zh:"无神论",jp:"wú shén lùn",en:"Atheism"},
-      {zh:"灵性",jp:"líng xìng",en:"Spirituality"},
-      {zh:"冥想",jp:"míng xiǎng",en:"Meditation"},
-      {zh:"祷告",jp:"dǎo gào",en:"Prayer"},
-      {zh:"寺庙",jp:"sì miào",en:"Temple"},
-    ]},
-    { title:"Philosophy", zh:"哲学", vocab:[
-      {zh:"哲学",jp:"zhé xué",en:"Philosophy"},
-      {zh:"伦理",jp:"lún lǐ",en:"Ethics"},
-      {zh:"道德",jp:"dào dé",en:"Morality"},
-      {zh:"存在主义",jp:"cún zài zhǔ yì",en:"Existentialism"},
-      {zh:"命运",jp:"mìng yùn",en:"Fate / Destiny"},
-      {zh:"自由意志",jp:"zì yóu yì zhì",en:"Free will"},
-      {zh:"意义",jp:"yì yì",en:"Meaning / Purpose"},
-      {zh:"真理",jp:"zhēn lǐ",en:"Truth"},
-      {zh:"因果",jp:"yīn guǒ",en:"Cause and effect / Karma"},
-      {zh:"意识",jp:"yì shí",en:"Consciousness"},
-    ]},
-    { title:"Religion & Philosophy Phrases", zh:"宗教与哲学用语", vocab:[
-      {zh:"你有没有宗教信仰？",jp:"nǐ yǒu méi yǒu zōng jiào xìn yǎng?",en:"Are you religious?"},
-      {zh:"生命的意义是什么？",jp:"shēng mìng de yì yì shì shén me?",en:"What is the meaning of life?"},
-      {zh:"我相信因果报应",jp:"wǒ xiāng xìn yīn guǒ bào yìng",en:"I believe in karma"},
-      {zh:"这是一个道德问题",jp:"zhè shì yī gè dào dé wèn tí",en:"This is an ethical question"},
-      {zh:"佛教讲求慈悲",jp:"fó jiào jiǎng qiú cí bēi",en:"Buddhism emphasizes compassion"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Belief and Meaning",
-    lines:[
-      {sp:"A",zh:"你有没有宗教信仰？我最近开始对佛教有兴趣。",jp:"nǐ yǒu méi yǒu zōng jiào xìn yǎng? wǒ zuì jìn kāi shǐ duì fó jiào yǒu xìng qù.",en:"Do you have any religious beliefs? I\'ve recently become interested in Buddhism."},
-      {sp:"B",zh:"我是无神论者，但我尊重所有宗教。你是怎么对佛教感兴趣的？",jp:"wǒ shì wú shén lùn zhě, dàn wǒ zūn zhòng suǒ yǒu zōng jiào. nǐ shì zěn me duì fó jiào gǎn xìng qù de?",en:"I\'m an atheist, but I respect all religions. What got you interested in Buddhism?"},
-      {sp:"A",zh:"是因为它的哲学，特别是关于苦难和慈悲的概念，让我觉得很有共鸣。",jp:"shì yīn wèi tā de zhé xué, tè bié shì guān yú kǔ nàn hé cí bēi de gài niàn, ràng wǒ jué de hěn yǒu gòng míng.",en:"It\'s the philosophy — especially the concepts of suffering and compassion — that I really resonate with."},
-      {sp:"B",zh:"我理解。其实哲学和宗教有时候是殊途同归，都是探讨生命的意义。",jp:"wǒ lǐ jiě. qí shí zhé xué hé zōng jiào yǒu shí hou shì shū tú tóng guī, dōu shì tàn tǎo shēng mìng de yì yì.",en:"I understand. Philosophy and religion often arrive at the same place by different routes — both explore the meaning of life."},
-      {sp:"A",zh:"是，我觉得无论有没有宗教信仰，对道德和伦理有自己的反思是很重要的。",jp:"shì, wǒ jué de wú lùn yǒu méi yǒu zōng jiào xìn yǎng, duì dào dé hé lún lǐ yǒu zì jǐ de fǎn sī shì hěn zhòng yào de.",en:"Yes, I think regardless of whether you\'re religious, reflecting on morality and ethics for yourself is very important."},
-    ]
-  }
-  },
-  {
-  id:13, zh:"天气与自然", en:"Weather & Nature",
-  sections:[
-    { title:"Weather", zh:"天气", vocab:[
-      {zh:"晴天",jp:"qíng tiān",en:"Sunny / Clear sky"},
-      {zh:"阴天",jp:"yīn tiān",en:"Cloudy / Overcast"},
-      {zh:"下雨",jp:"xià yǔ",en:"Raining"},
-      {zh:"台风",jp:"tái fēng",en:"Typhoon"},
-      {zh:"闪电",jp:"shǎn diàn",en:"Lightning"},
-      {zh:"打雷",jp:"dǎ léi",en:"Thunder"},
-      {zh:"大雾",jp:"dà wù",en:"Heavy fog"},
-      {zh:"潮湿",jp:"cháo shī",en:"Humid"},
-      {zh:"干燥",jp:"gān zào",en:"Dry"},
-      {zh:"寒冷",jp:"hán lěng",en:"Cold"},
-      {zh:"炎热",jp:"yán rè",en:"Hot / Scorching"},
-      {zh:"天气预报",jp:"tiān qì yù bào",en:"Weather forecast"},
-    ]},
-    { title:"Nature & Environment", zh:"自然与环境", vocab:[
-      {zh:"森林",jp:"sēn lín",en:"Forest"},
-      {zh:"河流",jp:"hé liú",en:"River"},
-      {zh:"海洋",jp:"hǎi yáng",en:"Ocean / Sea"},
-      {zh:"野生动物",jp:"yě shēng dòng wù",en:"Wildlife"},
-      {zh:"环境保护",jp:"huán jìng bǎo hù",en:"Environmental protection"},
-      {zh:"污染",jp:"wū rǎn",en:"Pollution"},
-      {zh:"可持续发展",jp:"kě chí xù fā zhǎn",en:"Sustainable development"},
-      {zh:"碳排放",jp:"tàn pái fàng",en:"Carbon emissions"},
-      {zh:"全球变暖",jp:"quán qiú biàn nuǎn",en:"Global warming"},
-      {zh:"濒危物种",jp:"bīn wēi wù zhǒng",en:"Endangered species"},
-    ]},
-    { title:"Weather Phrases", zh:"天气用语", vocab:[
-      {zh:"今天天气怎么样？",jp:"jīn tiān tiān qì zěn me yàng?",en:"What\'s the weather like today?"},
-      {zh:"明天会不会下雨？",jp:"míng tiān huì bù huì xià yǔ?",en:"Will it rain tomorrow?"},
-      {zh:"台风几号信号？",jp:"tái fēng jǐ hào xìn hào?",en:"What typhoon signal is up?"},
-      {zh:"香港的夏天很热很潮湿",jp:"xiāng gǎng de xià tiān hěn rè hěn cháo shī",en:"Hong Kong summers are very hot and humid"},
-      {zh:"我们要珍惜大自然",jp:"wǒ men yào zhēn xī dà zì rán",en:"We must cherish nature"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Weather and Environment",
-    lines:[
-      {sp:"A",zh:"现在天气真的越来越极端，今年夏天热得吓人。",jp:"xiàn zài tiān qì zhēn de yuè lái yuè jí duān, jīn nián xià tiān rè de xià rén.",en:"The weather is getting more and more extreme. This summer has been frighteningly hot."},
-      {sp:"B",zh:"是啊，全球变暖的影响越来越明显。碳排放问题真的要认真处理。",jp:"shì a, quán qiú biàn nuǎn de yǐng xiǎng yuè lái yuè míng xiǎn. tàn pái fàng wèn tí zhēn de yào rèn zhēn chǔ lǐ.",en:"Yeah, the effects of global warming are becoming more and more obvious. Carbon emissions really need to be seriously addressed."},
-      {sp:"A",zh:"是，但是很多国家还是只说不做。可持续发展只是说说而已？",jp:"shì, dàn shì hěn duō guó jiā hái shì zhǐ shuō bù zuò. kě chí xù fā zhǎn zhǐ shì shuō shuō ér yǐ?",en:"Yes, but many countries are still just talking and not doing anything. Is sustainable development just empty words?"},
-      {sp:"B",zh:"不能这么悲观，个人的行动也是有意义的。少用一次性塑料、减少浪费，每个人都可以出一份力。",jp:"bù néng zhè me bēi guān, gè rén de xíng dòng yě shì yǒu yì yì de. shǎo yòng yī cì xìng sù liào, jiǎn shǎo làng fèi, měi gè rén dōu kě yǐ chū yī fèn lì.",en:"Don\'t be so pessimistic — individual actions do matter. Use fewer single-use plastics, reduce waste — everyone can contribute."},
-    ]
-  }
-  },
-  {
-  id:14, zh:"历史与文化", en:"History & Culture",
-  sections:[
-    { title:"History", zh:"历史", vocab:[
-      {zh:"朝代",jp:"cháo dài",en:"Dynasty"},
-      {zh:"革命",jp:"gé mìng",en:"Revolution"},
-      {zh:"战争",jp:"zhàn zhēng",en:"War"},
-      {zh:"殖民地",jp:"zhí mín dì",en:"Colony / Colonial"},
-      {zh:"独立",jp:"dú lì",en:"Independence"},
-      {zh:"帝国",jp:"dì guó",en:"Empire"},
-      {zh:"文化大革命",jp:"wén huà dà gé mìng",en:"Cultural Revolution"},
-      {zh:"鸦片战争",jp:"yā piàn zhàn zhēng",en:"Opium War"},
-      {zh:"冷战",jp:"lěng zhàn",en:"Cold War"},
-      {zh:"全球化",jp:"quán qiú huà",en:"Globalization"},
-    ]},
-    { title:"Culture & Traditions", zh:"文化与传统", vocab:[
-      {zh:"传统",jp:"chuán tǒng",en:"Tradition"},
-      {zh:"风俗",jp:"fēng sú",en:"Custom / Folk custom"},
-      {zh:"节日",jp:"jié rì",en:"Festival / Holiday"},
-      {zh:"农历新年",jp:"nóng lì xīn nián",en:"Lunar New Year"},
-      {zh:"清明节",jp:"qīng míng jié",en:"Qingming Festival"},
-      {zh:"中秋节",jp:"zhōng qiū jié",en:"Mid-Autumn Festival"},
-      {zh:"艺术",jp:"yì shù",en:"Art"},
-      {zh:"文学",jp:"wén xué",en:"Literature"},
-      {zh:"遗产",jp:"yí chǎn",en:"Heritage / Legacy"},
-      {zh:"身份认同",jp:"shēn fèn rèn tóng",en:"Identity"},
-    ]},
-    { title:"History & Culture Phrases", zh:"历史文化用语", vocab:[
-      {zh:"你对中国历史了解多少？",jp:"nǐ duì zhōng guó lì shǐ liǎo jiě duō shǎo?",en:"How much do you know about Chinese history?"},
-      {zh:"传统文化值得保留",jp:"chuán tǒng wén huà zhí dé bǎo liú",en:"Traditional culture is worth preserving"},
-      {zh:"历史是由胜利者书写的",jp:"lì shǐ shì yóu shèng lì zhě shū xiě de",en:"History is written by the victors"},
-      {zh:"香港有独特的文化身份",jp:"xiāng gǎng yǒu dú tè de wén huà shēn fèn",en:"Hong Kong has a unique cultural identity"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Cultural Identity",
-    lines:[
-      {sp:"A",zh:"你觉得香港的文化是什么样的？",jp:"nǐ jué de xiāng gǎng de wén huà shì shén me yàng de?",en:"What do you think Hong Kong\'s culture is like?"},
-      {sp:"B",zh:"我觉得香港是一个很独特的地方，中西文化交融，有自己的身份认同。",jp:"wǒ jué de xiāng gǎng shì yī gè hěn dú tè de dì fang, zhōng xī wén huà jiāo róng, yǒu zì jǐ de shēn fèn rèn tóng.",en:"I think Hong Kong is a very unique place — a blend of Chinese and Western cultures with its own distinct identity."},
-      {sp:"A",zh:"是，但是近年来，很多人担心这种独特的文化会慢慢消失。",jp:"shì, dàn shì jìn nián lái, hěn duō rén dān xīn zhè zhǒng dú tè de wén huà huì màn màn xiāo shī.",en:"Yes, but in recent years many people worry this unique culture will gradually disappear."},
-      {sp:"B",zh:"我理解这个担忧。所以保护粤语、传统节日和本土文化是很重要的。",jp:"wǒ lǐ jiě zhè gè dān yōu. suǒ yǐ bǎo hù yuè yǔ, chuán tǒng jié rì hé běn tǔ wén huà shì hěn zhòng yào de.",en:"I understand that concern. That\'s why protecting Cantonese, traditional festivals, and local culture is so important."},
-      {sp:"A",zh:"就是这样，历史和文化是我们的根，不可以轻易放弃。",jp:"jiù shì zhè yàng, lì shǐ hé wén huà shì wǒ men de gēn, bù kě yǐ qīng yì fàng qì.",en:"Exactly. History and culture are our roots — we can\'t easily abandon them."},
-    ]
-  }
-  },
-  {
-  id:15, zh:"购物与金钱", en:"Shopping & Money",
-  sections:[
-    { title:"Shopping", zh:"购物", vocab:[
-      {zh:"商场",jp:"shāng chǎng",en:"Shopping mall"},
-      {zh:"超级市场",jp:"chāo jí shì chǎng",en:"Supermarket"},
-      {zh:"网购",jp:"wǎng gòu",en:"Online shopping"},
-      {zh:"折扣",jp:"zhé kòu",en:"Discount"},
-      {zh:"特价",jp:"tè jià",en:"Sale / Special price"},
-      {zh:"退货",jp:"tuì huò",en:"Return (merchandise)"},
-      {zh:"收据",jp:"shōu jù",en:"Receipt"},
-      {zh:"试衣间",jp:"shì yī jiān",en:"Fitting room"},
-      {zh:"贵",jp:"guì",en:"Expensive"},
-      {zh:"便宜",jp:"pián yi",en:"Cheap / Affordable"},
-      {zh:"讨价还价",jp:"tǎo jià huán jià",en:"Bargain / Haggle"},
-      {zh:"购物车",jp:"gòu wù chē",en:"Shopping cart"},
-    ]},
-    { title:"Money", zh:"金钱", vocab:[
-      {zh:"现金",jp:"xiàn jīn",en:"Cash"},
-      {zh:"八达通",jp:"bā dá tōng",en:"Octopus card"},
-      {zh:"找零",jp:"zhǎo líng",en:"Change (money back)"},
-      {zh:"汇率",jp:"huì lǜ",en:"Exchange rate"},
-      {zh:"港币",jp:"gǎng bì",en:"Hong Kong Dollar"},
-      {zh:"人民币",jp:"rén mín bì",en:"Chinese Yuan (RMB)"},
-      {zh:"美元",jp:"měi yuán",en:"US Dollar"},
-      {zh:"存钱",jp:"cún qián",en:"Save money"},
-      {zh:"大手笔",jp:"dà shǒu bǐ",en:"Spend a lot / Splurge"},
-      {zh:"穷",jp:"qióng",en:"Poor / Broke"},
-    ]},
-    { title:"Shopping Phrases", zh:"购物用语", vocab:[
-      {zh:"这个多少钱？",jp:"zhè gè duō shǎo qián?",en:"How much does this cost?"},
-      {zh:"有没有便宜一点的？",jp:"yǒu méi yǒu pián yi yī diǎn de?",en:"Is there anything cheaper?"},
-      {zh:"可不可以便宜一点？",jp:"kě bù kě yǐ pián yi yī diǎn?",en:"Can you make it cheaper?"},
-      {zh:"我要先试一下",jp:"wǒ yào xiān shì yī xià",en:"I want to try it first"},
-      {zh:"这件有没有大码？",jp:"zhè jiàn yǒu méi yǒu dà mǎ?",en:"Do you have this in a larger size?"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Shopping at the Market",
-    lines:[
-      {sp:"A",zh:"这件衣服很漂亮，多少钱？",jp:"zhè jiàn yī fu hěn piào liang, duō shǎo qián?",en:"This top looks really nice — how much is it?"},
-      {sp:"B",zh:"三百块，但现在特价，两百五。",jp:"sān bǎi kuài, dàn xiàn zài tè jià, liǎng bǎi wǔ.",en:"Three hundred dollars, but it\'s on sale now — two fifty."},
-      {sp:"A",zh:"还是有点贵，可不可以再便宜一点？我买两件。",jp:"hái shì yǒu diǎn guì, kě bù kě yǐ zài pián yi yī diǎn? wǒ mǎi liǎng jiàn.",en:"Still a bit expensive. Can you make it cheaper? I\'ll buy two."},
-      {sp:"B",zh:"买两件的话，每件两百二，怎么样？",jp:"mǎi liǎng jiàn de huà, měi jiàn liǎng bǎi èr, zěn me yàng?",en:"If you buy two, it\'s two hundred and twenty each. Deal?"},
-      {sp:"A",zh:"好，成交！你们可以用八达通付款吗？",jp:"hǎo, chéng jiāo! nǐ men kě yǐ yòng bā dá tōng fù kuǎn ma?",en:"Okay, deal! Can I pay with Octopus card?"},
-    ]
-  }
-  },
-  {
-  id:16, zh:"价值观与品格", en:"Values & Character",
-  sections:[
-    { title:"Core Values", zh:"核心价值观", vocab:[
-      {zh:"诚实",jp:"chéng shí",en:"Honesty"},
-      {zh:"正直",jp:"zhèng zhí",en:"Integrity"},
-      {zh:"忠诚",jp:"zhōng chéng",en:"Loyalty"},
-      {zh:"谦逊",jp:"qiān xùn",en:"Humility"},
-      {zh:"骄傲",jp:"jiāo ào",en:"Pride (in a positive sense)"},
-      {zh:"自尊",jp:"zì zūn",en:"Self-respect / Dignity"},
-      {zh:"勇气",jp:"yǒng qì",en:"Courage"},
-      {zh:"责任",jp:"zé rèn",en:"Responsibility"},
-      {zh:"慷慨",jp:"kāng kǎi",en:"Generosity"},
-      {zh:"同理心",jp:"tóng lǐ xīn",en:"Empathy"},
-      {zh:"宽恕",jp:"kuān shù",en:"Forgiveness"},
-      {zh:"毅力",jp:"yì lì",en:"Perseverance / Grit"},
-    ]},
-    { title:"Face & Social Values", zh:"面子与社会价值观", vocab:[
-      {zh:"面子",jp:"miàn zi",en:"Face / Social dignity"},
-      {zh:"丢脸",jp:"diū liǎn",en:"Lose face"},
-      {zh:"羞耻",jp:"xiū chǐ",en:"Shame"},
-      {zh:"仁义",jp:"rén yì",en:"Benevolence and righteousness"},
-      {zh:"孝顺",jp:"xiào shùn",en:"Filial piety"},
-      {zh:"公平",jp:"gōng píng",en:"Fairness"},
-      {zh:"正义",jp:"zhèng yì",en:"Justice"},
-      {zh:"诚信",jp:"chéng xìn",en:"Good faith / Trustworthiness"},
-      {zh:"包容",jp:"bāo róng",en:"Tolerance / Inclusiveness"},
-      {zh:"感恩",jp:"gǎn ēn",en:"Gratitude / Thankfulness"},
-    ]},
-    { title:"Values in Conversation", zh:"价值观对话", vocab:[
-      {zh:"你最重视什么价值观？",jp:"nǐ zuì zhòng shì shén me jià zhí guān?",en:"What values do you value most?"},
-      {zh:"诚实是做人最基本的原则",jp:"chéng shí shì zuò rén zuì jī běn de yuán zé",en:"Honesty is the most basic principle in life"},
-      {zh:"要有勇气承认自己的错误",jp:"yào yǒu yǒng qì chéng rèn zì jǐ de cuò wù",en:"It takes courage to admit your mistakes"},
-      {zh:"面子不是最重要的",jp:"miàn zi bú shì zuì zhòng yào de",en:"Face is not the most important thing"},
-      {zh:"孝顺父母是中国文化的核心",jp:"xiào shùn fù mǔ shì zhōng guó wén huà de hé xīn",en:"Filial piety is at the heart of Chinese culture"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: What Matters Most",
-    lines:[
-      {sp:"A",zh:"你觉得一个人最重要的品格是什么？",jp:"nǐ jué de yī gè rén zuì zhòng yào de pǐn gé shì shén me?",en:"What do you think is the most important character trait in a person?"},
-      {sp:"B",zh:"我觉得是诚实和正直。一个人可以没有本事，但是不可以没有诚信。",jp:"wǒ jué de shì chéng shí hé zhèng zhí. yī gè rén kě yǐ méi yǒu běn shi, dàn shì bù kě yǐ méi yǒu chéng xìn.",en:"I think it\'s honesty and integrity. A person can lack talent, but they can\'t lack trustworthiness."},
-      {sp:"A",zh:"我同意，但我也很重视同理心。有时候，能够理解别人的感受，比什么都重要。",jp:"wǒ tóng yì, dàn wǒ yě hěn zhòng shì tóng lǐ xīn. yǒu shí hou, néng gòu lǐ jiě bié rén de gǎn shòu, bǐ shén me dōu zhòng yào.",en:"I agree, but I also value empathy highly. Sometimes, being able to understand others\' feelings is more important than anything."},
-      {sp:"B",zh:"是。还有，我觉得谦逊很重要。骄傲不是坏事，但不可以自大。",jp:"shì. hái yǒu, wǒ jué de qiān xùn hěn zhòng yào. jiāo ào bú shì huài shì, dàn bù kě yǐ zì dà.",en:"Yes. Also, I think humility is very important. Pride isn\'t bad, but you can\'t be arrogant."},
-      {sp:"A",zh:"就是这样。现在社会很多人太重视面子，反而忽略了真正重要的东西，比如家人和健康。",jp:"jiù shì zhè yàng. xiàn zài shè huì hěn duō rén tài zhòng shì miàn zi, fǎn ér hū lüè le zhēn zhèng zhòng yào de dōng xi, bǐ rú jiā rén hé jiàn kāng.",en:"Exactly. Nowadays many people care too much about face, and in doing so neglect what\'s truly important — like family and health."},
-    ]
-  }
-  },
-  ,{
-  id:17,zh:"节日与典礼",en:"Holidays & Ceremonies",
+  {id:17,zh:"节日与典礼",en:"Holidays & Ceremonies",
   sections:[
     { title:"Traditional Chinese Festivals", zh:"中国传统节日", vocab:[
       {zh:"农历新年",jp:"nóng lì xīn nián",en:"Lunar New Year"},
@@ -4405,8 +3735,7 @@ const LESSONS_MANDARIN = [
     ]
   }
   }
-  ,{
-  id:18,zh:"赞美、寒暄与感情",en:"Compliments, Small Talk & Romance",
+  ,{id:18,zh:"赞美与寒暄",en:"Compliments & Small Talk",
   sections:[
     { title:"Compliments & Praise", zh:"赞美与称赞", vocab:[
       {zh:"好漂亮啊",jp:"hǎo piào liang a",en:"Wow, so pretty/beautiful (colloquial exclamation)"},
@@ -4429,8 +3758,7 @@ const LESSONS_MANDARIN = [
       {zh:"先看看吧",jp:"xiān kàn kàn ba",en:"See how it goes / Let's wait and see (colloquial)"},
       {zh:"无缘无故",jp:"wú yuán wú gù",en:"Out of nowhere / For no reason"},
       {zh:"就这样吧",jp:"jiù zhè yàng ba",en:"That's it for now / Let's leave it here"},
-    ]},
-    { title:"Romance & Relationships", zh:"感情与恋爱", vocab:[
+    ,
       {zh:"谈恋爱",jp:"tán liàn ài",en:"Be in a relationship / Date (standard)"},
       {zh:"在一起",jp:"zài yī qǐ",en:"Be together / In a relationship (colloquial)"},
       {zh:"单身",jp:"dān shēn",en:"Single"},
@@ -4440,8 +3768,7 @@ const LESSONS_MANDARIN = [
       {zh:"前任",jp:"qián rèn",en:"Ex / Former partner (colloquial)"},
       {zh:"另一半",jp:"lìng yī bàn",en:"Other half / Partner"},
       {zh:"有缘分",jp:"yǒu yuán fèn",en:"It's fate / We were meant to meet"},
-      {zh:"聊一聊",jp:"liáo yī liáo",en:"Have a chat / Get to know each other (colloquial)"},
-    ]},
+      {zh:"聊一聊",jp:"liáo yī liáo",en:"Have a chat / Get to know each other (colloquial)"}]},
   ],
   dialogue:{
     title:"Dialogue: Catching Up",
@@ -4454,8 +3781,7 @@ const LESSONS_MANDARIN = [
     ]
   }
   }
-  ,{
-  id:19,zh:"家居与住房",en:"Home & Housing",
+  ,{id:19,zh:"家居与住房",en:"Home & Housing",
   sections:[
     { title:"Types of Housing", zh:"住房类型", vocab:[
       {zh:"公租房",jp:"gōng zū fáng",en:"Public rental housing"},
@@ -4503,8 +3829,7 @@ const LESSONS_MANDARIN = [
     ]
   }
   }
-  ,{
-  id:20,zh:"艺术与娱乐",en:"Arts & Entertainment",
+  ,{id:20,zh:"艺术与娱乐",en:"Arts & Entertainment",
   sections:[
     { title:"Film, TV & Music", zh:"电影、电视与音乐", vocab:[
       {zh:"国产片",jp:"guó chǎn piān",en:"Chinese domestic film (colloquial)"},
@@ -4565,8 +3890,7 @@ const LESSONS_MANDARIN = [
     ]
   }
   }
-  ,{
-  id:21,zh:"环保与可持续生活",en:"Environment & Sustainable Living",
+  ,{id:21,zh:"环保与可持续生活",en:"Environment & Sustainable Living",
   sections:[
     { title:"Environmental Issues", zh:"环境问题", vocab:[
       {zh:"全球变暖",jp:"quán qiú biàn nuǎn",en:"Global warming"},
@@ -4615,7 +3939,86 @@ const LESSONS_MANDARIN = [
     ]
   }
   }
-
+  ,{id:22,zh:"买菜与超市",en:"Grocery Shopping",
+  sections:[
+    { title:"Produce — Chinese Vegetables", zh:"蔬菜", vocab:[
+      {zh:"菜心",jp:"cài xīn",en:"Choy sum / Chinese flowering cabbage"},
+      {zh:"芥兰",jp:"jiè lán",en:"Gai lan / Chinese broccoli"},
+      {zh:"白菜",jp:"bái cài",en:"Bok choy / Napa cabbage"},
+      {zh:"空心菜",jp:"kōng xīn cài",en:"Water spinach / Morning glory"},
+      {zh:"苦瓜",jp:"kǔ guā",en:"Bitter melon"},
+      {zh:"冬瓜",jp:"dōng guā",en:"Winter melon"},
+      {zh:"莲藕",jp:"lián ǒu",en:"Lotus root"},
+      {zh:"芋头",jp:"yù tou",en:"Taro"},
+      {zh:"番薯",jp:"fān shǔ",en:"Sweet potato"},
+      {zh:"豆苗",jp:"dòu miáo",en:"Pea shoots"},
+      {zh:"韭菜",jp:"jiǔ cài",en:"Chinese chives"},
+      {zh:"香菇",jp:"xiāng gū",en:"Shiitake mushroom"},
+      {zh:"金针菇",jp:"jīn zhēn gū",en:"Enoki mushroom"},
+      {zh:"豆腐",jp:"dòu fu",en:"Tofu"},
+      {zh:"豆芽",jp:"dòu yá",en:"Bean sprouts"},
+      {zh:"姜",jp:"jiāng",en:"Ginger"},
+      {zh:"蒜头",jp:"suàn tou",en:"Garlic"},
+      {zh:"葱",jp:"cōng",en:"Spring onion / Green onion"},
+    ]},
+    { title:"Cooked Food Counter", zh:"熟食", vocab:[
+      {zh:"烤鸭",jp:"kǎo yā",en:"Roast duck"},
+      {zh:"叉烧",jp:"chā shāo",en:"Char siu / Barbecue pork"},
+      {zh:"烧肉",jp:"shāo ròu",en:"Roast pork"},
+      {zh:"白斩鸡",jp:"bái zhǎn jī",en:"Poached chicken / White cut chicken"},
+      {zh:"牛肠",jp:"niú cháng",en:"Beef intestine (braised)"},
+      {zh:"牛腩",jp:"niú nǎn",en:"Beef brisket (braised)"},
+      {zh:"猪手",jp:"zhū shǒu",en:"Braised pork knuckle"},
+      {zh:"卤水",jp:"lǔ shuǐ",en:"Braised in master stock / Soy-braised"},
+      {zh:"半份",jp:"bàn fèn",en:"Half portion"},
+    ]},
+    { title:"Meat & Seafood", zh:"肉类与海鲜", vocab:[
+      {zh:"猪肉",jp:"zhū ròu",en:"Pork"},
+      {zh:"牛肉",jp:"niú ròu",en:"Beef"},
+      {zh:"鸡肉",jp:"jī ròu",en:"Chicken"},
+      {zh:"羊肉",jp:"yáng ròu",en:"Lamb / Mutton"},
+      {zh:"猪排",jp:"zhū pái",en:"Pork chop"},
+      {zh:"猪骨",jp:"zhū gǔ",en:"Pork bones (for soup)"},
+      {zh:"鱼",jp:"yú",en:"Fish"},
+      {zh:"虾",jp:"xiā",en:"Shrimp / Prawn"},
+      {zh:"螃蟹",jp:"páng xiè",en:"Crab"},
+      {zh:"扇贝",jp:"shàn bèi",en:"Scallop"},
+      {zh:"鱿鱼",jp:"yóu yú",en:"Squid"},
+      {zh:"生蚝",jp:"shēng háo",en:"Oyster"},
+      {zh:"三文鱼",jp:"sān wén yú",en:"Salmon"},
+      {zh:"鳕鱼",jp:"xuě yú",en:"Cod"},
+    ]},
+    { title:"General Groceries", zh:"一般杂货", vocab:[
+      {zh:"白米",jp:"bái mǐ",en:"White rice"},
+      {zh:"面条",jp:"miàn tiáo",en:"Noodles"},
+      {zh:"面粉",jp:"miàn fěn",en:"Flour"},
+      {zh:"食用油",jp:"shí yòng yóu",en:"Cooking oil"},
+      {zh:"生抽",jp:"shēng chōu",en:"Light soy sauce"},
+      {zh:"老抽",jp:"lǎo chōu",en:"Dark soy sauce"},
+      {zh:"蚝油",jp:"háo yóu",en:"Oyster sauce"},
+      {zh:"糖",jp:"táng",en:"Sugar"},
+      {zh:"盐",jp:"yán",en:"Salt"},
+      {zh:"鸡蛋",jp:"jī dàn",en:"Eggs"},
+      {zh:"牛奶",jp:"niú nǎi",en:"Milk"},
+      {zh:"面包",jp:"miàn bāo",en:"Bread"},
+      {zh:"冷冻食品",jp:"lěng dòng shí pǐn",en:"Frozen goods"},
+      {zh:"购物车",jp:"gòu wù chē",en:"Shopping cart / Trolley"},
+      {zh:"购物篮",jp:"gòu wù lán",en:"Shopping basket"},
+      {zh:"收银台",jp:"shōu yín tái",en:"Checkout / Cash register"},
+      {zh:"会员卡",jp:"huì yuán kǎ",en:"Loyalty / Membership card"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: At the Market",
+    lines:[
+      {sp:"A",zh:"老板，今天有没有新鲜的鱼？",jp:"lǎo bǎn, jīn tiān yǒu méi yǒu xīn xiān de yú?",en:"Boss, do you have fresh fish today?"},
+      {sp:"B",zh:"有的，今早刚到货，三文鱼很新鲜。",jp:"yǒu de, jīn zǎo gāng dào huò, sān wén yú hěn xīn xiān.",en:"Yes, just got stock in this morning. The salmon is very fresh."},
+      {sp:"A",zh:"好，我要半条，帮我切好。还有，有没有叉烧？",jp:"hǎo, wǒ yào bàn tiáo, bāng wǒ qiē hǎo. hái yǒu, yǒu méi yǒu chā shāo?",en:"Great, I'll take half, cut for me. Also, do you have char siu?"},
+      {sp:"B",zh:"叉烧快卖完了，烤鸭的话还有整只。",jp:"chā shāo kuài mài wán le, kǎo yā de huà hái yǒu zhěng zhī.",en:"Not much char siu left, but we have a whole roast duck."},
+      {sp:"A",zh:"那给我半只烤鸭。一共多少钱？",jp:"nà gěi wǒ bàn zhī kǎo yā. yī gòng duō shao qián?",en:"Then give me half a roast duck. How much altogether?"},
+    ]
+  }
+  }
 ];
 
 
@@ -4668,7 +4071,7 @@ function setLang(lang) {
   document.getElementById('lang-btn-cmn').classList.toggle('active', lang === 'cmn');
   // Update header subtitle
   const headerEl = document.getElementById('header-en');
-  if (headerEl) headerEl.textContent = lang === 'cmn' ? 'ConversationalChinese (Mandarin)' : 'ConversationalChinese (Cantonese)';
+  if (headerEl) headerEl.textContent = lang === 'cmn' ? 'EverydayChinese (Mandarin)' : 'EverydayChinese (Cantonese)';
   renderSidebar(); renderMain();
   // Re-render Setup so instructions/voice tips update for the new language
   const setupEl = document.getElementById('setup-content');
@@ -4719,7 +4122,7 @@ const store = {
 // ─── MODULE DEFINITIONS ───
 const MODULES = [
   { id:1, short:"Everyday Topics", en:"Everyday Topics", zh:"日常話題", zhCmn:"日常话题",
-    lessons:[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20] },
+    lessons:[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21] },
 ];
 
 function getModuleForLesson(lessonIdx) {
@@ -4781,7 +4184,7 @@ function toggleFavorite(li, si, vi) {
 // ─── SPEECH ───
 // ── AZURE TTS ──────────────────────────────────────────────────────────────
 // Update AZURE_WORKER_URL after deploying the Cloudflare Worker
-const APP_VERSION = 'ConversationalChinese v2.0';
+const APP_VERSION = 'EverydayChinese v1.0';
 const AZURE_WORKER_URL = 'https://medchinese-tts.medrosettaapp.workers.dev';
 const VOICE_MAP = {
   yue: localStorage.getItem('everyday_azure_voice_yue') || 'zh-HK-HiuGaaiNeural',
@@ -6268,14 +5671,14 @@ function renderAudioSetup(targetEl) {
       <div class="lesson-main-title" style="font-style:italic">Audio & Voice Settings</div>
     </div>
     <div style="font-family:var(--mono);font-size:0.875rem;color:var(--muted);font-style:italic;margin-bottom:20px;line-height:1.9">
-      ConversationalChinese is for educational purposes and is not intended to provide medical advice. Clinical decisions should reflect professional judgment.
+      EverydayChinese is for educational purposes and is not intended to provide medical advice. Clinical decisions should reflect professional judgment.
     </div>
 
     <!-- Azure TTS Status -->
     <div style="background:var(--gold-light);border:2px solid var(--gold);padding:16px 20px;margin-bottom:28px">
       <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;margin-bottom:6px">🔊 Neural Voice Audio</div>
       <div style="font-family:var(--mono);font-size:0.875rem;line-height:1.9;color:var(--ink)">
-        ConversationalChinese uses <strong>Azure Neural TTS</strong> — high-quality AI voices that work automatically in all browsers.
+        EverydayChinese uses <strong>Azure Neural TTS</strong> — high-quality AI voices that work automatically in all browsers.
         No setup required. Select your preferred voices below.
       </div>
     </div>
@@ -6425,7 +5828,7 @@ function renderAudioSetup(targetEl) {
             </div>
             <div style="display:flex;gap:10px;align-items:baseline">
               <span style="background:var(--teal);color:white;border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;flex-shrink:0">4</span>
-              <span>Tap <strong>Add</strong> — ConversationalChinese appears on your home screen</span>
+              <span>Tap <strong>Add</strong> — EverydayChinese appears on your home screen</span>
             </div>
           </div>
         </div>
@@ -6452,14 +5855,14 @@ function renderAudioSetup(targetEl) {
             </div>
             <div style="display:flex;gap:10px;align-items:baseline">
               <span style="background:var(--teal);color:white;border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;flex-shrink:0">4</span>
-              <span>Tap <strong>Add</strong> — ConversationalChinese appears on your home screen</span>
+              <span>Tap <strong>Add</strong> — EverydayChinese appears on your home screen</span>
             </div>
           </div>
         </div>
       </div>
 
       <div style="background:var(--teal-light);border:1.5px solid var(--teal);padding:12px 16px;font-family:var(--mono);font-size:0.68rem;line-height:1.7;color:var(--ink)">
-        💡 <strong>Tip:</strong> Once installed, ConversationalChinese opens full-screen with no browser bars — just like a native app. Audio and all features work the same way.
+        💡 <strong>Tip:</strong> Once installed, EverydayChinese opens full-screen with no browser bars — just like a native app. Audio and all features work the same way.
       </div>
     </div>
   `;
@@ -6978,10 +6381,11 @@ function renderMain() {
 
 function renderSetupPage() {
   const target = document.getElementById('setup-content');
+  const vbanner = document.createElement('div');
+  vbanner.innerHTML = `<div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;padding:10px 0 18px 0;border-bottom:1px solid var(--border);margin-bottom:20px"><span style="color:var(--gold);font-weight:700">EverydayChinese v1.0</span> &nbsp;·&nbsp; April 10, 2026</div>`;
+  target.appendChild(vbanner);
   renderAudioSetup(target);
-  // Append About section
   renderAbout(target);
-  // Append feedback survey after audio setup
   renderFeedbackSurvey(target);
 }
 
@@ -6992,14 +6396,14 @@ function renderAbout(targetEl) {
   div.innerHTML = `
     <div style="margin-top:36px;padding-top:24px;border-top:2px solid var(--border)">
       <div class="lesson-label" style="margin-bottom:16px">ABOUT 關於</div>
-      <div style="font-family:'DM Serif Display',serif;font-size:1.3rem;font-style:italic;margin-bottom:20px">Why ConversationalChinese Was Created</div>
+      <div style="font-family:'DM Serif Display',serif;font-size:1.3rem;font-style:italic;margin-bottom:20px">Why EverydayChinese Was Created</div>
 
       <div style="font-family:var(--mono);font-size:0.875rem;line-height:1.9;color:var(--ink);margin-bottom:16px">
         After 15 years of practicing Family Medicine in the San Francisco Bay Area within a Chinese-speaking clinical setting, one thing became clear. Language barriers can lead to missed opportunities to improve care. Building strong medical Chinese skills takes time, practice, support from colleagues, and the right tools.
       </div>
 
       <div style="font-family:var(--mono);font-size:0.875rem;line-height:1.9;color:var(--ink);margin-bottom:16px">
-        ConversationalChinese was created as a practical learning resource shaped by clinical experience. It's free to use, with a commitment to keeping the core content accessible to everyone. If you find it helpful, please share it with others working to better support Chinese-speaking patients.
+        EverydayChinese was created as a practical learning resource shaped by clinical experience. It's free to use, with a commitment to keeping the core content accessible to everyone. If you find it helpful, please share it with others working to better support Chinese-speaking patients.
       </div>
 
       <div style="font-family:var(--mono);font-size:0.875rem;line-height:1.9;color:var(--ink);margin-bottom:16px">
@@ -7016,7 +6420,7 @@ function renderAbout(targetEl) {
 
 
       <div style="margin-top:20px;padding:16px 20px;border:1px solid var(--border);font-family:var(--mono);font-size:0.875rem;line-height:1.9;color:var(--muted);font-style:italic">
-        ConversationalChinese is a language learning tool for healthcare professionals. It is not a medical device and does not provide medical advice or clinical translation services. All phrases should be verified before clinical use, and all clinical decisions should reflect professional judgment and current standards of care.
+        EverydayChinese is a language learning tool for healthcare professionals. It is not a medical device and does not provide medical advice or clinical translation services. All phrases should be verified before clinical use, and all clinical decisions should reflect professional judgment and current standards of care.
       </div>
 
       <!-- Version -->
@@ -7094,7 +6498,7 @@ function renderFeedbackSurvey(targetEl) {
 
       <!-- Would recommend -->
       <div class="survey-q">
-        <div class="survey-q-label">Would you recommend ConversationalChinese to colleagues?</div>
+        <div class="survey-q-label">Would you recommend EverydayChinese to colleagues?</div>
         <div style="display:flex;gap:8px;margin-top:6px">
           ${['Definitely','Probably','Unsure','No'].map(o =>
             `<button class="survey-opt survey-opt-recommend" onclick="toggleSurveyOpt(this)">${o}</button>`
@@ -8415,7 +7819,7 @@ renderPathwayBanner();
 // Registers an inline service worker for offline support & home screen install
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'conversational-chinese-v2';
+    const CACHE = 'everyday-chinese-v1';
     self.addEventListener('install', e => {
       e.waitUntil(
         caches.open(CACHE).then(c => c.addAll(['${location.href}']))
@@ -8460,7 +7864,7 @@ function showUpdateBanner() {
   const banner = document.createElement('div');
   banner.id = 'update-banner';
   banner.innerHTML = `
-    <span>🔄 ConversationalChinese has been updated</span>
+    <span>🔄 EverydayChinese has been updated</span>
     <button onclick="window.location.reload()">Reload</button>
     <button onclick="this.parentElement.remove()" style="background:none;border:none;color:rgba(245,240,232,0.6);cursor:pointer;font-size:1rem;padding:0 4px">✕</button>
   `;
@@ -8585,7 +7989,7 @@ async function sendFeedback(data) {
   } catch(e) {
     console.warn('Feedback send failed:', e);
     // Fallback: open pre-filled email
-    const subject = encodeURIComponent('ConversationalChinese Feedback: ' + (data.lesson || ''));
+    const subject = encodeURIComponent('EverydayChinese Feedback: ' + (data.lesson || ''));
     const body = encodeURIComponent(
       'Type: ' + (data.type || '') + '\n' +
       'Item: ' + (data.item || '') + '\n' +
@@ -8942,6 +8346,9 @@ function setSurveyStars(n) {
   // Track session start and lesson views
   window._sessionStart = Date.now();
   window._lessonsViewed = new Set();
+
+
+
 </script>
 
   <!-- Beta Feedback Overlay -->
