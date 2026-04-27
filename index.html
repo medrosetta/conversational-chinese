@@ -3083,9 +3083,9 @@
     <span class="top-nav-mobile" style="font-size:1.6rem;line-height:1">★</span>
   </button>
   <button class="top-nav-btn" id="nav-pathway" onclick="navSelectPathway()">
-    <span class="top-nav-zh">路徑</span>
-    <span class="top-nav-en">My Path</span>
-    <span class="top-nav-mobile">Path</span>
+    <span class="top-nav-zh">遊戲</span>
+    <span class="top-nav-en">Games</span>
+    <span class="top-nav-mobile">Games</span>
   </button>
   <button class="top-nav-btn" id="nav-setup" onclick="navSelectSetup()">
     <span class="top-nav-zh">設定</span>
@@ -3125,7 +3125,7 @@
 </div>
 
 <div id="pathway-container" style="display:none; min-height:calc(100vh - 148px)">
-  <main id="pathway-content" style="max-width:720px;margin:0 auto;padding:36px 44px;box-sizing:border-box"></main>
+  <main id="games-content" style="max-width:720px;margin:0 auto;padding:36px 44px;box-sizing:border-box"></main>
 </div>
 
 <div id="favorites-container" style="display:none; min-height:calc(100vh - 148px)">
@@ -3133,6 +3133,8 @@
 </div>
 
 <script>
+function trackEvent() {}
+
 const LESSONS = [
   {id:1,zh:"問候與基本用語",en:"Greetings & Basic Phrases",
   sections:[
@@ -5254,7 +5256,7 @@ function toggleFavorite(li, si, vi) {
 // ─── SPEECH ───
 // ── AZURE TTS ──────────────────────────────────────────────────────────────
 // Update AZURE_WORKER_URL after deploying the Cloudflare Worker
-const APP_VERSION = 'EverydayChinese v2.0';
+const APP_VERSION = 'EverydayChinese v2.1';
 const AZURE_WORKER_URL = 'https://medchinese-tts.medrosettaapp.workers.dev';
 const VOICE_MAP = {
   yue: localStorage.getItem('everyday_azure_voice_yue') || 'zh-HK-HiuGaaiNeural',
@@ -6737,28 +6739,15 @@ function renderAudioSetup(targetEl) {
 
   el.innerHTML = `
     <div class="lesson-header fade-in">
-      <div class="lesson-label">SETUP & AUDIO 設定及語音</div>
-      <div class="lesson-main-title" style="font-style:italic">Audio & Voice Settings</div>
+      <div class="lesson-label">VOICE SETTINGS 語音設定</div>
+      <div class="lesson-main-title" style="font-style:italic">Choose your preferred voices</div>
     </div>
-    <div style="font-family:var(--mono);font-size:0.875rem;color:var(--muted);font-style:italic;margin-bottom:20px;line-height:1.9">
-      EverydayChinese is for educational purposes and is not intended to provide medical advice. Clinical decisions should reflect professional judgment.
-    </div>
-
-    <!-- Azure TTS Status -->
-    <div style="background:var(--gold-light);border:2px solid var(--gold);padding:16px 20px;margin-bottom:28px">
-      <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;margin-bottom:6px">🔊 Neural Voice Audio</div>
-      <div style="font-family:var(--mono);font-size:0.875rem;line-height:1.9;color:var(--ink)">
-        EverydayChinese uses <strong>Azure Neural TTS</strong> — high-quality AI voices that work automatically in all browsers.
-        No setup required. Select your preferred voices below.
-      </div>
-    </div>
-
     <!-- Cantonese Voice -->
     <div style="margin-bottom:28px">
       <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;font-style:italic;margin-bottom:6px">粵語 Cantonese Voice</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:6px">
         <div>
-          <div style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.03em;color:var(--muted);margin-bottom:4px">NARRATOR / DOCTOR 旁白／醫生</div>
+          <div style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.03em;color:var(--muted);margin-bottom:4px">SPEAKER A 說話者甲</div>
           <div style="display:flex;gap:6px;align-items:center">
             <select id="voice-yue-select" onchange="saveAzureVoice('yue', this.value)"
               style="font-family:var(--mono);font-size:0.72rem;padding:5px 6px;border:1.5px solid var(--border);background:var(--cream);color:var(--ink);outline:none;cursor:pointer;flex:1;min-width:0">
@@ -6773,7 +6762,7 @@ function renderAudioSetup(targetEl) {
           </div>
         </div>
         <div>
-          <div style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.03em;color:var(--muted);margin-bottom:4px">PATIENT 病人</div>
+          <div style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.03em;color:var(--muted);margin-bottom:4px">SPEAKER B 說話者乙</div>
           <div style="display:flex;gap:6px;align-items:center">
             <select id="voice-yue-patient-select" onchange="saveAzureVoice('yue_patient', this.value)"
               style="font-family:var(--mono);font-size:0.72rem;padding:5px 6px;border:1.5px solid var(--border);background:var(--cream);color:var(--ink);outline:none;cursor:pointer;flex:1;min-width:0">
@@ -6795,7 +6784,7 @@ function renderAudioSetup(targetEl) {
       <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;font-style:italic;margin-bottom:6px">國語 Mandarin Voice</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:6px">
         <div>
-          <div style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.03em;color:var(--muted);margin-bottom:4px">NARRATOR / DOCTOR 旁白／醫生</div>
+          <div style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.03em;color:var(--muted);margin-bottom:4px">SPEAKER A 說話者甲</div>
           <div style="display:flex;gap:6px;align-items:center">
             <select id="voice-cmn-select" onchange="saveAzureVoice('cmn', this.value)"
               style="font-family:var(--mono);font-size:0.72rem;padding:5px 6px;border:1.5px solid var(--border);background:var(--cream);color:var(--ink);outline:none;cursor:pointer;flex:1;min-width:0">
@@ -6811,7 +6800,7 @@ function renderAudioSetup(targetEl) {
           </div>
         </div>
         <div>
-          <div style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.03em;color:var(--muted);margin-bottom:4px">PATIENT 病人</div>
+          <div style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.03em;color:var(--muted);margin-bottom:4px">SPEAKER B 說話者乙</div>
           <div style="display:flex;gap:6px;align-items:center">
             <select id="voice-cmn-patient-select" onchange="saveAzureVoice('cmn_patient', this.value)"
               style="font-family:var(--mono);font-size:0.72rem;padding:5px 6px;border:1.5px solid var(--border);background:var(--cream);color:var(--ink);outline:none;cursor:pointer;flex:1;min-width:0">
@@ -6854,87 +6843,6 @@ function renderAudioSetup(targetEl) {
       </div>
     </div>
 
-    <!-- Browser compatibility note -->
-    <div style="border:1px solid var(--border);padding:16px 20px;margin-bottom:28px;font-family:var(--mono);font-size:0.875rem;line-height:1.9">
-      <div style="font-weight:700;margin-bottom:6px;font-size:0.78rem">Browser Compatibility</div>
-      <div>✅ <strong>Edge</strong> — Full neural voice support</div>
-      <div>✅ <strong>Chrome</strong> — Full neural voice support</div>
-      <div>✅ <strong>Safari (iOS/macOS)</strong> — Full neural voice support</div>
-      <div>✅ <strong>Firefox</strong> — Full neural voice support</div>
-      <div style="margin-top:8px;color:var(--muted);font-size:0.875rem">If audio does not play, check that your browser tab is not muted and your device volume is on.</div>
-    </div>
-
-    <!-- Feature ratings -->
-    <div style="border-top:1px solid var(--border);padding-top:20px;margin-top:8px">
-      <div class="feature-rating-bar">Was <strong>Audio Setup</strong> useful?&nbsp;
-        <button class="feature-thumb-btn" onclick="rateFeature(this,'Audio Setup','up')">👍</button>&nbsp;
-        <button class="feature-thumb-btn" onclick="rateFeature(this,'Audio Setup','down')">👎</button>
-      </div>
-    </div>
-
-    <!-- Install on Home Screen -->
-    <div style="margin-top:32px;border-top:2px solid var(--border);padding-top:24px">
-      <div style="font-family:'DM Serif Display',serif;font-size:1.3rem;font-style:italic;margin-bottom:4px">📲 Add App to Your Mobile Device</div>
-      <div style="font-family:var(--mono);font-size:0.68rem;color:var(--muted);letter-spacing:0.06em;margin-bottom:20px">INSTALL MEDCHINESE ON YOUR HOME SCREEN — NO APP STORE REQUIRED</div>
-
-      <!-- iOS -->
-      <div style="background:var(--section-bg);border:1.5px solid var(--border);margin-bottom:16px">
-        <div style="background:var(--ink);color:var(--paper);padding:10px 16px;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.12em;display:flex;align-items:center;gap:8px">
-          <span style="font-size:1rem"></span> IOS — SAFARI
-        </div>
-        <div style="padding:16px">
-          <div style="font-family:var(--mono);font-size:0.72rem;line-height:2;color:var(--ink)">
-            <div style="display:flex;gap:10px;align-items:baseline;margin-bottom:4px">
-              <span style="background:var(--teal);color:white;border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;flex-shrink:0">1</span>
-              <span>Open <strong>medchinese.com</strong> in Safari</span>
-            </div>
-            <div style="display:flex;gap:10px;align-items:baseline;margin-bottom:4px">
-              <span style="background:var(--teal);color:white;border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;flex-shrink:0">2</span>
-              <span>Tap the <strong>Share</strong> button <span style="font-size:1rem">⬆️</span> at the bottom of the screen</span>
-            </div>
-            <div style="display:flex;gap:10px;align-items:baseline;margin-bottom:4px">
-              <span style="background:var(--teal);color:white;border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;flex-shrink:0">3</span>
-              <span>Scroll down and tap <strong>Add to Home Screen</strong></span>
-            </div>
-            <div style="display:flex;gap:10px;align-items:baseline">
-              <span style="background:var(--teal);color:white;border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;flex-shrink:0">4</span>
-              <span>Tap <strong>Add</strong> — EverydayChinese appears on your home screen</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Android -->
-      <div style="background:var(--section-bg);border:1.5px solid var(--border);margin-bottom:24px">
-        <div style="background:var(--ink);color:var(--paper);padding:10px 16px;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.12em;display:flex;align-items:center;gap:8px">
-          <span style="font-size:1rem">🤖</span> ANDROID — CHROME
-        </div>
-        <div style="padding:16px">
-          <div style="font-family:var(--mono);font-size:0.72rem;line-height:2;color:var(--ink)">
-            <div style="display:flex;gap:10px;align-items:baseline;margin-bottom:4px">
-              <span style="background:var(--teal);color:white;border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;flex-shrink:0">1</span>
-              <span>Open <strong>medchinese.com</strong> in Chrome</span>
-            </div>
-            <div style="display:flex;gap:10px;align-items:baseline;margin-bottom:4px">
-              <span style="background:var(--teal);color:white;border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;flex-shrink:0">2</span>
-              <span>Tap the <strong>⋮ menu</strong> (top right)</span>
-            </div>
-            <div style="display:flex;gap:10px;align-items:baseline;margin-bottom:4px">
-              <span style="background:var(--teal);color:white;border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;flex-shrink:0">3</span>
-              <span>Tap <strong>Add to Home screen</strong></span>
-            </div>
-            <div style="display:flex;gap:10px;align-items:baseline">
-              <span style="background:var(--teal);color:white;border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;flex-shrink:0">4</span>
-              <span>Tap <strong>Add</strong> — EverydayChinese appears on your home screen</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style="background:var(--teal-light);border:1.5px solid var(--teal);padding:12px 16px;font-family:var(--mono);font-size:0.68rem;line-height:1.7;color:var(--ink)">
-        💡 <strong>Tip:</strong> Once installed, EverydayChinese opens full-screen with no browser bars — just like a native app. Audio and all features work the same way.
-      </div>
-    </div>
   `;
 }
 
@@ -7451,12 +7359,12 @@ function renderMain() {
 
 function renderSetupPage() {
   const target = document.getElementById('setup-content');
-  const vbanner = document.createElement('div');
-  vbanner.innerHTML = `<div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;padding:10px 0 18px 0;border-bottom:1px solid var(--border);margin-bottom:20px"><span style="color:var(--gold);font-weight:700">EverydayChinese v2.0</span> &nbsp;·&nbsp; April 27, 2026</div>`;
-  target.appendChild(vbanner);
+  target.innerHTML = '';
   renderAudioSetup(target);
-  renderAbout(target);
-  renderFeedbackSurvey(target);
+  // Version at bottom
+  const vbanner = document.createElement('div');
+  vbanner.innerHTML = `<div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;padding:16px 0 8px 0;border-top:1px solid var(--border);margin-top:24px;color:var(--muted)"><span style="color:var(--gold);font-weight:700">EverydayChinese v2.1</span> &nbsp;·&nbsp; April 27, 2026</div>`;
+  target.appendChild(vbanner);
 }
 
 function renderAbout(targetEl) {
@@ -8654,21 +8562,329 @@ function navSelectPathway() {
 }
 
 function renderPathwayScreen() {
-  const pathway = getPathway();
+  renderGamesScreen();
+}
+
+function renderGamesScreen() {
   const el = document.getElementById('pathway-content');
   if (!el) return;
+  const L = getLessons();
+  const totalWords = L.reduce((n,l) => n + l.sections.reduce((m,s) => m + (s.vocab||[]).length, 0), 0);
+  const totalLessons = L.length;
+  const favCount = (typeof favorites !== 'undefined' ? [...favorites].length : 0);
+  const langLabel = (typeof currentLang !== 'undefined' && currentLang === 'cmn') ? '國語 Mandarin' : '粵語 Cantonese';
 
-  if (pathway) {
-    // Return state — show saved path
-    renderPathwayResult(pathway, true);
+  el.innerHTML = `
+    <div class="lesson-header fade-in">
+      <div class="lesson-label">GAMES &amp; PROGRESS 遊戲與進度</div>
+    </div>
+
+    <!-- Progress Strip -->
+    <div style="background:var(--ink);border:1px solid var(--border);border-radius:4px;padding:18px 20px;margin-bottom:22px">
+      <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;color:var(--gold);margin-bottom:14px">YOUR PROGRESS 你的進度 🌟</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center">
+        <div>
+          <div style="font-family:'DM Serif Display',serif;font-size:2rem;color:var(--paper);line-height:1">${totalWords.toLocaleString()}</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.55rem;color:var(--muted);letter-spacing:0.06em;margin-top:4px">WORDS 詞彙</div>
+        </div>
+        <div>
+          <div style="font-family:'DM Serif Display',serif;font-size:2rem;color:var(--paper);line-height:1">${totalLessons}</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.55rem;color:var(--muted);letter-spacing:0.06em;margin-top:4px">LESSONS 課程</div>
+        </div>
+        <div>
+          <div style="font-family:'DM Serif Display',serif;font-size:2rem;color:var(--paper);line-height:1">4</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.55rem;color:var(--muted);letter-spacing:0.06em;margin-top:4px">MODULES 模組</div>
+        </div>
+        <div>
+          <div style="font-family:'DM Serif Display',serif;font-size:2rem;color:var(--paper);line-height:1">${favCount}<span style="font-size:1rem">★</span></div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.55rem;color:var(--muted);letter-spacing:0.06em;margin-top:4px">FAVORITES 喜愛</div>
+        </div>
+      </div>
+      <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--muted)">
+        🗣️ ${langLabel} mode
+      </div>
+    </div>
+
+    <!-- Scope selector -->
+    <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;color:var(--gold);margin-bottom:10px">PLAY FROM 選擇範圍</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px">
+      <button id="gs-all"  onclick="setGameScope('all')"      style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.07em;background:var(--gold);color:var(--ink);border:none;padding:7px 14px;cursor:pointer;border-radius:2px">ALL LESSONS 全部</button>
+      <button id="gs-cur"  onclick="setGameScope('current')"  style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.07em;background:var(--ink);color:var(--paper);border:1px solid var(--border);padding:7px 14px;cursor:pointer;border-radius:2px">CURRENT LESSON 本課</button>
+      <button id="gs-fav"  onclick="setGameScope('favorites')" style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.07em;background:var(--ink);color:var(--paper);border:1px solid var(--border);padding:7px 14px;cursor:pointer;border-radius:2px">FAVORITES ★</button>
+    </div>
+
+    <!-- Games Grid -->
+    <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;color:var(--gold);margin-bottom:12px">CHOOSE A GAME 選遊戲</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px" id="games-grid">
+      <button onclick="startGame('flashcard')" class="game-tile">
+        <div style="font-size:1.8rem;margin-bottom:8px">🃏</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--paper);margin-bottom:4px">Flashcards</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);line-height:1.5">快閃卡 · Tap to reveal meaning</div>
+      </button>
+      <button onclick="startGame('quiz')" class="game-tile">
+        <div style="font-size:1.8rem;margin-bottom:8px">🎯</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--paper);margin-bottom:4px">Quick Quiz</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);line-height:1.5">快問快答 · 4 choices, 10 rounds</div>
+      </button>
+      <button onclick="startGame('match')" class="game-tile">
+        <div style="font-size:1.8rem;margin-bottom:8px">🔗</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--paper);margin-bottom:4px">Word Match</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);line-height:1.5">配對遊戲 · Match all 6 pairs</div>
+      </button>
+      <button onclick="startGame('listen')" class="game-tile">
+        <div style="font-size:1.8rem;margin-bottom:8px">👂</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--paper);margin-bottom:4px">Listen & Pick</div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);line-height:1.5">聆聽遊戲 · Hear it, find the word</div>
+      </button>
+    </div>
+
+    <!-- Game play area -->
+    <div id="game-area"></div>
+  `;
+}
+
+/* ── Game tile CSS injected once ── */
+(function(){
+  if (document.getElementById('game-tile-css')) return;
+  const s = document.createElement('style');
+  s.id = 'game-tile-css';
+  s.textContent = `.game-tile{background:var(--ink);border:1px solid var(--border);border-radius:4px;padding:20px 16px;text-align:left;cursor:pointer;transition:border-color 0.18s,transform 0.12s;width:100%}.game-tile:hover{border-color:var(--gold);transform:translateY(-2px)}`;
+  document.head.appendChild(s);
+})();
+
+let _gameScope = 'all';
+function setGameScope(scope) {
+  _gameScope = scope;
+  ['all','cur','fav'].forEach(k => {
+    const b = document.getElementById('gs-'+k);
+    if (!b) return;
+    const active = (k === scope || (scope==='current' && k==='cur') || (scope==='favorites' && k==='fav'));
+    b.style.background = active ? 'var(--gold)' : 'var(--ink)';
+    b.style.color       = active ? 'var(--ink)'  : 'var(--paper)';
+    b.style.border      = active ? 'none'         : '1px solid var(--border)';
+  });
+}
+
+function getGamePool() {
+  const L = getLessons();
+  let pool = [];
+  if (_gameScope === 'all') {
+    L.forEach(l => l.sections.forEach(s => (s.vocab||[]).forEach(v => pool.push({...v, lesson:l.en}))));
+  } else if (_gameScope === 'current') {
+    const l = L[typeof cur !== 'undefined' ? cur : 0];
+    if (l) l.sections.forEach(s => (s.vocab||[]).forEach(v => pool.push({...v, lesson:l.en})));
   } else {
-    // Fresh — show start screen
-    renderPathwayHome();
+    const favSet = typeof favorites !== 'undefined' ? favorites : new Set();
+    L.forEach(l => l.sections.forEach(s => (s.vocab||[]).forEach(v => {
+      if (favSet.has(v.zh)) pool.push({...v, lesson:l.en});
+    })));
   }
+  return pool.filter(v => v.zh && v.en);
+}
+
+function gShuffle(a) { return [...a].sort(()=>Math.random()-0.5); }
+
+function startGame(type) {
+  const pool = getGamePool();
+  if (pool.length < 4) {
+    document.getElementById('game-area').innerHTML =
+      `<div style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--muted);padding:20px 0">
+        Not enough words — try <strong>ALL LESSONS</strong> or add some ★ favorites first!<br>
+        <span style="color:var(--gold)">詞彙不足，請選擇「全部」或先加入喜愛詞彙！</span>
+      </div>`;
+    return;
+  }
+  const area = document.getElementById('game-area');
+  area.innerHTML = '';
+  if (type==='flashcard') runFlashcard(gShuffle(pool));
+  else if (type==='quiz')  runQuiz(gShuffle(pool));
+  else if (type==='match') runMatch(gShuffle(pool).slice(0,6));
+  else if (type==='listen') runListenPick(gShuffle(pool));
+}
+
+/* ─── FLASHCARD ─── */
+function runFlashcard(pool) {
+  let idx=0, shown=false;
+  function card() {
+    const v=pool[idx], pct=Math.round((idx/pool.length)*100);
+    document.getElementById('game-area').innerHTML=`
+      <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);margin-bottom:10px;display:flex;justify-content:space-between">
+        <span>Card ${idx+1} of ${pool.length}</span>
+        <span>${v.lesson||''}</span>
+      </div>
+      <div style="background:var(--ink);border:1px solid var(--border);border-radius:6px;padding:36px 24px;text-align:center;cursor:pointer;min-height:170px;display:flex;flex-direction:column;align-items:center;justify-content:center" onclick="fcFlip()" id="fc-card">
+        <div style="font-family:'Noto Serif TC',serif;font-size:2.6rem;color:var(--paper);margin-bottom:6px">${v.zh}</div>
+        <div id="fc-back" style="display:none;width:100%">
+          <div style="font-family:'DM Mono',monospace;font-size:0.8rem;color:var(--gold);margin:10px 0">${v.jp}</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.9rem;color:var(--muted)">${v.en}</div>
+        </div>
+        <div id="fc-hint" style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--border);margin-top:14px">tap to flip · 點擊翻轉</div>
+      </div>
+      <div style="height:4px;background:var(--border);border-radius:2px;margin:14px 0">
+        <div style="height:4px;background:var(--gold);width:${pct}%;border-radius:2px;transition:width 0.3s"></div>
+      </div>
+      <div style="display:flex;gap:10px;justify-content:center">
+        <button onclick="fcNav(-1)" style="font-family:'DM Mono',monospace;font-size:0.65rem;background:var(--ink);color:var(--paper);border:1px solid var(--border);padding:9px 18px;cursor:pointer">← Prev</button>
+        <button onclick="speakAzure('${v.zh.replace(/'/g,"\\'")}','${typeof currentLang!=='undefined'?currentLang:'yue'}')" style="font-family:'DM Mono',monospace;font-size:0.65rem;background:var(--ink);color:var(--gold);border:1px solid var(--gold);padding:9px 14px;cursor:pointer">▶ 聽</button>
+        <button onclick="fcNav(1)"  style="font-family:'DM Mono',monospace;font-size:0.65rem;background:var(--gold);color:var(--ink);border:none;padding:9px 18px;cursor:pointer">Next →</button>
+      </div>
+      <div style="text-align:center;margin-top:14px">
+        <button onclick="renderGamesScreen()" style="font-family:'DM Mono',monospace;font-size:0.58rem;background:transparent;color:var(--muted);border:none;cursor:pointer;text-decoration:underline">← Back to Games</button>
+      </div>`;
+    shown=false;
+  }
+  window.fcFlip=function(){shown=!shown;document.getElementById('fc-back').style.display=shown?'':'none';document.getElementById('fc-hint').style.display=shown?'none':'';};
+  window.fcNav=function(d){idx=(idx+d+pool.length)%pool.length;card();};
+  card();
+}
+
+/* ─── QUICK QUIZ ─── */
+function runQuiz(pool) {
+  let idx=0, score=0;
+  const total=Math.min(pool.length,10);
+  function q() {
+    if (idx>=total) {
+      const pct=Math.round((score/total)*100);
+      document.getElementById('game-area').innerHTML=`
+        <div style="text-align:center;padding:28px 0">
+          <div style="font-size:2.8rem">${score>=8?'🏆':score>=5?'🎉':'💪'}</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:2rem;color:var(--paper);margin:10px 0">${score}/${total}</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--muted);margin-bottom:6px">${pct}% correct</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:var(--gold);margin-bottom:22px;font-style:italic">${score>=8?'Excellent! 好勁！':score>=5?'Good job! 做得好！':'Keep going! 繼續加油！'}</div>
+          <div style="display:flex;gap:10px;justify-content:center">
+            <button onclick="startGame('quiz')" style="font-family:'DM Mono',monospace;font-size:0.65rem;background:var(--gold);color:var(--ink);border:none;padding:10px 22px;cursor:pointer">Play Again 再玩</button>
+            <button onclick="renderGamesScreen()" style="font-family:'DM Mono',monospace;font-size:0.65rem;background:var(--ink);color:var(--paper);border:1px solid var(--border);padding:10px 22px;cursor:pointer">← Games</button>
+          </div>
+        </div>`;
+      return;
+    }
+    const v=pool[idx];
+    const wrong=gShuffle(pool.filter((_,i)=>i!==idx)).slice(0,3);
+    const choices=gShuffle([v,...wrong]);
+    let done=false;
+    document.getElementById('game-area').innerHTML=`
+      <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);margin-bottom:14px;display:flex;justify-content:space-between"><span>Q${idx+1}/${total}</span><span>Score: ${score}</span></div>
+      <div style="font-family:'Noto Serif TC',serif;font-size:2.8rem;text-align:center;color:var(--paper);margin-bottom:6px">${v.zh}</div>
+      <div style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--gold);text-align:center;margin-bottom:20px">${v.jp}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        ${choices.map((c,i)=>`<button id="qb${i}" onclick="qPick(${i},${c===v},${choices.map(x=>x===v?1:0).join(',')})" style="font-family:'DM Mono',monospace;font-size:0.72rem;background:var(--ink);color:var(--paper);border:1px solid var(--border);padding:14px 10px;cursor:pointer;text-align:left;line-height:1.5;border-radius:2px">${c.en}</button>`).join('')}
+      </div>`;
+    window.qPick=function(bi,correct,...mask){
+      if(done)return; done=true;
+      if(correct)score++;
+      document.getElementById('qb'+bi).style.cssText+='background:#2d5a27;border-color:#4a9e3f;';
+      if(!correct){for(let i=0;i<4;i++){if(mask[i]){const b=document.getElementById('qb'+i);if(b)b.style.cssText+='background:#2d5a27;border-color:#4a9e3f;';}}}
+      else{document.getElementById('qb'+bi).style.cssText+='background:#5a2727;border-color:#9e3f3f;';}
+      const saved=score;
+      setTimeout(()=>{score=saved;idx++;q();},900);
+    };
+  }
+  q();
+}
+
+/* ─── WORD MATCH ─── */
+function runMatch(pool) {
+  const pairs=pool.slice(0,6);
+  let sel=null, matched=new Set(), tries=0;
+  const zhList=gShuffle(pairs.map(v=>({zh:v.zh,en:v.en})));
+  const enList=gShuffle(pairs.map(v=>({zh:v.zh,en:v.en})));
+  function draw(){
+    if(matched.size===pairs.length){
+      document.getElementById('game-area').innerHTML=`
+        <div style="text-align:center;padding:24px 0">
+          <div style="font-size:2.4rem">🎊</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.6rem;color:var(--paper);margin:10px 0">All matched!</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--muted);margin-bottom:18px">全部配對！${tries} attempts · ${pairs.length} pairs</div>
+          <div style="display:flex;gap:10px;justify-content:center">
+            <button onclick="startGame('match')" style="font-family:'DM Mono',monospace;font-size:0.65rem;background:var(--gold);color:var(--ink);border:none;padding:10px 22px;cursor:pointer">Play Again 再玩</button>
+            <button onclick="renderGamesScreen()" style="font-family:'DM Mono',monospace;font-size:0.65rem;background:var(--ink);color:var(--paper);border:1px solid var(--border);padding:10px 22px;cursor:pointer">← Games</button>
+          </div>
+        </div>`;
+      return;
+    }
+    const mkBtn=(item,side,i)=>{
+      const done=matched.has(item.zh);
+      const active=sel&&sel.zh===item.zh&&sel.side!==side;
+      return `<button onclick="mPick('${item.zh.replace(/'/g,"\\'")}','${side}')"
+        style="font-family:${side==='zh'?"'Noto Serif TC',serif":"'DM Mono',monospace"};font-size:${side==='zh'?'1.4rem':'0.7rem'};background:${done?'#2d5a27':'var(--ink)'};color:${done?'#8edd81':'var(--paper)'};border:1px solid ${done?'#4a9e3f':active?'var(--gold)':'var(--border)'};padding:13px 8px;cursor:${done?'default':'pointer'};border-radius:2px;text-align:center;opacity:${done?'0.7':'1'};pointer-events:${done?'none':'auto'};width:100%">
+        ${side==='zh'?item.zh:item.en}
+      </button>`;
+    };
+    document.getElementById('game-area').innerHTML=`
+      <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);margin-bottom:14px">${matched.size}/${pairs.length} matched · ${tries} attempts</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+        <div style="display:grid;gap:8px">${zhList.map((v,i)=>mkBtn(v,'zh',i)).join('')}</div>
+        <div style="display:grid;gap:8px">${enList.map((v,i)=>mkBtn(v,'en',i)).join('')}</div>
+      </div>
+      <div style="text-align:center;margin-top:14px">
+        <button onclick="renderGamesScreen()" style="font-family:'DM Mono',monospace;font-size:0.58rem;background:transparent;color:var(--muted);border:none;cursor:pointer;text-decoration:underline">← Back to Games</button>
+      </div>`;
+    window.mPick=function(zh,side){
+      if(!sel){sel={zh,side};draw();}
+      else{
+        tries++;
+        if(sel.zh===zh&&sel.side!==side){matched.add(zh);sel=null;}
+        else sel=null;
+        draw();
+      }
+    };
+  }
+  draw();
+}
+
+/* ─── LISTEN & PICK ─── */
+function runListenPick(pool) {
+  let idx=0, score=0;
+  const total=Math.min(pool.length,10);
+  function q() {
+    if(idx>=total){
+      document.getElementById('game-area').innerHTML=`
+        <div style="text-align:center;padding:28px 0">
+          <div style="font-size:2.8rem">${score>=8?'👂🏆':score>=5?'🎉':'💪'}</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:2rem;color:var(--paper);margin:10px 0">${score}/${total}</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:var(--gold);margin-bottom:22px;font-style:italic">${score>=8?'Amazing ears! 聽力超強！':score>=5?'Good listening! 聽得不錯！':'Keep practising! 多聽練習！'}</div>
+          <div style="display:flex;gap:10px;justify-content:center">
+            <button onclick="startGame('listen')" style="font-family:'DM Mono',monospace;font-size:0.65rem;background:var(--gold);color:var(--ink);border:none;padding:10px 22px;cursor:pointer">Play Again 再玩</button>
+            <button onclick="renderGamesScreen()" style="font-family:'DM Mono',monospace;font-size:0.65rem;background:var(--ink);color:var(--paper);border:1px solid var(--border);padding:10px 22px;cursor:pointer">← Games</button>
+          </div>
+        </div>`;
+      return;
+    }
+    const v=pool[idx];
+    const wrong=gShuffle(pool.filter((_,i)=>i!==idx)).slice(0,3);
+    const choices=gShuffle([v,...wrong]);
+    let done=false;
+    document.getElementById('game-area').innerHTML=`
+      <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);margin-bottom:14px;display:flex;justify-content:space-between"><span>Q${idx+1}/${total}</span><span>Score: ${score}</span></div>
+      <div style="text-align:center;margin-bottom:24px">
+        <button onclick="speakAzure('${v.zh.replace(/'/g,"\\'")}','${typeof currentLang!=='undefined'?currentLang:'yue'}')"
+          style="font-family:'DM Mono',monospace;font-size:0.8rem;background:var(--gold);color:var(--ink);border:none;padding:18px 40px;cursor:pointer;border-radius:4px;letter-spacing:0.06em">
+          ▶ PLAY 聆聽
+        </button>
+        <div style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);margin-top:8px">Which character did you hear? 你聽到哪個字？</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        ${choices.map((c,i)=>`<button id="lb${i}" onclick="lPick(${i},${c===v})" style="font-family:'Noto Serif TC',serif;font-size:1.9rem;background:var(--ink);color:var(--paper);border:1px solid var(--border);padding:18px;cursor:pointer;border-radius:2px;text-align:center">${c.zh}</button>`).join('')}
+      </div>
+      <div style="text-align:center;margin-top:14px">
+        <button onclick="renderGamesScreen()" style="font-family:'DM Mono',monospace;font-size:0.58rem;background:transparent;color:var(--muted);border:none;cursor:pointer;text-decoration:underline">← Back to Games</button>
+      </div>`;
+    setTimeout(()=>speakAzure(v.zh, typeof currentLang!=='undefined'?currentLang:'yue'), 300);
+    window.lPick=function(bi,correct){
+      if(done)return; done=true;
+      if(correct)score++;
+      document.getElementById('lb'+bi).style.background=correct?'#2d5a27':'#5a2727';
+      document.getElementById('lb'+bi).style.borderColor=correct?'#4a9e3f':'#9e3f3f';
+      if(!correct){for(let i=0;i<4;i++){const b=document.getElementById('lb'+i);if(b&&choices[i]===v){b.style.background='#2d5a27';b.style.borderColor='#4a9e3f';}}}
+      const saved=score;
+      setTimeout(()=>{score=saved;idx++;q();},1000);
+    };
+  }
+  q();
 }
 
 function renderPathwayHome() {
-  const el = document.getElementById('pathway-content');
+  const el = document.getElementById('games-content');
   el.innerHTML = `
     <div class="pathway-hero fade-in">
       <div class="pathway-hero-title">Personalize Your Learning</div>
@@ -8691,7 +8907,7 @@ function startAssessment() {
 }
 
 function renderAssessmentStep() {
-  const el = document.getElementById('pathway-content');
+  const el = document.getElementById('games-content');
   const q = ASSESSMENT_QUESTIONS[assessmentStep];
   const total = ASSESSMENT_QUESTIONS.length;
   const current = assessmentAnswers[q.id];
@@ -8761,7 +8977,7 @@ function assessmentNext() {
 }
 
 function renderPathwayResult(pathway, isReturn) {
-  const el = document.getElementById('pathway-content');
+  const el = document.getElementById('games-content');
   const lessons = getLessons();
   const completed = getCompletedLessons();
   const { answers, sequence } = pathway;
@@ -8889,7 +9105,7 @@ renderPathwayBanner();
 // Registers an inline service worker for offline support & home screen install
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'everyday-chinese-v5';
+    const CACHE = 'everyday-chinese-v6';
     self.addEventListener('install', e => {
       e.waitUntil(
         caches.open(CACHE).then(c => c.addAll(['${location.href}']))
