@@ -3092,7 +3092,12 @@
     <span class="top-nav-en">Setup & Feedback</span>
     <span class="top-nav-mobile" style="font-size:1.4rem;line-height:1">⚙</span>
   </button>
-  <button class="top-nav-btn" id="nav-search-btn" onclick="toggleSearch()" title="Search 搜尋" style="margin-left:auto;padding:12px 16px;border-right:none">
+  <button class="top-nav-btn" id="nav-songs" onclick="navSelectSongs()">
+    <span class="top-nav-zh">歌曲</span>
+    <span class="top-nav-en">Songs</span>
+    <span class="top-nav-mobile" style="font-size:1.3rem;line-height:1">🎵</span>
+  </button>
+    <button class="top-nav-btn" id="nav-search-btn" onclick="toggleSearch()" title="Search 搜尋" style="margin-left:auto;padding:12px 16px;border-right:none">
     <span class="top-nav-en" style="font-size:1.3rem">🔍 <span style="font-size:0.7rem;letter-spacing:0.1em;vertical-align:middle">Search</span></span>
     <span class="top-nav-mobile">🔍</span>
   </button>
@@ -3133,7 +3138,74 @@
 </div>
 
 <script>
+
 function trackEvent() {}
+
+const SONGS = [
+  {
+    "id": "song1",
+    "ytId": "bJVlrynp43E",
+    "zh": "歌曲一",
+    "artist": "歌手",
+    "en": "Song 1",
+    "artistEn": "Artist",
+    "lang": "yue",
+    "lines": [
+      {
+        "zh": "（請輸入歌詞第一行）",
+        "jp": "（jyutping）",
+        "en": "(English translation)"
+      },
+      {
+        "zh": "（請輸入歌詞第二行）",
+        "jp": "（jyutping）",
+        "en": "(English translation)"
+      }
+    ]
+  },
+  {
+    "id": "song2",
+    "ytId": "EoU5FMB9a7U",
+    "zh": "歌曲二",
+    "artist": "歌手",
+    "en": "Song 2",
+    "artistEn": "Artist",
+    "lang": "yue",
+    "lines": [
+      {
+        "zh": "（請輸入歌詞第一行）",
+        "jp": "（jyutping）",
+        "en": "(English translation)"
+      },
+      {
+        "zh": "（請輸入歌詞第二行）",
+        "jp": "（jyutping）",
+        "en": "(English translation)"
+      }
+    ]
+  },
+  {
+    "id": "song3",
+    "ytId": "OWRd9zELZE8",
+    "zh": "歌曲三",
+    "artist": "歌手",
+    "en": "Song 3",
+    "artistEn": "Artist",
+    "lang": "yue",
+    "lines": [
+      {
+        "zh": "（請輸入歌詞第一行）",
+        "jp": "（jyutping）",
+        "en": "(English translation)"
+      },
+      {
+        "zh": "（請輸入歌詞第二行）",
+        "jp": "（jyutping）",
+        "en": "(English translation)"
+      }
+    ]
+  }
+];
 
 const LESSONS = [
   {id:1,zh:"問候與基本用語",en:"Greetings & Basic Phrases",
@@ -5953,7 +6025,7 @@ function toggleFavorite(li, si, vi) {
 // ─── SPEECH ───
 // ── AZURE TTS ──────────────────────────────────────────────────────────────
 // Update AZURE_WORKER_URL after deploying the Cloudflare Worker
-const APP_VERSION = 'EverydayChinese v2.1';
+const APP_VERSION = 'EverydayChinese v2.2';
 const AZURE_WORKER_URL = 'https://medchinese-tts.medrosettaapp.workers.dev';
 const VOICE_MAP = {
   yue: localStorage.getItem('everyday_azure_voice_yue') || 'zh-HK-HiuGaaiNeural',
@@ -6727,7 +6799,8 @@ function navSelectLessons() {
   (document.getElementById('anatomy-container')||{style:{}}).style.display='none';
   document.body.style.overflow = '';
   document.getElementById('setup-container').style.display = 'none';
-  document.getElementById('favorites-container').style.display = 'none';
+
+  document.getElementById('songs-container').style.display = 'none';  document.getElementById('favorites-container').style.display = 'none';
   document.getElementById('pathway-container').style.display = 'none';
   document.getElementById('nav-lessons').classList.add('active');
   (document.getElementById('nav-anatomy')||{classList:{remove:()=>{}}}).classList.remove('active');
@@ -6761,7 +6834,8 @@ function navSelectSetup() {
   if (window.innerWidth <= 768) toggleDrawer(true);
   trackEvent('tab_view', { tab_name: 'Setup' });
   document.getElementById('lessons-container').style.display = 'none';
-  (document.getElementById('anatomy-container')||{style:{}}).style.display='none';
+
+  document.getElementById('songs-container').style.display = 'none';  (document.getElementById('anatomy-container')||{style:{}}).style.display='none';
   document.getElementById('setup-container').style.display = '';
   document.getElementById('favorites-container').style.display = 'none';
   document.getElementById('pathway-container').style.display = 'none';
@@ -6774,12 +6848,173 @@ function navSelectSetup() {
   renderSetupPage();
 }
 
+function navSelectSongs() {
+  if (window.innerWidth <= 768) toggleDrawer(true);
+  trackEvent('tab_view', { tab_name: 'Songs' });
+  document.getElementById('lessons-container').style.display = 'none';
+  (document.getElementById('anatomy-container')||{style:{}}).style.display='none';
+  document.getElementById('setup-container').style.display = 'none';
+  document.getElementById('favorites-container').style.display = 'none';
+  document.getElementById('pathway-container').style.display = 'none';
+  document.getElementById('songs-container').style.display = '';
+  document.getElementById('nav-lessons').classList.remove('active');
+  document.getElementById('nav-favorites').classList.remove('active');
+  document.getElementById('nav-pathway').classList.remove('active');
+  document.getElementById('nav-setup').classList.remove('active');
+  (document.getElementById('nav-anatomy')||{classList:{remove:()=>{}}}).classList.remove('active');
+  document.getElementById('nav-songs').classList.add('active');
+  renderSongsScreen();
+}
+
+function renderSongsScreen() {
+  const el = document.getElementById('songs-content');
+  if (!el) return;
+  const isMobile = window.innerWidth <= 768;
+
+  el.innerHTML = `
+    <div class="lesson-header fade-in">
+      <div class="lesson-label">SONGS 歌曲</div>
+      <div class="lesson-main-title" style="font-style:italic">Cantonese Songs & Lyrics</div>
+    </div>
+
+    ${isMobile ? `
+    <div style="background:var(--ink);border:2px solid var(--gold);border-radius:4px;padding:20px 22px;margin-bottom:24px">
+      <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--paper);margin-bottom:8px">📱 Better on Desktop</div>
+      <div style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);line-height:1.8">
+        The embedded YouTube player works best on a larger screen.<br>
+        On mobile, tap <strong style="color:var(--gold)">▶ Open on YouTube</strong> on any song to listen in the YouTube app, then come back to follow along with the annotated lyrics.
+      </div>
+    </div>` : ''}
+
+    <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;color:var(--gold);margin-bottom:14px">SELECT A SONG 選擇歌曲</div>
+    <div style="display:grid;gap:12px;margin-bottom:32px">
+      ${SONGS.map((s,i) => `
+      <button onclick="renderSongDetail('${s.id}')" style="background:var(--ink);border:1px solid var(--border);border-radius:4px;padding:18px 20px;text-align:left;cursor:pointer;display:flex;align-items:center;gap:16px;width:100%;transition:border-color 0.18s" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="flex-shrink:0;width:48px;height:48px;background:#1a1a1a;border-radius:4px;overflow:hidden">
+          <img src="https://img.youtube.com/vi/${s.ytId}/default.jpg" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display='none'">
+        </div>
+        <div style="flex:1;min-width:0">
+          <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--paper);margin-bottom:2px">${s.zh} <span style="font-style:italic;font-size:0.9rem;color:var(--muted)">${s.en}</span></div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.06em">${s.artist} · ${s.artistEn} · ${s.lang === 'yue' ? '粵語 Cantonese' : '國語 Mandarin'}</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--gold);letter-spacing:0.06em;flex-shrink:0">OPEN →</div>
+      </button>`).join('')}
+    </div>
+  `;
+}
+
+function renderSongDetail(songId) {
+  const s = SONGS.find(x => x.id === songId);
+  if (!s) return;
+  const el = document.getElementById('songs-content');
+  const isMobile = window.innerWidth <= 768;
+  const lang = typeof currentLang !== 'undefined' ? currentLang : 'yue';
+
+  el.innerHTML = `
+    <button onclick="renderSongsScreen()" style="font-family:'DM Mono',monospace;font-size:0.62rem;background:transparent;color:var(--muted);border:none;cursor:pointer;padding:0;margin-bottom:20px;letter-spacing:0.06em">← ALL SONGS 全部歌曲</button>
+
+    <!-- Title -->
+    <div style="margin-bottom:20px">
+      <div style="font-family:'DM Serif Display',serif;font-size:1.6rem;color:var(--paper)">${s.zh}</div>
+      <div style="font-family:'DM Serif Display',serif;font-size:1rem;color:var(--muted);font-style:italic">${s.en}</div>
+      <div style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gold);letter-spacing:0.08em;margin-top:4px">${s.artist} · ${s.artistEn}</div>
+    </div>
+
+    <!-- YouTube player or mobile note -->
+    ${isMobile ? `
+    <div style="background:var(--ink);border:1px solid var(--border);border-radius:4px;padding:16px 20px;margin-bottom:24px">
+      <div style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);margin-bottom:10px">📱 Open in YouTube app to listen, then follow the lyrics below.</div>
+      <a href="https://www.youtube.com/watch?v=${s.ytId}" target="_blank" rel="noopener" style="display:inline-block;font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.08em;background:var(--gold);color:var(--ink);text-decoration:none;padding:9px 18px;border-radius:2px">▶ OPEN ON YOUTUBE</a>
+    </div>` : `
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:4px;margin-bottom:24px;background:#000">
+      <iframe src="https://www.youtube.com/embed/${s.ytId}?rel=0&modestbranding=1"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border:none"
+        allowfullscreen allow="autoplay; encrypted-media"></iframe>
+    </div>
+    <div style="text-align:right;margin-top:-18px;margin-bottom:18px">
+      <a href="https://www.youtube.com/watch?v=${s.ytId}" target="_blank" rel="noopener" style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);text-decoration:none">▶ Open on YouTube ↗</a>
+    </div>`}
+
+    <!-- Lyrics -->
+    <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;color:var(--gold);margin-bottom:14px">LYRICS 歌詞</div>
+    <div style="background:var(--ink);border:1px solid var(--border);border-radius:4px;overflow:hidden">
+      ${s.lines.map((line, i) => `
+      <div class="lyric-line" id="ll-${i}" onclick="toggleLyricLine(${i})"
+        style="padding:14px 18px;border-bottom:1px solid var(--border);cursor:pointer;transition:background 0.15s"
+        onmouseover="this.style.background='rgba(255,255,255,0.04)'"
+        onmouseout="this.style.background=''">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="font-family:'Noto Serif TC',serif;font-size:1.15rem;color:var(--paper);flex:1;line-height:1.6">${line.zh}</div>
+          <button onclick="event.stopPropagation();speakAzure('${line.zh.replace(/'/g,"\\'")}','${lang}')"
+            style="flex-shrink:0;background:transparent;border:1px solid var(--border);color:var(--gold);font-size:0.7rem;padding:4px 8px;cursor:pointer;border-radius:2px">▶</button>
+        </div>
+        <div id="ll-detail-${i}" style="display:none;margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.06)">
+          <div style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--gold);margin-bottom:4px">${line.jp}</div>
+          <div style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--muted);line-height:1.6">${line.en}</div>
+        </div>
+      </div>`).join('')}
+    </div>
+
+    <!-- Play all lyrics -->
+    <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
+      <button onclick="playSongLyrics('${s.id}')" style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.08em;background:var(--gold);color:var(--ink);border:none;padding:9px 18px;cursor:pointer;border-radius:2px">▶ PLAY ALL LYRICS 逐句播放</button>
+      <button onclick="stopVocabPlayAll ? stopVocabPlayAll() : null" style="font-family:'DM Mono',monospace;font-size:0.65rem;background:var(--ink);color:var(--paper);border:1px solid var(--border);padding:9px 14px;cursor:pointer;border-radius:2px">■ Stop</button>
+    </div>
+
+    <!-- Vocab from this song -->
+    <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;color:var(--gold);margin:28px 0 12px">KEY VOCABULARY 重點詞彙</div>
+    <div id="song-vocab-${s.id}" style="display:grid;gap:6px">
+      ${(s.vocab||[]).map(v => `
+      <div style="background:var(--ink);border:1px solid var(--border);border-radius:3px;padding:10px 14px;display:flex;align-items:center;gap:12px">
+        <span style="font-family:'Noto Serif TC',serif;font-size:1.1rem;color:var(--paper);min-width:48px">${v.zh}</span>
+        <span style="font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gold);min-width:100px">${v.jp}</span>
+        <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted)">${v.en}</span>
+        <button onclick="speakAzure('${v.zh.replace(/'/g,"\\'")}','${lang}')" style="margin-left:auto;background:transparent;border:1px solid var(--border);color:var(--gold);font-size:0.65rem;padding:3px 7px;cursor:pointer;border-radius:2px">▶</button>
+      </div>`).join('') || '<div style="font-family:\'DM Mono\',monospace;font-size:0.72rem;color:var(--muted)">Vocabulary coming soon — add lyrics to unlock key words.</div>'}
+    </div>
+  `;
+}
+
+function toggleLyricLine(idx) {
+  const d = document.getElementById('ll-detail-'+idx);
+  if (d) d.style.display = d.style.display === 'none' ? '' : 'none';
+}
+
+function playSongLyrics(songId) {
+  const s = SONGS.find(x => x.id === songId);
+  if (!s) return;
+  const lang = typeof currentLang !== 'undefined' ? currentLang : 'yue';
+  let i = 0;
+  function next() {
+    if (i >= s.lines.length) return;
+    // Highlight current line
+    document.querySelectorAll('.lyric-line').forEach(el => el.style.background = '');
+    const el = document.getElementById('ll-'+i);
+    if (el) {
+      el.style.background = 'rgba(198,160,84,0.12)';
+      el.scrollIntoView({behavior:'smooth', block:'nearest'});
+      // Open detail
+      const d = document.getElementById('ll-detail-'+i);
+      if (d) d.style.display = '';
+    }
+    const line = s.lines[i];
+    i++;
+    // Use speakAzure with callback via onEnd
+    if (typeof speakAzure === 'function') {
+      speakAzure(line.zh, lang, null, () => setTimeout(next, 600));
+    }
+  }
+  next();
+}
+
+
 function navSelectFavorites() {
   if (window.innerWidth <= 768) toggleDrawer(true);
   trackEvent('tab_view', { tab_name: 'Favorites' });
   stopVocabPlayAll();
   document.getElementById('lessons-container').style.display = 'none';
-  (document.getElementById('anatomy-container')||{style:{}}).style.display='none';
+
+  document.getElementById('songs-container').style.display = 'none';  (document.getElementById('anatomy-container')||{style:{}}).style.display='none';
   document.getElementById('setup-container').style.display = 'none';
   document.getElementById('pathway-container').style.display = 'none';
   document.getElementById('favorites-container').style.display = '';
@@ -8060,7 +8295,7 @@ function renderSetupPage() {
   renderAudioSetup(target);
   // Version at bottom
   const vbanner = document.createElement('div');
-  vbanner.innerHTML = `<div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;padding:16px 0 8px 0;border-top:1px solid var(--border);margin-top:24px;color:var(--muted)"><span style="color:var(--gold);font-weight:700">EverydayChinese v2.1</span> &nbsp;·&nbsp; April 27, 2026</div>`;
+  vbanner.innerHTML = `<div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;padding:16px 0 8px 0;border-top:1px solid var(--border);margin-top:24px;color:var(--muted)"><span style="color:var(--gold);font-weight:700">EverydayChinese v2.2</span> &nbsp;·&nbsp; April 27, 2026</div>`;
   target.appendChild(vbanner);
 }
 
@@ -9245,7 +9480,8 @@ let assessmentAnswers = {};
 function navSelectPathway() {
   if (window.innerWidth <= 768) toggleDrawer(true);
   document.getElementById('lessons-container').style.display = 'none';
-  (document.getElementById('anatomy-container')||{style:{}}).style.display='none';
+
+  document.getElementById('songs-container').style.display = 'none';  (document.getElementById('anatomy-container')||{style:{}}).style.display='none';
   document.getElementById('setup-container').style.display = 'none';
   document.getElementById('favorites-container').style.display = 'none';
   document.getElementById('pathway-container').style.display = '';
@@ -9802,7 +10038,7 @@ renderPathwayBanner();
 // Registers an inline service worker for offline support & home screen install
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'everyday-chinese-v6';
+    const CACHE = 'everyday-chinese-v7';
     self.addEventListener('install', e => {
       e.waitUntil(
         caches.open(CACHE).then(c => c.addAll(['${location.href}']))
@@ -10333,6 +10569,7 @@ function setSurveyStars(n) {
 
 
 
+
 </script>
 
   <!-- Beta Feedback Overlay -->
@@ -10392,5 +10629,9 @@ function setSurveyStars(n) {
       <button id="drill-repeat-btn" onclick="drillToggleRepeat()" title="Repeat">🔁</button>
     </div>
   </div>
+
+<div id="songs-container" style="display:none; min-height:calc(100vh - 148px)">
+  <main id="songs-content" style="max-width:760px;margin:0 auto;padding:36px 44px;box-sizing:border-box"></main>
+</div>
 </body>
 </html>
