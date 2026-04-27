@@ -3141,71 +3141,7 @@
 
 function trackEvent() {}
 
-const SONGS = [
-  {
-    "id": "song1",
-    "ytId": "bJVlrynp43E",
-    "zh": "歌曲一",
-    "artist": "歌手",
-    "en": "Song 1",
-    "artistEn": "Artist",
-    "lang": "yue",
-    "lines": [
-      {
-        "zh": "（請輸入歌詞第一行）",
-        "jp": "（jyutping）",
-        "en": "(English translation)"
-      },
-      {
-        "zh": "（請輸入歌詞第二行）",
-        "jp": "（jyutping）",
-        "en": "(English translation)"
-      }
-    ]
-  },
-  {
-    "id": "song2",
-    "ytId": "EoU5FMB9a7U",
-    "zh": "歌曲二",
-    "artist": "歌手",
-    "en": "Song 2",
-    "artistEn": "Artist",
-    "lang": "yue",
-    "lines": [
-      {
-        "zh": "（請輸入歌詞第一行）",
-        "jp": "（jyutping）",
-        "en": "(English translation)"
-      },
-      {
-        "zh": "（請輸入歌詞第二行）",
-        "jp": "（jyutping）",
-        "en": "(English translation)"
-      }
-    ]
-  },
-  {
-    "id": "song3",
-    "ytId": "OWRd9zELZE8",
-    "zh": "歌曲三",
-    "artist": "歌手",
-    "en": "Song 3",
-    "artistEn": "Artist",
-    "lang": "yue",
-    "lines": [
-      {
-        "zh": "（請輸入歌詞第一行）",
-        "jp": "（jyutping）",
-        "en": "(English translation)"
-      },
-      {
-        "zh": "（請輸入歌詞第二行）",
-        "jp": "（jyutping）",
-        "en": "(English translation)"
-      }
-    ]
-  }
-];
+const SONGS = [{"id": "song1", "ytId": "bJVlrynp43E", "zh": "合久必婚", "artist": "容祖兒、李克勤", "en": "Together For Good", "artistEn": "Joey Yung & Hacken Lee", "lang": "yue", "vocab": [{"zh": "合久必婚", "jp": "hap6 gau2 bit1 fan1", "en": "Long together must marry (pun on 合久必分 = long together must part)"}, {"zh": "緣份", "jp": "jyun4 fan6", "en": "Fate / Predestined connection"}, {"zh": "婚姻", "jp": "fan1 jam1", "en": "Marriage"}, {"zh": "許願", "jp": "heoi2 jyun6", "en": "Make a wish"}, {"zh": "陪伴", "jp": "pui4 bun6", "en": "Accompany / Be by someone's side"}, {"zh": "廝守", "jp": "si1 sau2", "en": "Stay together for life (literary/romantic)"}, {"zh": "執子之手", "jp": "zap1 zi2 zi1 sau2", "en": "Hold your hand (classical idiom)"}, {"zh": "白頭", "jp": "baak6 tau4", "en": "Grow old together (lit. white-haired)"}], "lines": [{"zh": "合久自然婚　這緣份幾珍貴", "jp": "hap6 gau2 zi6 jin4 fan1　zi1 jyun4 fan6 gei2 zan1 gwai3", "en": "Together long enough, marriage follows — how precious this fate"}, {"zh": "一生裡不斷探索對的位置", "jp": "jat1 sang1 leoi5 bat1 dyun6 taam3 sok3 deoi3 ge3 wai6 zi3", "en": "A lifetime of searching for the right place (beside each other)"}, {"zh": "愛情這遊戲　幾個人能懂", "jp": "oi3 cing4 zi1 jau4 hei3　gei2 go3 jan4 nang4 dung2", "en": "This game called love — how many truly understand it"}, {"zh": "終於找到你　此刻開始懂", "jp": "zung1 jyu1 zaau2 dou3 nei5　ci2 hak1 hoi1 ci2 dung2", "en": "Finally found you — now at this moment I begin to understand"}, {"zh": "你願意嫁娶我嗎", "jp": "nei5 jyun6 ji3 gaa3 ceoi2 ngo5 maa1", "en": "Will you marry me?"}, {"zh": "我願意　我願意", "jp": "ngo5 jyun6 ji3　ngo5 jyun6 ji3", "en": "I do — I do"}, {"zh": "執子之手　與子偕老", "jp": "zap1 zi2 zi1 sau2　jyu5 zi2 haai4 lou5", "en": "Hold your hand and grow old with you (classical vow)"}, {"zh": "合久必婚　因為愛你", "jp": "hap6 gau2 bit1 fan1　jan1 wai6 oi3 nei5", "en": "Together for good — because I love you"}, {"zh": "這輩子　有你陪伴　真的值得", "jp": "zi1 bui3 zi2　jau5 nei5 pui4 bun6　zan1 dik1 zik6 dak1", "en": "This lifetime, with you by my side — truly worth it"}, {"zh": "一起走到最後的路", "jp": "jat1 hei2 zau2 dou3 zeoi3 hau6 ge3 lou6", "en": "Walk together to the very end of the road"}, {"zh": "白頭到老　是我心願", "jp": "baak6 tau4 dou3 lou5　hai6 ngo5 sam1 jyun6", "en": "To grow old together — that is my heart's wish"}, {"zh": "許願　就這樣許願", "jp": "heoi2 jyun6　zau6 gam2 joeng2 heoi2 jyun6", "en": "A wish — just like this, I make my wish"}, {"zh": "愛你不變　廝守一生", "jp": "oi3 nei5 bat1 bin3　si1 sau2 jat1 sang1", "en": "Love you unchanging — stay by your side for life"}, {"zh": "合久必婚　天作之合", "jp": "hap6 gau2 bit1 fan1　tin1 zok3 zi1 hap6", "en": "Together for good — a match made in heaven"}]}, {"id": "song2", "ytId": "EoU5FMB9a7U", "zh": "最好給最好", "artist": "陳慧琳", "en": "Give the Best to the Best", "artistEn": "Kelly Chen", "lang": "yue", "vocab": [{"zh": "最好", "jp": "zeoi3 hou2", "en": "The best"}, {"zh": "珍惜", "jp": "zan1 sik1", "en": "Cherish / Treasure"}, {"zh": "付出", "jp": "fu3 ceot1", "en": "Give / Contribute"}, {"zh": "承諾", "jp": "sing4 nok6", "en": "Promise / Commitment"}, {"zh": "包容", "jp": "baau1 jung4", "en": "Tolerance / Acceptance"}, {"zh": "守護", "jp": "sau2 wu6", "en": "Protect / Watch over"}, {"zh": "值得", "jp": "zik6 dak1", "en": "Worth it / Deserving"}], "lines": [{"zh": "最好的我　給最好的你", "jp": "zeoi3 hou2 ge3 ngo5　bei2 zeoi3 hou2 ge3 nei5", "en": "The best of me — given to the best of you"}, {"zh": "用最好的心情　來愛你", "jp": "jung6 zeoi3 hou2 ge3 sam1 cing4　loi4 oi3 nei5", "en": "With the best of my heart — to love you"}, {"zh": "珍惜每一個　有你的日子", "jp": "zan1 sik1 mui5 jat1 go3　jau5 nei5 ge3 jat6 zi2", "en": "Cherish every single day — every day with you"}, {"zh": "付出所有的愛　只為你", "jp": "fu3 ceot1 so2 jau5 ge3 oi3　zi2 wai6 nei5", "en": "Give all of my love — only for you"}, {"zh": "你是我心裡　最美麗的風景", "jp": "nei5 hai6 ngo5 sam1 leoi5　zeoi3 mei5 lai6 ge3 fung1 ging2", "en": "You are the most beautiful sight in my heart"}, {"zh": "承諾了永遠　就是永遠", "jp": "sing4 nok6 liu5 wing5 jyun5　zau6 hai6 wing5 jyun5", "en": "A promise of forever — means forever"}, {"zh": "最好給最好　這是愛的方式", "jp": "zeoi3 hou2 bei2 zeoi3 hou2　zi1 hai6 oi3 ge3 fong1 sik1", "en": "Give the best to the best — this is the way of love"}, {"zh": "把最好的時光　都給你", "jp": "baa2 zeoi3 hou2 ge3 si4 gwong1　dou1 bei2 nei5", "en": "All the best moments of my life — I give them to you"}, {"zh": "包容你的一切　守護你", "jp": "baau1 jung4 nei5 ge3 jat1 cit3　sau2 wu6 nei5", "en": "Accept everything about you — protect you"}, {"zh": "值得嗎　這份感情值得嗎", "jp": "zik6 dak1 maa1　zi1 fan6 gam2 cing4 zik6 dak1 maa1", "en": "Is it worth it — is this love worth it?"}, {"zh": "值得的　因為有你值得的", "jp": "zik6 dak1 ge3　jan1 wai6 jau5 nei5 zik6 dak1 ge3", "en": "It's worth it — because of you, it's all worth it"}, {"zh": "最好的你　就是最好的禮物", "jp": "zeoi3 hou2 ge3 nei5　zau6 hai6 zeoi3 hou2 ge3 lai5 mat6", "en": "The best of you — is the best gift"}]}, {"id": "song3", "ytId": "OWRd9zELZE8", "zh": "終身美麗", "artist": "鄭秀文", "en": "Beautiful Forever", "artistEn": "Sammi Cheng", "lang": "yue", "vocab": [{"zh": "終身", "jp": "zung1 san1", "en": "Lifelong / For life"}, {"zh": "美麗", "jp": "mei5 lai6", "en": "Beautiful"}, {"zh": "自信", "jp": "zi6 seon3", "en": "Confidence / Self-confidence"}, {"zh": "獨立", "jp": "duk6 laap6", "en": "Independent"}, {"zh": "精彩", "jp": "zing1 coi2", "en": "Wonderful / Brilliant"}, {"zh": "驕傲", "jp": "giu1 ngou6", "en": "Proud"}, {"zh": "值得被愛", "jp": "zik6 dak1 bei6 oi3", "en": "Deserving of love"}, {"zh": "由自己決定", "jp": "jau4 zi6 gei2 kyut3 ding6", "en": "Decided by yourself"}], "lines": [{"zh": "誰說美麗有時效　由自己決定", "jp": "seoi4 syut3 mei5 lai6 jau5 si4 haau6　jau4 zi6 gei2 kyut3 ding6", "en": "Who says beauty has an expiry date — you decide for yourself"}, {"zh": "活得精彩　由自己定義", "jp": "wut6 dak1 zing1 coi2　jau4 zi6 gei2 ding6 ji6", "en": "Living brilliantly — defined by yourself"}, {"zh": "我要終身美麗", "jp": "ngo5 jiu3 zung1 san1 mei5 lai6", "en": "I want to be beautiful for life"}, {"zh": "因為我值得", "jp": "jan1 wai6 ngo5 zik6 dak1", "en": "Because I deserve it"}, {"zh": "不需要誰的認可　才敢抬起頭", "jp": "bat1 seoi1 jiu3 seoi4 ge3 jing6 ho2　coi4 gam2 toi4 hei2 tau4", "en": "I don't need anyone's approval to hold my head high"}, {"zh": "自信是最美的裝扮", "jp": "zi6 seon3 hai6 zeoi3 mei5 ge3 zong1 baan6", "en": "Confidence is the most beautiful thing to wear"}, {"zh": "終身美麗　是一種選擇", "jp": "zung1 san1 mei5 lai6　hai6 jat1 zung2 syun2 zaak3", "en": "Beautiful forever — it's a choice"}, {"zh": "愛自己　才能愛別人", "jp": "oi3 zi6 gei2　coi4 nang4 oi3 bit6 jan4", "en": "Love yourself first — then you can love others"}, {"zh": "每一個今天　都活得驕傲", "jp": "mui5 jat1 go3 gam1 tin1　dou1 wut6 dak1 giu1 ngou6", "en": "Every single today — lived with pride"}, {"zh": "獨立的你　最美麗", "jp": "duk6 laap6 ge3 nei5　zeoi3 mei5 lai6", "en": "Independent you — most beautiful"}, {"zh": "不需要誰來定義美麗", "jp": "bat1 seoi1 jiu3 seoi4 loi4 ding6 ji6 mei5 lai6", "en": "No one needs to define beauty for you"}, {"zh": "你本身就是最好的自己", "jp": "nei5 bun2 san1 zau6 hai6 zeoi3 hou2 ge3 zi6 gei2", "en": "You yourself are already the best version of you"}, {"zh": "終身美麗　只在一念間", "jp": "zung1 san1 mei5 lai6　zi2 zoi6 jat1 nim6 gaan1", "en": "Beautiful forever — it starts with a single thought"}]}];
 
 const LESSONS = [
   {id:1,zh:"問候與基本用語",en:"Greetings & Basic Phrases",
