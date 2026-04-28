@@ -178,6 +178,7 @@
   }
   .section-title-row {
     display: flex; justify-content: space-between; align-items: center; width: 100%;
+    padding-left: 16px;
   }
   .section-title-zh {
     font-family: 'Noto Serif TC', serif; font-size: 0.9rem; font-weight: 600;
@@ -188,10 +189,9 @@
     width: 100%; margin-top: 2px; overflow-x: auto;
   }
   .section-header {
-    display: flex; flex-direction: column; align-items: stretch;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
     padding: 14px 20px;
     cursor: pointer;
     user-select: none;
@@ -292,6 +292,7 @@
     border: none; cursor: pointer;
     font-family: 'DM Mono', monospace;
     font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+    font-weight: 700;
     transition: background 0.15s;
   }
   .play-all-btn:hover { background: var(--teal); }
@@ -301,6 +302,7 @@
     background: none; color: var(--muted);
     border: 1.5px solid var(--border);
     cursor: pointer;
+    font-weight: 700;
     font-family: 'DM Mono', monospace;
     font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
     transition: all 0.15s;
@@ -587,6 +589,7 @@
     cursor: pointer;
     font-family: 'DM Mono', monospace;
     font-size: 0.6rem;
+    font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--muted);
@@ -3138,10 +3141,7 @@
 </div>
 
 <script>
-
 function trackEvent() {}
-
-const SONGS = [{"id": "song1", "ytId": "bJVlrynp43E", "zh": "合久必婚", "artist": "容祖兒、李克勤", "en": "Together For Good", "artistEn": "Joey Yung & Hacken Lee", "lang": "yue", "vocab": [{"zh": "合久必婚", "jp": "hap6 gau2 bit1 fan1", "en": "Long together must marry (pun on 合久必分 = long together must part)"}, {"zh": "緣份", "jp": "jyun4 fan6", "en": "Fate / Predestined connection"}, {"zh": "婚姻", "jp": "fan1 jam1", "en": "Marriage"}, {"zh": "許願", "jp": "heoi2 jyun6", "en": "Make a wish"}, {"zh": "陪伴", "jp": "pui4 bun6", "en": "Accompany / Be by someone's side"}, {"zh": "廝守", "jp": "si1 sau2", "en": "Stay together for life (literary/romantic)"}, {"zh": "執子之手", "jp": "zap1 zi2 zi1 sau2", "en": "Hold your hand (classical idiom)"}, {"zh": "白頭", "jp": "baak6 tau4", "en": "Grow old together (lit. white-haired)"}], "lines": [{"zh": "合久自然婚　這緣份幾珍貴", "jp": "hap6 gau2 zi6 jin4 fan1　zi1 jyun4 fan6 gei2 zan1 gwai3", "en": "Together long enough, marriage follows — how precious this fate"}, {"zh": "一生裡不斷探索對的位置", "jp": "jat1 sang1 leoi5 bat1 dyun6 taam3 sok3 deoi3 ge3 wai6 zi3", "en": "A lifetime of searching for the right place (beside each other)"}, {"zh": "愛情這遊戲　幾個人能懂", "jp": "oi3 cing4 zi1 jau4 hei3　gei2 go3 jan4 nang4 dung2", "en": "This game called love — how many truly understand it"}, {"zh": "終於找到你　此刻開始懂", "jp": "zung1 jyu1 zaau2 dou3 nei5　ci2 hak1 hoi1 ci2 dung2", "en": "Finally found you — now at this moment I begin to understand"}, {"zh": "你願意嫁娶我嗎", "jp": "nei5 jyun6 ji3 gaa3 ceoi2 ngo5 maa1", "en": "Will you marry me?"}, {"zh": "我願意　我願意", "jp": "ngo5 jyun6 ji3　ngo5 jyun6 ji3", "en": "I do — I do"}, {"zh": "執子之手　與子偕老", "jp": "zap1 zi2 zi1 sau2　jyu5 zi2 haai4 lou5", "en": "Hold your hand and grow old with you (classical vow)"}, {"zh": "合久必婚　因為愛你", "jp": "hap6 gau2 bit1 fan1　jan1 wai6 oi3 nei5", "en": "Together for good — because I love you"}, {"zh": "這輩子　有你陪伴　真的值得", "jp": "zi1 bui3 zi2　jau5 nei5 pui4 bun6　zan1 dik1 zik6 dak1", "en": "This lifetime, with you by my side — truly worth it"}, {"zh": "一起走到最後的路", "jp": "jat1 hei2 zau2 dou3 zeoi3 hau6 ge3 lou6", "en": "Walk together to the very end of the road"}, {"zh": "白頭到老　是我心願", "jp": "baak6 tau4 dou3 lou5　hai6 ngo5 sam1 jyun6", "en": "To grow old together — that is my heart's wish"}, {"zh": "許願　就這樣許願", "jp": "heoi2 jyun6　zau6 gam2 joeng2 heoi2 jyun6", "en": "A wish — just like this, I make my wish"}, {"zh": "愛你不變　廝守一生", "jp": "oi3 nei5 bat1 bin3　si1 sau2 jat1 sang1", "en": "Love you unchanging — stay by your side for life"}, {"zh": "合久必婚　天作之合", "jp": "hap6 gau2 bit1 fan1　tin1 zok3 zi1 hap6", "en": "Together for good — a match made in heaven"}]}, {"id": "song2", "ytId": "EoU5FMB9a7U", "zh": "最好給最好", "artist": "陳慧琳", "en": "Give the Best to the Best", "artistEn": "Kelly Chen", "lang": "yue", "vocab": [{"zh": "最好", "jp": "zeoi3 hou2", "en": "The best"}, {"zh": "珍惜", "jp": "zan1 sik1", "en": "Cherish / Treasure"}, {"zh": "付出", "jp": "fu3 ceot1", "en": "Give / Contribute"}, {"zh": "承諾", "jp": "sing4 nok6", "en": "Promise / Commitment"}, {"zh": "包容", "jp": "baau1 jung4", "en": "Tolerance / Acceptance"}, {"zh": "守護", "jp": "sau2 wu6", "en": "Protect / Watch over"}, {"zh": "值得", "jp": "zik6 dak1", "en": "Worth it / Deserving"}], "lines": [{"zh": "最好的我　給最好的你", "jp": "zeoi3 hou2 ge3 ngo5　bei2 zeoi3 hou2 ge3 nei5", "en": "The best of me — given to the best of you"}, {"zh": "用最好的心情　來愛你", "jp": "jung6 zeoi3 hou2 ge3 sam1 cing4　loi4 oi3 nei5", "en": "With the best of my heart — to love you"}, {"zh": "珍惜每一個　有你的日子", "jp": "zan1 sik1 mui5 jat1 go3　jau5 nei5 ge3 jat6 zi2", "en": "Cherish every single day — every day with you"}, {"zh": "付出所有的愛　只為你", "jp": "fu3 ceot1 so2 jau5 ge3 oi3　zi2 wai6 nei5", "en": "Give all of my love — only for you"}, {"zh": "你是我心裡　最美麗的風景", "jp": "nei5 hai6 ngo5 sam1 leoi5　zeoi3 mei5 lai6 ge3 fung1 ging2", "en": "You are the most beautiful sight in my heart"}, {"zh": "承諾了永遠　就是永遠", "jp": "sing4 nok6 liu5 wing5 jyun5　zau6 hai6 wing5 jyun5", "en": "A promise of forever — means forever"}, {"zh": "最好給最好　這是愛的方式", "jp": "zeoi3 hou2 bei2 zeoi3 hou2　zi1 hai6 oi3 ge3 fong1 sik1", "en": "Give the best to the best — this is the way of love"}, {"zh": "把最好的時光　都給你", "jp": "baa2 zeoi3 hou2 ge3 si4 gwong1　dou1 bei2 nei5", "en": "All the best moments of my life — I give them to you"}, {"zh": "包容你的一切　守護你", "jp": "baau1 jung4 nei5 ge3 jat1 cit3　sau2 wu6 nei5", "en": "Accept everything about you — protect you"}, {"zh": "值得嗎　這份感情值得嗎", "jp": "zik6 dak1 maa1　zi1 fan6 gam2 cing4 zik6 dak1 maa1", "en": "Is it worth it — is this love worth it?"}, {"zh": "值得的　因為有你值得的", "jp": "zik6 dak1 ge3　jan1 wai6 jau5 nei5 zik6 dak1 ge3", "en": "It's worth it — because of you, it's all worth it"}, {"zh": "最好的你　就是最好的禮物", "jp": "zeoi3 hou2 ge3 nei5　zau6 hai6 zeoi3 hou2 ge3 lai5 mat6", "en": "The best of you — is the best gift"}]}, {"id": "song3", "ytId": "OWRd9zELZE8", "zh": "終身美麗", "artist": "鄭秀文", "en": "Beautiful Forever", "artistEn": "Sammi Cheng", "lang": "yue", "vocab": [{"zh": "終身", "jp": "zung1 san1", "en": "Lifelong / For life"}, {"zh": "美麗", "jp": "mei5 lai6", "en": "Beautiful"}, {"zh": "自信", "jp": "zi6 seon3", "en": "Confidence / Self-confidence"}, {"zh": "獨立", "jp": "duk6 laap6", "en": "Independent"}, {"zh": "精彩", "jp": "zing1 coi2", "en": "Wonderful / Brilliant"}, {"zh": "驕傲", "jp": "giu1 ngou6", "en": "Proud"}, {"zh": "值得被愛", "jp": "zik6 dak1 bei6 oi3", "en": "Deserving of love"}, {"zh": "由自己決定", "jp": "jau4 zi6 gei2 kyut3 ding6", "en": "Decided by yourself"}], "lines": [{"zh": "誰說美麗有時效　由自己決定", "jp": "seoi4 syut3 mei5 lai6 jau5 si4 haau6　jau4 zi6 gei2 kyut3 ding6", "en": "Who says beauty has an expiry date — you decide for yourself"}, {"zh": "活得精彩　由自己定義", "jp": "wut6 dak1 zing1 coi2　jau4 zi6 gei2 ding6 ji6", "en": "Living brilliantly — defined by yourself"}, {"zh": "我要終身美麗", "jp": "ngo5 jiu3 zung1 san1 mei5 lai6", "en": "I want to be beautiful for life"}, {"zh": "因為我值得", "jp": "jan1 wai6 ngo5 zik6 dak1", "en": "Because I deserve it"}, {"zh": "不需要誰的認可　才敢抬起頭", "jp": "bat1 seoi1 jiu3 seoi4 ge3 jing6 ho2　coi4 gam2 toi4 hei2 tau4", "en": "I don't need anyone's approval to hold my head high"}, {"zh": "自信是最美的裝扮", "jp": "zi6 seon3 hai6 zeoi3 mei5 ge3 zong1 baan6", "en": "Confidence is the most beautiful thing to wear"}, {"zh": "終身美麗　是一種選擇", "jp": "zung1 san1 mei5 lai6　hai6 jat1 zung2 syun2 zaak3", "en": "Beautiful forever — it's a choice"}, {"zh": "愛自己　才能愛別人", "jp": "oi3 zi6 gei2　coi4 nang4 oi3 bit6 jan4", "en": "Love yourself first — then you can love others"}, {"zh": "每一個今天　都活得驕傲", "jp": "mui5 jat1 go3 gam1 tin1　dou1 wut6 dak1 giu1 ngou6", "en": "Every single today — lived with pride"}, {"zh": "獨立的你　最美麗", "jp": "duk6 laap6 ge3 nei5　zeoi3 mei5 lai6", "en": "Independent you — most beautiful"}, {"zh": "不需要誰來定義美麗", "jp": "bat1 seoi1 jiu3 seoi4 loi4 ding6 ji6 mei5 lai6", "en": "No one needs to define beauty for you"}, {"zh": "你本身就是最好的自己", "jp": "nei5 bun2 san1 zau6 hai6 zeoi3 hou2 ge3 zi6 gei2", "en": "You yourself are already the best version of you"}, {"zh": "終身美麗　只在一念間", "jp": "zung1 san1 mei5 lai6　zi2 zoi6 jat1 nim6 gaan1", "en": "Beautiful forever — it starts with a single thought"}]}];
 
 const LESSONS = [
   {id:1,zh:"問候與基本用語",en:"Greetings & Basic Phrases",
@@ -3990,7 +3990,6 @@ const LESSONS = [
     ]
   }
   }
-
   ,{id:25,zh:"旅遊與交通",en:"Travel & Transportation",sections:[{title:"Transportation",zh:"交通",vocab:[{zh:"飛機",jp:"fei1 gei1",en:"Airplane"},{zh:"火車",jp:"fo2 ce1",en:"Train"},{zh:"地鐵",jp:"dei6 tit3",en:"Subway / MTR"},{zh:"巴士",jp:"baa1 si2",en:"Bus"},{zh:"的士",jp:"dik1 si2",en:"Taxi"},{zh:"渡輪",jp:"dou6 leon4",en:"Ferry"},{zh:"機場",jp:"gei1 coeng4",en:"Airport"},{zh:"車站",jp:"ce1 zaam6",en:"Train / Bus station"},{zh:"月台",jp:"jyut6 toi4",en:"Platform"},{zh:"行李",jp:"hang4 lei5",en:"Luggage / Baggage"},{zh:"護照",jp:"wu6 ziu3",en:"Passport"},{zh:"簽證",jp:"cim1 zing3",en:"Visa"}]},{title:"Travel Experiences",zh:"旅遊體驗",vocab:[{zh:"酒店",jp:"zau2 dim3",en:"Hotel"},{zh:"民宿",jp:"man4 suk1",en:"Guesthouse / Airbnb"},{zh:"景點",jp:"ging2 dim2",en:"Tourist attraction"},{zh:"博物館",jp:"bok3 mat6 gun2",en:"Museum"},{zh:"海灘",jp:"hoi2 taan1",en:"Beach"},{zh:"文化差異",jp:"man4 faa3 caa1 ji6",en:"Cultural difference"},{zh:"時差",jp:"si4 caa1",en:"Jet lag / Time difference"},{zh:"換錢",jp:"wun6 cin2",en:"Currency exchange"},{zh:"旅遊保險",jp:"leoi5 jau4 bou2 him2",en:"Travel insurance"},{zh:"迷路",jp:"mai4 lou6",en:"Get lost"}]},{title:"Travel Phrases",zh:"旅遊用語",vocab:[{zh:"去邊度好？",jp:"heoi3 bin1 dou6 hou2?",en:"Where's a good place to go?"},{zh:"下一班車係幾時？",jp:"haa6 jat1 baan1 ce1 hai6 gei2 si4?",en:"When is the next bus/train?"},{zh:"我想訂一個房間",jp:"ngo5 soeng2 deng6 jat1 go3 fong4 gaan1",en:"I'd like to book a room"},{zh:"附近有冇好食嘅地方？",jp:"fu6 gan6 jau5 mou5 hou2 sik6 ge3 dei6 fong1?",en:"Are there any good places to eat nearby?"},{zh:"我迷路喇，可唔可以幫我？",jp:"ngo5 mai4 lou6 laa3, ho2 m4 ho2 yi5 bong1 ngo5?",en:"I'm lost — can you help me?"}]},{ title:"Tours & Cruises", zh:"旅行團與郵輪", vocab:[
       {zh:"郵輪",jp:"jau4 leon4",en:"Cruise ship"},
       {zh:"郵輪旅行",jp:"jau4 leon4 leoi5 hang4",en:"Cruise holiday"},
@@ -4007,84 +4006,70 @@ const LESSONS = [
       {zh:"包團",jp:"baau1 tyun4",en:"Charter / Book a private tour"},
       {zh:"半自助遊",jp:"bun3 zi6 zo6 jau4",en:"Semi-independent tour"},
     ]}],dialogue:{title:"Dialogue: Planning a Trip",lines:[{sp:"A",zh:"你暑假有冇計劃去旅行？",jp:"nei5 syu2 gaa3 jau5 mou5 gai3 waak6 heoi3 leoi5 hang4?",en:"Do you have any travel plans for the summer?"},{sp:"B",zh:"有呀！我計劃去日本，去京都同大阪。你呢？",jp:"jau5 aa3! ngo5 gai3 waak6 heoi3 jat6 bun2, heoi3 ging1 dou1 tung4 daai6 baan2. nei5 ne1?",en:"Yes! I'm planning to go to Japan — Kyoto and Osaka. What about you?"},{sp:"A",zh:"我想去歐洲，但係機票好貴，仲要申請簽證，好麻煩。",jp:"ngo5 soeng2 heoi3 au1 zau1, daan6 hai6 gei1 piu3 hou2 gwai3, zung6 jiu3 san1 cing2 cim1 zing3, hou2 maa4 faan4.",en:"I want to go to Europe, but flights are expensive and I still need to apply for a visa — such a hassle."},{sp:"B",zh:"係囉，簽證好煩。日本就唔使簽證，方便好多。記得買旅遊保險㗎，好重要㗎。",jp:"hai6 lo3, cim1 zing3 hou2 faan4. jat6 bun2 zau6 m4 sai2 cim1 zing3, fong1 bin6 hou2 do1. gei3 dak1 maai5 leoi5 jau4 bou2 him2 gaa3, hou2 zung6 jiu3 gaa3.",en:"Yeah, visas are a pain. Japan doesn't require one — much more convenient. Remember to buy travel insurance, it's really important."},{sp:"A",zh:"好，我會記住。希望你玩得開心，帶埋手信返嚟㗎！",jp:"hou2, ngo5 wui5 gei3 zyu3. hei1 mong6 nei5 waan2 dak1 hoi1 sam1, daai3 maai4 sau2 seon3 faan1 lei4 gaa3!",en:"Okay, I'll remember. I hope you have a great time — bring back some souvenirs!"}]}}
-  ,{id:26,zh:"國家公園與野外",en:"National Parks & Wilderness",
+  ,{id:26,zh:"城市旅遊",en:"City & Urban Travel",
   sections:[
-    { title:"Mammals", zh:"哺乳類動物", vocab:[
-      {zh:"熊",jp:"hung4",en:"Bear"},
-      {zh:"棕熊",jp:"zung1 hung4",en:"Brown bear / Grizzly bear"},
-      {zh:"黑熊",jp:"hak1 hung4",en:"Black bear"},
-      {zh:"北極熊",jp:"bak1 gik6 hung4",en:"Polar bear"},
-      {zh:"鹿",jp:"luk6",en:"Deer"},
-      {zh:"麋鹿",jp:"mei4 luk6",en:"Elk / Moose"},
-      {zh:"野豬",jp:"je5 zyu1",en:"Wild boar"},
-      {zh:"狼",jp:"long4",en:"Wolf"},
-      {zh:"土狼",jp:"tou2 long4",en:"Coyote"},
-      {zh:"狐狸",jp:"wu4 lei4",en:"Fox"},
-      {zh:"松鼠",jp:"cung4 syu2",en:"Squirrel"},
-      {zh:"浣熊",jp:"wun5 hung4",en:"Raccoon"},
-      {zh:"土撥鼠",jp:"tou2 bok6 syu2",en:"Groundhog / Marmot"},
-      {zh:"野牛",jp:"je5 ngau4",en:"Bison / Buffalo"},
-      {zh:"山羊",jp:"saan1 joeng4",en:"Mountain goat"},
-      {zh:"大角羊",jp:"daai6 gok3 joeng4",en:"Bighorn sheep"},
-      {zh:"美洲獅",jp:"mei5 zau1 si1",en:"Mountain lion / Cougar / Puma"},
-      {zh:"水獺",jp:"seoi2 taat3",en:"River otter"},
-      {zh:"河狸",jp:"ho4 lei4",en:"Beaver"},
+    { title:"Getting Around the City", zh:"市內交通", vocab:[
+      {zh:"地鐵",jp:"dei6 tit3",en:"Subway / Metro"},
+      {zh:"坐地鐵",jp:"co5 dei6 tit3",en:"Take the subway (colloquial)"},
+      {zh:"搭巴士",jp:"daap3 baa1 si2",en:"Take the bus (HK: 搭 not 乘)"},
+      {zh:"的士",jp:"dik1 si2",en:"Taxi (HK colloquial from English)"},
+      {zh:"叫的士",jp:"giu3 dik1 si2",en:"Hail / Call a taxi (colloquial)"},
+      {zh:"Uber",jp:"ju1 baa1",en:"Uber / Ride-hailing app (colloquial)"},
+      {zh:"轉車",jp:"zyun3 ce1",en:"Transfer / Change trains (colloquial)"},
+      {zh:"出口",jp:"ceot1 hau2",en:"Exit (station)"},
+      {zh:"入口",jp:"jap6 hau2",en:"Entrance"},
+      {zh:"八達通",jp:"baat3 daat6 tung1",en:"Octopus card (HK transit card)"},
+      {zh:"月票",jp:"jyut6 piu3",en:"Monthly transit pass"},
+      {zh:"唔知去邊站落？",jp:"m4 zi1 heoi3 bin1 zaam6 lok6?",en:"Which stop do I get off at? (colloquial)"},
+      {zh:"幫我叫的士好唔好？",jp:"bong1 ngo5 giu3 dik1 si2 hou2 m4 hou2?",en:"Can you call me a taxi? (colloquial)"},
     ]},
-    { title:"Birds & Reptiles", zh:"雀鳥與爬蟲", vocab:[
-      {zh:"老鷹",jp:"lou5 jing1",en:"Eagle"},
-      {zh:"白頭鷹",jp:"baak6 tau4 jing1",en:"Bald eagle"},
-      {zh:"魚鷹",jp:"jyu2 jing1",en:"Osprey"},
-      {zh:"貓頭鷹",jp:"maau1 tau4 jing1",en:"Owl"},
-      {zh:"啄木鳥",jp:"doek3 muk6 niu5",en:"Woodpecker"},
-      {zh:"野火雞",jp:"je5 fo2 gai1",en:"Wild turkey"},
-      {zh:"烏鴉",jp:"wu1 aa1",en:"Raven / Crow"},
-      {zh:"蛇",jp:"se4",en:"Snake"},
-      {zh:"響尾蛇",jp:"hoeng2 mei5 se4",en:"Rattlesnake"},
-      {zh:"蜥蜴",jp:"sek6 jik6",en:"Lizard"},
-      {zh:"烏龜",jp:"wu1 gwai1",en:"Tortoise / Turtle"},
-      {zh:"蝴蝶",jp:"wu4 dip6",en:"Butterfly"},
-      {zh:"螢火蟲",jp:"jing4 fo2 cung4",en:"Firefly"},
+    { title:"Navigating & Directions", zh:"問路與指引", vocab:[
+      {zh:"唔該，請問…",jp:"m4 goi1, cing2 man6…",en:"Excuse me, may I ask… (colloquial)"},
+      {zh:"去…點行？",jp:"heoi3… dim2 haang4?",en:"How do I get to…? (colloquial)"},
+      {zh:"行直",jp:"haang4 zik6",en:"Go straight (colloquial)"},
+      {zh:"轉左",jp:"zyun3 zo2",en:"Turn left (colloquial)"},
+      {zh:"轉右",jp:"zyun3 jau6",en:"Turn right (colloquial)"},
+      {zh:"喺…對面",jp:"hai2… deoi3 min6",en:"Opposite / Across from… (colloquial)"},
+      {zh:"喺…隔籬",jp:"hai2… gaak3 lei4",en:"Next to… (HK colloquial)"},
+      {zh:"行路去幾遠？",jp:"haang4 lou6 heoi3 gei2 jyun5?",en:"How far is it to walk? (colloquial)"},
+      {zh:"迷路喇",jp:"mai4 lou6 laa3",en:"Got lost (colloquial)"},
+      {zh:"用Google地圖",jp:"jung6 Google dei6 tou4",en:"Use Google Maps (colloquial)"},
     ]},
-    { title:"Landscape & Natural Features", zh:"地形與自然景觀", vocab:[
-      {zh:"瀑布",jp:"buk6 bou3",en:"Waterfall"},
-      {zh:"間歇泉",jp:"gaan1 hit3 cyun4",en:"Geyser"},
-      {zh:"溫泉",jp:"wan1 cyun4",en:"Hot spring"},
-      {zh:"峽谷",jp:"haap6 guk1",en:"Canyon / Gorge"},
-      {zh:"懸崖",jp:"jyun4 ngaai4",en:"Cliff"},
-      {zh:"洞穴",jp:"dung6 jyut3",en:"Cave"},
-      {zh:"冰川",jp:"bing1 cyun4",en:"Glacier"},
-      {zh:"草原",jp:"cou2 jyun4",en:"Prairie / Grassland"},
-      {zh:"森林",jp:"sam1 lam4",en:"Forest"},
-      {zh:"沼澤",jp:"zaau3 zaak6",en:"Wetlands / Swamp"},
-      {zh:"山谷",jp:"saan1 guk1",en:"Valley"},
-      {zh:"高原",jp:"gou1 jyun4",en:"Plateau / Mesa"},
-      {zh:"火山口",jp:"fo2 saan1 hau2",en:"Volcanic crater / Caldera"},
-      {zh:"間歇泉盆地",jp:"gaan1 hit3 cyun4 pun4 dei6",en:"Geyser basin"},
+    { title:"City Sights & Culture", zh:"城市景點與文化", vocab:[
+      {zh:"博物館",jp:"bok3 mat6 gun2",en:"Museum"},
+      {zh:"美術館",jp:"mei5 seot6 gun2",en:"Art gallery"},
+      {zh:"夜市",jp:"je6 si5",en:"Night market (colloquial)"},
+      {zh:"街市",jp:"gaai1 si5",en:"Wet market / Street market (colloquial)"},
+      {zh:"唐人街",jp:"tong4 jan4 gaai1",en:"Chinatown (colloquial)"},
+      {zh:"廟",jp:"miu6",en:"Temple (colloquial short form)"},
+      {zh:"公園",jp:"gung1 jyun2",en:"Park"},
+      {zh:"天台",jp:"tin1 toi4",en:"Rooftop (HK culture — rooftop bars/views)"},
+      {zh:"打卡",jp:"daa2 kaat1",en:"Take an Insta-worthy photo / Check in (very HK colloquial)"},
+      {zh:"網紅景點",jp:"mong5 hung4 ging2 dim2",en:"Instagrammable spot (colloquial)"},
+      {zh:"行夜街",jp:"haang4 je6 gaai1",en:"Night stroll (colloquial HK leisure)"},
     ]},
-    { title:"Park Vocabulary", zh:"公園用語", vocab:[
-      {zh:"國家公園",jp:"gwok3 gaa1 gung1 jyun4",en:"National park"},
-      {zh:"自然保護區",jp:"zi6 jin4 bou2 wu6 keoi1",en:"Nature reserve"},
-      {zh:"山徑",jp:"saan1 ging3",en:"Trail / Hiking path"},
-      {zh:"護林員",jp:"wu6 lam4 jyun4",en:"Park ranger"},
-      {zh:"露營地",jp:"lou6 jing4 dei6",en:"Campsite"},
-      {zh:"觀景台",jp:"gun1 ging2 toi4",en:"Viewpoint / Overlook"},
-      {zh:"野生動物觀察",jp:"je5 sang1 dung6 mat6 gun1 caat3",en:"Wildlife viewing"},
-      {zh:"觀鳥",jp:"gun1 niu5",en:"Birdwatching"},
-      {zh:"生態旅遊",jp:"sang1 taai3 leoi5 jau4",en:"Ecotourism"},
-      {zh:"勿餵飼野生動物",jp:"mat6 wai3 ci6 je5 sang1 dung6 mat6",en:"Do not feed wildlife"},
-      {zh:"小心野熊",jp:"siu2 sam1 je5 hung4",en:"Caution: bears (sign)"},
-      {zh:"留在小徑上",jp:"lau4 hei2 siu2 ging3 soeng6",en:"Stay on the trail"},
-      {zh:"垃圾帶走",jp:"laap6 saap3 daai3 zau2",en:"Pack out your rubbish (Leave No Trace)"},
+    { title:"Food & Nightlife", zh:"飲食與夜生活", vocab:[
+      {zh:"茶餐廳",jp:"caa4 caan1 teng1",en:"Hong Kong-style café / Cha chaan teng"},
+      {zh:"大牌檔",jp:"daai6 paai4 dong3",en:"Open-air food stall / Dai pai dong (colloquial)"},
+      {zh:"宵夜",jp:"siu1 je5",en:"Late-night supper / Snack (colloquial)"},
+      {zh:"去食宵夜",jp:"heoi3 sik6 siu1 je5",en:"Go for late-night supper (very HK colloquial)"},
+      {zh:"酒吧",jp:"zau2 baa1",en:"Bar"},
+      {zh:"蒲吧",jp:"pou4 baa1",en:"Go bar-hopping / Party out (colloquial)"},
+      {zh:"雞尾酒",jp:"gai1 mei5 zau2",en:"Cocktail"},
+      {zh:"生啤",jp:"saang1 be1",en:"Draft beer (colloquial)"},
+      {zh:"唔飲得咁多",jp:"m4 jam2 dak1 gam3 do1",en:"Can't drink so much (colloquial)"},
+      {zh:"埋單",jp:"maai4 daan1",en:"Pay the bill (quintessential HK)"},
     ]},
   ],
   dialogue:{
-    title:"Dialogue: At the National Park",
+    title:"Dialogue: Exploring the City",
     lines:[
-      {sp:"A",zh:"嘩，個間歇泉啱啱噴水㗎！好壯觀！幾時再噴㗎？",jp:"waa3, go3 gaan1 hit3 cyun4 ngaam1 ngaam1 pan3 seoi2 gaa3! hou2 zong3 gun1! gei2 si4 zoi3 pan3 gaa3?",en:"Wow, the geyser just erupted! So spectacular! When does it go off again?"},
-      {sp:"B",zh:"護林員話大概每隔九十分鐘噴一次㗎。你有冇見到嗰隻白頭鷹？係美國國鳥嚟㗎！",jp:"wu6 lam4 jyun4 waa6 daai6 koi3 mui5 gaak3 gau2 sap6 fan1 zung1 pan3 jat1 ci3 gaa3. nei5 jau5 mou5 gin3 dou3 go2 zek3 baak6 tau4 jing1? hai6 mei5 gwok3 gwok3 niu5 lei4 gaa3!",en:"The ranger said roughly every 90 minutes. Did you see that bald eagle? It's the US national bird!"},
-      {sp:"A",zh:"見到㗎！好靚！不過我最驚係見到熊隻熊喺路邊食嘢！",jp:"gin3 dou3 gaa3! hou2 leng3! bat1 gwo3 ngo5 zeoi3 geng1 hai6 gin3 dou3 go2 zek3 hung4 hai2 lou6 bin1 sik6 je5!",en:"Saw it! So beautiful! But the most shocking thing was seeing a bear eating by the roadside!"},
-      {sp:"B",zh:"係囉，所以要小心㗎！記得唔好餵佢，亦都唔好行埋去。留喺小徑上先至安全㗎。",jp:"hai6 lo3, so2 ji5 jiu3 siu2 sam1 gaa3! gei3 dak1 m4 hou2 wai3 keoi5, jik6 dou1 m4 hou2 haang4 maai4 heoi3. lau4 hai2 siu2 ging3 soeng6 sin1 zi3 on1 cyun4 gaa3.",en:"Exactly, so be careful! Remember don't feed it, and don't approach it either. Stay on the trail — that's the safest."},
-      {sp:"A",zh:"明白㗎。而家去行嗰條山徑睇瀑布，好唔好？",jp:"ming4 baak6 gaa3. ji4 gaa1 heoi3 haang4 go2 tiu4 saan1 ging3 tai2 buk6 bou3, hou2 m4 hou2?",en:"Understood. Shall we go hike that trail to the waterfall now?"},
+      {sp:"A",zh:"而家去邊好？我想行下街，打下卡。",jp:"ji4 gaa1 heoi3 bin1 hou2? ngo5 soeng2 haang4 haa5 gaai1, daa2 haa5 kaat1.",en:"Where should we go now? I want to walk around and take some photos."},
+      {sp:"B",zh:"去旺角夜市啦，好多嘢食，仲可以行街，好熱鬧㗎。",jp:"heoi3 wong6 gok3 je6 si5 laa1, hou2 do1 je5 sik6, zung6 ho2 yi5 haang4 gaai1, hou2 jit6 naau6 gaa3.",en:"Let's go to the Mong Kok night market — lots of food and shopping, very lively."},
+      {sp:"A",zh:"好呀！搭地鐵去定係叫的士？",jp:"hou2 aa3! daap3 dei6 tit3 heoi3 ding6 hai6 giu3 dik1 si2?",en:"Great! Shall we take the subway or call a taxi?"},
+      {sp:"B",zh:"搭地鐵快啲，用八達通就得㗎，唔使買飛。",jp:"daap3 dei6 tit3 faai3 di1, jung6 baat3 daat6 tung1 zau6 dak1 gaa3, m4 sai2 maai5 fei1.",en:"Subway is faster — just use the Octopus card, no need to buy a ticket."},
+      {sp:"A",zh:"食完宵夜可唔可以去天台睇夜景？",jp:"sik6 jyun4 siu1 je5 ho2 m4 ho2 yi5 heoi3 tin1 toi4 tai2 je6 ging2?",en:"After supper can we go to a rooftop to see the night view?"},
+      {sp:"B",zh:"得㗎！我識個好靚嘅天台酒吧，夜景一流㗎！",jp:"dak1 gaa3! ngo5 sik1 go3 hou2 leng3 ge3 tin1 toi4 zau2 baa1, je6 ging2 jat1 lau4 gaa3!",en:"Sure! I know a great rooftop bar — the night view is superb!"},
     ]
   }
   }
@@ -4240,6 +4225,270 @@ const LESSONS = [
     ]
   }
   }
+  ,{id:29,zh:"國家公園與野外",en:"National Parks & Wilderness",
+  sections:[
+    { title:"Mammals", zh:"哺乳類動物", vocab:[
+      {zh:"熊",jp:"hung4",en:"Bear"},
+      {zh:"棕熊",jp:"zung1 hung4",en:"Brown bear / Grizzly bear"},
+      {zh:"黑熊",jp:"hak1 hung4",en:"Black bear"},
+      {zh:"北極熊",jp:"bak1 gik6 hung4",en:"Polar bear"},
+      {zh:"鹿",jp:"luk6",en:"Deer"},
+      {zh:"麋鹿",jp:"mei4 luk6",en:"Elk / Moose"},
+      {zh:"野豬",jp:"je5 zyu1",en:"Wild boar"},
+      {zh:"狼",jp:"long4",en:"Wolf"},
+      {zh:"土狼",jp:"tou2 long4",en:"Coyote"},
+      {zh:"狐狸",jp:"wu4 lei4",en:"Fox"},
+      {zh:"松鼠",jp:"cung4 syu2",en:"Squirrel"},
+      {zh:"浣熊",jp:"wun5 hung4",en:"Raccoon"},
+      {zh:"土撥鼠",jp:"tou2 bok6 syu2",en:"Groundhog / Marmot"},
+      {zh:"野牛",jp:"je5 ngau4",en:"Bison / Buffalo"},
+      {zh:"山羊",jp:"saan1 joeng4",en:"Mountain goat"},
+      {zh:"大角羊",jp:"daai6 gok3 joeng4",en:"Bighorn sheep"},
+      {zh:"美洲獅",jp:"mei5 zau1 si1",en:"Mountain lion / Cougar / Puma"},
+      {zh:"水獺",jp:"seoi2 taat3",en:"River otter"},
+      {zh:"河狸",jp:"ho4 lei4",en:"Beaver"},
+    ]},
+    { title:"Birds & Reptiles", zh:"雀鳥與爬蟲", vocab:[
+      {zh:"老鷹",jp:"lou5 jing1",en:"Eagle"},
+      {zh:"白頭鷹",jp:"baak6 tau4 jing1",en:"Bald eagle"},
+      {zh:"魚鷹",jp:"jyu2 jing1",en:"Osprey"},
+      {zh:"貓頭鷹",jp:"maau1 tau4 jing1",en:"Owl"},
+      {zh:"啄木鳥",jp:"doek3 muk6 niu5",en:"Woodpecker"},
+      {zh:"野火雞",jp:"je5 fo2 gai1",en:"Wild turkey"},
+      {zh:"烏鴉",jp:"wu1 aa1",en:"Raven / Crow"},
+      {zh:"蛇",jp:"se4",en:"Snake"},
+      {zh:"響尾蛇",jp:"hoeng2 mei5 se4",en:"Rattlesnake"},
+      {zh:"蜥蜴",jp:"sek6 jik6",en:"Lizard"},
+      {zh:"烏龜",jp:"wu1 gwai1",en:"Tortoise / Turtle"},
+      {zh:"蝴蝶",jp:"wu4 dip6",en:"Butterfly"},
+      {zh:"螢火蟲",jp:"jing4 fo2 cung4",en:"Firefly"},
+    ]},
+    { title:"Landscape & Natural Features", zh:"地形與自然景觀", vocab:[
+      {zh:"瀑布",jp:"buk6 bou3",en:"Waterfall"},
+      {zh:"間歇泉",jp:"gaan1 hit3 cyun4",en:"Geyser"},
+      {zh:"溫泉",jp:"wan1 cyun4",en:"Hot spring"},
+      {zh:"峽谷",jp:"haap6 guk1",en:"Canyon / Gorge"},
+      {zh:"懸崖",jp:"jyun4 ngaai4",en:"Cliff"},
+      {zh:"洞穴",jp:"dung6 jyut3",en:"Cave"},
+      {zh:"冰川",jp:"bing1 cyun4",en:"Glacier"},
+      {zh:"草原",jp:"cou2 jyun4",en:"Prairie / Grassland"},
+      {zh:"森林",jp:"sam1 lam4",en:"Forest"},
+      {zh:"沼澤",jp:"zaau3 zaak6",en:"Wetlands / Swamp"},
+      {zh:"山谷",jp:"saan1 guk1",en:"Valley"},
+      {zh:"高原",jp:"gou1 jyun4",en:"Plateau / Mesa"},
+      {zh:"火山口",jp:"fo2 saan1 hau2",en:"Volcanic crater / Caldera"},
+      {zh:"間歇泉盆地",jp:"gaan1 hit3 cyun4 pun4 dei6",en:"Geyser basin"},
+    ]},
+    { title:"Park Vocabulary", zh:"公園用語", vocab:[
+      {zh:"國家公園",jp:"gwok3 gaa1 gung1 jyun4",en:"National park"},
+      {zh:"自然保護區",jp:"zi6 jin4 bou2 wu6 keoi1",en:"Nature reserve"},
+      {zh:"山徑",jp:"saan1 ging3",en:"Trail / Hiking path"},
+      {zh:"護林員",jp:"wu6 lam4 jyun4",en:"Park ranger"},
+      {zh:"露營地",jp:"lou6 jing4 dei6",en:"Campsite"},
+      {zh:"觀景台",jp:"gun1 ging2 toi4",en:"Viewpoint / Overlook"},
+      {zh:"野生動物觀察",jp:"je5 sang1 dung6 mat6 gun1 caat3",en:"Wildlife viewing"},
+      {zh:"觀鳥",jp:"gun1 niu5",en:"Birdwatching"},
+      {zh:"生態旅遊",jp:"sang1 taai3 leoi5 jau4",en:"Ecotourism"},
+      {zh:"勿餵飼野生動物",jp:"mat6 wai3 ci6 je5 sang1 dung6 mat6",en:"Do not feed wildlife"},
+      {zh:"小心野熊",jp:"siu2 sam1 je5 hung4",en:"Caution: bears (sign)"},
+      {zh:"留在小徑上",jp:"lau4 hei2 siu2 ging3 soeng6",en:"Stay on the trail"},
+      {zh:"垃圾帶走",jp:"laap6 saap3 daai3 zau2",en:"Pack out your rubbish (Leave No Trace)"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: At the National Park",
+    lines:[
+      {sp:"A",zh:"嘩，個間歇泉啱啱噴水㗎！好壯觀！幾時再噴㗎？",jp:"waa3, go3 gaan1 hit3 cyun4 ngaam1 ngaam1 pan3 seoi2 gaa3! hou2 zong3 gun1! gei2 si4 zoi3 pan3 gaa3?",en:"Wow, the geyser just erupted! So spectacular! When does it go off again?"},
+      {sp:"B",zh:"護林員話大概每隔九十分鐘噴一次㗎。你有冇見到嗰隻白頭鷹？係美國國鳥嚟㗎！",jp:"wu6 lam4 jyun4 waa6 daai6 koi3 mui5 gaak3 gau2 sap6 fan1 zung1 pan3 jat1 ci3 gaa3. nei5 jau5 mou5 gin3 dou3 go2 zek3 baak6 tau4 jing1? hai6 mei5 gwok3 gwok3 niu5 lei4 gaa3!",en:"The ranger said roughly every 90 minutes. Did you see that bald eagle? It's the US national bird!"},
+      {sp:"A",zh:"見到㗎！好靚！不過我最驚係見到熊隻熊喺路邊食嘢！",jp:"gin3 dou3 gaa3! hou2 leng3! bat1 gwo3 ngo5 zeoi3 geng1 hai6 gin3 dou3 go2 zek3 hung4 hai2 lou6 bin1 sik6 je5!",en:"Saw it! So beautiful! But the most shocking thing was seeing a bear eating by the roadside!"},
+      {sp:"B",zh:"係囉，所以要小心㗎！記得唔好餵佢，亦都唔好行埋去。留喺小徑上先至安全㗎。",jp:"hai6 lo3, so2 ji5 jiu3 siu2 sam1 gaa3! gei3 dak1 m4 hou2 wai3 keoi5, jik6 dou1 m4 hou2 haang4 maai4 heoi3. lau4 hai2 siu2 ging3 soeng6 sin1 zi3 on1 cyun4 gaa3.",en:"Exactly, so be careful! Remember don't feed it, and don't approach it either. Stay on the trail — that's the safest."},
+      {sp:"A",zh:"明白㗎。而家去行嗰條山徑睇瀑布，好唔好？",jp:"ming4 baak6 gaa3. ji4 gaa1 heoi3 haang4 go2 tiu4 saan1 ging3 tai2 buk6 bou3, hou2 m4 hou2?",en:"Understood. Shall we go hike that trail to the waterfall now?"},
+    ]
+  }
+  }
+  ,{id:30,zh:"主題樂園",en:"Amusement Parks & Theme Parks",
+  sections:[
+    { title:"Rides & Attractions", zh:"機動遊戲", vocab:[
+      {zh:"過山車",jp:"gwo3 saan1 ce1",en:"Roller coaster (colloquial)"},
+      {zh:"旋轉木馬",jp:"syun4 zyun2 muk6 maa5",en:"Carousel / Merry-go-round"},
+      {zh:"摩天輪",jp:"mo4 tin1 leon4",en:"Ferris wheel"},
+      {zh:"鬼屋",jp:"gwai2 uk1",en:"Haunted house (colloquial)"},
+      {zh:"激流勇進",jp:"gik1 lau4 jung5 zeon3",en:"Log flume / Water ride (colloquial)"},
+      {zh:"4D電影",jp:"sei3 D din6 jing2",en:"4D cinema / Motion ride (colloquial)"},
+      {zh:"機動遊戲",jp:"gei1 dung6 jau4 hei3",en:"Rides / Attractions (general)"},
+      {zh:"好刺激㗎！",jp:"hou2 ci3 gik1 gaa3!",en:"So thrilling! (colloquial)"},
+      {zh:"我唔敢坐",jp:"ngo5 m4 gam2 co5",en:"I don't dare go on it (colloquial)"},
+      {zh:"坐完想嘔",jp:"co5 jyun4 soeng2 au3",en:"Felt like throwing up after (colloquial)"},
+    ]},
+    { title:"Park Logistics", zh:"入場與排隊", vocab:[
+      {zh:"入場費",jp:"jap6 coeng4 fai3",en:"Admission fee"},
+      {zh:"門票",jp:"mun4 piu3",en:"Entry ticket"},
+      {zh:"快速通道",jp:"faai3 sok6 tung1 dou6",en:"Fast pass / Express lane (colloquial)"},
+      {zh:"排隊",jp:"paai4 deoi2",en:"Queue / Line up (colloquial)"},
+      {zh:"要排幾耐？",jp:"jiu3 paai4 gei2 noi6?",en:"How long is the wait? (colloquial)"},
+      {zh:"身高限制",jp:"san1 gou1 haan6 zai3",en:"Height restriction"},
+      {zh:"地圖",jp:"dei6 tou4",en:"Park map"},
+      {zh:"表演時間表",jp:"biu2 jin2 si4 gaan3 biu2",en:"Show schedule"},
+      {zh:"快啲去啦，等會人多㗎",jp:"faai3 di1 heoi3 laa3, dang2 wui5 jan4 do1 gaa3",en:"Let's go quickly — it'll get crowded later (colloquial)"},
+    ]},
+    { title:"Food & Souvenirs", zh:"園內飲食與紀念品", vocab:[
+      {zh:"小食",jp:"siu2 sik6",en:"Snack / Light food (colloquial)"},
+      {zh:"薯條",jp:"syu2 tiu4",en:"French fries (colloquial)"},
+      {zh:"爆谷",jp:"baau3 guk1",en:"Popcorn (HK colloquial)"},
+      {zh:"雪糕",jp:"syut3 gou1",en:"Ice cream (HK colloquial)"},
+      {zh:"紀念品",jp:"gei3 nim6 ban2",en:"Souvenir"},
+      {zh:"公仔",jp:"gung1 zai2",en:"Stuffed toy / Character plush (HK colloquial)"},
+      {zh:"好貴喎，景點價",jp:"hou2 gwai3 wo3, ging2 dim2 gaa3",en:"So expensive — tourist prices (colloquial)"},
+      {zh:"限定版",jp:"haan6 ding6 baan2",en:"Limited edition (colloquial)"},
+    ]},
+    { title:"Shows & Characters", zh:"表演與角色", vocab:[
+      {zh:"卡通人物",jp:"kaat1 tung1 jan4 mat6",en:"Character / Cartoon figure (colloquial)"},
+      {zh:"同…影相",jp:"tung4… jing2 soeng2",en:"Take a photo with… (colloquial)"},
+      {zh:"花車巡遊",jp:"faa1 ce1 ceon4 jau4",en:"Float parade (colloquial)"},
+      {zh:"煙火",jp:"jin1 fo2",en:"Fireworks"},
+      {zh:"燈光表演",jp:"dang1 gwong1 biu2 jin2",en:"Light show"},
+      {zh:"夜間遊行",jp:"je6 gaan1 jau4 hang4",en:"Night parade"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: At the Theme Park",
+    lines:[
+      {sp:"A",zh:"你敢唔敢坐過山車？我好想試㗎！",jp:"nei5 gam2 m4 gam2 co5 gwo3 saan1 ce1? ngo5 hou2 soeng2 si3 gaa3!",en:"Do you dare go on the roller coaster? I really want to try!"},
+      {sp:"B",zh:"唔敢㗎！我驚㗎，你自己去啦。我去坐旋轉木馬好過。",jp:"m4 gam2 gaa3! ngo5 geng1 gaa3, nei5 zi6 gei2 heoi3 laa1. ngo5 heoi3 co5 syun4 zyun2 muk6 maa5 hou2 gwo3.",en:"No way! I'm scared — you go yourself. I'd rather ride the carousel."},
+      {sp:"A",zh:"膽小鬼！咁我哋去排，你幫我睇住嘢。要排幾耐㗎？",jp:"daam2 siu2 gwai2! gam2 ngo5 dei6 heoi3 paai4, nei5 bong1 ngo5 tai2 zyu6 je5. jiu3 paai4 gei2 noi6 gaa3?",en:"Coward! OK let's go queue — you watch the bags. How long's the wait?"},
+      {sp:"B",zh:"個App話要等六十分鐘，要唔要買快速通道？",jp:"go3 App waa6 jiu3 dang2 luk6 sap6 fan1 zung1, jiu3 m4 jiu3 maai5 faai3 sok6 tung1 dou6?",en:"The app says 60 minutes — should we buy a fast pass?"},
+      {sp:"A",zh:"幾多錢？一個人一百蚊，坐完想嘔都唔使等咁耐㗎！",jp:"gei2 do1 cin2? jat1 go3 jan4 jat1 baak3 man1, co5 jyun4 soeng2 au3 dou1 m4 sai2 dang2 gam3 noi6 gaa3!",en:"How much? 100 per person — you can feel sick without the long wait!"},
+    ]
+  }
+  }
+  ,{id:31,zh:"滑雪與冬季旅遊",en:"Ski & Winter Travel",
+  sections:[
+    { title:"On the Slopes", zh:"在雪坡上", vocab:[
+      {zh:"滑雪",jp:"waat6 syut3",en:"Skiing (colloquial)"},
+      {zh:"單板滑雪",jp:"daan1 baan2 waat6 syut3",en:"Snowboarding (colloquial)"},
+      {zh:"雪坡",jp:"syut3 bo1",en:"Ski slope / Piste (colloquial)"},
+      {zh:"初級坡",jp:"co1 kap1 bo1",en:"Beginner slope (green run)"},
+      {zh:"中級坡",jp:"zung1 kap1 bo1",en:"Intermediate slope (blue run)"},
+      {zh:"高級坡",jp:"gou1 kap1 bo1",en:"Advanced slope (black run)"},
+      {zh:"纜車",jp:"laam6 ce1",en:"Cable car / Ski lift (colloquial)"},
+      {zh:"跌倒",jp:"dit3 dou2",en:"Fall over / Wipe out (colloquial)"},
+      {zh:"好大斜度！",jp:"hou2 daai6 ce4 dou6!",en:"So steep! (colloquial)"},
+      {zh:"我唔識滑㗎",jp:"ngo5 m4 sik1 waat6 gaa3",en:"I don't know how to ski (colloquial)"},
+      {zh:"學滑雪",jp:"hok6 waat6 syut3",en:"Learn to ski (colloquial)"},
+      {zh:"教練",jp:"gaau3 lin6",en:"Instructor / Coach"},
+    ]},
+    { title:"Gear & Rentals", zh:"裝備與租借", vocab:[
+      {zh:"頭盔",jp:"tau4 kwai4",en:"Helmet"},
+      {zh:"護目鏡",jp:"wu6 muk6 geng2",en:"Goggles"},
+      {zh:"手套",jp:"sau2 tou3",en:"Gloves"},
+      {zh:"雪褸",jp:"syut3 lau4",en:"Ski jacket / Snow jacket (HK colloquial)"},
+      {zh:"雪褲",jp:"syut3 fu3",en:"Ski pants (colloquial)"},
+      {zh:"雪靴",jp:"syut3 hue3",en:"Snow boots / Ski boots"},
+      {zh:"租",jp:"zo1",en:"Rent (colloquial)"},
+      {zh:"租滑雪裝備",jp:"zo1 waat6 syut3 zong1 bei6",en:"Rent ski equipment (colloquial)"},
+      {zh:"幾多碼？",jp:"gei2 do1 maa5?",en:"What size? (colloquial)"},
+      {zh:"脫唔甩㗎",jp:"tyut3 m4 maak6 gaa3",en:"Can't get it off — stuck (colloquial)"},
+    ]},
+    { title:"Winter Activities", zh:"冬季活動", vocab:[
+      {zh:"落雪喇",jp:"lok6 syut3 laa3",en:"It's snowing! (colloquial)"},
+      {zh:"雪人",jp:"syut3 jan4",en:"Snowman"},
+      {zh:"打雪仗",jp:"daa2 syut3 zoeng3",en:"Snowball fight (colloquial)"},
+      {zh:"溫泉",jp:"wan1 cyun4",en:"Hot spring / Onsen"},
+      {zh:"泡溫泉",jp:"paau3 wan1 cyun4",en:"Soak in a hot spring (colloquial)"},
+      {zh:"滑冰",jp:"waat6 bing1",en:"Ice skating (colloquial)"},
+      {zh:"結冰",jp:"git3 bing1",en:"Frozen / Iced over"},
+      {zh:"冰天雪地",jp:"bing1 tin1 syut3 dei6",en:"Snowy icy landscape (idiom)"},
+      {zh:"好凍呀！",jp:"hou2 dung3 aa3!",en:"So cold! (colloquial exclamation)"},
+      {zh:"凍到手震",jp:"dung3 dou3 sau2 zan3",en:"So cold my hands are shaking (colloquial)"},
+    ]},
+    { title:"Après-Ski & Lodge Life", zh:"滑雪後休閒", vocab:[
+      {zh:"滑雪小屋",jp:"waat6 syut3 siu2 uk1",en:"Ski lodge / Chalet"},
+      {zh:"爐火",jp:"lou4 fo2",en:"Fireplace / Hearth"},
+      {zh:"熱朱古力",jp:"jit6 zyu1 gu1 lik1",en:"Hot chocolate (colloquial)"},
+      {zh:"全身痠痛",jp:"cyun4 san1 syun1 tung3",en:"Whole body aching (colloquial)"},
+      {zh:"浸下熱水澡",jp:"zam3 haa5 jit6 seoi2 zou2",en:"Soak in a hot bath (colloquial)"},
+      {zh:"雪場酒店",jp:"syut3 coeng4 zau2 dim3",en:"Ski resort hotel"},
+      {zh:"雪地靴",jp:"syut3 dei6 hue3",en:"Snow boots (walking)"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: First Time Skiing",
+    lines:[
+      {sp:"A",zh:"你有冇試過滑雪㗎？我係第一次㗎。",jp:"nei5 jau5 mou5 si3 gwo3 waat6 syut3 gaa3? ngo5 hai6 dai6 jat1 ci3 gaa3.",en:"Have you ever tried skiing? It's my first time."},
+      {sp:"B",zh:"我滑過幾次㗎，不過都係初級坡。你要唔要請教練？",jp:"ngo5 waat6 gwo3 gei2 ci3 gaa3, bat1 gwo3 dou1 hai6 co1 kap1 bo1. nei5 jiu3 m4 jiu3 cing2 gaau3 lin6?",en:"I've skied a few times, but only on beginner slopes. Do you want to hire an instructor?"},
+      {sp:"A",zh:"係喎，我連雪靴都著唔好，仲講滑雪喎！",jp:"hai6 wo3, ngo5 lin4 syut3 hue3 dou1 zoek3 m4 hou2, zung6 gong2 waat6 syut3 wo3!",en:"True — I can't even get my ski boots on properly, let alone ski!"},
+      {sp:"B",zh:"哈哈！租完裝備先去食個早餐，之後落初級坡試吓先。",jp:"haa1 haa1! zo1 jyun4 zong1 bei6 sin1 heoi3 sik6 go3 zou2 caan1, zi1 hau6 lok6 co1 kap1 bo1 si3 haa5 sin1.",en:"Haha! Let's rent gear first, grab breakfast, then try the beginner slope."},
+      {sp:"A",zh:"好！如果我跌倒唔好笑我㗎喎。",jp:"hou2! jyu4 gwo2 ngo5 dit3 dou2 m4 hou2 siu3 ngo5 gaa3 wo3.",en:"OK! Promise you won't laugh if I fall."},
+      {sp:"B",zh:"保證唔笑！不過記得拍低㗎，要打卡㗎！",jp:"bou2 zing3 m4 siu3! bat1 gwo3 gei3 dak1 paak3 dai1 gaa3, jiu3 daa2 kaat1 gaa3!",en:"I promise! But I'm definitely recording it — gotta post it!"},
+    ]
+  }
+  }
+  ,{id:32,zh:"郵輪旅遊",en:"Cruises",
+  sections:[
+    { title:"The Ship", zh:"郵輪設施", vocab:[
+      {zh:"郵輪",jp:"jau4 leon4",en:"Cruise ship"},
+      {zh:"船艙",jp:"syun4 cong1",en:"Cabin / Stateroom"},
+      {zh:"海景房",jp:"hoi2 ging2 fong4",en:"Ocean-view cabin (colloquial)"},
+      {zh:"露台房",jp:"lou6 toi4 fong4",en:"Balcony cabin (colloquial)"},
+      {zh:"套房",jp:"tou3 fong4",en:"Suite"},
+      {zh:"甲板",jp:"gaap3 baan2",en:"Deck"},
+      {zh:"船頭",jp:"syun4 tau4",en:"Bow — front of ship (colloquial)"},
+      {zh:"船尾",jp:"syun4 mei5",en:"Stern — back of ship (colloquial)"},
+      {zh:"救生衣",jp:"gau3 sang1 ji1",en:"Life jacket"},
+      {zh:"安全演習",jp:"on1 cyun4 jin2 zaap6",en:"Safety / Muster drill"},
+      {zh:"自助餐廳",jp:"zi6 zo6 caan1 teng1",en:"Buffet restaurant (colloquial)"},
+      {zh:"泳池",jp:"wing6 ci4",en:"Swimming pool (colloquial)"},
+      {zh:"賭場",jp:"dou2 coeng4",en:"Casino"},
+    ]},
+    { title:"Ports of Call", zh:"靠港觀光", vocab:[
+      {zh:"靠港",jp:"kaau3 gong2",en:"Port call / Dock at a port (colloquial)"},
+      {zh:"上岸",jp:"soeng5 ngon6",en:"Go ashore (colloquial)"},
+      {zh:"岸上觀光",jp:"ngon6 soeng6 gun1 gwong1",en:"Shore excursion"},
+      {zh:"自由活動",jp:"zi6 jau4 wut6 dung6",en:"Free time / Independent activity"},
+      {zh:"返船時間",jp:"faan1 syun4 si4 gaan3",en:"All-aboard time / Return-to-ship deadline (colloquial)"},
+      {zh:"唔好遲到",jp:"m4 hou2 ci4 dou3",en:"Don't be late back to the ship (colloquial)"},
+      {zh:"錯過條船喎！",jp:"co3 gwo3 tiu4 syun4 wo3!",en:"You'll miss the ship! (colloquial alarm)"},
+      {zh:"最後上船",jp:"zeoi3 hau6 soeng5 syun4",en:"Last to board (colloquial)"},
+      {zh:"港口稅",jp:"gong2 hau2 seoi3",en:"Port tax / Port fees"},
+    ]},
+    { title:"Life on Board", zh:"船上生活", vocab:[
+      {zh:"暈船",jp:"wan4 syun4",en:"Seasick (colloquial)"},
+      {zh:"暈船藥",jp:"wan4 syun4 joek6",en:"Seasickness medication"},
+      {zh:"浪好大",jp:"long6 hou2 daai6",en:"Big waves / Rough seas (colloquial)"},
+      {zh:"條船搖晒",jp:"tiu4 syun4 jiu4 saai3",en:"The ship is rocking a lot (colloquial)"},
+      {zh:"船上娛樂",jp:"syun4 soeng6 jyu4 lok6",en:"On-board entertainment"},
+      {zh:"歌舞表演",jp:"go1 mou5 biu2 jin2",en:"Song and dance show (colloquial)"},
+      {zh:"自助晚餐",jp:"zi6 zo6 maan5 caan1",en:"Buffet dinner (colloquial)"},
+      {zh:"船長晚宴",jp:"syun4 zoeng2 maan5 jyn2",en:"Captain's dinner / Gala dinner"},
+      {zh:"望海",jp:"mong6 hoi2",en:"Look out at the sea (colloquial)"},
+      {zh:"睇日落",jp:"tai2 jat6 lok6",en:"Watch the sunset (colloquial)"},
+    ]},
+    { title:"Booking & Planning", zh:"訂郵輪", vocab:[
+      {zh:"郵輪假期",jp:"jau4 leon4 gaa3 kei4",en:"Cruise holiday / Cruise vacation"},
+      {zh:"地中海郵輪",jp:"dei6 zung1 hoi2 jau4 leon4",en:"Mediterranean cruise"},
+      {zh:"加勒比海",jp:"gaa1 laak6 bei2 hoi2",en:"Caribbean"},
+      {zh:"阿拉斯加",jp:"aa3 laai1 si1 gaa1",en:"Alaska"},
+      {zh:"幾晚船程？",jp:"gei2 maan5 syun4 cing4?",en:"How many nights is the cruise? (colloquial)"},
+      {zh:"全包",jp:"cyun4 baau1",en:"All-inclusive (colloquial)"},
+      {zh:"船費包唔包飛？",jp:"syun4 fai3 baau1 m4 baau1 fei1?",en:"Does the cruise price include flights? (colloquial)"},
+      {zh:"小費",jp:"siu2 fai3",en:"Gratuity / Tips (added to bill on cruise)"},
+      {zh:"岸上消費",jp:"ngon6 soeng6 siu1 fai3",en:"On-shore spending"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: Planning a Cruise",
+    lines:[
+      {sp:"A",zh:"我哋係咪訂咗地中海郵輪㗎？幾時出發？",jp:"ngo5 dei6 hai6 mai6 deng6 zo2 dei6 zung1 hoi2 jau4 leon4 gaa3? gei2 si4 ceot1 faat3?",en:"Did we book the Mediterranean cruise? When do we depart?"},
+      {sp:"B",zh:"係㗎！七月出發，十四晚，去西班牙、意大利同希臘。",jp:"hai6 gaa3! cat1 jyut6 ceot1 faat3, sap6 sei3 maan5, heoi3 sai1 baan1 ngaa4, ji3 daai6 lei6 tung4 hei1 laap6.",en:"Yes! Departing July, 14 nights — Spain, Italy, and Greece."},
+      {sp:"A",zh:"好興奮！係海景房定係露台房㗎？",jp:"hou2 hing3 fan5! hai6 hoi2 ging2 fong4 ding6 hai6 lou6 toi4 fong4 gaa3?",en:"So exciting! Is it an ocean-view or balcony cabin?"},
+      {sp:"B",zh:"露台房㗎，可以喺房睇日落，貴少少但係值得㗎。",jp:"lou6 toi4 fong4 gaa3, ho2 yi5 hai2 fong2 tai2 jat6 lok6, gwai3 siu2 siu2 daan6 hai6 zik6 dak1 gaa3.",en:"Balcony cabin — we can watch the sunset from the room. A bit more expensive but worth it."},
+      {sp:"A",zh:"你會唔會暈船呀？我好驚暈船㗎。",jp:"nei5 wui5 m4 wui5 wan4 syun4 aa3? ngo5 hou2 geng1 wan4 syun4 gaa3.",en:"Do you get seasick? I'm really worried about it."},
+      {sp:"B",zh:"買定暈船藥就得㗎。大郵輪好穩陣，通常唔會搖得好厲害㗎。",jp:"maai5 ding6 wan4 syun4 joek6 zau6 dak1 gaa3. daai6 jau4 leon4 hou2 wan2 zan3, tung1 soeng4 m4 wui5 jiu4 dak1 hou2 lei6 hoi2 gaa3.",en:"Just buy seasickness meds in advance. Big ships are very stable — usually don't rock much."},
+      {sp:"A",zh:"好喇！記住上岸要準時返船，唔係就走寶喇！",jp:"hou2 laa3! gei3 zyu6 soeng5 ngon6 jiu3 zeon2 si4 faan1 syun4, m4 hai6 zau6 zau2 bou2 laa3!",en:"OK! Remember to be back on time when we go ashore — or we'll miss the ship!"},
+    ]
+  }
+  }
+
 ];
 
 const LESSONS_MANDARIN = [
@@ -4330,766 +4579,6 @@ const LESSONS_MANDARIN = [
       {sp:"A",zh:"是啊，我是香港人。你会说普通话吗？",jp:"shì a, wǒ shì xiāng gǎng rén. nǐ huì shuō pǔ tōng huà ma?",en:"Yes, I'm from Hong Kong. Do you speak Mandarin?"},
       {sp:"B",zh:"我在学，说得不太好，不好意思。",jp:"wǒ zài xué, shuō de bù tài hǎo, bù hǎo yì si.",en:"I'm learning — not very good yet, sorry about that."},
       {sp:"A",zh:"没关系！你说得挺好的！有空我们聊聊天，拜拜！",jp:"méi guān xi! nǐ shuō de tǐng hǎo de! yǒu kōng wǒ men liáo liáo tiān, bái bái!",en:"No worries! You speak pretty well! Let's chat when free — bye!"},
-    ]
-  }
-  }
-  ,{id:4,zh:"艺术与娱乐",en:"Arts & Entertainment",
-  sections:[
-    { title:"Film, TV & Music", zh:"电影、电视与音乐", vocab:[
-      {zh:"国产片",jp:"guó chǎn piān",en:"Chinese domestic film (colloquial)"},
-      {zh:"剧集",jp:"jù jí",en:"TV drama series"},
-      {zh:"追剧",jp:"zhuī jù",en:"Binge-watch a drama (colloquial — lit. 'chase a drama')"},
-      {zh:"原声带",jp:"yuán shēng dài",en:"Soundtrack / OST"},
-      {zh:"国语歌",jp:"guó yǔ gē",en:"Mandarin pop song"},
-      {zh:"KTV",jp:"kēi tī wī",en:"Karaoke (colloquial)"},
-      {zh:"听歌",jp:"tīng gē",en:"Listen to music"},
-      {zh:"追星",jp:"zhuī xīng",en:"Follow / Stan a celebrity (colloquial)"},
-      {zh:"偶像",jp:"ǒu xiàng",en:"Idol / Role model"},
-      {zh:"演唱会",jp:"yǎn chàng huì",en:"Concert"},
-      {zh:"上映",jp:"shàng yìng",en:"Now showing / Released (film)"},
-      {zh:"烂片",jp:"làn piān",en:"Terrible film (colloquial — lit. 'rotten film')"},
-    ]},
-    { title:"Arts & Culture", zh:"艺术与文化", vocab:[
-      {zh:"博物馆",jp:"bó wù guǎn",en:"Museum"},
-      {zh:"画廊",jp:"huà láng",en:"Art gallery"},
-      {zh:"展览",jp:"zhǎn lǎn",en:"Exhibition"},
-      {zh:"话剧",jp:"huà jù",en:"Stage play / Spoken drama"},
-      {zh:"京剧",jp:"jīng jù",en:"Peking opera"},
-      {zh:"书法",jp:"shū fǎ",en:"Calligraphy"},
-      {zh:"街头表演",jp:"jiē tóu biǎo yǎn",en:"Street performance / Busking"},
-      {zh:"文艺青年",jp:"wén yì qīng nián",en:"Artsy / Hipster type (colloquial: 文青 wén qīng)"},
-      {zh:"打卡",jp:"dǎ kǎ",en:"Take a photo for social media (colloquial — lit. 'punch a card')"},
-    ]},
-    { title:"Entertainment Phrases", zh:"娱乐用语", vocab:[
-      {zh:"你在追什么剧？",jp:"nǐ zài zhuī shén me jù?",en:"What drama are you watching right now? (colloquial)"},
-      {zh:"这部电影很不错",jp:"zhè bù diàn yǐng hěn bú cuò",en:"This film is really good"},
-      {zh:"去唱KTV好不好？",jp:"qù chàng KTV hǎo bu hǎo?",en:"Want to go karaoke? (colloquial)"},
-      {zh:"这首歌太洗脑了",jp:"zhè shǒu gē tài xǐ nǎo le",en:"This song is so catchy (colloquial — lit. 'brainwashing')"},
-      {zh:"好想去演唱会",jp:"hǎo xiǎng qù yǎn chàng huì",en:"I really want to go to the concert"},
-      {zh:"是不是很文青？",jp:"shì bu shì hěn wén qīng?",en:"Isn't that very artsy/hipster? (colloquial)"},
-      {zh:"要去打卡",jp:"yào qù dǎ kǎ",en:"Have to go take a photo there (colloquial)"},
-    ]},
-
-  ,{ title:"Musical Instruments & Performance", zh:"乐器与演出", vocab:[
-      {zh:"乐器",jp:"yuè qì",en:"Musical instrument"},
-      {zh:"钢琴",jp:"gāng qín",en:"Piano"},{zh:"小提琴",jp:"xiǎo tí qín",en:"Violin"},
-      {zh:"吉他",jp:"jí tā",en:"Guitar"},{zh:"长笛",jp:"cháng dí",en:"Flute"},
-      {zh:"大提琴",jp:"dà tí qín",en:"Cello"},{zh:"鼓",jp:"gǔ",en:"Drums"},
-      {zh:"练习",jp:"liàn xí",en:"Practice / Rehearse"},
-      {zh:"独奏会",jp:"dú zòu huì",en:"Recital"},{zh:"音乐会",jp:"yīn yuè huì",en:"Concert"},
-      {zh:"二重奏",jp:"èr chóng zòu",en:"Duet"},{zh:"乐团",jp:"yuè tuán",en:"Orchestra / Band"},
-      {zh:"古典音乐",jp:"gǔ diǎn yīn yuè",en:"Classical music"},
-      {zh:"你会弹琴吗？",jp:"nǐ huì tán qín ma?",en:"Do you play piano?"},
-      {zh:"练得很熟",jp:"liàn de hěn shú",en:"Practiced until fluent"},
-    ]}
-  ],
-  dialogue:{
-    title:"Dialogue: Weekend Plans",
-    lines:[
-      {sp:"A",zh:"周末有没有事？想不想去看展览？西九有个新展，很文青的。",jp:"zhōu mò yǒu méi yǒu shì? xiǎng bu xiǎng qù kàn zhǎn lǎn? xī jiǔ yǒu gè xīn zhǎn, hěn wén qīng de.",en:"Anything on this weekend? Want to go see an exhibition? There's a new one at West Kowloon — very artsy."},
-      {sp:"B",zh:"好啊！我现在在追一部韩剧，追完就有空了。你有没有看过？",jp:"hǎo a! wǒ xiàn zài zài zhuī yī bù hán jù, zhuī wán jiù yǒu kōng le. nǐ yǒu méi yǒu kàn guò?",en:"Sure! I'm bingeing a Korean drama right now — once I'm done I'm free. Have you seen it?"},
-      {sp:"A",zh:"没看过，但我不太看韩剧，比较喜欢国产片。",jp:"méi kàn guò, dàn wǒ bù tài kàn hán jù, bǐ jiào xǐ huān guó chǎn piān.",en:"Haven't seen it — I'm not really into Korean dramas, I prefer Chinese films."},
-      {sp:"B",zh:"哈，你很传统嘛！不过国产片确实有种独特的感觉。看完展览去唱KTV好不好？",jp:"hā, nǐ hěn chuán tǒng ma! bù guò guó chǎn piān què shí yǒu zhǒng dú tè de gǎn jué. kàn wán zhǎn lǎn qù chàng KTV hǎo bu hǎo?",en:"Haha, you're so traditional! But true — Chinese films have a unique feel. After the exhibition want to go karaoke?"},
-      {sp:"A",zh:"好！记得去打卡啊，那个展很漂亮，发到朋友圈一定爆了。",jp:"hǎo! jì de qù dǎ kǎ a, nà gè zhǎn hěn piào liang, fā dào péng you quān yī dìng bào le.",en:"Deal! Make sure we get photos — the exhibition looks gorgeous, it'll blow up on WeChat Moments."},
-    ]
-  }
-  }
-  ,{id:18,zh:"买菜与超市",en:"Grocery Shopping",
-  sections:[
-    { title:"Produce — Chinese Vegetables", zh:"蔬菜", vocab:[
-      {zh:"菜心",jp:"cài xīn",en:"Choy sum / Chinese flowering cabbage"},
-      {zh:"芥兰",jp:"jiè lán",en:"Gai lan / Chinese broccoli"},
-      {zh:"白菜",jp:"bái cài",en:"Bok choy / Napa cabbage"},
-      {zh:"空心菜",jp:"kōng xīn cài",en:"Water spinach / Morning glory"},
-      {zh:"苦瓜",jp:"kǔ guā",en:"Bitter melon"},
-      {zh:"冬瓜",jp:"dōng guā",en:"Winter melon"},
-      {zh:"莲藕",jp:"lián ǒu",en:"Lotus root"},
-      {zh:"芋头",jp:"yù tou",en:"Taro"},
-      {zh:"番薯",jp:"fān shǔ",en:"Sweet potato"},
-      {zh:"豆苗",jp:"dòu miáo",en:"Pea shoots"},
-      {zh:"韭菜",jp:"jiǔ cài",en:"Chinese chives"},
-      {zh:"香菇",jp:"xiāng gū",en:"Shiitake mushroom"},
-      {zh:"金针菇",jp:"jīn zhēn gū",en:"Enoki mushroom"},
-      {zh:"豆腐",jp:"dòu fu",en:"Tofu"},
-      {zh:"豆芽",jp:"dòu yá",en:"Bean sprouts"},
-      {zh:"姜",jp:"jiāng",en:"Ginger"},
-      {zh:"蒜头",jp:"suàn tou",en:"Garlic"},
-      {zh:"葱",jp:"cōng",en:"Spring onion / Green onion"},
-    ]},
-    { title:"Cooked Food Counter", zh:"熟食", vocab:[
-      {zh:"烤鸭",jp:"kǎo yā",en:"Roast duck"},
-      {zh:"叉烧",jp:"chā shāo",en:"Char siu / Barbecue pork"},
-      {zh:"烧肉",jp:"shāo ròu",en:"Roast pork"},
-      {zh:"白斩鸡",jp:"bái zhǎn jī",en:"Poached chicken / White cut chicken"},
-      {zh:"牛肠",jp:"niú cháng",en:"Beef intestine (braised)"},
-      {zh:"牛腩",jp:"niú nǎn",en:"Beef brisket (braised)"},
-      {zh:"猪手",jp:"zhū shǒu",en:"Braised pork knuckle"},
-      {zh:"卤水",jp:"lǔ shuǐ",en:"Braised in master stock / Soy-braised"},
-      {zh:"半份",jp:"bàn fèn",en:"Half portion"},
-    ]},
-    { title:"Meat & Seafood", zh:"肉类与海鲜", vocab:[
-      {zh:"猪肉",jp:"zhū ròu",en:"Pork"},
-      {zh:"牛肉",jp:"niú ròu",en:"Beef"},
-      {zh:"鸡肉",jp:"jī ròu",en:"Chicken"},
-      {zh:"羊肉",jp:"yáng ròu",en:"Lamb / Mutton"},
-      {zh:"猪排",jp:"zhū pái",en:"Pork chop"},
-      {zh:"猪骨",jp:"zhū gǔ",en:"Pork bones (for soup)"},
-      {zh:"鱼",jp:"yú",en:"Fish"},
-      {zh:"虾",jp:"xiā",en:"Shrimp / Prawn"},
-      {zh:"螃蟹",jp:"páng xiè",en:"Crab"},
-      {zh:"扇贝",jp:"shàn bèi",en:"Scallop"},
-      {zh:"鱿鱼",jp:"yóu yú",en:"Squid"},
-      {zh:"生蚝",jp:"shēng háo",en:"Oyster"},
-      {zh:"三文鱼",jp:"sān wén yú",en:"Salmon"},
-      {zh:"鳕鱼",jp:"xuě yú",en:"Cod"},
-    ]},
-    { title:"General Groceries", zh:"一般杂货", vocab:[
-      {zh:"白米",jp:"bái mǐ",en:"White rice"},
-      {zh:"面条",jp:"miàn tiáo",en:"Noodles"},
-      {zh:"面粉",jp:"miàn fěn",en:"Flour"},
-      {zh:"食用油",jp:"shí yòng yóu",en:"Cooking oil"},
-      {zh:"生抽",jp:"shēng chōu",en:"Light soy sauce"},
-      {zh:"老抽",jp:"lǎo chōu",en:"Dark soy sauce"},
-      {zh:"蚝油",jp:"háo yóu",en:"Oyster sauce"},
-      {zh:"糖",jp:"táng",en:"Sugar"},
-      {zh:"盐",jp:"yán",en:"Salt"},
-      {zh:"鸡蛋",jp:"jī dàn",en:"Eggs"},
-      {zh:"牛奶",jp:"niú nǎi",en:"Milk"},
-      {zh:"面包",jp:"miàn bāo",en:"Bread"},
-      {zh:"冷冻食品",jp:"lěng dòng shí pǐn",en:"Frozen goods"},
-      {zh:"购物车",jp:"gòu wù chē",en:"Shopping cart / Trolley"},
-      {zh:"购物篮",jp:"gòu wù lán",en:"Shopping basket"},
-      {zh:"收银台",jp:"shōu yín tái",en:"Checkout / Cash register"},
-      {zh:"会员卡",jp:"huì yuán kǎ",en:"Loyalty / Membership card"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: At the Market",
-    lines:[
-      {sp:"A",zh:"老板，今天有没有新鲜的鱼？",jp:"lǎo bǎn, jīn tiān yǒu méi yǒu xīn xiān de yú?",en:"Boss, do you have fresh fish today?"},
-      {sp:"B",zh:"有的，今早刚到货，三文鱼很新鲜。",jp:"yǒu de, jīn zǎo gāng dào huò, sān wén yú hěn xīn xiān.",en:"Yes, just got stock in this morning. The salmon is very fresh."},
-      {sp:"A",zh:"好，我要半条，帮我切好。还有，有没有叉烧？",jp:"hǎo, wǒ yào bàn tiáo, bāng wǒ qiē hǎo. hái yǒu, yǒu méi yǒu chā shāo?",en:"Great, I'll take half, cut for me. Also, do you have char siu?"},
-      {sp:"B",zh:"叉烧快卖完了，烤鸭的话还有整只。",jp:"chā shāo kuài mài wán le, kǎo yā de huà hái yǒu zhěng zhī.",en:"Not much char siu left, but we have a whole roast duck."},
-      {sp:"A",zh:"那给我半只烤鸭。一共多少钱？",jp:"nà gěi wǒ bàn zhī kǎo yā. yī gòng duō shao qián?",en:"Then give me half a roast duck. How much altogether?"},
-    ]
-  }
-  }
-  ,{id:19,zh:"人生大事",en:"Life's Big Moments",
-  sections:[
-    { title:"Life Milestones", zh:"人生里程碑", vocab:[
-      {zh:"毕业",jp:"bì yè",en:"Graduation"},
-      {zh:"毕业典礼",jp:"bì yè diǎn lǐ",en:"Graduation ceremony"},
-      {zh:"订婚",jp:"dìng hūn",en:"Engagement"},
-      {zh:"婚礼",jp:"hūn lǐ",en:"Wedding"},
-      {zh:"摆酒",jp:"bǎi jiǔ",en:"Host a wedding banquet (colloquial)"},
-      {zh:"结婚周年",jp:"jié hūn zhōu nián",en:"Wedding anniversary"},
-      {zh:"银婚",jp:"yín hūn",en:"Silver anniversary (25 years)"},
-      {zh:"金婚",jp:"jīn hūn",en:"Golden anniversary (50 years)"},
-      {zh:"生孩子",jp:"shēng hái zi",en:"Have a baby"},
-      {zh:"满月酒",jp:"mǎn yuè jiǔ",en:"Full-month baby banquet"},
-      {zh:"百日宴",jp:"bǎi rì yàn",en:"100-day baby celebration"},
-      {zh:"做寿",jp:"zuò shòu",en:"Celebrate a milestone birthday (esp. elderly)"},
-      {zh:"退休",jp:"tuì xiū",en:"Retirement"},
-      {zh:"退休派对",jp:"tuì xiū pài duì",en:"Retirement party"},
-      {zh:"升职",jp:"shēng zhí",en:"Promotion"},
-      {zh:"乔迁",jp:"qiáo qiān",en:"Housewarming / Move into a new home"},
-      {zh:"乔迁派对",jp:"qiáo qiān pài duì",en:"Housewarming party"},
-      {zh:"饯别",jp:"jiàn bié",en:"Farewell / Send-off party"},
-      {zh:"入籍",jp:"rù jí",en:"Citizenship / Naturalisation ceremony"},
-    ]},
-    { title:"Congratulations & Toasts", zh:"恭贺与祝酒", vocab:[
-      {zh:"恭喜",jp:"gōng xǐ",en:"Congratulations"},
-      {zh:"恭喜恭喜",jp:"gōng xǐ gōng xǐ",en:"Congratulations! (warm, doubled form)"},
-      {zh:"好消息",jp:"hǎo xiāo xi",en:"Good news"},
-      {zh:"值得庆祝",jp:"zhí dé qìng zhù",en:"Worth celebrating"},
-      {zh:"干杯",jp:"gān bēi",en:"Cheers / Toast"},
-      {zh:"祝你百年好合",jp:"zhù nǐ bǎi nián hǎo hé",en:"Wishing you a happy marriage (wedding toast)"},
-      {zh:"祝你前程似锦",jp:"zhù nǐ qián chéng sì jǐn",en:"Wishing you a brilliant future (graduation toast)"},
-      {zh:"祝你退休快乐",jp:"zhù nǐ tuì xiū kuài lè",en:"Wishing you a happy retirement"},
-      {zh:"感谢大家的到来",jp:"gǎn xiè dà jiā de dào lái",en:"Thank you all for coming"},
-      {zh:"红包",jp:"hóng bāo",en:"Red envelope / Cash gift"},
-      {zh:"礼物",jp:"lǐ wù",en:"Gift"},
-      {zh:"心意",jp:"xīn yì",en:"Thoughtful gesture / Token of appreciation"},
-    ]},
-    { title:"Condolences & Funerals", zh:"吊唁与丧礼", vocab:[
-      {zh:"葬礼",jp:"zàng lǐ",en:"Funeral"},
-      {zh:"追思会",jp:"zhuī sī huì",en:"Memorial service"},
-      {zh:"节哀顺变",jp:"jié āi shùn biàn",en:"My condolences (restrain grief, accept change)"},
-      {zh:"深切慰问",jp:"shēn qiè wèi wèn",en:"Deepest condolences"},
-      {zh:"安息",jp:"ān xī",en:"Rest in peace"},
-      {zh:"扫墓",jp:"sǎo mù",en:"Visit ancestral graves / Tomb sweeping"},
-      {zh:"烧香",jp:"shāo xiāng",en:"Burn incense"},
-      {zh:"默哀",jp:"mò āi",en:"Observe a moment of silence"},
-      {zh:"慰问卡",jp:"wèi wèn kǎ",en:"Condolence card"},
-    ]},
-    { title:"Celebration Phrases", zh:"庆祝用语", vocab:[
-      {zh:"你们什么时候摆酒？",jp:"nǐ men shén me shí hou bǎi jiǔ?",en:"When's your wedding banquet? (colloquial)"},
-      {zh:"恭喜！好消息！",jp:"gōng xǐ! hǎo xiāo xi!",en:"Congrats! Great news!"},
-      {zh:"太厉害了！",jp:"tài lì hai le!",en:"That's amazing! So impressive! (colloquial)"},
-      {zh:"你们是天生一对",jp:"nǐ men shì tiān shēng yī duì",en:"You two are made for each other"},
-      {zh:"后生可畏",jp:"hòu shēng kě wèi",en:"The younger generation is impressive (to graduates)"},
-      {zh:"辛苦了，值得的！",jp:"xīn kǔ le, zhí dé de!",en:"All your hard work paid off!"},
-      {zh:"好好享受这个时刻",jp:"hǎo hǎo xiǎng shòu zhè gè shí kè",en:"Savour this moment"},
-      {zh:"一起干杯！",jp:"yī qǐ gān bēi!",en:"Let's drink together! (toast)"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Wedding Banquet",
-    lines:[
-      {sp:"A",zh:"恭喜恭喜！你们终于摆酒了！今晚太开心了！",jp:"gōng xǐ gōng xǐ! nǐ men zhōng yú bǎi jiǔ le! jīn wǎn tài kāi xīn le!",en:"Congratulations to you both! You finally had your banquet! Tonight is so joyful!"},
-      {sp:"B",zh:"谢谢大家来！见到这么多亲友，真的感动到想哭。",jp:"xiè xie dà jiā lái! jiàn dào zhè me duō qīn yǒu, zhēn de gǎn dòng dào xiǎng kū.",en:"Thank you all so much for coming! Seeing so many friends and family, I'm genuinely moved to tears."},
-      {sp:"A",zh:"你们是天生一对！祝你们百年好合，白头到老！",jp:"nǐ men shì tiān shēng yī duì! zhù nǐ men bǎi nián hǎo hé, bái tóu dào lǎo!",en:"You two are made for each other! Wishing you a happy marriage and growing old together!"},
-      {sp:"B",zh:"谢谢！好了，我们准备干杯了，请大家举杯！",jp:"xiè xie! hǎo le, wǒ men zhǔn bèi gān bēi le, qǐng dà jiā jǔ bēi!",en:"Thank you! Alright, we're about to toast — please raise your glasses everyone!"},
-      {sp:"A",zh:"干杯！祝新人百年好合，永结同心！",jp:"gān bēi! zhù xīn rén bǎi nián hǎo hé, yǒng jié tóng xīn!",en:"Cheers! Wishing the newlyweds everlasting happiness and unity!"},
-    ]
-  }
-  }
-  ,{id:20,zh:"赞美与寒暄",en:"Compliments & Small Talk",
-  sections:[
-    { title:"Compliments & Praise", zh:"赞美与称赞", vocab:[
-      {zh:"好漂亮啊",jp:"hǎo piào liang a",en:"Wow, so pretty/beautiful (colloquial exclamation)"},
-      {zh:"好帅啊",jp:"hǎo shuài a",en:"So handsome / cool (colloquial)"},
-      {zh:"你好厉害",jp:"nǐ hǎo lì hai",en:"You're so capable/impressive (colloquial)"},
-      {zh:"你做饭真好吃",jp:"nǐ zuò fàn zhēn hǎo chī",en:"Your cooking is delicious"},
-      {zh:"你今天穿得真好看",jp:"nǐ jīn tiān chuān de zhēn hǎo kàn",en:"You're dressed really nicely today"},
-      {zh:"你的发型很好看",jp:"nǐ de fà xíng hěn hǎo kàn",en:"Your hairstyle looks great"},
-      {zh:"过奖了",jp:"guò jiǎng le",en:"You flatter me / You're too kind (humble response)"},
-      {zh:"哪里哪里",jp:"nǎ lǐ nǎ lǐ",en:"Not at all / Where? (modest deflection, colloquial)"},
-      {zh:"还差得远呢",jp:"hái chà de yuǎn ne",en:"I'm still far from that level (humble deflection)"},
-    ]},
-    { title:"Small Talk & Social Phrases", zh:"寒暄与闲聊", vocab:[
-      {zh:"吃了吗？",jp:"chī le ma?",en:"Have you eaten yet? (common Chinese greeting)"},
-      {zh:"去哪儿呀？",jp:"qù nǎr ya?",en:"Where are you off to? (casual greeting)"},
-      {zh:"有空喝茶",jp:"yǒu kōng hē chá",en:"Let's catch up over tea sometime (casual invite)"},
-      {zh:"没什么，你呢？",jp:"méi shén me, nǐ ne?",en:"Not much, what about you?"},
-      {zh:"就是这样嘛",jp:"jiù shì zhè yàng ma",en:"That's just how it is / Such is life (colloquial)"},
-      {zh:"说不准",jp:"shuō bu zhǔn",en:"Hard to say / You never know (colloquial)"},
-      {zh:"先看看吧",jp:"xiān kàn kàn ba",en:"See how it goes / Let's wait and see (colloquial)"},
-      {zh:"无缘无故",jp:"wú yuán wú gù",en:"Out of nowhere / For no reason"},
-      {zh:"就这样吧",jp:"jiù zhè yàng ba",en:"That's it for now / Let's leave it here"},
-    ,
-      {zh:"谈恋爱",jp:"tán liàn ài",en:"Be in a relationship / Date (standard)"},
-      {zh:"在一起",jp:"zài yī qǐ",en:"Be together / In a relationship (colloquial)"},
-      {zh:"单身",jp:"dān shēn",en:"Single"},
-      {zh:"暗恋",jp:"àn liàn",en:"Secret crush / Unrequited love"},
-      {zh:"表白",jp:"biǎo bái",en:"Confess feelings / Ask someone out"},
-      {zh:"分手",jp:"fēn shǒu",en:"Break up"},
-      {zh:"前任",jp:"qián rèn",en:"Ex / Former partner (colloquial)"},
-      {zh:"另一半",jp:"lìng yī bàn",en:"Other half / Partner"},
-      {zh:"有缘分",jp:"yǒu yuán fèn",en:"It's fate / We were meant to meet"},
-      {zh:"聊一聊",jp:"liáo yī liáo",en:"Have a chat / Get to know each other (colloquial)"}]},
-  ],
-  dialogue:{
-    title:"Dialogue: Catching Up",
-    lines:[
-      {sp:"A",zh:"哇，你今天穿得真好看！去哪儿呀？",jp:"wā, nǐ jīn tiān chuān de zhēn hǎo kàn! qù nǎr ya?",en:"Wow, you look amazing today! Where are you off to?"},
-      {sp:"B",zh:"哪里哪里，普普通通啦。跟朋友去吃饭，没什么特别的。你呢，吃了吗？",jp:"nǎ lǐ nǎ lǐ, pǔ pǔ tōng tōng la. gēn péng you qù chī fàn, méi shén me tè bié de. nǐ ne, chī le ma?",en:"Not at all, just casual. Going for dinner with a friend, nothing special. What about you — have you eaten?"},
-      {sp:"A",zh:"还没呢。那个朋友是不是你暗恋的那个？",jp:"hái méi ne. nà gè péng you shì bu shì nǐ àn liàn de nà gè?",en:"Not yet. Is that friend the one you have a crush on?"},
-      {sp:"B",zh:"说不准嘛，先看看吧。我们只是去聊一聊，看看合不合得来。",jp:"shuō bu zhǔn ma, xiān kàn kàn ba. wǒ men zhǐ shì qù liáo yī liáo, kàn kàn hé bu hé de lái.",en:"Hard to say, we'll see how it goes. We're just having a chat, seeing if we click."},
-      {sp:"A",zh:"真是有缘分！加油，记得表白啊！有空喝茶，你跟我说说整件事！",jp:"zhēn shì yǒu yuán fèn! jiā yóu, jì de biǎo bái a! yǒu kōng hē chá, nǐ gēn wǒ shuō shuo zhěng jiàn shì!",en:"It's fate! Go for it — make sure you confess! Let's catch up over tea and you can tell me everything!"},
-    ]
-  }
-  }
-  ,{id:21,zh:"环保与可持续生活",en:"Environment & Sustainable Living",
-  sections:[
-    { title:"Environmental Issues", zh:"环境问题", vocab:[
-      {zh:"全球变暖",jp:"quán qiú biàn nuǎn",en:"Global warming"},
-      {zh:"碳排放",jp:"tàn pái fàng",en:"Carbon emissions"},
-      {zh:"碳足迹",jp:"tàn zú jì",en:"Carbon footprint"},
-      {zh:"温室效应",jp:"wēn shì xiào yìng",en:"Greenhouse effect"},
-      {zh:"空气污染",jp:"kōng qì wū rǎn",en:"Air pollution"},
-      {zh:"海洋污染",jp:"hǎi yáng wū rǎn",en:"Ocean pollution"},
-      {zh:"塑料污染",jp:"sù liào wū rǎn",en:"Plastic pollution"},
-      {zh:"极端天气",jp:"jí duān tiān qì",en:"Extreme weather"},
-      {zh:"生物多样性",jp:"shēng wù duō yàng xìng",en:"Biodiversity"},
-      {zh:"濒危物种",jp:"bīn wēi wù zhǒng",en:"Endangered species"},
-    ]},
-    { title:"Sustainable Living", zh:"可持续生活", vocab:[
-      {zh:"环保",jp:"huán bǎo",en:"Environmentally friendly / Green (colloquial short form)"},
-      {zh:"限塑令",jp:"xiàn sù lìng",en:"Plastic restriction policy (mainland colloquial)"},
-      {zh:"自带袋",jp:"zì dài dài",en:"Bring your own bag"},
-      {zh:"回收",jp:"huí shōu",en:"Recycle"},
-      {zh:"堆肥",jp:"duī féi",en:"Composting"},
-      {zh:"节电",jp:"jié diàn",en:"Save electricity"},
-      {zh:"节水",jp:"jié shuǐ",en:"Save water"},
-      {zh:"素食",jp:"sù shí",en:"Vegetarian / Plant-based"},
-      {zh:"少吃肉",jp:"shǎo chī ròu",en:"Eat less meat (colloquial)"},
-      {zh:"二手",jp:"èr shǒu",en:"Second-hand"},
-      {zh:"快时尚",jp:"kuài shí shàng",en:"Fast fashion"},
-      {zh:"光盘行动",jp:"guāng pán xíng dòng",en:"Clean plate campaign — finish all your food (mainland colloquial)"},
-    ]},
-    { title:"Green Living Phrases", zh:"环保用语", vocab:[
-      {zh:"你有没有自带袋？",jp:"nǐ yǒu méi yǒu zì dài dài?",en:"Did you bring your own bag?"},
-      {zh:"记得自带袋",jp:"jì de zì dài dài",en:"Remember to bring your own bag"},
-      {zh:"这家餐厅很环保",jp:"zhè jiā cān tīng hěn huán bǎo",en:"This restaurant is very eco-friendly"},
-      {zh:"我最近在少吃肉",jp:"wǒ zuì jìn zài shǎo chī ròu",en:"I've been eating less meat lately (colloquial)"},
-      {zh:"买二手比买新的好",jp:"mǎi èr shǒu bǐ mǎi xīn de hǎo",en:"Buying second-hand is better than buying new"},
-      {zh:"节电节水保护地球",jp:"jié diàn jié shuǐ bǎo hù dì qiú",en:"Save electricity, save water, protect the planet"},
-      {zh:"快时尚很不环保",jp:"kuài shí shàng hěn bù huán bǎo",en:"Fast fashion is really bad for the environment"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Going Green",
-    lines:[
-      {sp:"A",zh:"你有没有注意到现在很多餐厅都开始限塑了？连吸管都没有了。",jp:"nǐ yǒu méi yǒu zhù yì dào xiàn zài hěn duō cān tīng dōu kāi shǐ xiàn sù le? lián xī guǎn dōu méi yǒu le.",en:"Have you noticed a lot of restaurants are restricting plastic now? Even straws are gone."},
-      {sp:"B",zh:"是啊，我支持。我现在出门都自带袋，还在少吃肉。环保的事要从自己做起。",jp:"shì a, wǒ zhī chí. wǒ xiàn zài chū mén dōu zì dài dài, hái zài shǎo chī ròu. huán bǎo de shì yào cóng zì jǐ zuò qǐ.",en:"Yeah, I support it. I bring my own bag now and I've been eating less meat. Environmental stuff has to start with yourself."},
-      {sp:"A",zh:"很棒！我也想少吃肉，但是太喜欢吃了，很难戒。",jp:"hěn bàng! wǒ yě xiǎng shǎo chī ròu, dàn shì tài xǐ huān chī le, hěn nán jiè.",en:"That's great! I want to eat less meat too, but I love it too much — so hard to quit."},
-      {sp:"B",zh:"不用完全戒，少吃一点就有帮助了。还有，买东西尽量买二手，少买快时尚。",jp:"bù yòng wán quán jiè, shǎo chī yī diǎn jiù yǒu bāng zhù le. hái yǒu, mǎi dōng xi jǐn liàng mǎi èr shǒu, shǎo mǎi kuài shí shàng.",en:"You don't have to quit completely — just eating a bit less already helps. Also, try to buy second-hand when you can, cut down on fast fashion."},
-      {sp:"A",zh:"说得对，节电节水保护地球，每个人都要出一份力。",jp:"shuō de duì, jié diàn jié shuǐ bǎo hù dì qiú, měi gè rén dōu yào chū yī fèn lì.",en:"Well said — save electricity, save water, protect the planet. Everyone needs to do their part."},
-    ]
-  }
-  }
-  ,{id:22,zh:"节日与典礼",en:"Holidays & Ceremonies",
-  sections:[
-    { title:"Traditional Chinese Festivals", zh:"中国传统节日", vocab:[
-      {zh:"农历新年",jp:"nóng lì xīn nián",en:"Lunar New Year"},
-      {zh:"拜年",jp:"bài nián",en:"Pay New Year visits / Give New Year greetings"},
-      {zh:"红包",jp:"hóng bāo",en:"Red packet / Red envelope"},
-      {zh:"端午节",jp:"duān wǔ jié",en:"Dragon Boat Festival"},
-      {zh:"中秋节",jp:"zhōng qiū jié",en:"Mid-Autumn Festival"},
-      {zh:"清明节",jp:"qīng míng jié",en:"Qingming / Tomb Sweeping Festival"},
-      {zh:"重阳节",jp:"chóng yáng jié",en:"Double Ninth Festival"},
-      {zh:"冬至",jp:"dōng zhì",en:"Winter Solstice"},
-      {zh:"年糕",jp:"nián gāo",en:"New Year cake (glutinous rice cake)"},
-      {zh:"贺年",jp:"hè nián",en:"Celebrate the New Year / Send greetings"},
-      {zh:"压岁钱",jp:"yā suì qián",en:"Lucky money given to children at New Year"},
-      {zh:"春节联欢晚会",jp:"chūn jié lián huān wǎn huì",en:"CCTV Spring Festival Gala (colloquial: 春晚 chūn wǎn)"},
-    ]},
-    { title:"Ceremonies & Milestones", zh:"典礼与里程碑", vocab:[
-      {zh:"婚礼",jp:"hūn lǐ",en:"Wedding"},
-      {zh:"百日宴",jp:"bǎi rì yàn",en:"100-day banquet (baby celebration)"},
-      {zh:"成人礼",jp:"chéng rén lǐ",en:"Coming-of-age ceremony"},
-      {zh:"毕业典礼",jp:"bì yè diǎn lǐ",en:"Graduation ceremony"},
-      {zh:"葬礼",jp:"zàng lǐ",en:"Funeral"},
-      {zh:"扫墓",jp:"sǎo mù",en:"Sweep graves / Visit ancestral graves"},
-      {zh:"做寿",jp:"zuò shòu",en:"Celebrate a birthday (esp. elderly)"},
-      {zh:"摆酒",jp:"bǎi jiǔ",en:"Host a banquet (wedding/celebration, colloquial)"},
-      {zh:"收礼",jp:"shōu lǐ",en:"Receive gifts"},
-      {zh:"敬酒",jp:"jìng jiǔ",en:"Toast / Raise a glass"},
-    ]},
-    { title:"Festive Phrases", zh:"节日用语", vocab:[
-      {zh:"恭喜发财",jp:"gōng xǐ fā cái",en:"Wishing you prosperity (New Year greeting)"},
-      {zh:"身体健康",jp:"shēn tǐ jiàn kāng",en:"Wishing you good health"},
-      {zh:"万事如意",jp:"wàn shì rú yì",en:"May everything go as you wish"},
-      {zh:"新年快乐",jp:"xīn nián kuài lè",en:"Happy New Year"},
-      {zh:"你什么时候摆酒？",jp:"nǐ shén me shí hou bǎi jiǔ?",en:"When are you holding your wedding banquet? (colloquial)"},
-      {zh:"过年好",jp:"guò nián hǎo",en:"Happy New Year (mainland colloquial greeting)"},
-      {zh:"吃汤圆咯",jp:"chī tāng yuán lo",en:"Time to eat glutinous rice balls (Winter Solstice)"},
-    ]},
-  ,{ title:"Small Talk & Relationships", zh:"寒暄與感情", vocab:[
-      {zh:"食咗飯未？",jp:"sik6 zo2 faan6 mei6?",en:"Have you eaten yet? (common Cantonese greeting)"},
-      {zh:"去邊呀？",jp:"heoi3 bin1 aa3?",en:"Where are you off to? (casual greeting, not literal)"},
-      {zh:"得閒飲茶",jp:"dak1 haan4 jam2 caa4",en:"Let's catch up over dim sum sometime (colloquial)"},
-      {zh:"唔講得定",jp:"m4 gong2 dak1 ding6",en:"Hard to say / You never know (colloquial)"},
-      {zh:"睇吓先",jp:"tai2 haa5 sin1",en:"See how it goes / Wait and see (colloquial)"},
-      {zh:"係咁先",jp:"hai6 gam2 sin1",en:"That's it for now / Let's wrap up (colloquial)"},
-      {zh:"拍拖",jp:"paak3 to1",en:"Dating / In a relationship (Cantonese colloquial)"},
-      {zh:"有冇拍拖？",jp:"jau5 mou5 paak3 to1?",en:"Are you seeing anyone? (colloquial)"},
-      {zh:"單身",jp:"daan1 san1",en:"Single"},
-      {zh:"暗戀",jp:"am3 lyun2",en:"Secret crush / Unrequited love"},
-      {zh:"表白",jp:"biu2 baak6",en:"Confess feelings / Ask someone out"},
-      {zh:"分手",jp:"fan1 sau2",en:"Break up"},
-      {zh:"另一半",jp:"ling6 jat1 bun3",en:"Other half / Partner"},
-      {zh:"拍拖周年",jp:"paak3 to1 zau1 nin4",en:"Dating anniversary (colloquial)"},
-      {zh:"好有緣",jp:"hou2 jau5 jyun4",en:"It's fate / Meant to be (colloquial)"},
-      {zh:"傾吓偈",jp:"king1 haa5 gai3",en:"Have a chat / Get to know each other (colloquial)"},
-    ]}
-  ],
-  dialogue:{
-    title:"Dialogue: Lunar New Year",
-    lines:[
-      {sp:"A",zh:"恭喜发财！新年快乐！今年有没有发红包呀？",jp:"gōng xǐ fā cái! xīn nián kuài lè! jīn nián yǒu méi yǒu fā hóng bāo ya?",en:"Gung Hei Fat Choy! Happy New Year! Are you giving out red packets this year?"},
-      {sp:"B",zh:"当然啦，我已经结婚了，不发不行！你呢，什么时候摆酒？",jp:"dāng rán la, wǒ yǐ jīng jié hūn le, bù fā bù xíng! nǐ ne, shén me shí hou bǎi jiǔ?",en:"Of course — I'm married now, I have no choice! What about you, when's your wedding banquet?"},
-      {sp:"A",zh:"还早呢，还没谈恋爱！不过今年运气不错，说不定有消息。",jp:"hái zǎo ne, hái méi tán liàn ài! bù guò jīn nián yùn qì bú cuò, shuō bu dìng yǒu xiāo xi.",en:"Way too early — I'm not even dating anyone! But my luck has been good this year, who knows."},
-      {sp:"B",zh:"哈哈，借你吉言！我们今晚去妈妈那边吃冬至饭，你来不来？",jp:"hā hā, jiè nǐ jí yán! wǒ men jīn wǎn qù mā ma nà biān chī dōng zhì fàn, nǐ lái bu lái?",en:"Haha, from your mouth to God's ears! We're going to mum's for the Winter Solstice dinner tonight — are you coming?"},
-      {sp:"A",zh:"当然来啦，吃汤圆咯！我带年糕过去。",jp:"dāng rán lái la, chī tāng yuán lo! wǒ dài nián gāo guò qù.",en:"Of course I'm coming — time for glutinous rice balls! I'll bring the New Year cake."},
-    ]
-  }
-  }
-  ,{id:23,zh:"健康与养生",en:"Health & Wellness",
-  sections:[
-    { title:"Feeling Unwell", zh:"身体不舒服", vocab:[
-      {zh:"不舒服",jp:"bù shū fu",en:"Not feeling well"},
-      {zh:"生病了",jp:"shēng bìng le",en:"Got sick / Fell ill"},
-      {zh:"头痛",jp:"tóu tòng",en:"Headache"},
-      {zh:"喉咙痛",jp:"hóu lóng tòng",en:"Sore throat"},
-      {zh:"肚子痛",jp:"dù zi tòng",en:"Stomachache (colloquial)"},
-      {zh:"拉肚子",jp:"lā dù zi",en:"Diarrhoea (colloquial — lit. pull the belly)"},
-      {zh:"想吐",jp:"xiǎng tù",en:"Feel nauseous"},
-      {zh:"发烧",jp:"fā shāo",en:"Fever"},
-      {zh:"发冷",jp:"fā lěng",en:"Chills / Feel cold"},
-      {zh:"咳嗽",jp:"ké sou",en:"Cough"},
-      {zh:"感冒",jp:"gǎn mào",en:"Common cold"},
-      {zh:"流鼻涕",jp:"liú bí tì",en:"Runny nose"},
-      {zh:"头晕",jp:"tóu yūn",en:"Dizzy / Lightheaded"},
-      {zh:"很累",jp:"hěn lèi",en:"Very tired / Exhausted (colloquial)"},
-      {zh:"犯困",jp:"fàn kùn",en:"Sleepy / Drowsy (colloquial)"},
-    ]},
-    { title:"Pharmacy & Doctor", zh:"药房与看医生", vocab:[
-      {zh:"药店",jp:"yào diàn",en:"Pharmacy"},
-      {zh:"看医生",jp:"kàn yī shēng",en:"See a doctor (colloquial)"},
-      {zh:"去急诊",jp:"qù jí zhěn",en:"Go to A&E / Emergency"},
-      {zh:"预约",jp:"yù yuē",en:"Appointment / Book"},
-      {zh:"我要看医生",jp:"wǒ yào kàn yī shēng",en:"I need to see a doctor"},
-      {zh:"你不舒服多久了？",jp:"nǐ bù shū fu duō jiǔ le?",en:"How long have you been unwell?"},
-      {zh:"开药",jp:"kāi yào",en:"Prescribe medication"},
-      {zh:"止痛药",jp:"zhǐ tòng yào",en:"Painkiller"},
-      {zh:"退烧药",jp:"tuì shāo yào",en:"Fever medication"},
-      {zh:"抗生素",jp:"kàng shēng sù",en:"Antibiotic"},
-      {zh:"吃药",jp:"chī yào",en:"Take medicine (colloquial)"},
-      {zh:"一天吃几次？",jp:"yī tiān chī jǐ cì?",en:"How many times a day? (colloquial)"},
-      {zh:"好多了",jp:"hǎo duō le",en:"Much better (colloquial)"},
-      {zh:"还没好",jp:"hái méi hǎo",en:"Not better yet"},
-    ]},
-    { title:"Mental Health & Stress", zh:"精神健康", vocab:[
-      {zh:"压力",jp:"yā lì",en:"Stress / Pressure"},
-      {zh:"压力很大",jp:"yā lì hěn dà",en:"Feeling very stressed (colloquial)"},
-      {zh:"焦虑",jp:"jiāo lǜ",en:"Anxiety"},
-      {zh:"抑郁",jp:"yì yù",en:"Depression"},
-      {zh:"心情不好",jp:"xīn qíng bù hǎo",en:"In a bad mood (colloquial)"},
-      {zh:"撑不住了",jp:"chēng bù zhù le",en:"Can't cope / Burnt out (colloquial)"},
-      {zh:"需要休息",jp:"xū yào xiū xi",en:"Need rest"},
-      {zh:"睡不好",jp:"shuì bù hǎo",en:"Not sleeping well (colloquial)"},
-      {zh:"失眠",jp:"shī mián",en:"Insomnia"},
-      {zh:"放松一下",jp:"fàng sōng yī xià",en:"Relax / Take it easy (colloquial)"},
-      {zh:"别想太多",jp:"bié xiǎng tài duō",en:"Don't overthink it (colloquial)"},
-      {zh:"找人聊聊",jp:"zhǎo rén liáo liáo",en:"Find someone to talk to (colloquial)"},
-      {zh:"说出来会好一些",jp:"shuō chū lái huì hǎo yī xiē",en:"Talking about it will help"},
-    ]},
-    { title:"Exercise & Wellness", zh:"运动与养生", vocab:[
-      {zh:"爬山",jp:"pá shān",en:"Hiking / Mountain climbing"},
-      {zh:"游泳",jp:"yóu yǒng",en:"Swimming"},
-      {zh:"骑自行车",jp:"qí zì xíng chē",en:"Cycling"},
-      {zh:"跑步",jp:"pǎo bù",en:"Running"},
-      {zh:"健身",jp:"jiàn shēn",en:"Gym / Work out"},
-      {zh:"练瑜伽",jp:"liàn yú jiā",en:"Practise yoga"},
-      {zh:"打球",jp:"dǎ qiú",en:"Play ball sports (colloquial)"},
-      {zh:"多喝水",jp:"duō hē shuǐ",en:"Drink more water (colloquial)"},
-      {zh:"吃得健康",jp:"chī de jiàn kāng",en:"Eat healthily"},
-      {zh:"早睡早起",jp:"zǎo shuì zǎo qǐ",en:"Sleep early, rise early (saying)"},
-      {zh:"养生",jp:"yǎng shēng",en:"Nurture health / Wellness lifestyle"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Not Feeling Well",
-    lines:[
-      {sp:"A",zh:"你是不是不舒服？你看起来气色不太好。",jp:"nǐ shì bu shì bù shū fu? nǐ kàn qǐ lái qì sè bù tài hǎo.",en:"Are you not feeling well? You don't look great."},
-      {sp:"B",zh:"是的，我现在有点头痛和喉咙痛，可能感冒了。",jp:"shì de, wǒ xiàn zài yǒu diǎn tóu tòng hé hóu lóng tòng, kě néng gǎn mào le.",en:"Yeah, I have a bit of a headache and sore throat. Probably a cold."},
-      {sp:"A",zh:"你有没有去药店买药？还是要去看医生？",jp:"nǐ yǒu méi yǒu qù yào diàn mǎi yào? hái shì yào qù kàn yī shēng?",en:"Did you go to the pharmacy? Or do you need to see a doctor?"},
-      {sp:"B",zh:"我刚买了退烧药和止痛药，希望吃了能好一些。",jp:"wǒ gāng mǎi le tuì shāo yào hé zhǐ tòng yào, xī wàng chī le néng hǎo yī xiē.",en:"I just bought fever meds and painkillers. Hopefully I'll feel better after taking them."},
-      {sp:"A",zh:"多休息，多喝水。放松一下，别想太多。",jp:"duō xiū xi, duō hē shuǐ. fàng sōng yī xià, bié xiǎng tài duō.",en:"Get more rest, drink more water. Relax, don't overthink things."},
-    ]
-  }
-  }
-  ,{id:24,zh:"运动、兴趣与游戏",en:"Sports, Hobbies & Games",
-  sections:[
-    { title:"Watching Sports", zh:"看球", vocab:[
-      {zh:"看球",jp:"kàn qiú",en:"Watch sports / Watch the game (colloquial)"},
-      {zh:"英超",jp:"yīng chāo",en:"English Premier League"},
-      {zh:"世界杯",jp:"shì jiè bēi",en:"World Cup"},
-      {zh:"奥运会",jp:"ào yùn huì",en:"Olympics"},
-      {zh:"决赛",jp:"jué sài",en:"Final / Championship match"},
-      {zh:"进球",jp:"jìn qiú",en:"Score a goal"},
-      {zh:"乌龙球",jp:"wū lóng qiú",en:"Own goal (colloquial — lit. confused dragon ball)"},
-      {zh:"红牌",jp:"hóng pái",en:"Red card"},
-      {zh:"黄牌",jp:"huáng pái",en:"Yellow card"},
-      {zh:"加时",jp:"jiā shí",en:"Extra time / Overtime"},
-      {zh:"点球",jp:"diǎn qiú",en:"Penalty kick"},
-      {zh:"今晚有球赛！",jp:"jīn wǎn yǒu qiú sài!",en:"There's a match tonight! (colloquial)"},
-      {zh:"你支持哪个队？",jp:"nǐ zhī chí nǎ gè duì?",en:"Which team do you support? (colloquial)"},
-    ]},
-    { title:"Playing Sports", zh:"做运动", vocab:[
-      {zh:"打羽毛球",jp:"dǎ yǔ máo qiú",en:"Play badminton"},
-      {zh:"打网球",jp:"dǎ wǎng qiú",en:"Play tennis"},
-      {zh:"打乒乓球",jp:"dǎ pīng pāng qiú",en:"Play table tennis"},
-      {zh:"打篮球",jp:"dǎ lán qiú",en:"Play basketball"},
-      {zh:"踢足球",jp:"tī zú qiú",en:"Play football / Soccer"},
-      {zh:"游泳",jp:"yóu yǒng",en:"Swimming"},
-      {zh:"爬山",jp:"pá shān",en:"Hiking"},
-      {zh:"骑车",jp:"qí chē",en:"Cycling (colloquial short form)"},
-      {zh:"跑步",jp:"pǎo bù",en:"Running"},
-      {zh:"健身",jp:"jiàn shēn",en:"Gym / Work out"},
-      {zh:"打拳",jp:"dǎ quán",en:"Boxing / Martial arts"},
-      {zh:"冲浪",jp:"chōng làng",en:"Surfing"},
-      {zh:"滑雪",jp:"huá xuě",en:"Skiing"},
-      {zh:"你喜欢什么运动？",jp:"nǐ xǐ huān shén me yùn dòng?",en:"What sports do you like? (colloquial)"},
-    ]},
-    { title:"Hobbies & Leisure", zh:"兴趣与休闲", vocab:[
-      {zh:"兴趣",jp:"xìng qù",en:"Hobby / Interest"},
-      {zh:"你有什么兴趣？",jp:"nǐ yǒu shén me xìng qù?",en:"What are your hobbies? (colloquial)"},
-      {zh:"做饭",jp:"zuò fàn",en:"Cooking (colloquial)"},
-      {zh:"烘焙",jp:"hōng bèi",en:"Baking"},
-      {zh:"摄影",jp:"shè yǐng",en:"Photography"},
-      {zh:"画画",jp:"huà huà",en:"Drawing / Painting"},
-      {zh:"弹琴",jp:"tán qín",en:"Play piano / instrument"},
-      {zh:"唱歌",jp:"chàng gē",en:"Singing"},
-      {zh:"跳舞",jp:"tiào wǔ",en:"Dancing"},
-      {zh:"看书",jp:"kàn shū",en:"Reading"},
-      {zh:"打游戏",jp:"dǎ yóu xì",en:"Gaming / Play video games (colloquial)"},
-      {zh:"追剧",jp:"zhuī jù",en:"Binge-watch dramas (colloquial)"},
-      {zh:"逛街",jp:"guàng jiē",en:"Go shopping / Walk the streets (colloquial)"},
-      {zh:"宅在家",jp:"zhái zài jiā",en:"Stay home and chill / Be a homebody (colloquial)"},
-    ]},
-    { title:"Mahjong", zh:"打麻将", vocab:[
-      {zh:"打麻将",jp:"dǎ má jiàng",en:"Play mahjong (mainland says 麻将, HK says 麻雀)"},
-      {zh:"麻将牌",jp:"má jiàng pái",en:"Mahjong tiles"},
-      {zh:"洗牌",jp:"xǐ pái",en:"Shuffle tiles / Shuffle cards (colloquial)"},
-      {zh:"胡牌",jp:"hú pái",en:"Win a hand (mahjong)"},
-      {zh:"诈胡",jp:"zhà hú",en:"False win / Cheat a win (colloquial)"},
-      {zh:"打到天亮",jp:"dǎ dào tiān liàng",en:"Play mahjong until dawn (colloquial)"},
-      {zh:"上",jp:"shàng",en:"Chow — complete a sequence (mahjong)"},
-      {zh:"碰",jp:"pèng",en:"Pung — claim a matching tile (mahjong)"},
-      {zh:"杠",jp:"gàng",en:"Kong — four of a kind (mahjong)"},
-      {zh:"你会打麻将吗？",jp:"nǐ huì dǎ má jiàng ma?",en:"Do you know how to play mahjong?"},
-      {zh:"我不会",jp:"wǒ bù huì",en:"I don't know how"},
-      {zh:"我会一点点",jp:"wǒ huì yī diǎn diǎn",en:"I know a little (colloquial)"},
-    ]},
-    { title:"Board, Card & Other Games", zh:"棋牌与其他游戏", vocab:[
-      {zh:"下棋",jp:"xià qí",en:"Play chess / board games (colloquial)"},
-      {zh:"国际象棋",jp:"guó jì xiàng qí",en:"Western chess"},
-      {zh:"中国象棋",jp:"zhōng guó xiàng qí",en:"Chinese chess (xiangqi)"},
-      {zh:"围棋",jp:"wéi qí",en:"Go (the board game)"},
-      {zh:"跳棋",jp:"tiào qí",en:"Checkers / Draughts"},
-      {zh:"飞行棋",jp:"fēi xíng qí",en:"Ludo / Aeroplane chess (popular Chinese board game)"},
-      {zh:"大富翁",jp:"dà fù wēng",en:"Monopoly (lit. big rich man)"},
-      {zh:"拼图",jp:"pīn tú",en:"Jigsaw puzzle"},
-      {zh:"扑克牌",jp:"pū kè pái",en:"Playing cards (colloquial)"},
-      {zh:"斗地主",jp:"dòu dì zhǔ",en:"Dou Di Zhu / Fight the Landlord (popular card game)"},
-      {zh:"升级",jp:"shēng jí",en:"Sheng Ji / Tractor (card game)"},
-      {zh:"吹牛",jp:"chuī niú",en:"Bluff / Cheat (card game, colloquial)"},
-      {zh:"轮流来",jp:"lún liú lái",en:"Take turns (colloquial)"},
-      {zh:"再来一局！",jp:"zài lái yī jú!",en:"Rematch! / One more round! (colloquial)"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Weekend Plans",
-    lines:[
-      {sp:"A",zh:"这个周末你有什么计划吗？",jp:"zhè gè zhōu mò nǐ yǒu shén me jì huà ma?",en:"Any plans this weekend?"},
-      {sp:"B",zh:"我在练羽毛球，周六有比赛。你呢？",jp:"wǒ zài liàn yǔ máo qiú, zhōu liù yǒu bǐ sài. nǐ ne?",en:"I'm training for badminton — there's a match Saturday. You?"},
-      {sp:"A",zh:"我跟朋友去爬山，然后回家打游戏放松一下。",jp:"wǒ gēn péng you qù pá shān, rán hòu huí jiā dǎ yóu xì fàng sōng yī xià.",en:"I'm hiking with friends, then going home to game and chill."},
-      {sp:"B",zh:"听起来不错！你有没有看那场英超决赛？太精彩了！",jp:"tīng qǐ lái bú cuò! nǐ yǒu méi yǒu kàn nà chǎng yīng chāo jué sài? tài jīng cǎi le!",en:"Sounds fun! Did you catch that Premier League final? So exciting!"},
-      {sp:"A",zh:"看了！进球那一刻我激动死了。明天打麻将吗？我们少一个人。",jp:"kàn le! jìn qiú nà yī kè wǒ jī dòng sǐ le. míng tiān dǎ má jiàng ma? wǒ men shǎo yī gè rén.",en:"Watched it! I went crazy when they scored. Mahjong tomorrow? We're short one player."},
-      {sp:"B",zh:"好啊！我只会一点点，别笑我哦！",jp:"hǎo a! wǒ zhǐ huì yī diǎn diǎn, bié xiào wǒ ó!",en:"Sure! I only know a little though — don't laugh at me!"},
-    ]
-  }
-  }
-
-  ,{id:26,zh:"国家公园与野外",en:"National Parks & Wilderness",
-  sections:[
-    { title:"Mammals", zh:"哺乳类动物", vocab:[
-      {zh:"熊",jp:"xióng",en:"Bear"},
-      {zh:"棕熊",jp:"zōng xióng",en:"Brown bear / Grizzly bear"},
-      {zh:"黑熊",jp:"hēi xióng",en:"Black bear"},
-      {zh:"北极熊",jp:"běi jí xióng",en:"Polar bear"},
-      {zh:"鹿",jp:"lù",en:"Deer"},
-      {zh:"麋鹿",jp:"mí lù",en:"Elk / Moose"},
-      {zh:"野猪",jp:"yě zhū",en:"Wild boar"},
-      {zh:"狼",jp:"láng",en:"Wolf"},
-      {zh:"土狼",jp:"tǔ láng",en:"Coyote"},
-      {zh:"狐狸",jp:"hú li",en:"Fox"},
-      {zh:"松鼠",jp:"sōng shǔ",en:"Squirrel"},
-      {zh:"浣熊",jp:"huàn xióng",en:"Raccoon"},
-      {zh:"土拨鼠",jp:"tǔ bō shǔ",en:"Groundhog / Marmot"},
-      {zh:"野牛",jp:"yě niú",en:"Bison / Buffalo"},
-      {zh:"山羊",jp:"shān yáng",en:"Mountain goat"},
-      {zh:"大角羊",jp:"dà jiǎo yáng",en:"Bighorn sheep"},
-      {zh:"美洲狮",jp:"měi zhōu shī",en:"Mountain lion / Cougar"},
-      {zh:"水獭",jp:"shuǐ tǎ",en:"River otter"},
-      {zh:"河狸",jp:"hé lí",en:"Beaver"},
-    ]},
-    { title:"Birds & Reptiles", zh:"鸟类与爬虫", vocab:[
-      {zh:"老鹰",jp:"lǎo yīng",en:"Eagle"},
-      {zh:"白头鹰",jp:"bái tóu yīng",en:"Bald eagle"},
-      {zh:"鱼鹰",jp:"yú yīng",en:"Osprey"},
-      {zh:"猫头鹰",jp:"māo tóu yīng",en:"Owl"},
-      {zh:"啄木鸟",jp:"zhuó mù niǎo",en:"Woodpecker"},
-      {zh:"野火鸡",jp:"yě huǒ jī",en:"Wild turkey"},
-      {zh:"乌鸦",jp:"wū yā",en:"Raven / Crow"},
-      {zh:"蛇",jp:"shé",en:"Snake"},
-      {zh:"响尾蛇",jp:"xiǎng wěi shé",en:"Rattlesnake"},
-      {zh:"蜥蜴",jp:"xī yì",en:"Lizard"},
-      {zh:"乌龟",jp:"wū guī",en:"Tortoise / Turtle"},
-      {zh:"蝴蝶",jp:"hú dié",en:"Butterfly"},
-      {zh:"萤火虫",jp:"yíng huǒ chóng",en:"Firefly"},
-    ]},
-    { title:"Landscape & Natural Features", zh:"地形与自然景观", vocab:[
-      {zh:"瀑布",jp:"pù bù",en:"Waterfall"},
-      {zh:"间歇泉",jp:"jiān xiē quán",en:"Geyser"},
-      {zh:"温泉",jp:"wēn quán",en:"Hot spring"},
-      {zh:"峡谷",jp:"xiá gǔ",en:"Canyon / Gorge"},
-      {zh:"悬崖",jp:"xuán yá",en:"Cliff"},
-      {zh:"洞穴",jp:"dòng xué",en:"Cave"},
-      {zh:"冰川",jp:"bīng chuān",en:"Glacier"},
-      {zh:"草原",jp:"cǎo yuán",en:"Prairie / Grassland"},
-      {zh:"森林",jp:"sēn lín",en:"Forest"},
-      {zh:"沼泽",jp:"zhǎo zé",en:"Wetlands / Swamp"},
-      {zh:"山谷",jp:"shān gǔ",en:"Valley"},
-      {zh:"高原",jp:"gāo yuán",en:"Plateau / Mesa"},
-      {zh:"火山口",jp:"huǒ shān kǒu",en:"Volcanic crater / Caldera"},
-    ]},
-    { title:"Park Vocabulary", zh:"公园用语", vocab:[
-      {zh:"国家公园",jp:"guó jiā gōng yuán",en:"National park"},
-      {zh:"自然保护区",jp:"zì rán bǎo hù qū",en:"Nature reserve"},
-      {zh:"山径",jp:"shān jìng",en:"Trail / Hiking path"},
-      {zh:"护林员",jp:"hù lín yuán",en:"Park ranger"},
-      {zh:"露营地",jp:"lù yíng dì",en:"Campsite"},
-      {zh:"观景台",jp:"guān jǐng tái",en:"Viewpoint / Overlook"},
-      {zh:"野生动物观察",jp:"yě shēng dòng wù guān chá",en:"Wildlife viewing"},
-      {zh:"观鸟",jp:"guān niǎo",en:"Birdwatching"},
-      {zh:"勿喂野生动物",jp:"wù wèi yě shēng dòng wù",en:"Do not feed wildlife"},
-      {zh:"注意熊出没",jp:"zhù yì xióng chū mò",en:"Caution: bears (sign)"},
-      {zh:"请走小径",jp:"qǐng zǒu xiǎo jìng",en:"Stay on the trail"},
-      {zh:"请带走垃圾",jp:"qǐng dài zǒu lā jī",en:"Pack out your rubbish"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: At the National Park",
-    lines:[
-      {sp:"A",zh:"哇，间歇泉刚刚喷水了！太壮观了！多久会再喷一次？",jp:"wā, jiān xiē quán gāng gāng pēn shuǐ le! tài zhuàng guān le! duō jiǔ huì zài pēn yī cì?",en:"Wow, the geyser just erupted! So spectacular! How long until it goes off again?"},
-      {sp:"B",zh:"护林员说大概每隔九十分钟喷一次。你有没有看到那只白头鹰？那是美国国鸟！",jp:"hù lín yuán shuō dà gài měi gé jiǔ shí fēn zhōng pēn yī cì. nǐ yǒu méi yǒu kàn dào nà zhī bái tóu yīng? nà shì měi guó guó niǎo!",en:"The ranger said roughly every 90 minutes. Did you see that bald eagle? That's the US national bird!"},
-      {sp:"A",zh:"看到了！好美！不过我最震惊的是在路边看到一只熊在吃东西！",jp:"kàn dào le! hǎo měi! bù guò wǒ zuì zhèn jīng de shì zài lù biān kàn dào yī zhī xióng zài chī dōng xi!",en:"Saw it! So beautiful! But the most shocking was seeing a bear eating by the roadside!"},
-      {sp:"B",zh:"所以要小心！记得不要喂它，也不要靠近它。走小径才是最安全的。",jp:"suǒ yǐ yào xiǎo xīn! jì de bù yào wèi tā, yě bù yào kào jìn tā. zǒu xiǎo jìng cái shì zuì ān quán de.",en:"So be careful! Remember don't feed it, and don't approach it either. Stay on the trail — that's safest."},
-      {sp:"A",zh:"明白了。现在去走那条通往瀑布的小径，好吗？",jp:"míng bái le. xiàn zài qù zǒu nà tiáo tōng wǎng pù bù de xiǎo jìng, hǎo ma?",en:"Got it. Shall we go hike that trail to the waterfall now?"},
-    ]
-  }
-  }
-  ,{id:27,zh:"沿海与海岸",en:"Coastal & Shorelines",
-  sections:[
-    { title:"Coastal Landscape", zh:"海岸地貌", vocab:[
-      {zh:"悬崖",jp:"xuán yá",en:"Sea cliff"},
-      {zh:"海蚀洞",jp:"hǎi shí dòng",en:"Sea cave"},
-      {zh:"天然石拱",jp:"tiān rán shí gǒng",en:"Natural rock arch"},
-      {zh:"海蚀柱",jp:"hǎi shí zhù",en:"Sea stack"},
-      {zh:"潮池",jp:"cháo chí",en:"Tide pool"},
-      {zh:"礁石海滩",jp:"jiāo shí hǎi tān",en:"Rocky beach / Shore"},
-      {zh:"沙滩",jp:"shā tān",en:"Sandy beach"},
-      {zh:"码头",jp:"mǎ tóu",en:"Pier / Dock"},
-      {zh:"渔村",jp:"yú cūn",en:"Fishing village"},
-      {zh:"灯塔",jp:"dēng tǎ",en:"Lighthouse"},
-      {zh:"海湾",jp:"hǎi wān",en:"Bay / Cove"},
-      {zh:"海雾",jp:"hǎi wù",en:"Sea fog / Marine layer"},
-      {zh:"浪花",jp:"làng huā",en:"Ocean spray / Seafoam"},
-      {zh:"礁石",jp:"jiāo shí",en:"Reef / Rocks"},
-    ]},
-    { title:"Tide Pool & Shore Animals", zh:"潮池与岸边动物", vocab:[
-      {zh:"海豹",jp:"hǎi bào",en:"Seal"},
-      {zh:"海狮",jp:"hǎi shī",en:"Sea lion"},
-      {zh:"海獭",jp:"hǎi tǎ",en:"Sea otter"},
-      {zh:"海鸥",jp:"hǎi ōu",en:"Seagull"},
-      {zh:"鹈鹕",jp:"tí hú",en:"Pelican"},
-      {zh:"鸬鹚",jp:"lú cí",en:"Cormorant"},
-      {zh:"海星",jp:"hǎi xīng",en:"Starfish"},
-      {zh:"海胆",jp:"hǎi dǎn",en:"Sea urchin"},
-      {zh:"螃蟹",jp:"páng xiè",en:"Crab"},
-      {zh:"藤壶",jp:"téng hú",en:"Barnacle"},
-      {zh:"海葵",jp:"hǎi kuí",en:"Sea anemone"},
-      {zh:"贻贝",jp:"yí bèi",en:"Mussel"},
-      {zh:"章鱼",jp:"zhāng yú",en:"Octopus"},
-    ]},
-    { title:"Whale Watching & Open Ocean", zh:"赏鲸与外海", vocab:[
-      {zh:"鲸鱼",jp:"jīng yú",en:"Whale"},
-      {zh:"座头鲸",jp:"zuò tóu jīng",en:"Humpback whale"},
-      {zh:"灰鲸",jp:"huī jīng",en:"Gray whale"},
-      {zh:"虎鲸",jp:"hǔ jīng",en:"Killer whale / Orca"},
-      {zh:"海豚",jp:"hǎi tún",en:"Dolphin"},
-      {zh:"鲨鱼",jp:"shā yú",en:"Shark"},
-      {zh:"曼塔鳐",jp:"màn tǎ yáo",en:"Manta ray"},
-      {zh:"鱿鱼",jp:"yóu yú",en:"Squid"},
-      {zh:"水母",jp:"shuǐ mǔ",en:"Jellyfish"},
-      {zh:"跃身击浪",jp:"yuè shēn jī làng",en:"Breaching (whale)"},
-      {zh:"赏鲸船",jp:"shǎng jīng chuán",en:"Whale watching boat"},
-      {zh:"双筒望远镜",jp:"shuāng tǒng wàng yuǎn jìng",en:"Binoculars"},
-    ]},
-    { title:"Coastal Phrases", zh:"海岸用语", vocab:[
-      {zh:"退潮",jp:"tuì cháo",en:"Low tide"},
-      {zh:"涨潮",jp:"zhǎng cháo",en:"High tide"},
-      {zh:"浪很大",jp:"làng hěn dà",en:"The waves are big"},
-      {zh:"小心滑倒",jp:"xiǎo xīn huá dǎo",en:"Watch your step — slippery"},
-      {zh:"不要踩珊瑚",jp:"bù yào cǎi shān hú",en:"Don't step on the coral"},
-      {zh:"我看到鲸鱼喷水了！",jp:"wǒ kàn dào jīng yú pēn shuǐ le!",en:"I can see the whale spouting!"},
-      {zh:"海雾很大，看不清楚",jp:"hǎi wù hěn dà, kàn bù qīng chǔ",en:"The sea fog is thick, can't see clearly"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Mendocino Coast",
-    lines:[
-      {sp:"A",zh:"这段海岸线太美了，悬崖这么高，下面就是大海，太震撼了！",jp:"zhè duàn hǎi àn xiàn tài měi le, xuán yá zhè me gāo, xià miàn jiù shì dà hǎi, tài zhèn hàn le!",en:"This coastline is so beautiful — cliffs this high, straight down to the ocean. So dramatic!"},
-      {sp:"B",zh:"是啊，这是加州最美的海岸之一。你看，退潮了，可以去潮池看海星和螃蟹！",jp:"shì a, zhè shì jiā zhōu zuì měi de hǎi àn zhī yī. nǐ kàn, tuì cháo le, kě yǐ qù cháo chí kàn hǎi xīng hé páng xiè!",en:"Yeah, one of the most beautiful coastlines in California. Look — low tide! We can go check out the tide pools."},
-      {sp:"A",zh:"好啊！还有，我看到那边有只海獭浮在海面上吃东西！",jp:"hǎo a! hái yǒu, wǒ kàn dào nà biān yǒu zhī hǎi tǎ fú zài hǎi miàn shàng chī dōng xi!",en:"Great! And I can see a sea otter floating on the surface eating something over there!"},
-      {sp:"B",zh:"是啊，海獭喜欢仰浮在水面上休息，很可爱！听说现在是灰鲸迁徙季节，说不定能看到。",jp:"shì a, hǎi tǎ xǐ huān yǎng fú zài shuǐ miàn shàng xiū xi, hěn kě ài! tīng shuō xiàn zài shì huī jīng qiān xǐ jì jié, shuō bu dìng néng kàn dào.",en:"Yeah, sea otters love to float on their backs to rest — so cute! I heard it's gray whale migration season now."},
-      {sp:"A",zh:"真的？那我们去那个灯塔，视野更开阔，用望远镜看更方便！",jp:"zhēn de? nà wǒ men qù nà gè dēng tǎ, shì yě gèng kāi kuò, yòng wàng yuǎn jìng kàn gèng fāng biàn!",en:"Really? Then let's go to that lighthouse — better view, and easier to spot with binoculars!"},
-    ]
-  }
-  }
-  ,{id:28,zh:"热带岛屿",en:"Tropical Islands",
-  sections:[
-    { title:"Tropical Landscape — Hawaii", zh:"热带地貌（夏威夷）", vocab:[
-      {zh:"活火山",jp:"huó huǒ shān",en:"Active volcano"},
-      {zh:"火山口",jp:"huǒ shān kǒu",en:"Volcanic crater / Caldera"},
-      {zh:"熔岩流",jp:"róng yán liú",en:"Lava flow"},
-      {zh:"熔岩管道",jp:"róng yán guǎn dào",en:"Lava tube"},
-      {zh:"黑沙滩",jp:"hēi shā tān",en:"Black sand beach"},
-      {zh:"绿沙滩",jp:"lǜ shā tān",en:"Green sand beach (unique to Hawaii)"},
-      {zh:"潮池",jp:"cháo chí",en:"Tide pool"},
-      {zh:"悬崖海岸",jp:"xuán yá hǎi àn",en:"Sea cliffs (like Nā Pali)"},
-      {zh:"热带雨林",jp:"rè dài yǔ lín",en:"Tropical rainforest"},
-      {zh:"瀑布",jp:"pù bù",en:"Waterfall"},
-      {zh:"彩虹瀑布",jp:"cǎi hóng pù bù",en:"Rainbow Falls (Hilo, Hawaii)"},
-      {zh:"碧绿海水",jp:"bì lǜ hǎi shuǐ",en:"Turquoise water"},
-      {zh:"珊瑚礁",jp:"shān hú jiāo",en:"Coral reef"},
-      {zh:"贸易风",jp:"mào yì fēng",en:"Trade winds"},
-    ]},
-    { title:"Marine Animals", zh:"海洋动物", vocab:[
-      {zh:"座头鲸",jp:"zuò tóu jīng",en:"Humpback whale"},
-      {zh:"虎鲸",jp:"hǔ jīng",en:"Killer whale / Orca"},
-      {zh:"海豚",jp:"hǎi tún",en:"Dolphin"},
-      {zh:"鲨鱼",jp:"shā yú",en:"Shark"},
-      {zh:"鲸鲨",jp:"jīng shā",en:"Whale shark"},
-      {zh:"曼塔鳐",jp:"màn tǎ yáo",en:"Manta ray"},
-      {zh:"海龟",jp:"hǎi guī",en:"Sea turtle"},
-      {zh:"章鱼",jp:"zhāng yú",en:"Octopus"},
-      {zh:"鱿鱼",jp:"yóu yú",en:"Squid"},
-      {zh:"水母",jp:"shuǐ mǔ",en:"Jellyfish"},
-      {zh:"海星",jp:"hǎi xīng",en:"Starfish"},
-      {zh:"海胆",jp:"hǎi dǎn",en:"Sea urchin"},
-      {zh:"螃蟹",jp:"páng xiè",en:"Crab"},
-      {zh:"龙虾",jp:"lóng xiā",en:"Lobster"},
-      {zh:"珊瑚",jp:"shān hú",en:"Coral"},
-      {zh:"热带鱼",jp:"rè dài yú",en:"Tropical fish"},
-      {zh:"海马",jp:"hǎi mǎ",en:"Seahorse"},
-      {zh:"海鳗",jp:"hǎi mán",en:"Moray eel"},
-    ]},
-    { title:"Water Activities", zh:"水上活动", vocab:[
-      {zh:"浮潜",jp:"fú qián",en:"Snorkelling"},
-      {zh:"潜水",jp:"qián shuǐ",en:"Scuba diving"},
-      {zh:"冲浪",jp:"chōng làng",en:"Surfing"},
-      {zh:"皮划艇",jp:"pí huá tǐng",en:"Kayaking"},
-      {zh:"站立式划桨",jp:"zhàn lì shì huá jiǎng",en:"Stand-up paddleboarding (SUP)"},
-      {zh:"防晒霜",jp:"fáng shài shuāng",en:"Sunscreen"},
-      {zh:"珊瑚礁友好型防晒",jp:"shān hú jiāo yǒu hǎo xíng fáng shài",en:"Reef-safe sunscreen"},
-      {zh:"蛙鞋",jp:"wā xié",en:"Fins / Flippers"},
-      {zh:"浮潜面罩",jp:"fú qián miàn zhào",en:"Snorkel mask"},
-      {zh:"氧气瓶",jp:"yǎng qì píng",en:"Scuba tank"},
-    ]},
-    { title:"Island Culture & Food", zh:"岛屿文化与饮食", vocab:[
-      {zh:"草裙舞",jp:"cǎo qún wǔ",en:"Hula dance"},
-      {zh:"夏威夷花环",jp:"xià wēi yí huā huán",en:"Lei (flower garland)"},
-      {zh:"露天烤宴",jp:"lù tiān kǎo yàn",en:"Luau (Hawaiian feast)"},
-      {zh:"烤全猪",jp:"kǎo quán zhū",en:"Kalua pig (whole roast pig)"},
-      {zh:"夏威夷刨冰",jp:"xià wēi yí bào bīng",en:"Shave ice"},
-      {zh:"夏威夷生鱼沙拉",jp:"xià wēi yí shēng yú shā lā",en:"Poké bowl"},
-      {zh:"夏威夷果",jp:"xià wēi yí guǒ",en:"Macadamia nut"},
-      {zh:"原住民文化",jp:"yuán zhù mín wén huà",en:"Indigenous / Native Hawaiian culture"},
-    ]},
-  ],
-  dialogue:{
-    title:"Dialogue: Hawaii — Snorkelling & Volcano",
-    lines:[
-      {sp:"A",zh:"今天去浮潜真的太棒了！看到好多热带鱼，还有只海龟游过来了！",jp:"jīn tiān qù fú qián zhēn de tài bàng le! kàn dào hǎo duō rè dài yú, hái yǒu zhī hǎi guī yóu guò lái le!",en:"Today's snorkelling was amazing! So many tropical fish, and a sea turtle swam right up to us!"},
-      {sp:"B",zh:"是啊，太神奇了！不过你有没有用珊瑚礁友好型防晒霜？普通防晒霜会伤害珊瑚的。",jp:"shì a, tài shén qí le! bù guò nǐ yǒu méi yǒu yòng shān hú jiāo yǒu hǎo xíng fáng shài shuāng? pǔ tōng fáng shài shuāng huì shāng hài shān hú de.",en:"Yeah, incredible! But did you use reef-safe sunscreen? Regular sunscreen can damage the coral."},
-      {sp:"A",zh:"用了，我特意买了珊瑚礁友好型的。明天我们去火山国家公园看熔岩流！",jp:"yòng le, wǒ tè yì mǎi le shān hú jiāo yǒu hǎo xíng de. míng tiān wǒ men qù huǒ shān guó jiā gōng yuán kàn róng yán liú!",en:"Yes, I specifically bought reef-safe. Tomorrow we're going to Volcanoes National Park to see the lava flow!"},
-      {sp:"B",zh:"太期待了！而且晚上可以在黑暗中看熔岩发光，听说很壮观。",jp:"tài qī dài le! ér qiě wǎn shàng kě yǐ zài hēi àn zhōng kàn róng yán fā guāng, tīng shuō hěn zhuàng guān.",en:"So excited! And at night you can watch the lava glow in the dark — I heard it's spectacular."},
-      {sp:"A",zh:"真的！我还想去黑沙滩和彩虹瀑布。夏威夷实在有太多东西可以看了！",jp:"zhēn de! wǒ hái xiǎng qù hēi shā tān hé cǎi hóng pù bù. xià wēi yí shí zài yǒu tài duō dōng xi kě yǐ kàn le!",en:"Really! I also want to go to the black sand beach and Rainbow Falls. There's just so much to see in Hawaii!"},
     ]
   }
   }
@@ -5198,6 +4687,67 @@ const LESSONS_MANDARIN = [
       {sp:"B",zh:"是啊，我们要去外公外婆家吃饭，很久没见他们了。",jp:"shì a, wǒ men yào qù wài gōng wài pó jiā chī fàn, hěn jiǔ méi jiàn tā men le.",en:"Yes, we're going to my grandparents' place for dinner — haven't seen them in a long time."},
       {sp:"A",zh:"好温馨！你们家人多吗？",jp:"hǎo wēn xīn! nǐ men jiā rén duō ma?",en:"How lovely! Is your family big?"},
       {sp:"B",zh:"挺多的，有四个表兄弟，还有很多叔叔阿姨，聚起来很热闹。",jp:"tǐng duō de, yǒu sì gè biǎo xiōng dì, hái yǒu hěn duō shū shu ā yí, jù qǐ lái hěn rè nào.",en:"Quite big — four cousins, plus many aunts and uncles. When we get together it's really lively."},
+    ]
+  }
+  }
+  ,{id:4,zh:"艺术与娱乐",en:"Arts & Entertainment",
+  sections:[
+    { title:"Film, TV & Music", zh:"电影、电视与音乐", vocab:[
+      {zh:"国产片",jp:"guó chǎn piān",en:"Chinese domestic film (colloquial)"},
+      {zh:"剧集",jp:"jù jí",en:"TV drama series"},
+      {zh:"追剧",jp:"zhuī jù",en:"Binge-watch a drama (colloquial — lit. 'chase a drama')"},
+      {zh:"原声带",jp:"yuán shēng dài",en:"Soundtrack / OST"},
+      {zh:"国语歌",jp:"guó yǔ gē",en:"Mandarin pop song"},
+      {zh:"KTV",jp:"kēi tī wī",en:"Karaoke (colloquial)"},
+      {zh:"听歌",jp:"tīng gē",en:"Listen to music"},
+      {zh:"追星",jp:"zhuī xīng",en:"Follow / Stan a celebrity (colloquial)"},
+      {zh:"偶像",jp:"ǒu xiàng",en:"Idol / Role model"},
+      {zh:"演唱会",jp:"yǎn chàng huì",en:"Concert"},
+      {zh:"上映",jp:"shàng yìng",en:"Now showing / Released (film)"},
+      {zh:"烂片",jp:"làn piān",en:"Terrible film (colloquial — lit. 'rotten film')"},
+    ]},
+    { title:"Arts & Culture", zh:"艺术与文化", vocab:[
+      {zh:"博物馆",jp:"bó wù guǎn",en:"Museum"},
+      {zh:"画廊",jp:"huà láng",en:"Art gallery"},
+      {zh:"展览",jp:"zhǎn lǎn",en:"Exhibition"},
+      {zh:"话剧",jp:"huà jù",en:"Stage play / Spoken drama"},
+      {zh:"京剧",jp:"jīng jù",en:"Peking opera"},
+      {zh:"书法",jp:"shū fǎ",en:"Calligraphy"},
+      {zh:"街头表演",jp:"jiē tóu biǎo yǎn",en:"Street performance / Busking"},
+      {zh:"文艺青年",jp:"wén yì qīng nián",en:"Artsy / Hipster type (colloquial: 文青 wén qīng)"},
+      {zh:"打卡",jp:"dǎ kǎ",en:"Take a photo for social media (colloquial — lit. 'punch a card')"},
+    ]},
+    { title:"Entertainment Phrases", zh:"娱乐用语", vocab:[
+      {zh:"你在追什么剧？",jp:"nǐ zài zhuī shén me jù?",en:"What drama are you watching right now? (colloquial)"},
+      {zh:"这部电影很不错",jp:"zhè bù diàn yǐng hěn bú cuò",en:"This film is really good"},
+      {zh:"去唱KTV好不好？",jp:"qù chàng KTV hǎo bu hǎo?",en:"Want to go karaoke? (colloquial)"},
+      {zh:"这首歌太洗脑了",jp:"zhè shǒu gē tài xǐ nǎo le",en:"This song is so catchy (colloquial — lit. 'brainwashing')"},
+      {zh:"好想去演唱会",jp:"hǎo xiǎng qù yǎn chàng huì",en:"I really want to go to the concert"},
+      {zh:"是不是很文青？",jp:"shì bu shì hěn wén qīng?",en:"Isn't that very artsy/hipster? (colloquial)"},
+      {zh:"要去打卡",jp:"yào qù dǎ kǎ",en:"Have to go take a photo there (colloquial)"},
+    ]},
+
+  ,{ title:"Musical Instruments & Performance", zh:"乐器与演出", vocab:[
+      {zh:"乐器",jp:"yuè qì",en:"Musical instrument"},
+      {zh:"钢琴",jp:"gāng qín",en:"Piano"},{zh:"小提琴",jp:"xiǎo tí qín",en:"Violin"},
+      {zh:"吉他",jp:"jí tā",en:"Guitar"},{zh:"长笛",jp:"cháng dí",en:"Flute"},
+      {zh:"大提琴",jp:"dà tí qín",en:"Cello"},{zh:"鼓",jp:"gǔ",en:"Drums"},
+      {zh:"练习",jp:"liàn xí",en:"Practice / Rehearse"},
+      {zh:"独奏会",jp:"dú zòu huì",en:"Recital"},{zh:"音乐会",jp:"yīn yuè huì",en:"Concert"},
+      {zh:"二重奏",jp:"èr chóng zòu",en:"Duet"},{zh:"乐团",jp:"yuè tuán",en:"Orchestra / Band"},
+      {zh:"古典音乐",jp:"gǔ diǎn yīn yuè",en:"Classical music"},
+      {zh:"你会弹琴吗？",jp:"nǐ huì tán qín ma?",en:"Do you play piano?"},
+      {zh:"练得很熟",jp:"liàn de hěn shú",en:"Practiced until fluent"},
+    ]}
+  ],
+  dialogue:{
+    title:"Dialogue: Weekend Plans",
+    lines:[
+      {sp:"A",zh:"周末有没有事？想不想去看展览？西九有个新展，很文青的。",jp:"zhōu mò yǒu méi yǒu shì? xiǎng bu xiǎng qù kàn zhǎn lǎn? xī jiǔ yǒu gè xīn zhǎn, hěn wén qīng de.",en:"Anything on this weekend? Want to go see an exhibition? There's a new one at West Kowloon — very artsy."},
+      {sp:"B",zh:"好啊！我现在在追一部韩剧，追完就有空了。你有没有看过？",jp:"hǎo a! wǒ xiàn zài zài zhuī yī bù hán jù, zhuī wán jiù yǒu kōng le. nǐ yǒu méi yǒu kàn guò?",en:"Sure! I'm bingeing a Korean drama right now — once I'm done I'm free. Have you seen it?"},
+      {sp:"A",zh:"没看过，但我不太看韩剧，比较喜欢国产片。",jp:"méi kàn guò, dàn wǒ bù tài kàn hán jù, bǐ jiào xǐ huān guó chǎn piān.",en:"Haven't seen it — I'm not really into Korean dramas, I prefer Chinese films."},
+      {sp:"B",zh:"哈，你很传统嘛！不过国产片确实有种独特的感觉。看完展览去唱KTV好不好？",jp:"hā, nǐ hěn chuán tǒng ma! bù guò guó chǎn piān què shí yǒu zhǒng dú tè de gǎn jué. kàn wán zhǎn lǎn qù chàng KTV hǎo bu hǎo?",en:"Haha, you're so traditional! But true — Chinese films have a unique feel. After the exhibition want to go karaoke?"},
+      {sp:"A",zh:"好！记得去打卡啊，那个展很漂亮，发到朋友圈一定爆了。",jp:"hǎo! jì de qù dǎ kǎ a, nà gè zhǎn hěn piào liang, fā dào péng you quān yī dìng bào le.",en:"Deal! Make sure we get photos — the exhibition looks gorgeous, it'll blow up on WeChat Moments."},
     ]
   }
   }
@@ -5741,6 +5291,485 @@ const LESSONS_MANDARIN = [
     ]
   }
   }
+  ,{id:18,zh:"买菜与超市",en:"Grocery Shopping",
+  sections:[
+    { title:"Produce — Chinese Vegetables", zh:"蔬菜", vocab:[
+      {zh:"菜心",jp:"cài xīn",en:"Choy sum / Chinese flowering cabbage"},
+      {zh:"芥兰",jp:"jiè lán",en:"Gai lan / Chinese broccoli"},
+      {zh:"白菜",jp:"bái cài",en:"Bok choy / Napa cabbage"},
+      {zh:"空心菜",jp:"kōng xīn cài",en:"Water spinach / Morning glory"},
+      {zh:"苦瓜",jp:"kǔ guā",en:"Bitter melon"},
+      {zh:"冬瓜",jp:"dōng guā",en:"Winter melon"},
+      {zh:"莲藕",jp:"lián ǒu",en:"Lotus root"},
+      {zh:"芋头",jp:"yù tou",en:"Taro"},
+      {zh:"番薯",jp:"fān shǔ",en:"Sweet potato"},
+      {zh:"豆苗",jp:"dòu miáo",en:"Pea shoots"},
+      {zh:"韭菜",jp:"jiǔ cài",en:"Chinese chives"},
+      {zh:"香菇",jp:"xiāng gū",en:"Shiitake mushroom"},
+      {zh:"金针菇",jp:"jīn zhēn gū",en:"Enoki mushroom"},
+      {zh:"豆腐",jp:"dòu fu",en:"Tofu"},
+      {zh:"豆芽",jp:"dòu yá",en:"Bean sprouts"},
+      {zh:"姜",jp:"jiāng",en:"Ginger"},
+      {zh:"蒜头",jp:"suàn tou",en:"Garlic"},
+      {zh:"葱",jp:"cōng",en:"Spring onion / Green onion"},
+    ]},
+    { title:"Cooked Food Counter", zh:"熟食", vocab:[
+      {zh:"烤鸭",jp:"kǎo yā",en:"Roast duck"},
+      {zh:"叉烧",jp:"chā shāo",en:"Char siu / Barbecue pork"},
+      {zh:"烧肉",jp:"shāo ròu",en:"Roast pork"},
+      {zh:"白斩鸡",jp:"bái zhǎn jī",en:"Poached chicken / White cut chicken"},
+      {zh:"牛肠",jp:"niú cháng",en:"Beef intestine (braised)"},
+      {zh:"牛腩",jp:"niú nǎn",en:"Beef brisket (braised)"},
+      {zh:"猪手",jp:"zhū shǒu",en:"Braised pork knuckle"},
+      {zh:"卤水",jp:"lǔ shuǐ",en:"Braised in master stock / Soy-braised"},
+      {zh:"半份",jp:"bàn fèn",en:"Half portion"},
+    ]},
+    { title:"Meat & Seafood", zh:"肉类与海鲜", vocab:[
+      {zh:"猪肉",jp:"zhū ròu",en:"Pork"},
+      {zh:"牛肉",jp:"niú ròu",en:"Beef"},
+      {zh:"鸡肉",jp:"jī ròu",en:"Chicken"},
+      {zh:"羊肉",jp:"yáng ròu",en:"Lamb / Mutton"},
+      {zh:"猪排",jp:"zhū pái",en:"Pork chop"},
+      {zh:"猪骨",jp:"zhū gǔ",en:"Pork bones (for soup)"},
+      {zh:"鱼",jp:"yú",en:"Fish"},
+      {zh:"虾",jp:"xiā",en:"Shrimp / Prawn"},
+      {zh:"螃蟹",jp:"páng xiè",en:"Crab"},
+      {zh:"扇贝",jp:"shàn bèi",en:"Scallop"},
+      {zh:"鱿鱼",jp:"yóu yú",en:"Squid"},
+      {zh:"生蚝",jp:"shēng háo",en:"Oyster"},
+      {zh:"三文鱼",jp:"sān wén yú",en:"Salmon"},
+      {zh:"鳕鱼",jp:"xuě yú",en:"Cod"},
+    ]},
+    { title:"General Groceries", zh:"一般杂货", vocab:[
+      {zh:"白米",jp:"bái mǐ",en:"White rice"},
+      {zh:"面条",jp:"miàn tiáo",en:"Noodles"},
+      {zh:"面粉",jp:"miàn fěn",en:"Flour"},
+      {zh:"食用油",jp:"shí yòng yóu",en:"Cooking oil"},
+      {zh:"生抽",jp:"shēng chōu",en:"Light soy sauce"},
+      {zh:"老抽",jp:"lǎo chōu",en:"Dark soy sauce"},
+      {zh:"蚝油",jp:"háo yóu",en:"Oyster sauce"},
+      {zh:"糖",jp:"táng",en:"Sugar"},
+      {zh:"盐",jp:"yán",en:"Salt"},
+      {zh:"鸡蛋",jp:"jī dàn",en:"Eggs"},
+      {zh:"牛奶",jp:"niú nǎi",en:"Milk"},
+      {zh:"面包",jp:"miàn bāo",en:"Bread"},
+      {zh:"冷冻食品",jp:"lěng dòng shí pǐn",en:"Frozen goods"},
+      {zh:"购物车",jp:"gòu wù chē",en:"Shopping cart / Trolley"},
+      {zh:"购物篮",jp:"gòu wù lán",en:"Shopping basket"},
+      {zh:"收银台",jp:"shōu yín tái",en:"Checkout / Cash register"},
+      {zh:"会员卡",jp:"huì yuán kǎ",en:"Loyalty / Membership card"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: At the Market",
+    lines:[
+      {sp:"A",zh:"老板，今天有没有新鲜的鱼？",jp:"lǎo bǎn, jīn tiān yǒu méi yǒu xīn xiān de yú?",en:"Boss, do you have fresh fish today?"},
+      {sp:"B",zh:"有的，今早刚到货，三文鱼很新鲜。",jp:"yǒu de, jīn zǎo gāng dào huò, sān wén yú hěn xīn xiān.",en:"Yes, just got stock in this morning. The salmon is very fresh."},
+      {sp:"A",zh:"好，我要半条，帮我切好。还有，有没有叉烧？",jp:"hǎo, wǒ yào bàn tiáo, bāng wǒ qiē hǎo. hái yǒu, yǒu méi yǒu chā shāo?",en:"Great, I'll take half, cut for me. Also, do you have char siu?"},
+      {sp:"B",zh:"叉烧快卖完了，烤鸭的话还有整只。",jp:"chā shāo kuài mài wán le, kǎo yā de huà hái yǒu zhěng zhī.",en:"Not much char siu left, but we have a whole roast duck."},
+      {sp:"A",zh:"那给我半只烤鸭。一共多少钱？",jp:"nà gěi wǒ bàn zhī kǎo yā. yī gòng duō shao qián?",en:"Then give me half a roast duck. How much altogether?"},
+    ]
+  }
+  }
+  ,{id:19,zh:"人生大事",en:"Life's Big Moments",
+  sections:[
+    { title:"Life Milestones", zh:"人生里程碑", vocab:[
+      {zh:"毕业",jp:"bì yè",en:"Graduation"},
+      {zh:"毕业典礼",jp:"bì yè diǎn lǐ",en:"Graduation ceremony"},
+      {zh:"订婚",jp:"dìng hūn",en:"Engagement"},
+      {zh:"婚礼",jp:"hūn lǐ",en:"Wedding"},
+      {zh:"摆酒",jp:"bǎi jiǔ",en:"Host a wedding banquet (colloquial)"},
+      {zh:"结婚周年",jp:"jié hūn zhōu nián",en:"Wedding anniversary"},
+      {zh:"银婚",jp:"yín hūn",en:"Silver anniversary (25 years)"},
+      {zh:"金婚",jp:"jīn hūn",en:"Golden anniversary (50 years)"},
+      {zh:"生孩子",jp:"shēng hái zi",en:"Have a baby"},
+      {zh:"满月酒",jp:"mǎn yuè jiǔ",en:"Full-month baby banquet"},
+      {zh:"百日宴",jp:"bǎi rì yàn",en:"100-day baby celebration"},
+      {zh:"做寿",jp:"zuò shòu",en:"Celebrate a milestone birthday (esp. elderly)"},
+      {zh:"退休",jp:"tuì xiū",en:"Retirement"},
+      {zh:"退休派对",jp:"tuì xiū pài duì",en:"Retirement party"},
+      {zh:"升职",jp:"shēng zhí",en:"Promotion"},
+      {zh:"乔迁",jp:"qiáo qiān",en:"Housewarming / Move into a new home"},
+      {zh:"乔迁派对",jp:"qiáo qiān pài duì",en:"Housewarming party"},
+      {zh:"饯别",jp:"jiàn bié",en:"Farewell / Send-off party"},
+      {zh:"入籍",jp:"rù jí",en:"Citizenship / Naturalisation ceremony"},
+    ]},
+    { title:"Congratulations & Toasts", zh:"恭贺与祝酒", vocab:[
+      {zh:"恭喜",jp:"gōng xǐ",en:"Congratulations"},
+      {zh:"恭喜恭喜",jp:"gōng xǐ gōng xǐ",en:"Congratulations! (warm, doubled form)"},
+      {zh:"好消息",jp:"hǎo xiāo xi",en:"Good news"},
+      {zh:"值得庆祝",jp:"zhí dé qìng zhù",en:"Worth celebrating"},
+      {zh:"干杯",jp:"gān bēi",en:"Cheers / Toast"},
+      {zh:"祝你百年好合",jp:"zhù nǐ bǎi nián hǎo hé",en:"Wishing you a happy marriage (wedding toast)"},
+      {zh:"祝你前程似锦",jp:"zhù nǐ qián chéng sì jǐn",en:"Wishing you a brilliant future (graduation toast)"},
+      {zh:"祝你退休快乐",jp:"zhù nǐ tuì xiū kuài lè",en:"Wishing you a happy retirement"},
+      {zh:"感谢大家的到来",jp:"gǎn xiè dà jiā de dào lái",en:"Thank you all for coming"},
+      {zh:"红包",jp:"hóng bāo",en:"Red envelope / Cash gift"},
+      {zh:"礼物",jp:"lǐ wù",en:"Gift"},
+      {zh:"心意",jp:"xīn yì",en:"Thoughtful gesture / Token of appreciation"},
+    ]},
+    { title:"Condolences & Funerals", zh:"吊唁与丧礼", vocab:[
+      {zh:"葬礼",jp:"zàng lǐ",en:"Funeral"},
+      {zh:"追思会",jp:"zhuī sī huì",en:"Memorial service"},
+      {zh:"节哀顺变",jp:"jié āi shùn biàn",en:"My condolences (restrain grief, accept change)"},
+      {zh:"深切慰问",jp:"shēn qiè wèi wèn",en:"Deepest condolences"},
+      {zh:"安息",jp:"ān xī",en:"Rest in peace"},
+      {zh:"扫墓",jp:"sǎo mù",en:"Visit ancestral graves / Tomb sweeping"},
+      {zh:"烧香",jp:"shāo xiāng",en:"Burn incense"},
+      {zh:"默哀",jp:"mò āi",en:"Observe a moment of silence"},
+      {zh:"慰问卡",jp:"wèi wèn kǎ",en:"Condolence card"},
+    ]},
+    { title:"Celebration Phrases", zh:"庆祝用语", vocab:[
+      {zh:"你们什么时候摆酒？",jp:"nǐ men shén me shí hou bǎi jiǔ?",en:"When's your wedding banquet? (colloquial)"},
+      {zh:"恭喜！好消息！",jp:"gōng xǐ! hǎo xiāo xi!",en:"Congrats! Great news!"},
+      {zh:"太厉害了！",jp:"tài lì hai le!",en:"That's amazing! So impressive! (colloquial)"},
+      {zh:"你们是天生一对",jp:"nǐ men shì tiān shēng yī duì",en:"You two are made for each other"},
+      {zh:"后生可畏",jp:"hòu shēng kě wèi",en:"The younger generation is impressive (to graduates)"},
+      {zh:"辛苦了，值得的！",jp:"xīn kǔ le, zhí dé de!",en:"All your hard work paid off!"},
+      {zh:"好好享受这个时刻",jp:"hǎo hǎo xiǎng shòu zhè gè shí kè",en:"Savour this moment"},
+      {zh:"一起干杯！",jp:"yī qǐ gān bēi!",en:"Let's drink together! (toast)"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: Wedding Banquet",
+    lines:[
+      {sp:"A",zh:"恭喜恭喜！你们终于摆酒了！今晚太开心了！",jp:"gōng xǐ gōng xǐ! nǐ men zhōng yú bǎi jiǔ le! jīn wǎn tài kāi xīn le!",en:"Congratulations to you both! You finally had your banquet! Tonight is so joyful!"},
+      {sp:"B",zh:"谢谢大家来！见到这么多亲友，真的感动到想哭。",jp:"xiè xie dà jiā lái! jiàn dào zhè me duō qīn yǒu, zhēn de gǎn dòng dào xiǎng kū.",en:"Thank you all so much for coming! Seeing so many friends and family, I'm genuinely moved to tears."},
+      {sp:"A",zh:"你们是天生一对！祝你们百年好合，白头到老！",jp:"nǐ men shì tiān shēng yī duì! zhù nǐ men bǎi nián hǎo hé, bái tóu dào lǎo!",en:"You two are made for each other! Wishing you a happy marriage and growing old together!"},
+      {sp:"B",zh:"谢谢！好了，我们准备干杯了，请大家举杯！",jp:"xiè xie! hǎo le, wǒ men zhǔn bèi gān bēi le, qǐng dà jiā jǔ bēi!",en:"Thank you! Alright, we're about to toast — please raise your glasses everyone!"},
+      {sp:"A",zh:"干杯！祝新人百年好合，永结同心！",jp:"gān bēi! zhù xīn rén bǎi nián hǎo hé, yǒng jié tóng xīn!",en:"Cheers! Wishing the newlyweds everlasting happiness and unity!"},
+    ]
+  }
+  }
+  ,{id:20,zh:"赞美与寒暄",en:"Compliments & Small Talk",
+  sections:[
+    { title:"Compliments & Praise", zh:"赞美与称赞", vocab:[
+      {zh:"好漂亮啊",jp:"hǎo piào liang a",en:"Wow, so pretty/beautiful (colloquial exclamation)"},
+      {zh:"好帅啊",jp:"hǎo shuài a",en:"So handsome / cool (colloquial)"},
+      {zh:"你好厉害",jp:"nǐ hǎo lì hai",en:"You're so capable/impressive (colloquial)"},
+      {zh:"你做饭真好吃",jp:"nǐ zuò fàn zhēn hǎo chī",en:"Your cooking is delicious"},
+      {zh:"你今天穿得真好看",jp:"nǐ jīn tiān chuān de zhēn hǎo kàn",en:"You're dressed really nicely today"},
+      {zh:"你的发型很好看",jp:"nǐ de fà xíng hěn hǎo kàn",en:"Your hairstyle looks great"},
+      {zh:"过奖了",jp:"guò jiǎng le",en:"You flatter me / You're too kind (humble response)"},
+      {zh:"哪里哪里",jp:"nǎ lǐ nǎ lǐ",en:"Not at all / Where? (modest deflection, colloquial)"},
+      {zh:"还差得远呢",jp:"hái chà de yuǎn ne",en:"I'm still far from that level (humble deflection)"},
+    ]},
+    { title:"Small Talk & Social Phrases", zh:"寒暄与闲聊", vocab:[
+      {zh:"吃了吗？",jp:"chī le ma?",en:"Have you eaten yet? (common Chinese greeting)"},
+      {zh:"去哪儿呀？",jp:"qù nǎr ya?",en:"Where are you off to? (casual greeting)"},
+      {zh:"有空喝茶",jp:"yǒu kōng hē chá",en:"Let's catch up over tea sometime (casual invite)"},
+      {zh:"没什么，你呢？",jp:"méi shén me, nǐ ne?",en:"Not much, what about you?"},
+      {zh:"就是这样嘛",jp:"jiù shì zhè yàng ma",en:"That's just how it is / Such is life (colloquial)"},
+      {zh:"说不准",jp:"shuō bu zhǔn",en:"Hard to say / You never know (colloquial)"},
+      {zh:"先看看吧",jp:"xiān kàn kàn ba",en:"See how it goes / Let's wait and see (colloquial)"},
+      {zh:"无缘无故",jp:"wú yuán wú gù",en:"Out of nowhere / For no reason"},
+      {zh:"就这样吧",jp:"jiù zhè yàng ba",en:"That's it for now / Let's leave it here"},
+    ,
+      {zh:"谈恋爱",jp:"tán liàn ài",en:"Be in a relationship / Date (standard)"},
+      {zh:"在一起",jp:"zài yī qǐ",en:"Be together / In a relationship (colloquial)"},
+      {zh:"单身",jp:"dān shēn",en:"Single"},
+      {zh:"暗恋",jp:"àn liàn",en:"Secret crush / Unrequited love"},
+      {zh:"表白",jp:"biǎo bái",en:"Confess feelings / Ask someone out"},
+      {zh:"分手",jp:"fēn shǒu",en:"Break up"},
+      {zh:"前任",jp:"qián rèn",en:"Ex / Former partner (colloquial)"},
+      {zh:"另一半",jp:"lìng yī bàn",en:"Other half / Partner"},
+      {zh:"有缘分",jp:"yǒu yuán fèn",en:"It's fate / We were meant to meet"},
+      {zh:"聊一聊",jp:"liáo yī liáo",en:"Have a chat / Get to know each other (colloquial)"}]},
+  ],
+  dialogue:{
+    title:"Dialogue: Catching Up",
+    lines:[
+      {sp:"A",zh:"哇，你今天穿得真好看！去哪儿呀？",jp:"wā, nǐ jīn tiān chuān de zhēn hǎo kàn! qù nǎr ya?",en:"Wow, you look amazing today! Where are you off to?"},
+      {sp:"B",zh:"哪里哪里，普普通通啦。跟朋友去吃饭，没什么特别的。你呢，吃了吗？",jp:"nǎ lǐ nǎ lǐ, pǔ pǔ tōng tōng la. gēn péng you qù chī fàn, méi shén me tè bié de. nǐ ne, chī le ma?",en:"Not at all, just casual. Going for dinner with a friend, nothing special. What about you — have you eaten?"},
+      {sp:"A",zh:"还没呢。那个朋友是不是你暗恋的那个？",jp:"hái méi ne. nà gè péng you shì bu shì nǐ àn liàn de nà gè?",en:"Not yet. Is that friend the one you have a crush on?"},
+      {sp:"B",zh:"说不准嘛，先看看吧。我们只是去聊一聊，看看合不合得来。",jp:"shuō bu zhǔn ma, xiān kàn kàn ba. wǒ men zhǐ shì qù liáo yī liáo, kàn kàn hé bu hé de lái.",en:"Hard to say, we'll see how it goes. We're just having a chat, seeing if we click."},
+      {sp:"A",zh:"真是有缘分！加油，记得表白啊！有空喝茶，你跟我说说整件事！",jp:"zhēn shì yǒu yuán fèn! jiā yóu, jì de biǎo bái a! yǒu kōng hē chá, nǐ gēn wǒ shuō shuo zhěng jiàn shì!",en:"It's fate! Go for it — make sure you confess! Let's catch up over tea and you can tell me everything!"},
+    ]
+  }
+  }
+  ,{id:21,zh:"环保与可持续生活",en:"Environment & Sustainable Living",
+  sections:[
+    { title:"Environmental Issues", zh:"环境问题", vocab:[
+      {zh:"全球变暖",jp:"quán qiú biàn nuǎn",en:"Global warming"},
+      {zh:"碳排放",jp:"tàn pái fàng",en:"Carbon emissions"},
+      {zh:"碳足迹",jp:"tàn zú jì",en:"Carbon footprint"},
+      {zh:"温室效应",jp:"wēn shì xiào yìng",en:"Greenhouse effect"},
+      {zh:"空气污染",jp:"kōng qì wū rǎn",en:"Air pollution"},
+      {zh:"海洋污染",jp:"hǎi yáng wū rǎn",en:"Ocean pollution"},
+      {zh:"塑料污染",jp:"sù liào wū rǎn",en:"Plastic pollution"},
+      {zh:"极端天气",jp:"jí duān tiān qì",en:"Extreme weather"},
+      {zh:"生物多样性",jp:"shēng wù duō yàng xìng",en:"Biodiversity"},
+      {zh:"濒危物种",jp:"bīn wēi wù zhǒng",en:"Endangered species"},
+    ]},
+    { title:"Sustainable Living", zh:"可持续生活", vocab:[
+      {zh:"环保",jp:"huán bǎo",en:"Environmentally friendly / Green (colloquial short form)"},
+      {zh:"限塑令",jp:"xiàn sù lìng",en:"Plastic restriction policy (mainland colloquial)"},
+      {zh:"自带袋",jp:"zì dài dài",en:"Bring your own bag"},
+      {zh:"回收",jp:"huí shōu",en:"Recycle"},
+      {zh:"堆肥",jp:"duī féi",en:"Composting"},
+      {zh:"节电",jp:"jié diàn",en:"Save electricity"},
+      {zh:"节水",jp:"jié shuǐ",en:"Save water"},
+      {zh:"素食",jp:"sù shí",en:"Vegetarian / Plant-based"},
+      {zh:"少吃肉",jp:"shǎo chī ròu",en:"Eat less meat (colloquial)"},
+      {zh:"二手",jp:"èr shǒu",en:"Second-hand"},
+      {zh:"快时尚",jp:"kuài shí shàng",en:"Fast fashion"},
+      {zh:"光盘行动",jp:"guāng pán xíng dòng",en:"Clean plate campaign — finish all your food (mainland colloquial)"},
+    ]},
+    { title:"Green Living Phrases", zh:"环保用语", vocab:[
+      {zh:"你有没有自带袋？",jp:"nǐ yǒu méi yǒu zì dài dài?",en:"Did you bring your own bag?"},
+      {zh:"记得自带袋",jp:"jì de zì dài dài",en:"Remember to bring your own bag"},
+      {zh:"这家餐厅很环保",jp:"zhè jiā cān tīng hěn huán bǎo",en:"This restaurant is very eco-friendly"},
+      {zh:"我最近在少吃肉",jp:"wǒ zuì jìn zài shǎo chī ròu",en:"I've been eating less meat lately (colloquial)"},
+      {zh:"买二手比买新的好",jp:"mǎi èr shǒu bǐ mǎi xīn de hǎo",en:"Buying second-hand is better than buying new"},
+      {zh:"节电节水保护地球",jp:"jié diàn jié shuǐ bǎo hù dì qiú",en:"Save electricity, save water, protect the planet"},
+      {zh:"快时尚很不环保",jp:"kuài shí shàng hěn bù huán bǎo",en:"Fast fashion is really bad for the environment"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: Going Green",
+    lines:[
+      {sp:"A",zh:"你有没有注意到现在很多餐厅都开始限塑了？连吸管都没有了。",jp:"nǐ yǒu méi yǒu zhù yì dào xiàn zài hěn duō cān tīng dōu kāi shǐ xiàn sù le? lián xī guǎn dōu méi yǒu le.",en:"Have you noticed a lot of restaurants are restricting plastic now? Even straws are gone."},
+      {sp:"B",zh:"是啊，我支持。我现在出门都自带袋，还在少吃肉。环保的事要从自己做起。",jp:"shì a, wǒ zhī chí. wǒ xiàn zài chū mén dōu zì dài dài, hái zài shǎo chī ròu. huán bǎo de shì yào cóng zì jǐ zuò qǐ.",en:"Yeah, I support it. I bring my own bag now and I've been eating less meat. Environmental stuff has to start with yourself."},
+      {sp:"A",zh:"很棒！我也想少吃肉，但是太喜欢吃了，很难戒。",jp:"hěn bàng! wǒ yě xiǎng shǎo chī ròu, dàn shì tài xǐ huān chī le, hěn nán jiè.",en:"That's great! I want to eat less meat too, but I love it too much — so hard to quit."},
+      {sp:"B",zh:"不用完全戒，少吃一点就有帮助了。还有，买东西尽量买二手，少买快时尚。",jp:"bù yòng wán quán jiè, shǎo chī yī diǎn jiù yǒu bāng zhù le. hái yǒu, mǎi dōng xi jǐn liàng mǎi èr shǒu, shǎo mǎi kuài shí shàng.",en:"You don't have to quit completely — just eating a bit less already helps. Also, try to buy second-hand when you can, cut down on fast fashion."},
+      {sp:"A",zh:"说得对，节电节水保护地球，每个人都要出一份力。",jp:"shuō de duì, jié diàn jié shuǐ bǎo hù dì qiú, měi gè rén dōu yào chū yī fèn lì.",en:"Well said — save electricity, save water, protect the planet. Everyone needs to do their part."},
+    ]
+  }
+  }
+  ,{id:22,zh:"节日与典礼",en:"Holidays & Ceremonies",
+  sections:[
+    { title:"Traditional Chinese Festivals", zh:"中国传统节日", vocab:[
+      {zh:"农历新年",jp:"nóng lì xīn nián",en:"Lunar New Year"},
+      {zh:"拜年",jp:"bài nián",en:"Pay New Year visits / Give New Year greetings"},
+      {zh:"红包",jp:"hóng bāo",en:"Red packet / Red envelope"},
+      {zh:"端午节",jp:"duān wǔ jié",en:"Dragon Boat Festival"},
+      {zh:"中秋节",jp:"zhōng qiū jié",en:"Mid-Autumn Festival"},
+      {zh:"清明节",jp:"qīng míng jié",en:"Qingming / Tomb Sweeping Festival"},
+      {zh:"重阳节",jp:"chóng yáng jié",en:"Double Ninth Festival"},
+      {zh:"冬至",jp:"dōng zhì",en:"Winter Solstice"},
+      {zh:"年糕",jp:"nián gāo",en:"New Year cake (glutinous rice cake)"},
+      {zh:"贺年",jp:"hè nián",en:"Celebrate the New Year / Send greetings"},
+      {zh:"压岁钱",jp:"yā suì qián",en:"Lucky money given to children at New Year"},
+      {zh:"春节联欢晚会",jp:"chūn jié lián huān wǎn huì",en:"CCTV Spring Festival Gala (colloquial: 春晚 chūn wǎn)"},
+    ]},
+    { title:"Ceremonies & Milestones", zh:"典礼与里程碑", vocab:[
+      {zh:"婚礼",jp:"hūn lǐ",en:"Wedding"},
+      {zh:"百日宴",jp:"bǎi rì yàn",en:"100-day banquet (baby celebration)"},
+      {zh:"成人礼",jp:"chéng rén lǐ",en:"Coming-of-age ceremony"},
+      {zh:"毕业典礼",jp:"bì yè diǎn lǐ",en:"Graduation ceremony"},
+      {zh:"葬礼",jp:"zàng lǐ",en:"Funeral"},
+      {zh:"扫墓",jp:"sǎo mù",en:"Sweep graves / Visit ancestral graves"},
+      {zh:"做寿",jp:"zuò shòu",en:"Celebrate a birthday (esp. elderly)"},
+      {zh:"摆酒",jp:"bǎi jiǔ",en:"Host a banquet (wedding/celebration, colloquial)"},
+      {zh:"收礼",jp:"shōu lǐ",en:"Receive gifts"},
+      {zh:"敬酒",jp:"jìng jiǔ",en:"Toast / Raise a glass"},
+    ]},
+    { title:"Festive Phrases", zh:"节日用语", vocab:[
+      {zh:"恭喜发财",jp:"gōng xǐ fā cái",en:"Wishing you prosperity (New Year greeting)"},
+      {zh:"身体健康",jp:"shēn tǐ jiàn kāng",en:"Wishing you good health"},
+      {zh:"万事如意",jp:"wàn shì rú yì",en:"May everything go as you wish"},
+      {zh:"新年快乐",jp:"xīn nián kuài lè",en:"Happy New Year"},
+      {zh:"你什么时候摆酒？",jp:"nǐ shén me shí hou bǎi jiǔ?",en:"When are you holding your wedding banquet? (colloquial)"},
+      {zh:"过年好",jp:"guò nián hǎo",en:"Happy New Year (mainland colloquial greeting)"},
+      {zh:"吃汤圆咯",jp:"chī tāng yuán lo",en:"Time to eat glutinous rice balls (Winter Solstice)"},
+    ]},
+  ,{ title:"Small Talk & Relationships", zh:"寒暄與感情", vocab:[
+      {zh:"食咗飯未？",jp:"sik6 zo2 faan6 mei6?",en:"Have you eaten yet? (common Cantonese greeting)"},
+      {zh:"去邊呀？",jp:"heoi3 bin1 aa3?",en:"Where are you off to? (casual greeting, not literal)"},
+      {zh:"得閒飲茶",jp:"dak1 haan4 jam2 caa4",en:"Let's catch up over dim sum sometime (colloquial)"},
+      {zh:"唔講得定",jp:"m4 gong2 dak1 ding6",en:"Hard to say / You never know (colloquial)"},
+      {zh:"睇吓先",jp:"tai2 haa5 sin1",en:"See how it goes / Wait and see (colloquial)"},
+      {zh:"係咁先",jp:"hai6 gam2 sin1",en:"That's it for now / Let's wrap up (colloquial)"},
+      {zh:"拍拖",jp:"paak3 to1",en:"Dating / In a relationship (Cantonese colloquial)"},
+      {zh:"有冇拍拖？",jp:"jau5 mou5 paak3 to1?",en:"Are you seeing anyone? (colloquial)"},
+      {zh:"單身",jp:"daan1 san1",en:"Single"},
+      {zh:"暗戀",jp:"am3 lyun2",en:"Secret crush / Unrequited love"},
+      {zh:"表白",jp:"biu2 baak6",en:"Confess feelings / Ask someone out"},
+      {zh:"分手",jp:"fan1 sau2",en:"Break up"},
+      {zh:"另一半",jp:"ling6 jat1 bun3",en:"Other half / Partner"},
+      {zh:"拍拖周年",jp:"paak3 to1 zau1 nin4",en:"Dating anniversary (colloquial)"},
+      {zh:"好有緣",jp:"hou2 jau5 jyun4",en:"It's fate / Meant to be (colloquial)"},
+      {zh:"傾吓偈",jp:"king1 haa5 gai3",en:"Have a chat / Get to know each other (colloquial)"},
+    ]}
+  ],
+  dialogue:{
+    title:"Dialogue: Lunar New Year",
+    lines:[
+      {sp:"A",zh:"恭喜发财！新年快乐！今年有没有发红包呀？",jp:"gōng xǐ fā cái! xīn nián kuài lè! jīn nián yǒu méi yǒu fā hóng bāo ya?",en:"Gung Hei Fat Choy! Happy New Year! Are you giving out red packets this year?"},
+      {sp:"B",zh:"当然啦，我已经结婚了，不发不行！你呢，什么时候摆酒？",jp:"dāng rán la, wǒ yǐ jīng jié hūn le, bù fā bù xíng! nǐ ne, shén me shí hou bǎi jiǔ?",en:"Of course — I'm married now, I have no choice! What about you, when's your wedding banquet?"},
+      {sp:"A",zh:"还早呢，还没谈恋爱！不过今年运气不错，说不定有消息。",jp:"hái zǎo ne, hái méi tán liàn ài! bù guò jīn nián yùn qì bú cuò, shuō bu dìng yǒu xiāo xi.",en:"Way too early — I'm not even dating anyone! But my luck has been good this year, who knows."},
+      {sp:"B",zh:"哈哈，借你吉言！我们今晚去妈妈那边吃冬至饭，你来不来？",jp:"hā hā, jiè nǐ jí yán! wǒ men jīn wǎn qù mā ma nà biān chī dōng zhì fàn, nǐ lái bu lái?",en:"Haha, from your mouth to God's ears! We're going to mum's for the Winter Solstice dinner tonight — are you coming?"},
+      {sp:"A",zh:"当然来啦，吃汤圆咯！我带年糕过去。",jp:"dāng rán lái la, chī tāng yuán lo! wǒ dài nián gāo guò qù.",en:"Of course I'm coming — time for glutinous rice balls! I'll bring the New Year cake."},
+    ]
+  }
+  }
+  ,{id:23,zh:"健康与养生",en:"Health & Wellness",
+  sections:[
+    { title:"Feeling Unwell", zh:"身体不舒服", vocab:[
+      {zh:"不舒服",jp:"bù shū fu",en:"Not feeling well"},
+      {zh:"生病了",jp:"shēng bìng le",en:"Got sick / Fell ill"},
+      {zh:"头痛",jp:"tóu tòng",en:"Headache"},
+      {zh:"喉咙痛",jp:"hóu lóng tòng",en:"Sore throat"},
+      {zh:"肚子痛",jp:"dù zi tòng",en:"Stomachache (colloquial)"},
+      {zh:"拉肚子",jp:"lā dù zi",en:"Diarrhoea (colloquial — lit. pull the belly)"},
+      {zh:"想吐",jp:"xiǎng tù",en:"Feel nauseous"},
+      {zh:"发烧",jp:"fā shāo",en:"Fever"},
+      {zh:"发冷",jp:"fā lěng",en:"Chills / Feel cold"},
+      {zh:"咳嗽",jp:"ké sou",en:"Cough"},
+      {zh:"感冒",jp:"gǎn mào",en:"Common cold"},
+      {zh:"流鼻涕",jp:"liú bí tì",en:"Runny nose"},
+      {zh:"头晕",jp:"tóu yūn",en:"Dizzy / Lightheaded"},
+      {zh:"很累",jp:"hěn lèi",en:"Very tired / Exhausted (colloquial)"},
+      {zh:"犯困",jp:"fàn kùn",en:"Sleepy / Drowsy (colloquial)"},
+    ]},
+    { title:"Pharmacy & Doctor", zh:"药房与看医生", vocab:[
+      {zh:"药店",jp:"yào diàn",en:"Pharmacy"},
+      {zh:"看医生",jp:"kàn yī shēng",en:"See a doctor (colloquial)"},
+      {zh:"去急诊",jp:"qù jí zhěn",en:"Go to A&E / Emergency"},
+      {zh:"预约",jp:"yù yuē",en:"Appointment / Book"},
+      {zh:"我要看医生",jp:"wǒ yào kàn yī shēng",en:"I need to see a doctor"},
+      {zh:"你不舒服多久了？",jp:"nǐ bù shū fu duō jiǔ le?",en:"How long have you been unwell?"},
+      {zh:"开药",jp:"kāi yào",en:"Prescribe medication"},
+      {zh:"止痛药",jp:"zhǐ tòng yào",en:"Painkiller"},
+      {zh:"退烧药",jp:"tuì shāo yào",en:"Fever medication"},
+      {zh:"抗生素",jp:"kàng shēng sù",en:"Antibiotic"},
+      {zh:"吃药",jp:"chī yào",en:"Take medicine (colloquial)"},
+      {zh:"一天吃几次？",jp:"yī tiān chī jǐ cì?",en:"How many times a day? (colloquial)"},
+      {zh:"好多了",jp:"hǎo duō le",en:"Much better (colloquial)"},
+      {zh:"还没好",jp:"hái méi hǎo",en:"Not better yet"},
+    ]},
+    { title:"Mental Health & Stress", zh:"精神健康", vocab:[
+      {zh:"压力",jp:"yā lì",en:"Stress / Pressure"},
+      {zh:"压力很大",jp:"yā lì hěn dà",en:"Feeling very stressed (colloquial)"},
+      {zh:"焦虑",jp:"jiāo lǜ",en:"Anxiety"},
+      {zh:"抑郁",jp:"yì yù",en:"Depression"},
+      {zh:"心情不好",jp:"xīn qíng bù hǎo",en:"In a bad mood (colloquial)"},
+      {zh:"撑不住了",jp:"chēng bù zhù le",en:"Can't cope / Burnt out (colloquial)"},
+      {zh:"需要休息",jp:"xū yào xiū xi",en:"Need rest"},
+      {zh:"睡不好",jp:"shuì bù hǎo",en:"Not sleeping well (colloquial)"},
+      {zh:"失眠",jp:"shī mián",en:"Insomnia"},
+      {zh:"放松一下",jp:"fàng sōng yī xià",en:"Relax / Take it easy (colloquial)"},
+      {zh:"别想太多",jp:"bié xiǎng tài duō",en:"Don't overthink it (colloquial)"},
+      {zh:"找人聊聊",jp:"zhǎo rén liáo liáo",en:"Find someone to talk to (colloquial)"},
+      {zh:"说出来会好一些",jp:"shuō chū lái huì hǎo yī xiē",en:"Talking about it will help"},
+    ]},
+    { title:"Exercise & Wellness", zh:"运动与养生", vocab:[
+      {zh:"爬山",jp:"pá shān",en:"Hiking / Mountain climbing"},
+      {zh:"游泳",jp:"yóu yǒng",en:"Swimming"},
+      {zh:"骑自行车",jp:"qí zì xíng chē",en:"Cycling"},
+      {zh:"跑步",jp:"pǎo bù",en:"Running"},
+      {zh:"健身",jp:"jiàn shēn",en:"Gym / Work out"},
+      {zh:"练瑜伽",jp:"liàn yú jiā",en:"Practise yoga"},
+      {zh:"打球",jp:"dǎ qiú",en:"Play ball sports (colloquial)"},
+      {zh:"多喝水",jp:"duō hē shuǐ",en:"Drink more water (colloquial)"},
+      {zh:"吃得健康",jp:"chī de jiàn kāng",en:"Eat healthily"},
+      {zh:"早睡早起",jp:"zǎo shuì zǎo qǐ",en:"Sleep early, rise early (saying)"},
+      {zh:"养生",jp:"yǎng shēng",en:"Nurture health / Wellness lifestyle"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: Not Feeling Well",
+    lines:[
+      {sp:"A",zh:"你是不是不舒服？你看起来气色不太好。",jp:"nǐ shì bu shì bù shū fu? nǐ kàn qǐ lái qì sè bù tài hǎo.",en:"Are you not feeling well? You don't look great."},
+      {sp:"B",zh:"是的，我现在有点头痛和喉咙痛，可能感冒了。",jp:"shì de, wǒ xiàn zài yǒu diǎn tóu tòng hé hóu lóng tòng, kě néng gǎn mào le.",en:"Yeah, I have a bit of a headache and sore throat. Probably a cold."},
+      {sp:"A",zh:"你有没有去药店买药？还是要去看医生？",jp:"nǐ yǒu méi yǒu qù yào diàn mǎi yào? hái shì yào qù kàn yī shēng?",en:"Did you go to the pharmacy? Or do you need to see a doctor?"},
+      {sp:"B",zh:"我刚买了退烧药和止痛药，希望吃了能好一些。",jp:"wǒ gāng mǎi le tuì shāo yào hé zhǐ tòng yào, xī wàng chī le néng hǎo yī xiē.",en:"I just bought fever meds and painkillers. Hopefully I'll feel better after taking them."},
+      {sp:"A",zh:"多休息，多喝水。放松一下，别想太多。",jp:"duō xiū xi, duō hē shuǐ. fàng sōng yī xià, bié xiǎng tài duō.",en:"Get more rest, drink more water. Relax, don't overthink things."},
+    ]
+  }
+  }
+  ,{id:24,zh:"运动、兴趣与游戏",en:"Sports, Hobbies & Games",
+  sections:[
+    { title:"Watching Sports", zh:"看球", vocab:[
+      {zh:"看球",jp:"kàn qiú",en:"Watch sports / Watch the game (colloquial)"},
+      {zh:"英超",jp:"yīng chāo",en:"English Premier League"},
+      {zh:"世界杯",jp:"shì jiè bēi",en:"World Cup"},
+      {zh:"奥运会",jp:"ào yùn huì",en:"Olympics"},
+      {zh:"决赛",jp:"jué sài",en:"Final / Championship match"},
+      {zh:"进球",jp:"jìn qiú",en:"Score a goal"},
+      {zh:"乌龙球",jp:"wū lóng qiú",en:"Own goal (colloquial — lit. confused dragon ball)"},
+      {zh:"红牌",jp:"hóng pái",en:"Red card"},
+      {zh:"黄牌",jp:"huáng pái",en:"Yellow card"},
+      {zh:"加时",jp:"jiā shí",en:"Extra time / Overtime"},
+      {zh:"点球",jp:"diǎn qiú",en:"Penalty kick"},
+      {zh:"今晚有球赛！",jp:"jīn wǎn yǒu qiú sài!",en:"There's a match tonight! (colloquial)"},
+      {zh:"你支持哪个队？",jp:"nǐ zhī chí nǎ gè duì?",en:"Which team do you support? (colloquial)"},
+    ]},
+    { title:"Playing Sports", zh:"做运动", vocab:[
+      {zh:"打羽毛球",jp:"dǎ yǔ máo qiú",en:"Play badminton"},
+      {zh:"打网球",jp:"dǎ wǎng qiú",en:"Play tennis"},
+      {zh:"打乒乓球",jp:"dǎ pīng pāng qiú",en:"Play table tennis"},
+      {zh:"打篮球",jp:"dǎ lán qiú",en:"Play basketball"},
+      {zh:"踢足球",jp:"tī zú qiú",en:"Play football / Soccer"},
+      {zh:"游泳",jp:"yóu yǒng",en:"Swimming"},
+      {zh:"爬山",jp:"pá shān",en:"Hiking"},
+      {zh:"骑车",jp:"qí chē",en:"Cycling (colloquial short form)"},
+      {zh:"跑步",jp:"pǎo bù",en:"Running"},
+      {zh:"健身",jp:"jiàn shēn",en:"Gym / Work out"},
+      {zh:"打拳",jp:"dǎ quán",en:"Boxing / Martial arts"},
+      {zh:"冲浪",jp:"chōng làng",en:"Surfing"},
+      {zh:"滑雪",jp:"huá xuě",en:"Skiing"},
+      {zh:"你喜欢什么运动？",jp:"nǐ xǐ huān shén me yùn dòng?",en:"What sports do you like? (colloquial)"},
+    ]},
+    { title:"Hobbies & Leisure", zh:"兴趣与休闲", vocab:[
+      {zh:"兴趣",jp:"xìng qù",en:"Hobby / Interest"},
+      {zh:"你有什么兴趣？",jp:"nǐ yǒu shén me xìng qù?",en:"What are your hobbies? (colloquial)"},
+      {zh:"做饭",jp:"zuò fàn",en:"Cooking (colloquial)"},
+      {zh:"烘焙",jp:"hōng bèi",en:"Baking"},
+      {zh:"摄影",jp:"shè yǐng",en:"Photography"},
+      {zh:"画画",jp:"huà huà",en:"Drawing / Painting"},
+      {zh:"弹琴",jp:"tán qín",en:"Play piano / instrument"},
+      {zh:"唱歌",jp:"chàng gē",en:"Singing"},
+      {zh:"跳舞",jp:"tiào wǔ",en:"Dancing"},
+      {zh:"看书",jp:"kàn shū",en:"Reading"},
+      {zh:"打游戏",jp:"dǎ yóu xì",en:"Gaming / Play video games (colloquial)"},
+      {zh:"追剧",jp:"zhuī jù",en:"Binge-watch dramas (colloquial)"},
+      {zh:"逛街",jp:"guàng jiē",en:"Go shopping / Walk the streets (colloquial)"},
+      {zh:"宅在家",jp:"zhái zài jiā",en:"Stay home and chill / Be a homebody (colloquial)"},
+    ]},
+    { title:"Mahjong", zh:"打麻将", vocab:[
+      {zh:"打麻将",jp:"dǎ má jiàng",en:"Play mahjong (mainland says 麻将, HK says 麻雀)"},
+      {zh:"麻将牌",jp:"má jiàng pái",en:"Mahjong tiles"},
+      {zh:"洗牌",jp:"xǐ pái",en:"Shuffle tiles / Shuffle cards (colloquial)"},
+      {zh:"胡牌",jp:"hú pái",en:"Win a hand (mahjong)"},
+      {zh:"诈胡",jp:"zhà hú",en:"False win / Cheat a win (colloquial)"},
+      {zh:"打到天亮",jp:"dǎ dào tiān liàng",en:"Play mahjong until dawn (colloquial)"},
+      {zh:"上",jp:"shàng",en:"Chow — complete a sequence (mahjong)"},
+      {zh:"碰",jp:"pèng",en:"Pung — claim a matching tile (mahjong)"},
+      {zh:"杠",jp:"gàng",en:"Kong — four of a kind (mahjong)"},
+      {zh:"你会打麻将吗？",jp:"nǐ huì dǎ má jiàng ma?",en:"Do you know how to play mahjong?"},
+      {zh:"我不会",jp:"wǒ bù huì",en:"I don't know how"},
+      {zh:"我会一点点",jp:"wǒ huì yī diǎn diǎn",en:"I know a little (colloquial)"},
+    ]},
+    { title:"Board, Card & Other Games", zh:"棋牌与其他游戏", vocab:[
+      {zh:"下棋",jp:"xià qí",en:"Play chess / board games (colloquial)"},
+      {zh:"国际象棋",jp:"guó jì xiàng qí",en:"Western chess"},
+      {zh:"中国象棋",jp:"zhōng guó xiàng qí",en:"Chinese chess (xiangqi)"},
+      {zh:"围棋",jp:"wéi qí",en:"Go (the board game)"},
+      {zh:"跳棋",jp:"tiào qí",en:"Checkers / Draughts"},
+      {zh:"飞行棋",jp:"fēi xíng qí",en:"Ludo / Aeroplane chess (popular Chinese board game)"},
+      {zh:"大富翁",jp:"dà fù wēng",en:"Monopoly (lit. big rich man)"},
+      {zh:"拼图",jp:"pīn tú",en:"Jigsaw puzzle"},
+      {zh:"扑克牌",jp:"pū kè pái",en:"Playing cards (colloquial)"},
+      {zh:"斗地主",jp:"dòu dì zhǔ",en:"Dou Di Zhu / Fight the Landlord (popular card game)"},
+      {zh:"升级",jp:"shēng jí",en:"Sheng Ji / Tractor (card game)"},
+      {zh:"吹牛",jp:"chuī niú",en:"Bluff / Cheat (card game, colloquial)"},
+      {zh:"轮流来",jp:"lún liú lái",en:"Take turns (colloquial)"},
+      {zh:"再来一局！",jp:"zài lái yī jú!",en:"Rematch! / One more round! (colloquial)"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: Weekend Plans",
+    lines:[
+      {sp:"A",zh:"这个周末你有什么计划吗？",jp:"zhè gè zhōu mò nǐ yǒu shén me jì huà ma?",en:"Any plans this weekend?"},
+      {sp:"B",zh:"我在练羽毛球，周六有比赛。你呢？",jp:"wǒ zài liàn yǔ máo qiú, zhōu liù yǒu bǐ sài. nǐ ne?",en:"I'm training for badminton — there's a match Saturday. You?"},
+      {sp:"A",zh:"我跟朋友去爬山，然后回家打游戏放松一下。",jp:"wǒ gēn péng you qù pá shān, rán hòu huí jiā dǎ yóu xì fàng sōng yī xià.",en:"I'm hiking with friends, then going home to game and chill."},
+      {sp:"B",zh:"听起来不错！你有没有看那场英超决赛？太精彩了！",jp:"tīng qǐ lái bú cuò! nǐ yǒu méi yǒu kàn nà chǎng yīng chāo jué sài? tài jīng cǎi le!",en:"Sounds fun! Did you catch that Premier League final? So exciting!"},
+      {sp:"A",zh:"看了！进球那一刻我激动死了。明天打麻将吗？我们少一个人。",jp:"kàn le! jìn qiú nà yī kè wǒ jī dòng sǐ le. míng tiān dǎ má jiàng ma? wǒ men shǎo yī gè rén.",en:"Watched it! I went crazy when they scored. Mahjong tomorrow? We're short one player."},
+      {sp:"B",zh:"好啊！我只会一点点，别笑我哦！",jp:"hǎo a! wǒ zhǐ huì yī diǎn diǎn, bié xiào wǒ ó!",en:"Sure! I only know a little though — don't laugh at me!"},
+    ]
+  }
+  }
   ,{id:25,zh:"旅行与交通",en:"Travel & Transportation",
   sections:[
     { title:"Transportation", zh:"交通", vocab:[
@@ -5786,6 +5815,462 @@ const LESSONS_MANDARIN = [
       {sp:"A",zh:"听起来很棒！你们是跟团还是自由行？",jp:"tīng qǐ lái hěn bàng! nǐ men shì gēn tuán hái shì zì yóu xíng?",en:"Sounds wonderful! Are you going on a package tour or independently?"},
       {sp:"B",zh:"自由行，自己订酒店和机票，这样比较自由，想去哪就去哪。",jp:"zì yóu xíng, zì jǐ dìng jiǔ diàn hé jī piào, zhè yàng bǐ jiào zì yóu, xiǎng qù nǎ jiù qù nǎ.",en:"Independently — we book our own hotels and flights. More flexible that way, go wherever we want."},
       {sp:"A",zh:"好主意！记得提前办好签证，日本签证要提前申请的。",jp:"hǎo zhǔ yì! jì de tí qián bàn hǎo qiān zhèng, rì běn qiān zhèng yào tí qián shēn qǐng de.",en:"Good idea! Remember to sort out your visa in advance — Japan visas need to be applied for ahead of time."},
+    ]
+  }
+  }
+  ,{id:26,zh:"城市旅游",en:"City & Urban Travel",
+  sections:[
+    { title:"Getting Around the City", zh:"市内交通", vocab:[
+      {zh:"地铁",jp:"dì tiě",en:"Subway / Metro"},
+      {zh:"坐地铁",jp:"zuò dì tiě",en:"Take the subway (colloquial)"},
+      {zh:"搭公交",jp:"dā gōng jiāo",en:"Take the bus (colloquial)"},
+      {zh:"出租车",jp:"chū zū chē",en:"Taxi"},
+      {zh:"叫出租车",jp:"jiào chū zū chē",en:"Hail a taxi (colloquial)"},
+      {zh:"滴滴",jp:"dī dī",en:"DiDi / Ride-hailing (colloquial mainland)"},
+      {zh:"转车",jp:"zhuǎn chē",en:"Transfer / Change trains (colloquial)"},
+      {zh:"出口",jp:"chū kǒu",en:"Exit (station)"},
+      {zh:"入口",jp:"rù kǒu",en:"Entrance"},
+      {zh:"公交卡",jp:"gōng jiāo kǎ",en:"Transit card (mainland)"},
+      {zh:"不知道在哪站下？",jp:"bù zhī dào zài nǎ zhàn xià?",en:"Which stop do I get off at? (colloquial)"},
+    ]},
+    { title:"Navigating & Directions", zh:"问路与指引", vocab:[
+      {zh:"请问…",jp:"qǐng wèn…",en:"Excuse me, may I ask… (colloquial)"},
+      {zh:"怎么去…？",jp:"zěn me qù…?",en:"How do I get to…? (colloquial)"},
+      {zh:"一直走",jp:"yī zhí zǒu",en:"Go straight"},
+      {zh:"左转",jp:"zuǒ zhuǎn",en:"Turn left"},
+      {zh:"右转",jp:"yòu zhuǎn",en:"Turn right"},
+      {zh:"在…对面",jp:"zài… duì miàn",en:"Opposite / Across from…"},
+      {zh:"在…旁边",jp:"zài… páng biān",en:"Next to…"},
+      {zh:"走路要多久？",jp:"zǒu lù yào duō jiǔ?",en:"How long to walk? (colloquial)"},
+      {zh:"迷路了",jp:"mí lù le",en:"Got lost (colloquial)"},
+      {zh:"用导航",jp:"yòng dǎo háng",en:"Use navigation / GPS (colloquial)"},
+    ]},
+    { title:"City Sights & Culture", zh:"城市景点与文化", vocab:[
+      {zh:"博物馆",jp:"bó wù guǎn",en:"Museum"},
+      {zh:"美术馆",jp:"měi shù guǎn",en:"Art gallery"},
+      {zh:"夜市",jp:"yè shì",en:"Night market"},
+      {zh:"菜市场",jp:"cài shì chǎng",en:"Wet market / Street market"},
+      {zh:"唐人街",jp:"táng rén jiē",en:"Chinatown"},
+      {zh:"庙",jp:"miào",en:"Temple"},
+      {zh:"公园",jp:"gōng yuán",en:"Park"},
+      {zh:"打卡",jp:"dǎ kǎ",en:"Take an Insta-worthy photo / Check in (colloquial)"},
+      {zh:"网红景点",jp:"wǎng hóng jǐng diǎn",en:"Instagrammable spot (colloquial)"},
+      {zh:"夜游",jp:"yè yóu",en:"Night tour / Evening stroll (colloquial)"},
+    ]},
+    { title:"Food & Nightlife", zh:"饮食与夜生活", vocab:[
+      {zh:"大排档",jp:"dà pái dàng",en:"Open-air food stall / Dai pai dong"},
+      {zh:"宵夜",jp:"xiāo yè",en:"Late-night supper / Snack"},
+      {zh:"吃宵夜",jp:"chī xiāo yè",en:"Go for late-night supper (colloquial)"},
+      {zh:"酒吧",jp:"jiǔ bā",en:"Bar"},
+      {zh:"夜店",jp:"yè diàn",en:"Nightclub"},
+      {zh:"鸡尾酒",jp:"jī wěi jiǔ",en:"Cocktail"},
+      {zh:"扎啤",jp:"zhā pí",en:"Draft beer (colloquial)"},
+      {zh:"不能喝太多",jp:"bù néng hē tài duō",en:"Can't drink too much (colloquial)"},
+      {zh:"买单",jp:"mǎi dān",en:"Pay the bill (colloquial)"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: Exploring the City",
+    lines:[
+      {sp:"A",zh:"现在去哪里好？我想逛街打打卡。",jp:"xiàn zài qù nǎ lǐ hǎo? wǒ xiǎng guàng jiē dǎ dǎ kǎ.",en:"Where should we go now? I want to walk around and take some photos."},
+      {sp:"B",zh:"去夜市吧，好多吃的，还可以逛街，很热闹。",jp:"qù yè shì ba, hǎo duō chī de, hái kě yǐ guàng jiē, hěn rè nào.",en:"Let's go to the night market — lots of food and shopping, very lively."},
+      {sp:"A",zh:"好啊！坐地铁还是打车？",jp:"hǎo a! zuò dì tiě hái shì dǎ chē?",en:"Great! Take the subway or call a taxi?"},
+      {sp:"B",zh:"坐地铁快一点，刷公交卡就行，不用买票。",jp:"zuò dì tiě kuài yī diǎn, shuā gōng jiāo kǎ jiù xíng, bù yòng mǎi piào.",en:"Subway is faster — just tap the transit card, no need to buy a ticket."},
+      {sp:"A",zh:"吃完宵夜能不能去天台看夜景？",jp:"chī wán xiāo yè néng bù néng qù tiān tái kàn yè jǐng?",en:"After supper can we go to a rooftop to see the night view?"},
+      {sp:"B",zh:"当然！我知道一个很棒的天台酒吧，夜景一流！",jp:"dāng rán! wǒ zhī dào yī gè hěn bàng de tiān tái jiǔ bā, yè jǐng yī liú!",en:"Of course! I know a great rooftop bar — the night view is superb!"},
+    ]
+  }
+  }
+  ,{id:27,zh:"沿海与海岸",en:"Coastal & Shorelines",
+  sections:[
+    { title:"Coastal Landscape", zh:"海岸地貌", vocab:[
+      {zh:"悬崖",jp:"xuán yá",en:"Sea cliff"},
+      {zh:"海蚀洞",jp:"hǎi shí dòng",en:"Sea cave"},
+      {zh:"天然石拱",jp:"tiān rán shí gǒng",en:"Natural rock arch"},
+      {zh:"海蚀柱",jp:"hǎi shí zhù",en:"Sea stack"},
+      {zh:"潮池",jp:"cháo chí",en:"Tide pool"},
+      {zh:"礁石海滩",jp:"jiāo shí hǎi tān",en:"Rocky beach / Shore"},
+      {zh:"沙滩",jp:"shā tān",en:"Sandy beach"},
+      {zh:"码头",jp:"mǎ tóu",en:"Pier / Dock"},
+      {zh:"渔村",jp:"yú cūn",en:"Fishing village"},
+      {zh:"灯塔",jp:"dēng tǎ",en:"Lighthouse"},
+      {zh:"海湾",jp:"hǎi wān",en:"Bay / Cove"},
+      {zh:"海雾",jp:"hǎi wù",en:"Sea fog / Marine layer"},
+      {zh:"浪花",jp:"làng huā",en:"Ocean spray / Seafoam"},
+      {zh:"礁石",jp:"jiāo shí",en:"Reef / Rocks"},
+    ]},
+    { title:"Tide Pool & Shore Animals", zh:"潮池与岸边动物", vocab:[
+      {zh:"海豹",jp:"hǎi bào",en:"Seal"},
+      {zh:"海狮",jp:"hǎi shī",en:"Sea lion"},
+      {zh:"海獭",jp:"hǎi tǎ",en:"Sea otter"},
+      {zh:"海鸥",jp:"hǎi ōu",en:"Seagull"},
+      {zh:"鹈鹕",jp:"tí hú",en:"Pelican"},
+      {zh:"鸬鹚",jp:"lú cí",en:"Cormorant"},
+      {zh:"海星",jp:"hǎi xīng",en:"Starfish"},
+      {zh:"海胆",jp:"hǎi dǎn",en:"Sea urchin"},
+      {zh:"螃蟹",jp:"páng xiè",en:"Crab"},
+      {zh:"藤壶",jp:"téng hú",en:"Barnacle"},
+      {zh:"海葵",jp:"hǎi kuí",en:"Sea anemone"},
+      {zh:"贻贝",jp:"yí bèi",en:"Mussel"},
+      {zh:"章鱼",jp:"zhāng yú",en:"Octopus"},
+    ]},
+    { title:"Whale Watching & Open Ocean", zh:"赏鲸与外海", vocab:[
+      {zh:"鲸鱼",jp:"jīng yú",en:"Whale"},
+      {zh:"座头鲸",jp:"zuò tóu jīng",en:"Humpback whale"},
+      {zh:"灰鲸",jp:"huī jīng",en:"Gray whale"},
+      {zh:"虎鲸",jp:"hǔ jīng",en:"Killer whale / Orca"},
+      {zh:"海豚",jp:"hǎi tún",en:"Dolphin"},
+      {zh:"鲨鱼",jp:"shā yú",en:"Shark"},
+      {zh:"曼塔鳐",jp:"màn tǎ yáo",en:"Manta ray"},
+      {zh:"鱿鱼",jp:"yóu yú",en:"Squid"},
+      {zh:"水母",jp:"shuǐ mǔ",en:"Jellyfish"},
+      {zh:"跃身击浪",jp:"yuè shēn jī làng",en:"Breaching (whale)"},
+      {zh:"赏鲸船",jp:"shǎng jīng chuán",en:"Whale watching boat"},
+      {zh:"双筒望远镜",jp:"shuāng tǒng wàng yuǎn jìng",en:"Binoculars"},
+    ]},
+    { title:"Coastal Phrases", zh:"海岸用语", vocab:[
+      {zh:"退潮",jp:"tuì cháo",en:"Low tide"},
+      {zh:"涨潮",jp:"zhǎng cháo",en:"High tide"},
+      {zh:"浪很大",jp:"làng hěn dà",en:"The waves are big"},
+      {zh:"小心滑倒",jp:"xiǎo xīn huá dǎo",en:"Watch your step — slippery"},
+      {zh:"不要踩珊瑚",jp:"bù yào cǎi shān hú",en:"Don't step on the coral"},
+      {zh:"我看到鲸鱼喷水了！",jp:"wǒ kàn dào jīng yú pēn shuǐ le!",en:"I can see the whale spouting!"},
+      {zh:"海雾很大，看不清楚",jp:"hǎi wù hěn dà, kàn bù qīng chǔ",en:"The sea fog is thick, can't see clearly"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: Mendocino Coast",
+    lines:[
+      {sp:"A",zh:"这段海岸线太美了，悬崖这么高，下面就是大海，太震撼了！",jp:"zhè duàn hǎi àn xiàn tài měi le, xuán yá zhè me gāo, xià miàn jiù shì dà hǎi, tài zhèn hàn le!",en:"This coastline is so beautiful — cliffs this high, straight down to the ocean. So dramatic!"},
+      {sp:"B",zh:"是啊，这是加州最美的海岸之一。你看，退潮了，可以去潮池看海星和螃蟹！",jp:"shì a, zhè shì jiā zhōu zuì měi de hǎi àn zhī yī. nǐ kàn, tuì cháo le, kě yǐ qù cháo chí kàn hǎi xīng hé páng xiè!",en:"Yeah, one of the most beautiful coastlines in California. Look — low tide! We can go check out the tide pools."},
+      {sp:"A",zh:"好啊！还有，我看到那边有只海獭浮在海面上吃东西！",jp:"hǎo a! hái yǒu, wǒ kàn dào nà biān yǒu zhī hǎi tǎ fú zài hǎi miàn shàng chī dōng xi!",en:"Great! And I can see a sea otter floating on the surface eating something over there!"},
+      {sp:"B",zh:"是啊，海獭喜欢仰浮在水面上休息，很可爱！听说现在是灰鲸迁徙季节，说不定能看到。",jp:"shì a, hǎi tǎ xǐ huān yǎng fú zài shuǐ miàn shàng xiū xi, hěn kě ài! tīng shuō xiàn zài shì huī jīng qiān xǐ jì jié, shuō bu dìng néng kàn dào.",en:"Yeah, sea otters love to float on their backs to rest — so cute! I heard it's gray whale migration season now."},
+      {sp:"A",zh:"真的？那我们去那个灯塔，视野更开阔，用望远镜看更方便！",jp:"zhēn de? nà wǒ men qù nà gè dēng tǎ, shì yě gèng kāi kuò, yòng wàng yuǎn jìng kàn gèng fāng biàn!",en:"Really? Then let's go to that lighthouse — better view, and easier to spot with binoculars!"},
+    ]
+  }
+  }
+  ,{id:28,zh:"热带岛屿",en:"Tropical Islands",
+  sections:[
+    { title:"Tropical Landscape — Hawaii", zh:"热带地貌（夏威夷）", vocab:[
+      {zh:"活火山",jp:"huó huǒ shān",en:"Active volcano"},
+      {zh:"火山口",jp:"huǒ shān kǒu",en:"Volcanic crater / Caldera"},
+      {zh:"熔岩流",jp:"róng yán liú",en:"Lava flow"},
+      {zh:"熔岩管道",jp:"róng yán guǎn dào",en:"Lava tube"},
+      {zh:"黑沙滩",jp:"hēi shā tān",en:"Black sand beach"},
+      {zh:"绿沙滩",jp:"lǜ shā tān",en:"Green sand beach (unique to Hawaii)"},
+      {zh:"潮池",jp:"cháo chí",en:"Tide pool"},
+      {zh:"悬崖海岸",jp:"xuán yá hǎi àn",en:"Sea cliffs (like Nā Pali)"},
+      {zh:"热带雨林",jp:"rè dài yǔ lín",en:"Tropical rainforest"},
+      {zh:"瀑布",jp:"pù bù",en:"Waterfall"},
+      {zh:"彩虹瀑布",jp:"cǎi hóng pù bù",en:"Rainbow Falls (Hilo, Hawaii)"},
+      {zh:"碧绿海水",jp:"bì lǜ hǎi shuǐ",en:"Turquoise water"},
+      {zh:"珊瑚礁",jp:"shān hú jiāo",en:"Coral reef"},
+      {zh:"贸易风",jp:"mào yì fēng",en:"Trade winds"},
+    ]},
+    { title:"Marine Animals", zh:"海洋动物", vocab:[
+      {zh:"座头鲸",jp:"zuò tóu jīng",en:"Humpback whale"},
+      {zh:"虎鲸",jp:"hǔ jīng",en:"Killer whale / Orca"},
+      {zh:"海豚",jp:"hǎi tún",en:"Dolphin"},
+      {zh:"鲨鱼",jp:"shā yú",en:"Shark"},
+      {zh:"鲸鲨",jp:"jīng shā",en:"Whale shark"},
+      {zh:"曼塔鳐",jp:"màn tǎ yáo",en:"Manta ray"},
+      {zh:"海龟",jp:"hǎi guī",en:"Sea turtle"},
+      {zh:"章鱼",jp:"zhāng yú",en:"Octopus"},
+      {zh:"鱿鱼",jp:"yóu yú",en:"Squid"},
+      {zh:"水母",jp:"shuǐ mǔ",en:"Jellyfish"},
+      {zh:"海星",jp:"hǎi xīng",en:"Starfish"},
+      {zh:"海胆",jp:"hǎi dǎn",en:"Sea urchin"},
+      {zh:"螃蟹",jp:"páng xiè",en:"Crab"},
+      {zh:"龙虾",jp:"lóng xiā",en:"Lobster"},
+      {zh:"珊瑚",jp:"shān hú",en:"Coral"},
+      {zh:"热带鱼",jp:"rè dài yú",en:"Tropical fish"},
+      {zh:"海马",jp:"hǎi mǎ",en:"Seahorse"},
+      {zh:"海鳗",jp:"hǎi mán",en:"Moray eel"},
+    ]},
+    { title:"Water Activities", zh:"水上活动", vocab:[
+      {zh:"浮潜",jp:"fú qián",en:"Snorkelling"},
+      {zh:"潜水",jp:"qián shuǐ",en:"Scuba diving"},
+      {zh:"冲浪",jp:"chōng làng",en:"Surfing"},
+      {zh:"皮划艇",jp:"pí huá tǐng",en:"Kayaking"},
+      {zh:"站立式划桨",jp:"zhàn lì shì huá jiǎng",en:"Stand-up paddleboarding (SUP)"},
+      {zh:"防晒霜",jp:"fáng shài shuāng",en:"Sunscreen"},
+      {zh:"珊瑚礁友好型防晒",jp:"shān hú jiāo yǒu hǎo xíng fáng shài",en:"Reef-safe sunscreen"},
+      {zh:"蛙鞋",jp:"wā xié",en:"Fins / Flippers"},
+      {zh:"浮潜面罩",jp:"fú qián miàn zhào",en:"Snorkel mask"},
+      {zh:"氧气瓶",jp:"yǎng qì píng",en:"Scuba tank"},
+    ]},
+    { title:"Island Culture & Food", zh:"岛屿文化与饮食", vocab:[
+      {zh:"草裙舞",jp:"cǎo qún wǔ",en:"Hula dance"},
+      {zh:"夏威夷花环",jp:"xià wēi yí huā huán",en:"Lei (flower garland)"},
+      {zh:"露天烤宴",jp:"lù tiān kǎo yàn",en:"Luau (Hawaiian feast)"},
+      {zh:"烤全猪",jp:"kǎo quán zhū",en:"Kalua pig (whole roast pig)"},
+      {zh:"夏威夷刨冰",jp:"xià wēi yí bào bīng",en:"Shave ice"},
+      {zh:"夏威夷生鱼沙拉",jp:"xià wēi yí shēng yú shā lā",en:"Poké bowl"},
+      {zh:"夏威夷果",jp:"xià wēi yí guǒ",en:"Macadamia nut"},
+      {zh:"原住民文化",jp:"yuán zhù mín wén huà",en:"Indigenous / Native Hawaiian culture"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: Hawaii — Snorkelling & Volcano",
+    lines:[
+      {sp:"A",zh:"今天去浮潜真的太棒了！看到好多热带鱼，还有只海龟游过来了！",jp:"jīn tiān qù fú qián zhēn de tài bàng le! kàn dào hǎo duō rè dài yú, hái yǒu zhī hǎi guī yóu guò lái le!",en:"Today's snorkelling was amazing! So many tropical fish, and a sea turtle swam right up to us!"},
+      {sp:"B",zh:"是啊，太神奇了！不过你有没有用珊瑚礁友好型防晒霜？普通防晒霜会伤害珊瑚的。",jp:"shì a, tài shén qí le! bù guò nǐ yǒu méi yǒu yòng shān hú jiāo yǒu hǎo xíng fáng shài shuāng? pǔ tōng fáng shài shuāng huì shāng hài shān hú de.",en:"Yeah, incredible! But did you use reef-safe sunscreen? Regular sunscreen can damage the coral."},
+      {sp:"A",zh:"用了，我特意买了珊瑚礁友好型的。明天我们去火山国家公园看熔岩流！",jp:"yòng le, wǒ tè yì mǎi le shān hú jiāo yǒu hǎo xíng de. míng tiān wǒ men qù huǒ shān guó jiā gōng yuán kàn róng yán liú!",en:"Yes, I specifically bought reef-safe. Tomorrow we're going to Volcanoes National Park to see the lava flow!"},
+      {sp:"B",zh:"太期待了！而且晚上可以在黑暗中看熔岩发光，听说很壮观。",jp:"tài qī dài le! ér qiě wǎn shàng kě yǐ zài hēi àn zhōng kàn róng yán fā guāng, tīng shuō hěn zhuàng guān.",en:"So excited! And at night you can watch the lava glow in the dark — I heard it's spectacular."},
+      {sp:"A",zh:"真的！我还想去黑沙滩和彩虹瀑布。夏威夷实在有太多东西可以看了！",jp:"zhēn de! wǒ hái xiǎng qù hēi shā tān hé cǎi hóng pù bù. xià wēi yí shí zài yǒu tài duō dōng xi kě yǐ kàn le!",en:"Really! I also want to go to the black sand beach and Rainbow Falls. There's just so much to see in Hawaii!"},
+    ]
+  }
+  }
+  ,{id:29,zh:"国家公园与野外",en:"National Parks & Wilderness",
+  sections:[
+    { title:"Mammals", zh:"哺乳类动物", vocab:[
+      {zh:"熊",jp:"xióng",en:"Bear"},
+      {zh:"棕熊",jp:"zōng xióng",en:"Brown bear / Grizzly bear"},
+      {zh:"黑熊",jp:"hēi xióng",en:"Black bear"},
+      {zh:"北极熊",jp:"běi jí xióng",en:"Polar bear"},
+      {zh:"鹿",jp:"lù",en:"Deer"},
+      {zh:"麋鹿",jp:"mí lù",en:"Elk / Moose"},
+      {zh:"野猪",jp:"yě zhū",en:"Wild boar"},
+      {zh:"狼",jp:"láng",en:"Wolf"},
+      {zh:"土狼",jp:"tǔ láng",en:"Coyote"},
+      {zh:"狐狸",jp:"hú li",en:"Fox"},
+      {zh:"松鼠",jp:"sōng shǔ",en:"Squirrel"},
+      {zh:"浣熊",jp:"huàn xióng",en:"Raccoon"},
+      {zh:"土拨鼠",jp:"tǔ bō shǔ",en:"Groundhog / Marmot"},
+      {zh:"野牛",jp:"yě niú",en:"Bison / Buffalo"},
+      {zh:"山羊",jp:"shān yáng",en:"Mountain goat"},
+      {zh:"大角羊",jp:"dà jiǎo yáng",en:"Bighorn sheep"},
+      {zh:"美洲狮",jp:"měi zhōu shī",en:"Mountain lion / Cougar"},
+      {zh:"水獭",jp:"shuǐ tǎ",en:"River otter"},
+      {zh:"河狸",jp:"hé lí",en:"Beaver"},
+    ]},
+    { title:"Birds & Reptiles", zh:"鸟类与爬虫", vocab:[
+      {zh:"老鹰",jp:"lǎo yīng",en:"Eagle"},
+      {zh:"白头鹰",jp:"bái tóu yīng",en:"Bald eagle"},
+      {zh:"鱼鹰",jp:"yú yīng",en:"Osprey"},
+      {zh:"猫头鹰",jp:"māo tóu yīng",en:"Owl"},
+      {zh:"啄木鸟",jp:"zhuó mù niǎo",en:"Woodpecker"},
+      {zh:"野火鸡",jp:"yě huǒ jī",en:"Wild turkey"},
+      {zh:"乌鸦",jp:"wū yā",en:"Raven / Crow"},
+      {zh:"蛇",jp:"shé",en:"Snake"},
+      {zh:"响尾蛇",jp:"xiǎng wěi shé",en:"Rattlesnake"},
+      {zh:"蜥蜴",jp:"xī yì",en:"Lizard"},
+      {zh:"乌龟",jp:"wū guī",en:"Tortoise / Turtle"},
+      {zh:"蝴蝶",jp:"hú dié",en:"Butterfly"},
+      {zh:"萤火虫",jp:"yíng huǒ chóng",en:"Firefly"},
+    ]},
+    { title:"Landscape & Natural Features", zh:"地形与自然景观", vocab:[
+      {zh:"瀑布",jp:"pù bù",en:"Waterfall"},
+      {zh:"间歇泉",jp:"jiān xiē quán",en:"Geyser"},
+      {zh:"温泉",jp:"wēn quán",en:"Hot spring"},
+      {zh:"峡谷",jp:"xiá gǔ",en:"Canyon / Gorge"},
+      {zh:"悬崖",jp:"xuán yá",en:"Cliff"},
+      {zh:"洞穴",jp:"dòng xué",en:"Cave"},
+      {zh:"冰川",jp:"bīng chuān",en:"Glacier"},
+      {zh:"草原",jp:"cǎo yuán",en:"Prairie / Grassland"},
+      {zh:"森林",jp:"sēn lín",en:"Forest"},
+      {zh:"沼泽",jp:"zhǎo zé",en:"Wetlands / Swamp"},
+      {zh:"山谷",jp:"shān gǔ",en:"Valley"},
+      {zh:"高原",jp:"gāo yuán",en:"Plateau / Mesa"},
+      {zh:"火山口",jp:"huǒ shān kǒu",en:"Volcanic crater / Caldera"},
+    ]},
+    { title:"Park Vocabulary", zh:"公园用语", vocab:[
+      {zh:"国家公园",jp:"guó jiā gōng yuán",en:"National park"},
+      {zh:"自然保护区",jp:"zì rán bǎo hù qū",en:"Nature reserve"},
+      {zh:"山径",jp:"shān jìng",en:"Trail / Hiking path"},
+      {zh:"护林员",jp:"hù lín yuán",en:"Park ranger"},
+      {zh:"露营地",jp:"lù yíng dì",en:"Campsite"},
+      {zh:"观景台",jp:"guān jǐng tái",en:"Viewpoint / Overlook"},
+      {zh:"野生动物观察",jp:"yě shēng dòng wù guān chá",en:"Wildlife viewing"},
+      {zh:"观鸟",jp:"guān niǎo",en:"Birdwatching"},
+      {zh:"勿喂野生动物",jp:"wù wèi yě shēng dòng wù",en:"Do not feed wildlife"},
+      {zh:"注意熊出没",jp:"zhù yì xióng chū mò",en:"Caution: bears (sign)"},
+      {zh:"请走小径",jp:"qǐng zǒu xiǎo jìng",en:"Stay on the trail"},
+      {zh:"请带走垃圾",jp:"qǐng dài zǒu lā jī",en:"Pack out your rubbish"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: At the National Park",
+    lines:[
+      {sp:"A",zh:"哇，间歇泉刚刚喷水了！太壮观了！多久会再喷一次？",jp:"wā, jiān xiē quán gāng gāng pēn shuǐ le! tài zhuàng guān le! duō jiǔ huì zài pēn yī cì?",en:"Wow, the geyser just erupted! So spectacular! How long until it goes off again?"},
+      {sp:"B",zh:"护林员说大概每隔九十分钟喷一次。你有没有看到那只白头鹰？那是美国国鸟！",jp:"hù lín yuán shuō dà gài měi gé jiǔ shí fēn zhōng pēn yī cì. nǐ yǒu méi yǒu kàn dào nà zhī bái tóu yīng? nà shì měi guó guó niǎo!",en:"The ranger said roughly every 90 minutes. Did you see that bald eagle? That's the US national bird!"},
+      {sp:"A",zh:"看到了！好美！不过我最震惊的是在路边看到一只熊在吃东西！",jp:"kàn dào le! hǎo měi! bù guò wǒ zuì zhèn jīng de shì zài lù biān kàn dào yī zhī xióng zài chī dōng xi!",en:"Saw it! So beautiful! But the most shocking was seeing a bear eating by the roadside!"},
+      {sp:"B",zh:"所以要小心！记得不要喂它，也不要靠近它。走小径才是最安全的。",jp:"suǒ yǐ yào xiǎo xīn! jì de bù yào wèi tā, yě bù yào kào jìn tā. zǒu xiǎo jìng cái shì zuì ān quán de.",en:"So be careful! Remember don't feed it, and don't approach it either. Stay on the trail — that's safest."},
+      {sp:"A",zh:"明白了。现在去走那条通往瀑布的小径，好吗？",jp:"míng bái le. xiàn zài qù zǒu nà tiáo tōng wǎng pù bù de xiǎo jìng, hǎo ma?",en:"Got it. Shall we go hike that trail to the waterfall now?"},
+    ]
+  }
+  }
+  ,{id:30,zh:"主题乐园",en:"Amusement Parks & Theme Parks",
+  sections:[
+    { title:"Rides & Attractions", zh:"游乐设施", vocab:[
+      {zh:"过山车",jp:"guò shān chē",en:"Roller coaster"},
+      {zh:"旋转木马",jp:"xuán zhuǎn mù mǎ",en:"Carousel / Merry-go-round"},
+      {zh:"摩天轮",jp:"mó tiān lún",en:"Ferris wheel"},
+      {zh:"鬼屋",jp:"guǐ wū",en:"Haunted house"},
+      {zh:"激流勇进",jp:"jī liú yǒng jìn",en:"Log flume / Water ride"},
+      {zh:"4D影院",jp:"sì D yǐng yuàn",en:"4D cinema / Motion ride"},
+      {zh:"太刺激了！",jp:"tài cì jī le!",en:"So thrilling! (colloquial)"},
+      {zh:"我不敢坐",jp:"wǒ bù gǎn zuò",en:"I don't dare go on it (colloquial)"},
+      {zh:"坐完想吐",jp:"zuò wán xiǎng tù",en:"Felt like throwing up after (colloquial)"},
+    ]},
+    { title:"Park Logistics", zh:"入场与排队", vocab:[
+      {zh:"门票",jp:"mén piào",en:"Entry ticket"},
+      {zh:"快速通道",jp:"kuài sù tōng dào",en:"Fast pass / Express lane"},
+      {zh:"排队",jp:"pái duì",en:"Queue / Line up"},
+      {zh:"要排多久？",jp:"yào pái duō jiǔ?",en:"How long is the wait? (colloquial)"},
+      {zh:"身高限制",jp:"shēn gāo xiàn zhì",en:"Height restriction"},
+      {zh:"游览地图",jp:"yóu lǎn dì tú",en:"Park map"},
+      {zh:"演出时间表",jp:"yǎn chū shí jiān biǎo",en:"Show schedule"},
+      {zh:"快去，等会儿人多",jp:"kuài qù, děng huì r rén duō",en:"Go quickly — it'll get crowded (colloquial)"},
+    ]},
+    { title:"Food & Souvenirs", zh:"园内饮食与纪念品", vocab:[
+      {zh:"小吃",jp:"xiǎo chī",en:"Snack / Light food (colloquial)"},
+      {zh:"薯条",jp:"shǔ tiáo",en:"French fries"},
+      {zh:"爆米花",jp:"bào mǐ huā",en:"Popcorn"},
+      {zh:"冰淇淋",jp:"bīng qí lín",en:"Ice cream"},
+      {zh:"纪念品",jp:"jì niàn pǐn",en:"Souvenir"},
+      {zh:"毛绒玩具",jp:"máo róng wán jù",en:"Stuffed toy / Plush"},
+      {zh:"太贵了，景点价格",jp:"tài guì le, jǐng diǎn jià gé",en:"So expensive — tourist prices (colloquial)"},
+      {zh:"限定版",jp:"xiàn dìng bǎn",en:"Limited edition"},
+    ]},
+    { title:"Shows & Characters", zh:"演出与角色", vocab:[
+      {zh:"卡通人物",jp:"kǎ tōng rén wù",en:"Character / Cartoon figure"},
+      {zh:"和…合影",jp:"hé… hé yǐng",en:"Take a photo with… (colloquial)"},
+      {zh:"花车巡游",jp:"huā chē xún yóu",en:"Float parade"},
+      {zh:"烟火",jp:"yān huǒ",en:"Fireworks"},
+      {zh:"灯光秀",jp:"dēng guāng xiù",en:"Light show"},
+      {zh:"夜间游行",jp:"yè jiān yóu xíng",en:"Night parade"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: At the Theme Park",
+    lines:[
+      {sp:"A",zh:"你敢不敢坐过山车？我很想试试！",jp:"nǐ gǎn bù gǎn zuò guò shān chē? wǒ hěn xiǎng shì shi!",en:"Do you dare go on the roller coaster? I really want to try!"},
+      {sp:"B",zh:"不敢！我怕，你自己去吧。我去坐旋转木马好了。",jp:"bù gǎn! wǒ pà, nǐ zì jǐ qù ba. wǒ qù zuò xuán zhuǎn mù mǎ hǎo le.",en:"No way! I'm scared — you go yourself. I'd rather ride the carousel."},
+      {sp:"A",zh:"胆小鬼！那我们去排队，你帮我看东西。要排多久？",jp:"dǎn xiǎo guǐ! nà wǒ men qù pái duì, nǐ bāng wǒ kàn dōng xi. yào pái duō jiǔ?",en:"Coward! Let's go queue — you watch the bags. How long's the wait?"},
+      {sp:"B",zh:"App说要等六十分钟，要不要买快速通道？",jp:"App shuō yào děng liù shí fēn zhōng, yào bù yào mǎi kuài sù tōng dào?",en:"The app says 60 minutes — should we buy a fast pass?"},
+      {sp:"A",zh:"多少钱？一个人一百块，坐完想吐也不用等那么久！",jp:"duō shao qián? yī gè rén yī bǎi kuài, zuò wán xiǎng tù yě bù yòng děng nà me jiǔ!",en:"How much? 100 per person — you can feel sick without the long wait!"},
+    ]
+  }
+  }
+  ,{id:31,zh:"滑雪与冬季旅游",en:"Ski & Winter Travel",
+  sections:[
+    { title:"On the Slopes", zh:"在雪坡上", vocab:[
+      {zh:"滑雪",jp:"huá xuě",en:"Skiing"},
+      {zh:"单板滑雪",jp:"dān bǎn huá xuě",en:"Snowboarding"},
+      {zh:"雪道",jp:"xuě dào",en:"Ski slope / Piste"},
+      {zh:"初级道",jp:"chū jí dào",en:"Beginner slope (green run)"},
+      {zh:"中级道",jp:"zhōng jí dào",en:"Intermediate slope (blue run)"},
+      {zh:"高级道",jp:"gāo jí dào",en:"Advanced slope (black run)"},
+      {zh:"缆车",jp:"lǎn chē",en:"Cable car / Ski lift"},
+      {zh:"摔倒了",jp:"shuāi dǎo le",en:"Fell over / Wiped out (colloquial)"},
+      {zh:"太陡了！",jp:"tài dǒu le!",en:"So steep! (colloquial)"},
+      {zh:"我不会滑雪",jp:"wǒ bù huì huá xuě",en:"I don't know how to ski (colloquial)"},
+      {zh:"教练",jp:"jiào liàn",en:"Instructor / Coach"},
+    ]},
+    { title:"Gear & Rentals", zh:"装备与租借", vocab:[
+      {zh:"头盔",jp:"tóu kuī",en:"Helmet"},
+      {zh:"护目镜",jp:"hù mù jìng",en:"Goggles"},
+      {zh:"手套",jp:"shǒu tào",en:"Gloves"},
+      {zh:"滑雪服",jp:"huá xuě fú",en:"Ski jacket / Snow jacket"},
+      {zh:"滑雪裤",jp:"huá xuě kù",en:"Ski pants"},
+      {zh:"雪地靴",jp:"xuě dì xuē",en:"Snow boots / Ski boots"},
+      {zh:"租",jp:"zū",en:"Rent"},
+      {zh:"租滑雪装备",jp:"zū huá xuě zhuāng bèi",en:"Rent ski equipment"},
+      {zh:"多大码？",jp:"duō dà mǎ?",en:"What size? (colloquial)"},
+    ]},
+    { title:"Winter Activities", zh:"冬季活动", vocab:[
+      {zh:"下雪了",jp:"xià xuě le",en:"It's snowing! (colloquial)"},
+      {zh:"雪人",jp:"xuě rén",en:"Snowman"},
+      {zh:"打雪仗",jp:"dǎ xuě zhàng",en:"Snowball fight"},
+      {zh:"温泉",jp:"wēn quán",en:"Hot spring / Onsen"},
+      {zh:"泡温泉",jp:"pào wēn quán",en:"Soak in a hot spring (colloquial)"},
+      {zh:"溜冰",jp:"liū bīng",en:"Ice skating"},
+      {zh:"结冰了",jp:"jié bīng le",en:"Frozen / Iced over (colloquial)"},
+      {zh:"冰天雪地",jp:"bīng tiān xuě dì",en:"Snowy icy landscape (idiom)"},
+      {zh:"好冷啊！",jp:"hǎo lěng a!",en:"So cold! (colloquial)"},
+      {zh:"冷得手发抖",jp:"lěng de shǒu fā dǒu",en:"So cold my hands are shaking (colloquial)"},
+    ]},
+    { title:"Après-Ski & Lodge Life", zh:"滑雪后休闲", vocab:[
+      {zh:"滑雪小屋",jp:"huá xuě xiǎo wū",en:"Ski lodge / Chalet"},
+      {zh:"壁炉",jp:"bì lú",en:"Fireplace"},
+      {zh:"热可可",jp:"rè kě kě",en:"Hot chocolate (colloquial)"},
+      {zh:"全身酸痛",jp:"quán shēn suān tòng",en:"Whole body aching (colloquial)"},
+      {zh:"泡热水澡",jp:"pào rè shuǐ zǎo",en:"Soak in a hot bath (colloquial)"},
+      {zh:"滑雪度假村",jp:"huá xuě dù jià cūn",en:"Ski resort"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: First Time Skiing",
+    lines:[
+      {sp:"A",zh:"你滑过雪吗？我是第一次。",jp:"nǐ huá guò xuě ma? wǒ shì dì yī cì.",en:"Have you ever skied before? It's my first time."},
+      {sp:"B",zh:"我滑过几次，不过都是初级道。你要不要请教练？",jp:"wǒ huá guò jǐ cì, bù guò dōu shì chū jí dào. nǐ yào bù yào qǐng jiào liàn?",en:"I've skied a few times, but only beginner slopes. Want to hire an instructor?"},
+      {sp:"A",zh:"对啊，我连雪地靴都穿不好，更别说滑雪了！",jp:"duì a, wǒ lián xuě dì xuē dōu chuān bù hǎo, gèng bié shuō huá xuě le!",en:"True — I can't even get my snow boots on properly, let alone ski!"},
+      {sp:"B",zh:"哈哈！租完装备先去吃早饭，然后在初级道试试。",jp:"hā hā! zū wán zhuāng bèi xiān qù chī zǎo fàn, rán hòu zài chū jí dào shì shi.",en:"Haha! Let's rent gear first, grab breakfast, then try the beginner slope."},
+      {sp:"A",zh:"好！如果我摔倒了，不许笑我哦。",jp:"hǎo! rú guǒ wǒ shuāi dǎo le, bù xǔ xiào wǒ ó.",en:"OK! Promise you won't laugh if I fall."},
+      {sp:"B",zh:"保证不笑！不过一定要录下来，要打卡的！",jp:"bǎo zhèng bù xiào! bù guò yī dìng yào lù xià lái, yào dǎ kǎ de!",en:"I promise! But I'm definitely recording it — gotta post it!"},
+    ]
+  }
+  }
+  ,{id:32,zh:"邮轮旅游",en:"Cruises",
+  sections:[
+    { title:"The Ship", zh:"邮轮设施", vocab:[
+      {zh:"邮轮",jp:"yóu lún",en:"Cruise ship"},
+      {zh:"船舱",jp:"chuán cāng",en:"Cabin / Stateroom"},
+      {zh:"海景房",jp:"hǎi jǐng fáng",en:"Ocean-view cabin"},
+      {zh:"阳台房",jp:"yáng tái fáng",en:"Balcony cabin"},
+      {zh:"套房",jp:"tào fáng",en:"Suite"},
+      {zh:"甲板",jp:"jiǎ bǎn",en:"Deck"},
+      {zh:"船头",jp:"chuán tóu",en:"Bow — front of ship"},
+      {zh:"船尾",jp:"chuán wěi",en:"Stern — back of ship"},
+      {zh:"救生衣",jp:"jiù shēng yī",en:"Life jacket"},
+      {zh:"安全演习",jp:"ān quán yǎn xí",en:"Safety / Muster drill"},
+      {zh:"自助餐厅",jp:"zì zhù cān tīng",en:"Buffet restaurant"},
+      {zh:"游泳池",jp:"yóu yǒng chí",en:"Swimming pool"},
+      {zh:"赌场",jp:"dǔ chǎng",en:"Casino"},
+    ]},
+    { title:"Ports of Call", zh:"靠港观光", vocab:[
+      {zh:"靠港",jp:"kào gǎng",en:"Port call / Dock at a port"},
+      {zh:"上岸",jp:"shàng àn",en:"Go ashore"},
+      {zh:"岸上游览",jp:"àn shàng yóu lǎn",en:"Shore excursion"},
+      {zh:"自由活动",jp:"zì yóu huó dòng",en:"Free time / Independent activity"},
+      {zh:"返船时间",jp:"fǎn chuán shí jiān",en:"All-aboard time / Return to ship deadline"},
+      {zh:"不要迟到",jp:"bù yào chí dào",en:"Don't be late (back to ship)"},
+      {zh:"会错过船的！",jp:"huì cuò guò chuán de!",en:"You'll miss the ship! (colloquial)"},
+      {zh:"港口税",jp:"gǎng kǒu shuì",en:"Port tax / Port fees"},
+    ]},
+    { title:"Life on Board", zh:"船上生活", vocab:[
+      {zh:"晕船",jp:"yùn chuán",en:"Seasick"},
+      {zh:"晕船药",jp:"yùn chuán yào",en:"Seasickness medication"},
+      {zh:"浪很大",jp:"làng hěn dà",en:"Big waves / Rough seas"},
+      {zh:"船摇得厉害",jp:"chuán yáo de lì hài",en:"The ship is rocking a lot (colloquial)"},
+      {zh:"船上娱乐",jp:"chuán shàng yú lè",en:"On-board entertainment"},
+      {zh:"歌舞表演",jp:"gē wǔ biǎo yǎn",en:"Song and dance show"},
+      {zh:"自助晚餐",jp:"zì zhù wǎn cān",en:"Buffet dinner"},
+      {zh:"船长晚宴",jp:"chuán zhǎng wǎn yàn",en:"Captain's dinner / Gala dinner"},
+      {zh:"看日落",jp:"kàn rì luò",en:"Watch the sunset"},
+    ]},
+    { title:"Booking & Planning", zh:"订邮轮", vocab:[
+      {zh:"邮轮假期",jp:"yóu lún jià qī",en:"Cruise holiday"},
+      {zh:"地中海邮轮",jp:"dì zhōng hǎi yóu lún",en:"Mediterranean cruise"},
+      {zh:"加勒比海",jp:"jiā lè bǐ hǎi",en:"Caribbean"},
+      {zh:"阿拉斯加",jp:"ā lā sī jiā",en:"Alaska"},
+      {zh:"几晚的行程？",jp:"jǐ wǎn de xíng chéng?",en:"How many nights is the cruise?"},
+      {zh:"全包",jp:"quán bāo",en:"All-inclusive"},
+      {zh:"船票包含机票吗？",jp:"chuán piào bāo hán jī piào ma?",en:"Does the cruise include flights?"},
+      {zh:"小费",jp:"xiǎo fèi",en:"Gratuity / Tips"},
+    ]},
+  ],
+  dialogue:{
+    title:"Dialogue: Planning a Cruise",
+    lines:[
+      {sp:"A",zh:"我们是不是订了地中海邮轮？什么时候出发？",jp:"wǒ men shì bu shì dìng le dì zhōng hǎi yóu lún? shén me shí hou chū fā?",en:"Did we book the Mediterranean cruise? When do we depart?"},
+      {sp:"B",zh:"是的！七月出发，十四晚，去西班牙、意大利和希腊。",jp:"shì de! qī yuè chū fā, shí sì wǎn, qù xī bān yá, yì dà lì hé xī là.",en:"Yes! Departing July, 14 nights — Spain, Italy, and Greece."},
+      {sp:"A",zh:"太兴奋了！是海景房还是阳台房？",jp:"tài xīng fèn le! shì hǎi jǐng fáng hái shì yáng tái fáng?",en:"So exciting! Is it ocean-view or balcony cabin?"},
+      {sp:"B",zh:"阳台房，可以在房间里看日落，贵一点但值得。",jp:"yáng tái fáng, kě yǐ zài fáng jiān lǐ kàn rì luò, guì yī diǎn dàn zhí dé.",en:"Balcony cabin — we can watch the sunset from the room. A bit more expensive but worth it."},
+      {sp:"A",zh:"你会晕船吗？我很担心晕船。",jp:"nǐ huì yùn chuán ma? wǒ hěn dān xīn yùn chuán.",en:"Do you get seasick? I'm really worried about it."},
+      {sp:"B",zh:"提前买晕船药就好了。大邮轮很稳，通常不会摇得很厉害。",jp:"tí qián mǎi yùn chuán yào jiù hǎo le. dà yóu lún hěn wěn, tōng cháng bù huì yáo de hěn lì hài.",en:"Just buy seasickness meds in advance. Big ships are very stable — usually don't rock much."},
+      {sp:"A",zh:"好！记住上岸要准时回船，不然就错过了！",jp:"hǎo! jì zhù shàng àn yào zhǔn shí huí chuán, bù rán jiù cuò guò le!",en:"OK! Remember to be back on time when ashore — or we'll miss the ship!"},
     ]
   }
   }
@@ -5899,7 +6384,7 @@ const MODULES = [
   { id:3, short:"Culture", en:"Culture & Connection", zh:"文化與人情", zhCmn:"文化与人情",
     lessons:[18,19,20,21,22,23] },
   { id:4, short:"Travel", en:"Travel & Destinations", zh:"旅遊與探索", zhCmn:"旅游与探索",
-    lessons:[24,25,26,27] },
+    lessons:[24,25,26,27,28,29,30,31] },
 ];
 
 function getModuleForLesson(lessonIdx) {
@@ -5961,7 +6446,7 @@ function toggleFavorite(li, si, vi) {
 // ─── SPEECH ───
 // ── AZURE TTS ──────────────────────────────────────────────────────────────
 // Update AZURE_WORKER_URL after deploying the Cloudflare Worker
-const APP_VERSION = 'EverydayChinese v2.2';
+const APP_VERSION = 'EverydayChinese v2.3';
 const AZURE_WORKER_URL = 'https://medchinese-tts.medrosettaapp.workers.dev';
 const VOICE_MAP = {
   yue: localStorage.getItem('everyday_azure_voice_yue') || 'zh-HK-HiuGaaiNeural',
@@ -6862,14 +7347,21 @@ function renderSongDetail(songId) {
       <div style="font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);margin-bottom:10px">📱 Open in YouTube app to listen, then follow the lyrics below.</div>
       <a href="https://www.youtube.com/watch?v=${s.ytId}" target="_blank" rel="noopener" style="display:inline-block;font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.08em;background:var(--gold);color:var(--ink);text-decoration:none;padding:9px 18px;border-radius:2px">▶ OPEN ON YOUTUBE</a>
     </div>` : `
-    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:4px;margin-bottom:24px;background:#000">
-      <iframe src="https://www.youtube.com/embed/${s.ytId}?rel=0&modestbranding=1"
-        style="position:absolute;top:0;left:0;width:100%;height:100%;border:none"
-        allowfullscreen allow="autoplay; encrypted-media"></iframe>
-    </div>
-    <div style="text-align:right;margin-top:-18px;margin-bottom:18px">
-      <a href="https://www.youtube.com/watch?v=${s.ytId}" target="_blank" rel="noopener" style="font-family:'DM Mono',monospace;font-size:0.58rem;color:var(--muted);text-decoration:none">▶ Open on YouTube ↗</a>
-    </div>`}
+    <a href="https://www.youtube.com/watch?v=${s.ytId}" target="_blank" rel="noopener"
+      style="display:block;position:relative;border-radius:4px;margin-bottom:24px;overflow:hidden;cursor:pointer;text-decoration:none">
+      <img src="https://img.youtube.com/vi/${s.ytId}/maxresdefault.jpg"
+        onerror="this.src='https://img.youtube.com/vi/${s.ytId}/hqdefault.jpg'"
+        style="width:100%;display:block;opacity:0.85;transition:opacity 0.2s"
+        onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.85'">
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+        <div style="width:68px;height:68px;background:rgba(220,0,0,0.92);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 16px rgba(0,0,0,0.6)">
+          <div style="width:0;height:0;border-style:solid;border-width:14px 0 14px 26px;border-color:transparent transparent transparent #fff;margin-left:6px"></div>
+        </div>
+      </div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.8))">
+        <div style="font-family:'DM Mono',monospace;font-size:0.62rem;color:rgba(255,255,255,0.92);letter-spacing:0.06em">▶ WATCH ON YOUTUBE &nbsp;·&nbsp; 點擊在 YouTube 觀看</div>
+      </div>
+    </a>`}
 
     <!-- Lyrics -->
     <div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;color:var(--gold);margin-bottom:14px">LYRICS 歌詞</div>
@@ -7082,6 +7574,7 @@ function renderVocab() {
   const totalWords = L.sections.reduce((n, s) => n + s.vocab.length, 0);
   let html = `
     
+    <div style="font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:0.12em;color:var(--muted);margin-bottom:8px">PLAY ALL OPTIONS 播放全部</div>
     <div class="vocab-play-bar">
       <button class="play-all-btn" id="vocab-play-all-btn" onclick="startVocabPlayAll()">▶ 中文</button>
       <button class="play-all-btn drill-btn" id="vocab-drill-en-zh-btn" onclick="startDrillEnZh()">▶ EN→中</button>
@@ -7098,14 +7591,16 @@ function renderVocab() {
             <span class="section-title-en">${sec.title}</span>
             <span class="section-chevron">▼</span>
           </div>
-          ${sec.zh ? `<span class="section-title-zh">${sec.zh}</span>` : ''}
+          ${sec.zh ? `<div style="display:flex;align-items:center;gap:10px;padding:2px 0 6px 0">
+            <span class="section-title-zh" style="text-align:left">${sec.zh}</span>
+            <button onclick="event.stopPropagation();startVocabPlaySection(${si})" style="font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:0.06em;font-weight:700;background:transparent;color:var(--gold);border:1px solid var(--gold);padding:3px 8px;cursor:pointer;border-radius:2px;flex-shrink:0">▶ PLAY</button>
+          </div>` : ''}
           <div class="section-controls-row" onclick="event.stopPropagation()">
             <button class="section-play-btn" id="secbtn-${si}" onclick="startVocabPlaySection(${si})">▶ 中文</button>
             <button class="section-play-btn" onclick="startSectionDrill(${si},'zh-en')">中→EN</button>
             <button class="section-play-btn" onclick="startSectionDrill(${si},'en-zh')">EN→中</button>
             <button class="section-thumb-btn" data-sec="${sec.title}" onclick="rateSectionEl(this,'up')" title="Section useful">👍</button>
             <button class="section-thumb-btn" data-sec="${sec.title}" onclick="rateSectionEl(this,'down')" title="Section not useful">👎</button>
-            <span style="cursor:pointer;padding:4px;position:absolute;top:8px;right:8px">▼</span>
           </div>
         </div>
         <div class="section-body ${isOpen?'open':''}">
@@ -8231,7 +8726,7 @@ function renderSetupPage() {
   renderAudioSetup(target);
   // Version at bottom
   const vbanner = document.createElement('div');
-  vbanner.innerHTML = `<div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;padding:16px 0 8px 0;border-top:1px solid var(--border);margin-top:24px;color:var(--muted)"><span style="color:var(--gold);font-weight:700">EverydayChinese v2.2</span> &nbsp;·&nbsp; April 27, 2026</div>`;
+  vbanner.innerHTML = `<div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;padding:16px 0 8px 0;border-top:1px solid var(--border);margin-top:24px;color:var(--muted)"><span style="color:var(--gold);font-weight:700">EverydayChinese v2.3</span> &nbsp;·&nbsp; April 28, 2026</div>`;
   target.appendChild(vbanner);
 }
 
@@ -9974,7 +10469,7 @@ renderPathwayBanner();
 // Registers an inline service worker for offline support & home screen install
 if ('serviceWorker' in navigator) {
   const swCode = `
-    const CACHE = 'everyday-chinese-v7';
+    const CACHE = 'everyday-chinese-v8';
     self.addEventListener('install', e => {
       e.waitUntil(
         caches.open(CACHE).then(c => c.addAll(['${location.href}']))
@@ -10501,6 +10996,7 @@ function setSurveyStars(n) {
   // Track session start and lesson views
   window._sessionStart = Date.now();
   window._lessonsViewed = new Set();
+
 
 
 
